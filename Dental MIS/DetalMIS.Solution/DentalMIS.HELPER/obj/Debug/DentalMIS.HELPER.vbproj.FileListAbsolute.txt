@@ -1,0 +1,42 @@
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll.config
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.xml
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\MySql.Data.dll
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.Resources.resources
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.GenerateResource.Cache
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
+C:\Users\acamacho\Documents\GitHub\DentalMIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll.config
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.xml
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\MySql.Data.dll
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.Resources.resources
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.GenerateResource.Cache
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
+C:\Users\bianca\Desktop\T H E S I S\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll.config
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.xml
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\MySql.Data.dll
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.Resources.resources
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.GenerateResource.Cache
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
+D:\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll.config
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.xml
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\MySql.Data.dll
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.Resources.resources
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.GenerateResource.Cache
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
+C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb

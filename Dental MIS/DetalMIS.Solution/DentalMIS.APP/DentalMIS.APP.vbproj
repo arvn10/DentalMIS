@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0743C075-52BF-4E77-9121-5DA56DC90591}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DentalMIS.APP.My.MyApplication</StartupObject>
+    <RootNamespace>DentalMIS.APP</RootNamespace>
+    <AssemblyName>Olaes Dental MIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Olaes Dental MIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Olaes Dental MIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-Denture-48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.vb">
+      <DependentUpon>formMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DoctorAddEditForm.Designer.vb">
+      <DependentUpon>DoctorAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DoctorAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PatientMaritalStatusAddEditForm.Designer.vb">
+      <DependentUpon>PatientMaritalStatusAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PatientMaritalStatusAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcedureTypeAddEditForm.Designer.vb">
+      <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcedureTypeAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UserAddEditForm.Designer.vb">
+      <DependentUpon>UserAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControl\ConfigurationControl.Designer.vb">
+      <DependentUpon>ConfigurationControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ConfigurationControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DashboardControl.Designer.vb">
+      <DependentUpon>DashboardControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DashboardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\PatientControl.Designer.vb">
+      <DependentUpon>PatientControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PatientControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\PatientMaritalStatusControl.Designer.vb">
+      <DependentUpon>PatientMaritalStatusControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PatientMaritalStatusControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProcedureTypeControl.Designer.vb">
+      <DependentUpon>ProcedureTypeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProcedureTypeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UserControl.Designer.vb">
+      <DependentUpon>UserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DoctorAddEditForm.resx">
+      <DependentUpon>DoctorAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PatientMaritalStatusAddEditForm.resx">
+      <DependentUpon>PatientMaritalStatusAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcedureTypeAddEditForm.resx">
+      <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserAddEditForm.resx">
+      <DependentUpon>UserAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ConfigurationControl.resx">
+      <DependentUpon>ConfigurationControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DashboardControl.resx">
+      <DependentUpon>DashboardControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\PatientControl.resx">
+      <DependentUpon>PatientControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\PatientMaritalStatusControl.resx">
+      <DependentUpon>PatientMaritalStatusControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ProcedureTypeControl.resx">
+      <DependentUpon>ProcedureTypeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UserControl.resx">
+      <DependentUpon>UserControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DentalMIS.BLL\DentalMIS.BLL.vbproj">
+      <Project>{c14f38d2-9761-4d1f-ad9b-5913c57284cf}</Project>
+      <Name>DentalMIS.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\white-menu-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\cross_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Happy tooth.svg_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Happy tooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\min2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Tooth-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Menu-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Gear-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Home-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Create New-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Edit-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\View-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\User Group-64 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-Denture-48.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
