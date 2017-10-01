@@ -57,7 +57,7 @@ Public Class PatientMaritalStatusControl
                 form.ShowDialog()
                 DataGrid.DataSource = Nothing
             Else
-                MessageBox.Show("No item(s) to edit", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
 

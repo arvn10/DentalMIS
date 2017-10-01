@@ -77,7 +77,7 @@ Public Class ProcedureTypeAddEditForm
                 Next
 
                 If Not valid Then
-                    MessageBox.Show("Fill up all fields.", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     Dim param As New ProcedureTypeCreate()
                     param.Name = textName.Text
@@ -88,14 +88,14 @@ Public Class ProcedureTypeAddEditForm
                     param.CreatedBy = activeUser
                     Dim ret As Long = procedureTypeService.ProcedureTypeCreate(param)
                     If ret > 0 Then
-                        MessageBox.Show("Procedure Type Saved!", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
                     Else
-                        MessageBox.Show("Procedure Type Exist!", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show("Procedure Type Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 End If
             Else
-                Dim confirm = MessageBox.Show("Save Changes?", "OLAES DENTAL CLINIC", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If confirm = DialogResult.Yes Then
                     Dim param As New ProcedureTypeEdit()
 
@@ -108,13 +108,13 @@ Public Class ProcedureTypeAddEditForm
                     param.UpdatedBy = activeUser
                     Dim ret As Long = procedureTypeService.ProcedureTypeEdit(param)
                     If ret > 0 Then
-                        MessageBox.Show("Procedure Type Saved!", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
                     End If
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -131,7 +131,7 @@ Public Class ProcedureTypeAddEditForm
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

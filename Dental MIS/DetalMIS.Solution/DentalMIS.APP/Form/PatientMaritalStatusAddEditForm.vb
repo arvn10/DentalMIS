@@ -19,7 +19,7 @@ Public Class PatientMaritalStatusAddEditForm
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
             If HeaderLabel.Text.Contains("Edit") Then
-                Dim confirm = MessageBox.Show("Save Changes?", "OLAES DENTAL CLINIC", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If confirm = DialogResult.Yes Then
                     Dim data As New PatientMaritalStatusEdit()
 
@@ -29,7 +29,7 @@ Public Class PatientMaritalStatusAddEditForm
                     data.UpdatedBy = activeUser
                     Dim ret As Long = patientMaritalStatusService.PatientMaritalStatusEdit(data)
                     If ret > 0 Then
-                        MessageBox.Show("Patient Marital Status Saved!", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("Patient Marital Status Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
                     End If
                 End If
@@ -51,7 +51,7 @@ Public Class PatientMaritalStatusAddEditForm
                 Next
 
                 If Not valid Then
-                    MessageBox.Show("Fill up all fields.", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     Dim data As New PatientMaritalStatusCreate
                     data.Name = textName.Text
@@ -59,16 +59,16 @@ Public Class PatientMaritalStatusAddEditForm
                     data.CreatedBy = activeUser
                     Dim ret As Long = patientMaritalStatusService.PatientMaritalStatusCreate(data)
                     If ret > 0 Then
-                        MessageBox.Show("Patient Marital Status Saved!", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("Patient Marital Status Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
                     Else
-                        MessageBox.Show("Patient Marital Status Exist!", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show("Patient Marital Status Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 End If
 
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -81,7 +81,7 @@ Public Class PatientMaritalStatusAddEditForm
                 comboStatus.Text = data.Status
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Dispose()
         End Try
     End Sub

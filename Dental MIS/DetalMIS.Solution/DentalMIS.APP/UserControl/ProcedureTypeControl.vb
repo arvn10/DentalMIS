@@ -51,7 +51,7 @@ Public Class ProcedureTypeControl
                 form.ShowDialog()
                 DataGrid.DataSource = Nothing
             Else
-                MessageBox.Show("No item(s) to edit", "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
 
@@ -63,7 +63,7 @@ Public Class ProcedureTypeControl
         Try
             LoadData(TextSearch.Text)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "OLAES DENTAL CLINIC", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub

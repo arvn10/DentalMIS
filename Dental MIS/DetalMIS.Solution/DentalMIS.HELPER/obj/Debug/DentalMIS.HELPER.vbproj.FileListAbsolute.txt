@@ -40,3 +40,15 @@ C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER
 C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
 C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
 C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll.config
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\MySql.Data.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.Resources.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.GenerateResource.Cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.CoreCompileInputs.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb

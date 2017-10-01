@@ -16,7 +16,6 @@ Public Class UserRepository
 
 #Region "Method"
     Public Function UserCreate(param As UserCreate) As Long
-
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_create`({0}, '{1}', '{2}', '{3}', '{4}', {5}, '{6}')",
                                   param.UserTypeID,
                                   param.Username,
@@ -32,7 +31,6 @@ Public Class UserRepository
     End Function
 
     Public Function UserEdit(param As UserEdit) As Long
-
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_create`({0}, {1}, '{2}', '{3}', '{4}', '{5}', {5}, '{6}')",
                                   param.ID,
                                   param.UserTypeID,

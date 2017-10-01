@@ -140,3 +140,34 @@ C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.APP\ob
 C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.vbproj.CoreCompileInputs.cache
 C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.UserControl.resources
 C:\Users\acamacho\Documents\GitHub\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.UserAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\Olaes Dental MIS.exe.config
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\Olaes Dental MIS.exe
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\Olaes Dental MIS.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\Olaes Dental MIS.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.BLL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\MySql.Data.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.DAL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.BLL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.BLL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.DAL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.DAL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.DAL.dll.config
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.vbprojResolveAssemblyReference.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.formMain.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.DoctorAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.LoginForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.PatientMaritalStatusAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.ProcedureTypeAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.UserAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.Resources.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.ConfigurationControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.DashboardControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.PatientControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.PatientMaritalStatusControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.ProcedureTypeControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.UserControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.vbproj.GenerateResource.Cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.vbproj.CoreCompileInputs.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\Olaes Dental MIS.exe
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\Olaes Dental MIS.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\Olaes Dental MIS.pdb
