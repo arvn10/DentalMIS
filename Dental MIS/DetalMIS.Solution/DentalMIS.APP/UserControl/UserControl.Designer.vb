@@ -76,7 +76,7 @@ Partial Class UserControl
         Me.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.DataGrid.HeaderForeColor = System.Drawing.Color.White
         Me.DataGrid.Location = New System.Drawing.Point(14, 127)
-        Me.DataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGrid.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGrid.MultiSelect = False
         Me.DataGrid.Name = "DataGrid"
         Me.DataGrid.ReadOnly = True
@@ -284,7 +284,7 @@ Partial Class UserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextSearch.Font = New System.Drawing.Font("Century Gothic", 10.0!)
         Me.TextSearch.Location = New System.Drawing.Point(147, 93)
-        Me.TextSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.TextSearch.Name = "TextSearch"
         Me.TextSearch.Size = New System.Drawing.Size(430, 24)
         Me.TextSearch.TabIndex = 39
@@ -316,7 +316,7 @@ Partial Class UserControl
         Me.Controls.Add(Me.ButtonNew)
         Me.Controls.Add(Me.TextSearch)
         Me.Controls.Add(Me.BunifuSeparator1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UserControl"
         Me.Size = New System.Drawing.Size(820, 671)
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).EndInit()

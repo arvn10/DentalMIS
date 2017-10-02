@@ -9,7 +9,7 @@ Public Class ProcedureTypeControl
         procedureTypeService = New ProcedureTypeService()
     End Sub
 
-    Public Sub LoadData(searchText As String)
+    Private Sub LoadData(searchText As String)
         Dim data As New List(Of ProcedureTypeView)
         data = procedureTypeService.ProcedureTypeSearchLike(searchText)
         Dim bs As New BindingSource

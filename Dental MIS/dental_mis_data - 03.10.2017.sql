@@ -2,9 +2,9 @@ CREATE DATABASE  IF NOT EXISTS `dental_mis` /*!40100 DEFAULT CHARACTER SET utf8 
 USE `dental_mis`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: dental_mis
+-- Host: localhost    Database: dental_mis
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.13-MariaDB
+-- Server version	5.7.19-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -340,7 +340,7 @@ CREATE TABLE `user_type` (
   `updated_by` varchar(45) DEFAULT NULL,
   `updated_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -349,7 +349,7 @@ CREATE TABLE `user_type` (
 
 LOCK TABLES `user_type` WRITE;
 /*!40000 ALTER TABLE `user_type` DISABLE KEYS */;
-INSERT INTO `user_type` VALUES (1,'Administrator','Test User','2017-09-14 03:04:00',NULL,NULL);
+INSERT INTO `user_type` VALUES (1,'Administrator','Service Account','2017-09-14 03:04:00',NULL,NULL),(2,'Doctor','Service Account','2017-10-01 00:13:00',NULL,NULL),(3,'Secretary','Service Account','2017-10-01 00:13:00',NULL,NULL);
 /*!40000 ALTER TABLE `user_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1829,7 +1829,7 @@ DELIMITER ;
 /*!50003 SET character_set_results = utf8 */ ;
 /*!50003 SET collation_connection  = utf8_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_user_create`(IN
 	`@user_type_id` BIGINT(8),
@@ -1841,30 +1841,40 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_user_create`(IN
 	`@created_by` VARCHAR(45)
 )
 BEGIN
-	INSERT INTO `dental_mis`.`user`
-	(
-		`user_type_id`,
-		`username`,
-		`password`,
-		`firstname`,
-		`lastname`,
-		`status`,
-		`created_by`,
-		`created_date`
-    )
-	VALUES
-	(
-		`@user_type_id`,
-		`@username`,
-		`@password`,
-		`@firstname`,
-		`@lastname`,
-		`@status`,
-		`@created_by`,
-        NOW()
-    );
-    
-    SELECT LAST_INSERT_ID();
+	DECLARE `@exist` INT;
+    SET `@exist` = (SELECT 1 FROM `dental_mis`.`user` 
+					WHERE `user_type_id` = `@user_type_id` AND 
+                          `username` = `@username` AND
+                          `firstname` = `@firstname` AND
+                          `lastname` = `@lastname`);
+	IF `@exist` = 1 THEN
+		INSERT INTO `dental_mis`.`user`
+		(
+			`user_type_id`,
+			`username`,
+			`password`,
+			`firstname`,
+			`lastname`,
+			`status`,
+			`created_by`,
+			`created_date`
+		)
+		VALUES
+		(
+			`@user_type_id`,
+			`@username`,
+			`@password`,
+			`@firstname`,
+			`@lastname`,
+			`@status`,
+			`@created_by`,
+			NOW()
+		);
+		
+		SELECT LAST_INSERT_ID();
+	ELSE
+		SELECT 0;
+	END IF;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -2181,4 +2191,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-30 23:06:45
+-- Dump completed on 2017-10-03  0:26:20
