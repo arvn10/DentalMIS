@@ -1,6 +1,14 @@
 ﻿Imports DentalMIS.BLL
 Public Class UserControl
     Private userService As UserService
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        userService = New UserService
+    End Sub
     Private Sub LoadData(searchText As String)
         Dim data As New List(Of UserView)
         data = userService.UserSearchLike(searchText)
@@ -10,7 +18,6 @@ Public Class UserControl
         DataGrid.DataSource = bs
         DataGrid.Columns("ID").DataPropertyName = "ID"
         DataGrid.Columns("username").DataPropertyName = "Username"
-        DataGrid.Columns("password").DataPropertyName = "Password"
         DataGrid.Columns("firstname").DataPropertyName = "Firstname"
         DataGrid.Columns("lastname").DataPropertyName = "Lastname"
         DataGrid.Columns("userType").DataPropertyName = "UserType"

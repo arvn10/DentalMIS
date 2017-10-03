@@ -13,7 +13,7 @@ Public Class UserAddEditForm
         userService = New UserService()
 
     End Sub
-    Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
+    Private Sub buttonSave_Click(sender As Object, e As EventArgs)
         Try
             If HeaderLabel.Text.Contains("New") Then
                 Dim valid As Boolean = True
@@ -78,6 +78,11 @@ Public Class UserAddEditForm
 
     Private Sub UserAddEditForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
+            Dim userTypeService As New UserTypeService
+            comboUserType.DisplayMember = "Name"
+            comboUserType.ValueMember = "ID"
+            comboUserType.DataSource = userTypeService.UserTypeGet
+            comboUserType.Text = ""
             If HeaderLabel.Text.Contains("Edit") Then
                 Dim data As New UserView
                 data = userService.UserSearchID(userID).ToList()(0)
@@ -111,5 +116,9 @@ Public Class UserAddEditForm
 
     Private Sub textLastname_Leave(sender As Object, e As EventArgs) Handles textLastname.Leave
         textLastname.Text = StrConv(textLastname.Text, VbStrConv.ProperCase)
+    End Sub
+
+    Private Sub buttonSave_Click_1(sender As Object, e As EventArgs) Handles buttonSave.Click
+
     End Sub
 End Class

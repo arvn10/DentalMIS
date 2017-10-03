@@ -45,8 +45,9 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.PanelHeader.Controls.Add(Me.ButtonClose)
         Me.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelHeader.Name = "PanelHeader"
-        Me.PanelHeader.Size = New System.Drawing.Size(520, 57)
+        Me.PanelHeader.Size = New System.Drawing.Size(390, 46)
         Me.PanelHeader.TabIndex = 3
         '
         'HeaderLabel
@@ -54,9 +55,10 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.HeaderLabel.AutoSize = True
         Me.HeaderLabel.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HeaderLabel.ForeColor = System.Drawing.Color.White
-        Me.HeaderLabel.Location = New System.Drawing.Point(7, 15)
+        Me.HeaderLabel.Location = New System.Drawing.Point(5, 12)
+        Me.HeaderLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(266, 28)
+        Me.HeaderLabel.Size = New System.Drawing.Size(207, 23)
         Me.HeaderLabel.TabIndex = 1
         Me.HeaderLabel.Text = "OLAES DENTAL CLINIC"
         '
@@ -68,9 +70,10 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.ButtonClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(452, 12)
+        Me.ButtonClose.Location = New System.Drawing.Point(339, 10)
+        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(56, 32)
+        Me.ButtonClose.Size = New System.Drawing.Size(42, 26)
         Me.ButtonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ButtonClose.TabIndex = 2
         Me.ButtonClose.TabStop = False
@@ -92,18 +95,20 @@ Partial Class PatientMaritalStatusAddEditForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 80)
+        Me.Label1.Location = New System.Drawing.Point(6, 65)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 21)
+        Me.Label1.Size = New System.Drawing.Size(59, 19)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Name :"
         '
         'textName
         '
         Me.textName.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textName.Location = New System.Drawing.Point(12, 104)
+        Me.textName.Location = New System.Drawing.Point(9, 84)
+        Me.textName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.textName.Name = "textName"
-        Me.textName.Size = New System.Drawing.Size(238, 30)
+        Me.textName.Size = New System.Drawing.Size(180, 25)
         Me.textName.TabIndex = 0
         '
         'buttonSave
@@ -113,7 +118,7 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.buttonSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.buttonSave.BorderRadius = 0
-        Me.buttonSave.ButtonText = "     Save"
+        Me.buttonSave.ButtonText = "  Save"
         Me.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonSave.DisabledColor = System.Drawing.Color.Gray
         Me.buttonSave.Iconcolor = System.Drawing.Color.Transparent
@@ -128,16 +133,15 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(398, 140)
-        Me.buttonSave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buttonSave.Location = New System.Drawing.Point(298, 114)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.buttonSave.OnHoverTextColor = System.Drawing.Color.White
         Me.buttonSave.selected = False
-        Me.buttonSave.Size = New System.Drawing.Size(113, 41)
+        Me.buttonSave.Size = New System.Drawing.Size(85, 33)
         Me.buttonSave.TabIndex = 2
-        Me.buttonSave.Text = "     Save"
+        Me.buttonSave.Text = "  Save"
         Me.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.buttonSave.Textcolor = System.Drawing.Color.White
         Me.buttonSave.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -146,9 +150,10 @@ Partial Class PatientMaritalStatusAddEditForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(252, 80)
+        Me.Label5.Location = New System.Drawing.Point(189, 65)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(71, 21)
+        Me.Label5.Size = New System.Drawing.Size(58, 19)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "Status :"
         '
@@ -157,17 +162,18 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.comboStatus.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.comboStatus.FormattingEnabled = True
         Me.comboStatus.Items.AddRange(New Object() {"Active", "Not Active"})
-        Me.comboStatus.Location = New System.Drawing.Point(256, 104)
+        Me.comboStatus.Location = New System.Drawing.Point(192, 84)
+        Me.comboStatus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.comboStatus.Name = "comboStatus"
-        Me.comboStatus.Size = New System.Drawing.Size(255, 29)
+        Me.comboStatus.Size = New System.Drawing.Size(192, 25)
         Me.comboStatus.TabIndex = 1
         '
         'PatientMaritalStatusAddEditForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(520, 188)
+        Me.ClientSize = New System.Drawing.Size(390, 153)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.comboStatus)
         Me.Controls.Add(Me.buttonSave)
@@ -175,6 +181,7 @@ Partial Class PatientMaritalStatusAddEditForm
         Me.Controls.Add(Me.textName)
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "PatientMaritalStatusAddEditForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.PanelHeader.ResumeLayout(False)

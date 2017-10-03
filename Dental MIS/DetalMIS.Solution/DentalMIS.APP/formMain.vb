@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
-        Dim confirm = MessageBox.Show("Exit System?", "Dental MIS", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim confirm = MessageBox.Show("Exit System?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If confirm = DialogResult.Yes Then
             Environment.Exit(0)
         End If

@@ -170,3 +170,4 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\Olaes Dental MIS.exe
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\Olaes Dental MIS.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\Olaes Dental MIS.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.DAL.dll.config

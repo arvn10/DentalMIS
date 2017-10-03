@@ -72,7 +72,7 @@ Public Class UserService
         Return datas
     End Function
 
-    Public Function UserSearchLike(SearchText As Long) As List(Of UserView) Implements IUserService.UserSearchLike
+    Public Function UserSearchLike(SearchText As String) As List(Of UserView) Implements IUserService.UserSearchLike
         Dim datas As List(Of UserView) = (From data As DAL.UserView In userService.UserSearchLike(SearchText)
                                           Select New UserView With {
                                                    .ID = data.ID,

@@ -29,7 +29,6 @@ Partial Class UserAddEditForm
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.comboUserType = New System.Windows.Forms.ComboBox()
-        Me.buttonSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.textUsername = New System.Windows.Forms.TextBox()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
@@ -42,6 +41,7 @@ Partial Class UserAddEditForm
         Me.textFirstname = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.comboStatus = New System.Windows.Forms.ComboBox()
+        Me.buttonSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -102,47 +102,12 @@ Partial Class UserAddEditForm
         '
         Me.comboUserType.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.comboUserType.FormattingEnabled = True
-        Me.comboUserType.Items.AddRange(New Object() {"Active", "Not Active"})
+        Me.comboUserType.Items.AddRange(New Object() {""})
         Me.comboUserType.Location = New System.Drawing.Point(9, 180)
         Me.comboUserType.Margin = New System.Windows.Forms.Padding(2)
         Me.comboUserType.Name = "comboUserType"
         Me.comboUserType.Size = New System.Drawing.Size(192, 25)
         Me.comboUserType.TabIndex = 4
-        '
-        'buttonSave
-        '
-        Me.buttonSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.buttonSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttonSave.BorderRadius = 0
-        Me.buttonSave.ButtonText = "     Save"
-        Me.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttonSave.DisabledColor = System.Drawing.Color.Gray
-        Me.buttonSave.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttonSave.Iconimage = CType(resources.GetObject("buttonSave.Iconimage"), System.Drawing.Image)
-        Me.buttonSave.Iconimage_right = Nothing
-        Me.buttonSave.Iconimage_right_Selected = Nothing
-        Me.buttonSave.Iconimage_Selected = Nothing
-        Me.buttonSave.IconMarginLeft = 0
-        Me.buttonSave.IconMarginRight = 0
-        Me.buttonSave.IconRightVisible = True
-        Me.buttonSave.IconRightZoom = 0R
-        Me.buttonSave.IconVisible = True
-        Me.buttonSave.IconZoom = 50.0R
-        Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(312, 213)
-        Me.buttonSave.Name = "buttonSave"
-        Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonSave.OnHoverTextColor = System.Drawing.Color.White
-        Me.buttonSave.selected = False
-        Me.buttonSave.Size = New System.Drawing.Size(85, 33)
-        Me.buttonSave.TabIndex = 6
-        Me.buttonSave.Text = "     Save"
-        Me.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.buttonSave.Textcolor = System.Drawing.Color.White
-        Me.buttonSave.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Label1
         '
@@ -259,12 +224,48 @@ Partial Class UserAddEditForm
         Me.comboStatus.Size = New System.Drawing.Size(192, 25)
         Me.comboStatus.TabIndex = 5
         '
+        'buttonSave
+        '
+        Me.buttonSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.buttonSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.buttonSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttonSave.BorderRadius = 0
+        Me.buttonSave.ButtonText = "  Save"
+        Me.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttonSave.DisabledColor = System.Drawing.Color.Gray
+        Me.buttonSave.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttonSave.Iconimage = CType(resources.GetObject("buttonSave.Iconimage"), System.Drawing.Image)
+        Me.buttonSave.Iconimage_right = Nothing
+        Me.buttonSave.Iconimage_right_Selected = Nothing
+        Me.buttonSave.Iconimage_Selected = Nothing
+        Me.buttonSave.IconMarginLeft = 0
+        Me.buttonSave.IconMarginRight = 0
+        Me.buttonSave.IconRightVisible = True
+        Me.buttonSave.IconRightZoom = 0R
+        Me.buttonSave.IconVisible = True
+        Me.buttonSave.IconZoom = 50.0R
+        Me.buttonSave.IsTab = False
+        Me.buttonSave.Location = New System.Drawing.Point(312, 210)
+        Me.buttonSave.Name = "buttonSave"
+        Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.buttonSave.OnHoverTextColor = System.Drawing.Color.White
+        Me.buttonSave.selected = False
+        Me.buttonSave.Size = New System.Drawing.Size(85, 33)
+        Me.buttonSave.TabIndex = 43
+        Me.buttonSave.Text = "  Save"
+        Me.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.buttonSave.Textcolor = System.Drawing.Color.White
+        Me.buttonSave.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'UserAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(406, 255)
+        Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.comboStatus)
         Me.Controls.Add(Me.Label3)
@@ -276,7 +277,6 @@ Partial Class UserAddEditForm
         Me.Controls.Add(Me.comboUserType)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.textPassword)
-        Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.textUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -296,7 +296,6 @@ Partial Class UserAddEditForm
     Friend WithEvents ButtonClose As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Label5 As Label
     Friend WithEvents comboUserType As ComboBox
-    Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label1 As Label
     Friend WithEvents textUsername As TextBox
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
@@ -309,4 +308,5 @@ Partial Class UserAddEditForm
     Friend WithEvents textFirstname As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents textPassword As TextBox
+    Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
 End Class

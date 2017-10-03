@@ -70,6 +70,7 @@
     <Compile Include="IService\IProcedureToothService.vb" />
     <Compile Include="IService\IProcedureTypeService.vb" />
     <Compile Include="IService\IUserService.vb" />
+    <Compile Include="IService\IUserTypeService.vb" />
     <Compile Include="Model\DoctorModel.vb" />
     <Compile Include="Model\PatientMaritalStatusModel.vb" />
     <Compile Include="Model\PatientModel.vb" />
@@ -77,6 +78,7 @@
     <Compile Include="Model\ProcedureToothModel.vb" />
     <Compile Include="Model\ProcedureTypeModel.vb" />
     <Compile Include="Model\UserModel.vb" />
+    <Compile Include="Model\UserTypeModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -99,6 +101,7 @@
     <Compile Include="Service\ProcedureToothService.vb" />
     <Compile Include="Service\ProcedureTypeService.vb" />
     <Compile Include="Service\UserService.vb" />
+    <Compile Include="Service\UserTypeService.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

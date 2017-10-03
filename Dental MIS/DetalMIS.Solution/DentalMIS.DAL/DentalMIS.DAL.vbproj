@@ -67,6 +67,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\UserType.vb" />
     <Compile Include="Repository\DoctorRepository.vb" />
     <Compile Include="Repository\ProcedureRepository.vb" />
     <Compile Include="Repository\ProcedureToothRepository.vb" />
@@ -98,6 +99,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Repository\UserTypeRepository.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

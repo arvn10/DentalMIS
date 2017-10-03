@@ -64,7 +64,7 @@ Public Class UserRepository
                     .Status = dr("status").ToString(),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
-                    .UpdatedBy = dr("created_by").ToString(),
+                    .UpdatedBy = dr("updated_by").ToString(),
                     .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
                  }).ToList()
         Return datas
@@ -88,14 +88,14 @@ Public Class UserRepository
                     .Status = dr("status").ToString(),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
-                    .UpdatedBy = dr("created_by").ToString(),
+                    .UpdatedBy = dr("updated_by").ToString(),
                     .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
                  }).ToList()
         Return datas
     End Function
 
-    Public Function UserSearchLike(SearchText As Long) As List(Of UserView)
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_search_Like`({0})", SearchText)
+    Public Function UserSearchLike(SearchText As String) As List(Of UserView)
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_search_Like`('{0}')", SearchText)
         Dim dt As DataTable = ExecuteDataset(procedure)
 
         Dim datas As New List(Of UserView)
@@ -112,7 +112,7 @@ Public Class UserRepository
                     .Status = dr("status").ToString(),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
-                    .UpdatedBy = dr("created_by").ToString(),
+                    .UpdatedBy = dr("updated_by").ToString(),
                     .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
                  }).ToList()
         Return datas
@@ -136,7 +136,7 @@ Public Class UserRepository
                     .Status = dr("status").ToString(),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
-                    .UpdatedBy = dr("created_by").ToString(),
+                    .UpdatedBy = dr("updated_by").ToString(),
                     .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
                  }).ToList()
         Return datas
