@@ -11,7 +11,7 @@ Public Class ProcedureTypeAddEditForm
     End Sub
 
     Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
-        Me.dispose()
+        Me.Dispose()
     End Sub
 
     Private Sub comboPaymentType_KeyPress(sender As Object, e As KeyPressEventArgs) Handles comboPaymentType.KeyPress

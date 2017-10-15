@@ -20,9 +20,10 @@ Public Class LoginForm
                 userList = userService.UserLogin(textUsername.Text, textPassword.Text)
                 If userList.Count > 0 Then
                     Dim user As UserView = userList(0)
-                    formMain.LabelMenu.Text = user.Firstname & " " & user.Lastname
-                    formMain.Show()
-                    Me.Hide()
+                    MainForm.LabelMenu.Text = user.Firstname & " " & user.Lastname
+                    MainForm.PanelSideMenu.Visible = True
+                    MainForm.PanelMain.Visible = True
+                    Me.Close()
                 Else
                     MessageBox.Show("Username or Password is incorrect.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -36,7 +37,7 @@ Public Class LoginForm
         BackgroundCheckDBCon.RunWorkerAsync()
     End Sub
 
-    Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
+    Private Sub ButtonClose_Click(sender As Object, e As EventArgs)
         Dim confirmation = MessageBox.Show("Exit System?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If confirmation = DialogResult.Yes Then
             Environment.Exit(0)
@@ -53,7 +54,6 @@ Public Class LoginForm
         Catch ex As Exception
             e.Cancel = True
         End Try
-
     End Sub
 
     Private Sub BackgroundCheckDBCon_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundCheckDBCon.RunWorkerCompleted

@@ -84,13 +84,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formMain.Designer.vb">
-      <DependentUpon>formMain.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\DoctorAddEditForm.Designer.vb">
       <DependentUpon>DoctorAddEditForm.vb</DependentUpon>
     </Compile>
@@ -101,6 +94,12 @@
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PatientAddEditForm.Designer.vb">
+      <DependentUpon>PatientAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PatientAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\PatientMaritalStatusAddEditForm.Designer.vb">
@@ -119,6 +118,12 @@
       <DependentUpon>UserAddEditForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\UserAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -174,14 +179,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="formMain.resx">
-      <DependentUpon>formMain.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\DoctorAddEditForm.resx">
       <DependentUpon>DoctorAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PatientAddEditForm.resx">
+      <DependentUpon>PatientAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PatientMaritalStatusAddEditForm.resx">
       <DependentUpon>PatientMaritalStatusAddEditForm.vb</DependentUpon>
@@ -191,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UserAddEditForm.resx">
       <DependentUpon>UserAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

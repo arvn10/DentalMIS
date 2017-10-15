@@ -28,7 +28,6 @@ Partial Class LoginForm
         Me.PanelLogin = New System.Windows.Forms.Panel()
         Me.LabelConnecting = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.buttonLogin = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -51,7 +50,6 @@ Partial Class LoginForm
         Me.BackgroundCheckDBCon = New System.ComponentModel.BackgroundWorker()
         Me.FormAnimator = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.PanelLogin.SuspendLayout()
-        CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ButtonSettingDisconnected, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ButtonSettingConnected, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDatabase.SuspendLayout()
@@ -62,7 +60,6 @@ Partial Class LoginForm
         Me.PanelLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.PanelLogin.Controls.Add(Me.LabelConnecting)
         Me.PanelLogin.Controls.Add(Me.Label3)
-        Me.PanelLogin.Controls.Add(Me.ButtonClose)
         Me.PanelLogin.Controls.Add(Me.Label2)
         Me.PanelLogin.Controls.Add(Me.Label1)
         Me.PanelLogin.Controls.Add(Me.buttonLogin)
@@ -74,7 +71,7 @@ Partial Class LoginForm
         Me.PanelLogin.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelLogin.ForeColor = System.Drawing.Color.White
         Me.PanelLogin.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelLogin.Name = "PanelLogin"
         Me.PanelLogin.Size = New System.Drawing.Size(353, 428)
         Me.PanelLogin.TabIndex = 0
@@ -102,24 +99,6 @@ Partial Class LoginForm
         Me.Label3.Size = New System.Drawing.Size(239, 26)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "OLAES DENTAL CLINIC"
-        '
-        'ButtonClose
-        '
-        Me.ButtonClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonClose.BackColor = System.Drawing.Color.Transparent
-        Me.ButtonClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FormAnimator.SetDecoration(Me.ButtonClose, BunifuAnimatorNS.DecorationType.None)
-        Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
-        Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(301, 10)
-        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(42, 34)
-        Me.ButtonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ButtonClose.TabIndex = 5
-        Me.ButtonClose.TabStop = False
-        Me.ButtonClose.Zoom = 10
         '
         'Label2
         '
@@ -169,7 +148,7 @@ Partial Class LoginForm
         Me.buttonLogin.IconZoom = 90.0R
         Me.buttonLogin.IsTab = False
         Me.buttonLogin.Location = New System.Drawing.Point(10, 315)
-        Me.buttonLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buttonLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonLogin.Name = "buttonLogin"
         Me.buttonLogin.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.buttonLogin.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -235,8 +214,8 @@ Partial Class LoginForm
         Me.ButtonSettingDisconnected.Enabled = False
         Me.ButtonSettingDisconnected.Image = CType(resources.GetObject("ButtonSettingDisconnected.Image"), System.Drawing.Image)
         Me.ButtonSettingDisconnected.ImageActive = Nothing
-        Me.ButtonSettingDisconnected.Location = New System.Drawing.Point(254, 10)
-        Me.ButtonSettingDisconnected.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonSettingDisconnected.Location = New System.Drawing.Point(302, 10)
+        Me.ButtonSettingDisconnected.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonSettingDisconnected.Name = "ButtonSettingDisconnected"
         Me.ButtonSettingDisconnected.Size = New System.Drawing.Size(42, 34)
         Me.ButtonSettingDisconnected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -253,8 +232,8 @@ Partial Class LoginForm
         Me.FormAnimator.SetDecoration(Me.ButtonSettingConnected, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonSettingConnected.Image = CType(resources.GetObject("ButtonSettingConnected.Image"), System.Drawing.Image)
         Me.ButtonSettingConnected.ImageActive = Nothing
-        Me.ButtonSettingConnected.Location = New System.Drawing.Point(254, 10)
-        Me.ButtonSettingConnected.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonSettingConnected.Location = New System.Drawing.Point(302, 10)
+        Me.ButtonSettingConnected.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonSettingConnected.Name = "ButtonSettingConnected"
         Me.ButtonSettingConnected.Size = New System.Drawing.Size(42, 34)
         Me.ButtonSettingConnected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -291,7 +270,7 @@ Partial Class LoginForm
         Me.PanelDatabase.Dock = System.Windows.Forms.DockStyle.Right
         Me.PanelDatabase.ForeColor = System.Drawing.Color.White
         Me.PanelDatabase.Location = New System.Drawing.Point(105, 0)
-        Me.PanelDatabase.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelDatabase.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelDatabase.Name = "PanelDatabase"
         Me.PanelDatabase.Size = New System.Drawing.Size(249, 428)
         Me.PanelDatabase.TabIndex = 2
@@ -319,7 +298,7 @@ Partial Class LoginForm
         Me.buttonSave.IconZoom = 90.0R
         Me.buttonSave.IsTab = False
         Me.buttonSave.Location = New System.Drawing.Point(6, 306)
-        Me.buttonSave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buttonSave.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
@@ -494,13 +473,12 @@ Partial Class LoginForm
         Me.Controls.Add(Me.PanelDatabase)
         Me.FormAnimator.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.PanelLogin.ResumeLayout(False)
         Me.PanelLogin.PerformLayout()
-        CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ButtonSettingDisconnected, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ButtonSettingConnected, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDatabase.ResumeLayout(False)
@@ -517,7 +495,6 @@ Partial Class LoginForm
     Friend WithEvents buttonLogin As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ButtonClose As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents textPassword As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents Label3 As Label
     Friend WithEvents ButtonSettingConnected As Bunifu.Framework.UI.BunifuImageButton

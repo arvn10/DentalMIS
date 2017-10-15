@@ -25,13 +25,13 @@ Public Class UserRepository
                                   param.Status,
                                   param.CreatedBy)
 
-        Dim id As Long = ExecuteDataset(procedure).Rows(0)(0)
+        Dim id As Long = Convert.ToInt64(ExecuteDataset(procedure).Rows(0)(0))
 
         Return id
     End Function
 
     Public Function UserEdit(param As UserEdit) As Long
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_create`({0}, {1}, '{2}', '{3}', '{4}', '{5}', {5}, '{6}')",
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_Edit`({0}, {1}, '{2}', '{3}', '{4}', '{5}', {6}, '{7}')",
                                   param.ID,
                                   param.UserTypeID,
                                   param.Username,
@@ -41,7 +41,7 @@ Public Class UserRepository
                                   param.Status,
                                   param.UpdatedBy)
 
-        Dim id As Long = ExecuteDataset(procedure).Rows(0)(0)
+        Dim id As Long = Convert.ToInt64(ExecuteDataset(procedure).Rows(0)(0))
 
         Return id
     End Function

@@ -32,15 +32,18 @@ Public Class UserControl
     End Sub
     Private Sub TextSearch_TextChanged(sender As Object, e As EventArgs) Handles TextSearch.TextChanged
         Try
-            LoadData(TextSearch.Text)
+            If TextSearch.Text <> String.Empty Then
+                LoadData(TextSearch.Text)
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
+        DataGrid.DataSource = Nothing
         Dim form As New UserAddEditForm
-        form.activeUser = formMain.LabelMenu.Text
+        form.activeUser = MainForm.LabelMenu.Text
         form.HeaderLabel.Text = "User - New"
         form.ShowDialog()
     End Sub
@@ -49,7 +52,7 @@ Public Class UserControl
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New UserAddEditForm
-                form.activeUser = formMain.LabelMenu.Text
+                form.activeUser = MainForm.LabelMenu.Text
                 form.userID = DataGrid.CurrentRow.Cells(0).Value
                 form.HeaderLabel.Text = "User - Edit"
                 form.ShowDialog()
@@ -60,5 +63,9 @@ Public Class UserControl
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
+        LoadData("")
     End Sub
 End Class

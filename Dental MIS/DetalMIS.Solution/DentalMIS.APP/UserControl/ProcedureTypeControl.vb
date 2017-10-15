@@ -35,20 +35,19 @@ Public Class ProcedureTypeControl
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
-        Dim form As New ProcedureTypeAddEditForm
-        form.activeUser = formMain.LabelMenu.Text
-        form.HeaderLabel.Text = "Procedure Type - New"
-        form.ShowDialog()
+        DataGrid.DataSource = Nothing
+        ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+        ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
+        ProcedureTypeAddEditForm.ShowDialog()
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
             If (DataGrid.Rows.Count > 0) Then
-                Dim form As New ProcedureTypeAddEditForm
-                form.activeUser = formMain.LabelMenu.Text
-                form.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
-                form.HeaderLabel.Text = "Procedure Type - Edit"
-                form.ShowDialog()
+                ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+                ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
+                ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
+                ProcedureTypeAddEditForm.ShowDialog()
                 DataGrid.DataSource = Nothing
             Else
                 MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -61,7 +60,9 @@ Public Class ProcedureTypeControl
 
     Private Sub TextSearch_TextChanged(sender As Object, e As EventArgs) Handles TextSearch.TextChanged
         Try
-            LoadData(TextSearch.Text)
+            If TextSearch.Text <> String.Empty Then
+                LoadData(TextSearch.Text)
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -70,5 +71,11 @@ Public Class ProcedureTypeControl
 
     Private Sub buttonRefresh_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
         LoadData("")
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+        ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
+        ProcedureTypeAddEditForm.ShowDialog()
     End Sub
 End Class

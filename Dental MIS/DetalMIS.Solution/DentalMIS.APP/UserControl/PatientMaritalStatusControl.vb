@@ -33,8 +33,9 @@ Public Class PatientMaritalStatusControl
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
+        DataGrid.DataSource = Nothing
         Dim form As New PatientMaritalStatusAddEditForm
-        form.activeUser = formMain.LabelMenu.Text
+        form.activeUser = MainForm.LabelMenu.Text
         form.HeaderLabel.Text = "Patient Marital Status - New"
         form.ShowDialog()
     End Sub
@@ -51,7 +52,7 @@ Public Class PatientMaritalStatusControl
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New PatientMaritalStatusAddEditForm
-                form.activeUser = formMain.LabelMenu.Text
+                form.activeUser = MainForm.LabelMenu.Text
                 form.patientMaritalStatusID = DataGrid.CurrentRow.Cells(0).Value
                 form.HeaderLabel.Text = "Patient Marital Status - Edit"
                 form.ShowDialog()

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class formMain
+Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -14,6 +14,7 @@ Partial Class formMain
         End Try
     End Sub
 
+
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
@@ -23,8 +24,8 @@ Partial Class formMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formMain))
+        Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
@@ -39,8 +40,8 @@ Partial Class formMain
         Me.ButtonMenu = New Bunifu.Framework.UI.BunifuImageButton()
         Me.ButtonDashboard = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.PanelMain = New System.Windows.Forms.Panel()
         Me.PanelAnimator = New BunifuAnimatorNS.BunifuTransition(Me.components)
+        Me.PanelMain = New System.Windows.Forms.Panel()
         Me.PanelHeader.SuspendLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,11 +59,11 @@ Partial Class formMain
         Me.PanelHeader.Controls.Add(Me.ButtonClose)
         Me.PanelAnimator.SetDecoration(Me.PanelHeader, BunifuAnimatorNS.DecorationType.None)
         Me.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelHeader.Location = New System.Drawing.Point(0, 0)
-        Me.PanelHeader.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PanelHeader.Location = New System.Drawing.Point(242, 0)
+        Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelHeader.Name = "PanelHeader"
-        Me.PanelHeader.Size = New System.Drawing.Size(1571, 57)
-        Me.PanelHeader.TabIndex = 0
+        Me.PanelHeader.Size = New System.Drawing.Size(936, 46)
+        Me.PanelHeader.TabIndex = 3
         '
         'HeaderLabel
         '
@@ -70,9 +71,10 @@ Partial Class formMain
         Me.PanelAnimator.SetDecoration(Me.HeaderLabel, BunifuAnimatorNS.DecorationType.None)
         Me.HeaderLabel.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HeaderLabel.ForeColor = System.Drawing.Color.White
-        Me.HeaderLabel.Location = New System.Drawing.Point(65, 12)
+        Me.HeaderLabel.Location = New System.Drawing.Point(49, 10)
+        Me.HeaderLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(254, 32)
+        Me.HeaderLabel.Size = New System.Drawing.Size(202, 25)
         Me.HeaderLabel.TabIndex = 1
         Me.HeaderLabel.Text = "OLAES DENTAL CLINIC"
         '
@@ -85,10 +87,10 @@ Partial Class formMain
         Me.PanelAnimator.SetDecoration(Me.BunifuImageButton1, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(1441, 9)
-        Me.BunifuImageButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(839, 7)
+        Me.BunifuImageButton1.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(56, 42)
+        Me.BunifuImageButton1.Size = New System.Drawing.Size(42, 34)
         Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.BunifuImageButton1.TabIndex = 4
         Me.BunifuImageButton1.TabStop = False
@@ -99,10 +101,10 @@ Partial Class formMain
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PanelAnimator.SetDecoration(Me.PictureBox1, BunifuAnimatorNS.DecorationType.None)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 7)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(47, 48)
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 39)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -116,10 +118,10 @@ Partial Class formMain
         Me.PanelAnimator.SetDecoration(Me.ButtonClose, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(1503, 9)
-        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonClose.Location = New System.Drawing.Point(885, 7)
+        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(56, 42)
+        Me.ButtonClose.Size = New System.Drawing.Size(42, 34)
         Me.ButtonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ButtonClose.TabIndex = 2
         Me.ButtonClose.TabStop = False
@@ -143,11 +145,11 @@ Partial Class formMain
         Me.PanelSideMenu.Controls.Add(Me.ButtonDashboard)
         Me.PanelAnimator.SetDecoration(Me.PanelSideMenu, BunifuAnimatorNS.DecorationType.None)
         Me.PanelSideMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelSideMenu.Location = New System.Drawing.Point(0, 57)
-        Me.PanelSideMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PanelSideMenu.Location = New System.Drawing.Point(0, 0)
+        Me.PanelSideMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSideMenu.Name = "PanelSideMenu"
-        Me.PanelSideMenu.Size = New System.Drawing.Size(323, 812)
-        Me.PanelSideMenu.TabIndex = 1
+        Me.PanelSideMenu.Size = New System.Drawing.Size(242, 706)
+        Me.PanelSideMenu.TabIndex = 4
         '
         'buttonLogout
         '
@@ -171,14 +173,14 @@ Partial Class formMain
         Me.buttonLogout.IconVisible = True
         Me.buttonLogout.IconZoom = 70.0R
         Me.buttonLogout.IsTab = False
-        Me.buttonLogout.Location = New System.Drawing.Point(0, 739)
-        Me.buttonLogout.Margin = New System.Windows.Forms.Padding(5)
+        Me.buttonLogout.Location = New System.Drawing.Point(0, 600)
+        Me.buttonLogout.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonLogout.Name = "buttonLogout"
         Me.buttonLogout.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonLogout.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.buttonLogout.OnHoverTextColor = System.Drawing.Color.White
         Me.buttonLogout.selected = False
-        Me.buttonLogout.Size = New System.Drawing.Size(323, 59)
+        Me.buttonLogout.Size = New System.Drawing.Size(242, 48)
         Me.buttonLogout.TabIndex = 8
         Me.buttonLogout.Text = "                         Logout"
         Me.buttonLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -207,14 +209,14 @@ Partial Class formMain
         Me.ButtonConfiguration.IconVisible = True
         Me.ButtonConfiguration.IconZoom = 70.0R
         Me.ButtonConfiguration.IsTab = False
-        Me.ButtonConfiguration.Location = New System.Drawing.Point(0, 206)
-        Me.ButtonConfiguration.Margin = New System.Windows.Forms.Padding(5)
+        Me.ButtonConfiguration.Location = New System.Drawing.Point(0, 167)
+        Me.ButtonConfiguration.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonConfiguration.Name = "ButtonConfiguration"
         Me.ButtonConfiguration.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonConfiguration.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonConfiguration.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonConfiguration.selected = False
-        Me.ButtonConfiguration.Size = New System.Drawing.Size(323, 59)
+        Me.ButtonConfiguration.Size = New System.Drawing.Size(242, 48)
         Me.ButtonConfiguration.TabIndex = 7
         Me.ButtonConfiguration.Text = "                         Configuration"
         Me.ButtonConfiguration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -243,14 +245,14 @@ Partial Class formMain
         Me.ButtonPatient.IconVisible = True
         Me.ButtonPatient.IconZoom = 70.0R
         Me.ButtonPatient.IsTab = False
-        Me.ButtonPatient.Location = New System.Drawing.Point(0, 139)
-        Me.ButtonPatient.Margin = New System.Windows.Forms.Padding(5)
+        Me.ButtonPatient.Location = New System.Drawing.Point(0, 113)
+        Me.ButtonPatient.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonPatient.Name = "ButtonPatient"
         Me.ButtonPatient.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonPatient.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonPatient.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonPatient.selected = False
-        Me.ButtonPatient.Size = New System.Drawing.Size(323, 59)
+        Me.ButtonPatient.Size = New System.Drawing.Size(242, 48)
         Me.ButtonPatient.TabIndex = 5
         Me.ButtonPatient.Text = "                         Patient"
         Me.ButtonPatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -263,9 +265,10 @@ Partial Class formMain
         Me.PanelAnimator.SetDecoration(Me.LabelMenu, BunifuAnimatorNS.DecorationType.None)
         Me.LabelMenu.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelMenu.ForeColor = System.Drawing.Color.White
-        Me.LabelMenu.Location = New System.Drawing.Point(12, 16)
+        Me.LabelMenu.Location = New System.Drawing.Point(9, 13)
+        Me.LabelMenu.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelMenu.Name = "LabelMenu"
-        Me.LabelMenu.Size = New System.Drawing.Size(139, 32)
+        Me.LabelMenu.Size = New System.Drawing.Size(109, 25)
         Me.LabelMenu.TabIndex = 4
         Me.LabelMenu.Text = "Main Menu"
         '
@@ -278,10 +281,10 @@ Partial Class formMain
         Me.PanelAnimator.SetDecoration(Me.ButtonMenu, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonMenu.Image = CType(resources.GetObject("ButtonMenu.Image"), System.Drawing.Image)
         Me.ButtonMenu.ImageActive = Nothing
-        Me.ButtonMenu.Location = New System.Drawing.Point(250, 6)
-        Me.ButtonMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonMenu.Location = New System.Drawing.Point(189, 5)
+        Me.ButtonMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(60, 55)
+        Me.ButtonMenu.Size = New System.Drawing.Size(44, 36)
         Me.ButtonMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ButtonMenu.TabIndex = 3
         Me.ButtonMenu.TabStop = False
@@ -309,14 +312,14 @@ Partial Class formMain
         Me.ButtonDashboard.IconVisible = True
         Me.ButtonDashboard.IconZoom = 70.0R
         Me.ButtonDashboard.IsTab = False
-        Me.ButtonDashboard.Location = New System.Drawing.Point(0, 71)
-        Me.ButtonDashboard.Margin = New System.Windows.Forms.Padding(5)
+        Me.ButtonDashboard.Location = New System.Drawing.Point(0, 58)
+        Me.ButtonDashboard.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonDashboard.Name = "ButtonDashboard"
         Me.ButtonDashboard.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonDashboard.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonDashboard.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonDashboard.selected = True
-        Me.ButtonDashboard.Size = New System.Drawing.Size(323, 59)
+        Me.ButtonDashboard.Size = New System.Drawing.Size(242, 48)
         Me.ButtonDashboard.TabIndex = 6
         Me.ButtonDashboard.Text = "                         Dashboard"
         Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -328,52 +331,54 @@ Partial Class formMain
         Me.BunifuElipse.ElipseRadius = 5
         Me.BunifuElipse.TargetControl = Me
         '
+        'PanelAnimator
+        '
+        Me.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
+        Me.PanelAnimator.Cursor = Nothing
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.RotateCoeff = 0!
+        Animation3.RotateLimit = 0!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.PanelAnimator.DefaultAnimation = Animation3
+        '
         'PanelMain
         '
         Me.PanelMain.BackColor = System.Drawing.Color.Gray
         Me.PanelAnimator.SetDecoration(Me.PanelMain, BunifuAnimatorNS.DecorationType.None)
         Me.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelMain.Location = New System.Drawing.Point(323, 57)
-        Me.PanelMain.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PanelMain.Location = New System.Drawing.Point(242, 46)
+        Me.PanelMain.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelMain.Name = "PanelMain"
-        Me.PanelMain.Size = New System.Drawing.Size(1248, 812)
-        Me.PanelMain.TabIndex = 2
+        Me.PanelMain.Size = New System.Drawing.Size(936, 660)
+        Me.PanelMain.TabIndex = 8
+        Me.PanelMain.Visible = False
         '
-        'PanelAnimator
+        'MainForm
         '
-        Me.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
-        Me.PanelAnimator.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.PanelAnimator.DefaultAnimation = Animation2
-        '
-        'formMain
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1571, 869)
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.ClientSize = New System.Drawing.Size(1178, 706)
         Me.Controls.Add(Me.PanelMain)
-        Me.Controls.Add(Me.PanelSideMenu)
         Me.Controls.Add(Me.PanelHeader)
+        Me.Controls.Add(Me.PanelSideMenu)
         Me.PanelAnimator.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "formMain"
+        Me.IsMdiContainer = True
+        Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "MainForm"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -387,19 +392,19 @@ Partial Class formMain
     End Sub
 
     Friend WithEvents PanelHeader As Panel
-    Friend WithEvents BunifuDragControl As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents HeaderLabel As Label
-    Friend WithEvents ButtonClose As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents PanelSideMenu As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BunifuElipse As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents ButtonMenu As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents LabelMenu As Label
-    Friend WithEvents ButtonPatient As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ButtonConfiguration As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ButtonDashboard As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents PanelMain As Panel
     Friend WithEvents PanelAnimator As BunifuAnimatorNS.BunifuTransition
+    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ButtonClose As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents BunifuDragControl As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents PanelSideMenu As Panel
     Friend WithEvents buttonLogout As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonConfiguration As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonPatient As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents LabelMenu As Label
+    Friend WithEvents ButtonMenu As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents ButtonDashboard As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuElipse As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents PanelMain As Panel
 End Class

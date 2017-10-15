@@ -1,5 +1,7 @@
-﻿Public Class formMain
+﻿Imports System.Windows.Forms
 
+Public Class MainForm
+    Public isLogin As Boolean = False
     Private Sub ClearControls()
         For Each control As Control In PanelMain.Controls
             PanelMain.Controls.Remove(control)
@@ -19,7 +21,6 @@
 
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
         If PanelSideMenu.Width = 55 Then
-
             PanelSideMenu.Visible = False
             PanelSideMenu.Width = 242
             LabelMenu.Visible = True
@@ -32,20 +33,12 @@
         End If
     End Sub
 
-    Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim dashboardControl As New DashboardControl
-        dashboardControl.Dock = DockStyle.Fill
-        PanelMain.Controls.Add(dashboardControl)
-    End Sub
-
     Private Sub ButtonPatient_Click(sender As Object, e As EventArgs) Handles ButtonPatient.Click
         ClearControls()
         Dim patientControl As New PatientControl
         patientControl.Dock = DockStyle.Fill
         PanelMain.Controls.Add(patientControl)
     End Sub
-
-
 
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         ClearControls()
@@ -62,9 +55,21 @@
     End Sub
 
     Private Sub buttonLogout_Click(sender As Object, e As EventArgs) Handles buttonLogout.Click
-        Dim confirm = MessageBox.Show("Logout Account?", "Dental MIS", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim confirm = MessageBox.Show("Logout Account?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If confirm = DialogResult.Yes Then
-            Me.Hide()
+            isLogin = False
+            PanelSideMenu.Visible = False
+            PanelMain.Visible = False
+            LoginForm.MdiParent = Me
+            LoginForm.Show()
+        End If
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If (Not isLogin) Then
+            PanelSideMenu.Visible = False
+            PanelMain.Visible = False
+            LoginForm.MdiParent = Me
             LoginForm.Show()
         End If
     End Sub
