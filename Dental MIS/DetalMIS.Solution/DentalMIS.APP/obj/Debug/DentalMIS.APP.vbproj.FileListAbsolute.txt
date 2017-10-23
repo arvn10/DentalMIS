@@ -172,3 +172,4 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\DentalMIS.DAL.dll.config
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.MainForm.resources
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.PatientAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.DatabaseConfigForm.resources

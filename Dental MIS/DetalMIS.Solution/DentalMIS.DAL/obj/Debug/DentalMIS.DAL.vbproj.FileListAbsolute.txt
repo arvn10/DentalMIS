@@ -50,4 +50,3 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.pdb
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.vbproj.CoreCompileInputs.cache
-C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.vbprojResolveAssemblyReference.cache
