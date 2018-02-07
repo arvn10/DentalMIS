@@ -24,7 +24,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
@@ -33,6 +33,10 @@ Partial Class MainForm
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuDragControl = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.PanelSideMenu = New System.Windows.Forms.Panel()
+        Me.ButtonPayment = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ButtonMyAccount = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ButtonSchedule = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ButtonReport = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttonLogout = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ButtonConfiguration = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ButtonPatient = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -59,22 +63,22 @@ Partial Class MainForm
         Me.PanelHeader.Controls.Add(Me.ButtonClose)
         Me.PanelAnimator.SetDecoration(Me.PanelHeader, BunifuAnimatorNS.DecorationType.None)
         Me.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelHeader.Location = New System.Drawing.Point(242, 0)
+        Me.PanelHeader.Location = New System.Drawing.Point(182, 0)
         Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelHeader.Name = "PanelHeader"
-        Me.PanelHeader.Size = New System.Drawing.Size(936, 46)
+        Me.PanelHeader.Size = New System.Drawing.Size(996, 46)
         Me.PanelHeader.TabIndex = 3
         '
         'HeaderLabel
         '
         Me.HeaderLabel.AutoSize = True
         Me.PanelAnimator.SetDecoration(Me.HeaderLabel, BunifuAnimatorNS.DecorationType.None)
-        Me.HeaderLabel.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HeaderLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HeaderLabel.ForeColor = System.Drawing.Color.White
         Me.HeaderLabel.Location = New System.Drawing.Point(49, 10)
         Me.HeaderLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(202, 25)
+        Me.HeaderLabel.Size = New System.Drawing.Size(276, 29)
         Me.HeaderLabel.TabIndex = 1
         Me.HeaderLabel.Text = "OLAES DENTAL CLINIC"
         '
@@ -87,7 +91,7 @@ Partial Class MainForm
         Me.PanelAnimator.SetDecoration(Me.BunifuImageButton1, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(839, 7)
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(899, 7)
         Me.BunifuImageButton1.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton1.Name = "BunifuImageButton1"
         Me.BunifuImageButton1.Size = New System.Drawing.Size(42, 34)
@@ -118,7 +122,7 @@ Partial Class MainForm
         Me.PanelAnimator.SetDecoration(Me.ButtonClose, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(885, 7)
+        Me.ButtonClose.Location = New System.Drawing.Point(945, 7)
         Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(42, 34)
@@ -137,6 +141,10 @@ Partial Class MainForm
         'PanelSideMenu
         '
         Me.PanelSideMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.PanelSideMenu.Controls.Add(Me.ButtonPayment)
+        Me.PanelSideMenu.Controls.Add(Me.ButtonMyAccount)
+        Me.PanelSideMenu.Controls.Add(Me.ButtonSchedule)
+        Me.PanelSideMenu.Controls.Add(Me.ButtonReport)
         Me.PanelSideMenu.Controls.Add(Me.buttonLogout)
         Me.PanelSideMenu.Controls.Add(Me.ButtonConfiguration)
         Me.PanelSideMenu.Controls.Add(Me.ButtonPatient)
@@ -148,16 +156,162 @@ Partial Class MainForm
         Me.PanelSideMenu.Location = New System.Drawing.Point(0, 0)
         Me.PanelSideMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelSideMenu.Name = "PanelSideMenu"
-        Me.PanelSideMenu.Size = New System.Drawing.Size(242, 706)
+        Me.PanelSideMenu.Size = New System.Drawing.Size(182, 706)
         Me.PanelSideMenu.TabIndex = 4
+        '
+        'ButtonPayment
+        '
+        Me.ButtonPayment.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonPayment.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonPayment.BorderRadius = 0
+        Me.ButtonPayment.ButtonText = "     Payment"
+        Me.ButtonPayment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PanelAnimator.SetDecoration(Me.ButtonPayment, BunifuAnimatorNS.DecorationType.None)
+        Me.ButtonPayment.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonPayment.Iconcolor = System.Drawing.Color.Transparent
+        Me.ButtonPayment.Iconimage = CType(resources.GetObject("ButtonPayment.Iconimage"), System.Drawing.Image)
+        Me.ButtonPayment.Iconimage_right = Nothing
+        Me.ButtonPayment.Iconimage_right_Selected = Nothing
+        Me.ButtonPayment.Iconimage_Selected = Nothing
+        Me.ButtonPayment.IconMarginLeft = 0
+        Me.ButtonPayment.IconMarginRight = 0
+        Me.ButtonPayment.IconRightVisible = True
+        Me.ButtonPayment.IconRightZoom = 0R
+        Me.ButtonPayment.IconVisible = True
+        Me.ButtonPayment.IconZoom = 70.0R
+        Me.ButtonPayment.IsTab = False
+        Me.ButtonPayment.Location = New System.Drawing.Point(0, 169)
+        Me.ButtonPayment.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonPayment.Name = "ButtonPayment"
+        Me.ButtonPayment.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonPayment.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonPayment.OnHoverTextColor = System.Drawing.Color.White
+        Me.ButtonPayment.selected = False
+        Me.ButtonPayment.Size = New System.Drawing.Size(182, 48)
+        Me.ButtonPayment.TabIndex = 12
+        Me.ButtonPayment.Text = "     Payment"
+        Me.ButtonPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonPayment.Textcolor = System.Drawing.Color.White
+        Me.ButtonPayment.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'ButtonMyAccount
+        '
+        Me.ButtonMyAccount.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonMyAccount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonMyAccount.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonMyAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonMyAccount.BorderRadius = 0
+        Me.ButtonMyAccount.ButtonText = "     My Account"
+        Me.ButtonMyAccount.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PanelAnimator.SetDecoration(Me.ButtonMyAccount, BunifuAnimatorNS.DecorationType.None)
+        Me.ButtonMyAccount.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonMyAccount.Iconcolor = System.Drawing.Color.Transparent
+        Me.ButtonMyAccount.Iconimage = CType(resources.GetObject("ButtonMyAccount.Iconimage"), System.Drawing.Image)
+        Me.ButtonMyAccount.Iconimage_right = Nothing
+        Me.ButtonMyAccount.Iconimage_right_Selected = Nothing
+        Me.ButtonMyAccount.Iconimage_Selected = Nothing
+        Me.ButtonMyAccount.IconMarginLeft = 0
+        Me.ButtonMyAccount.IconMarginRight = 0
+        Me.ButtonMyAccount.IconRightVisible = True
+        Me.ButtonMyAccount.IconRightZoom = 0R
+        Me.ButtonMyAccount.IconVisible = True
+        Me.ButtonMyAccount.IconZoom = 70.0R
+        Me.ButtonMyAccount.IsTab = False
+        Me.ButtonMyAccount.Location = New System.Drawing.Point(0, 589)
+        Me.ButtonMyAccount.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonMyAccount.Name = "ButtonMyAccount"
+        Me.ButtonMyAccount.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonMyAccount.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonMyAccount.OnHoverTextColor = System.Drawing.Color.White
+        Me.ButtonMyAccount.selected = False
+        Me.ButtonMyAccount.Size = New System.Drawing.Size(182, 48)
+        Me.ButtonMyAccount.TabIndex = 11
+        Me.ButtonMyAccount.Text = "     My Account"
+        Me.ButtonMyAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonMyAccount.Textcolor = System.Drawing.Color.White
+        Me.ButtonMyAccount.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'ButtonSchedule
+        '
+        Me.ButtonSchedule.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonSchedule.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonSchedule.BorderRadius = 0
+        Me.ButtonSchedule.ButtonText = "     Schedule"
+        Me.ButtonSchedule.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PanelAnimator.SetDecoration(Me.ButtonSchedule, BunifuAnimatorNS.DecorationType.None)
+        Me.ButtonSchedule.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonSchedule.Iconcolor = System.Drawing.Color.Transparent
+        Me.ButtonSchedule.Iconimage = CType(resources.GetObject("ButtonSchedule.Iconimage"), System.Drawing.Image)
+        Me.ButtonSchedule.Iconimage_right = Nothing
+        Me.ButtonSchedule.Iconimage_right_Selected = Nothing
+        Me.ButtonSchedule.Iconimage_Selected = Nothing
+        Me.ButtonSchedule.IconMarginLeft = 0
+        Me.ButtonSchedule.IconMarginRight = 0
+        Me.ButtonSchedule.IconRightVisible = True
+        Me.ButtonSchedule.IconRightZoom = 0R
+        Me.ButtonSchedule.IconVisible = True
+        Me.ButtonSchedule.IconZoom = 70.0R
+        Me.ButtonSchedule.IsTab = False
+        Me.ButtonSchedule.Location = New System.Drawing.Point(0, 225)
+        Me.ButtonSchedule.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonSchedule.Name = "ButtonSchedule"
+        Me.ButtonSchedule.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonSchedule.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonSchedule.OnHoverTextColor = System.Drawing.Color.White
+        Me.ButtonSchedule.selected = False
+        Me.ButtonSchedule.Size = New System.Drawing.Size(182, 48)
+        Me.ButtonSchedule.TabIndex = 10
+        Me.ButtonSchedule.Text = "     Schedule"
+        Me.ButtonSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonSchedule.Textcolor = System.Drawing.Color.White
+        Me.ButtonSchedule.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'ButtonReport
+        '
+        Me.ButtonReport.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonReport.BorderRadius = 0
+        Me.ButtonReport.ButtonText = "     Report"
+        Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PanelAnimator.SetDecoration(Me.ButtonReport, BunifuAnimatorNS.DecorationType.None)
+        Me.ButtonReport.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonReport.Iconcolor = System.Drawing.Color.Transparent
+        Me.ButtonReport.Iconimage = CType(resources.GetObject("ButtonReport.Iconimage"), System.Drawing.Image)
+        Me.ButtonReport.Iconimage_right = Nothing
+        Me.ButtonReport.Iconimage_right_Selected = Nothing
+        Me.ButtonReport.Iconimage_Selected = Nothing
+        Me.ButtonReport.IconMarginLeft = 0
+        Me.ButtonReport.IconMarginRight = 0
+        Me.ButtonReport.IconRightVisible = True
+        Me.ButtonReport.IconRightZoom = 0R
+        Me.ButtonReport.IconVisible = True
+        Me.ButtonReport.IconZoom = 70.0R
+        Me.ButtonReport.IsTab = False
+        Me.ButtonReport.Location = New System.Drawing.Point(0, 281)
+        Me.ButtonReport.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonReport.Name = "ButtonReport"
+        Me.ButtonReport.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonReport.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonReport.OnHoverTextColor = System.Drawing.Color.White
+        Me.ButtonReport.selected = False
+        Me.ButtonReport.Size = New System.Drawing.Size(182, 48)
+        Me.ButtonReport.TabIndex = 9
+        Me.ButtonReport.Text = "     Report"
+        Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonReport.Textcolor = System.Drawing.Color.White
+        Me.ButtonReport.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttonLogout
         '
         Me.buttonLogout.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.buttonLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.buttonLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.buttonLogout.BorderRadius = 0
-        Me.buttonLogout.ButtonText = "                         Logout"
+        Me.buttonLogout.ButtonText = "     Logout"
         Me.buttonLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.buttonLogout, BunifuAnimatorNS.DecorationType.None)
         Me.buttonLogout.DisabledColor = System.Drawing.Color.Gray
@@ -173,16 +327,16 @@ Partial Class MainForm
         Me.buttonLogout.IconVisible = True
         Me.buttonLogout.IconZoom = 70.0R
         Me.buttonLogout.IsTab = False
-        Me.buttonLogout.Location = New System.Drawing.Point(0, 600)
+        Me.buttonLogout.Location = New System.Drawing.Point(0, 645)
         Me.buttonLogout.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonLogout.Name = "buttonLogout"
         Me.buttonLogout.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonLogout.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.buttonLogout.OnHoverTextColor = System.Drawing.Color.White
         Me.buttonLogout.selected = False
-        Me.buttonLogout.Size = New System.Drawing.Size(242, 48)
+        Me.buttonLogout.Size = New System.Drawing.Size(182, 48)
         Me.buttonLogout.TabIndex = 8
-        Me.buttonLogout.Text = "                         Logout"
+        Me.buttonLogout.Text = "     Logout"
         Me.buttonLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonLogout.Textcolor = System.Drawing.Color.White
         Me.buttonLogout.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -193,7 +347,7 @@ Partial Class MainForm
         Me.ButtonConfiguration.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonConfiguration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonConfiguration.BorderRadius = 0
-        Me.ButtonConfiguration.ButtonText = "                         Configuration"
+        Me.ButtonConfiguration.ButtonText = "     Configuration"
         Me.ButtonConfiguration.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonConfiguration, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonConfiguration.DisabledColor = System.Drawing.Color.Gray
@@ -209,16 +363,16 @@ Partial Class MainForm
         Me.ButtonConfiguration.IconVisible = True
         Me.ButtonConfiguration.IconZoom = 70.0R
         Me.ButtonConfiguration.IsTab = False
-        Me.ButtonConfiguration.Location = New System.Drawing.Point(0, 167)
+        Me.ButtonConfiguration.Location = New System.Drawing.Point(0, 337)
         Me.ButtonConfiguration.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonConfiguration.Name = "ButtonConfiguration"
         Me.ButtonConfiguration.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonConfiguration.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonConfiguration.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonConfiguration.selected = False
-        Me.ButtonConfiguration.Size = New System.Drawing.Size(242, 48)
+        Me.ButtonConfiguration.Size = New System.Drawing.Size(182, 48)
         Me.ButtonConfiguration.TabIndex = 7
-        Me.ButtonConfiguration.Text = "                         Configuration"
+        Me.ButtonConfiguration.Text = "     Configuration"
         Me.ButtonConfiguration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConfiguration.Textcolor = System.Drawing.Color.White
         Me.ButtonConfiguration.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -229,7 +383,7 @@ Partial Class MainForm
         Me.ButtonPatient.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonPatient.BorderRadius = 0
-        Me.ButtonPatient.ButtonText = "                         Patient"
+        Me.ButtonPatient.ButtonText = "     Patient"
         Me.ButtonPatient.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonPatient, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonPatient.DisabledColor = System.Drawing.Color.Gray
@@ -252,9 +406,9 @@ Partial Class MainForm
         Me.ButtonPatient.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonPatient.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonPatient.selected = False
-        Me.ButtonPatient.Size = New System.Drawing.Size(242, 48)
+        Me.ButtonPatient.Size = New System.Drawing.Size(182, 48)
         Me.ButtonPatient.TabIndex = 5
-        Me.ButtonPatient.Text = "                         Patient"
+        Me.ButtonPatient.Text = "     Patient"
         Me.ButtonPatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonPatient.Textcolor = System.Drawing.Color.White
         Me.ButtonPatient.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -274,14 +428,13 @@ Partial Class MainForm
         '
         'ButtonMenu
         '
-        Me.ButtonMenu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonMenu.BackColor = System.Drawing.Color.Transparent
         Me.ButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonMenu, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonMenu.Image = CType(resources.GetObject("ButtonMenu.Image"), System.Drawing.Image)
         Me.ButtonMenu.ImageActive = Nothing
-        Me.ButtonMenu.Location = New System.Drawing.Point(189, 5)
+        Me.ButtonMenu.Location = New System.Drawing.Point(129, 5)
         Me.ButtonMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonMenu.Name = "ButtonMenu"
         Me.ButtonMenu.Size = New System.Drawing.Size(44, 36)
@@ -296,7 +449,7 @@ Partial Class MainForm
         Me.ButtonDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonDashboard.BorderRadius = 0
-        Me.ButtonDashboard.ButtonText = "                         Dashboard"
+        Me.ButtonDashboard.ButtonText = "     Dashboard"
         Me.ButtonDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonDashboard, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonDashboard.DisabledColor = System.Drawing.Color.Gray
@@ -319,9 +472,9 @@ Partial Class MainForm
         Me.ButtonDashboard.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonDashboard.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonDashboard.selected = True
-        Me.ButtonDashboard.Size = New System.Drawing.Size(242, 48)
+        Me.ButtonDashboard.Size = New System.Drawing.Size(182, 48)
         Me.ButtonDashboard.TabIndex = 6
-        Me.ButtonDashboard.Text = "                         Dashboard"
+        Me.ButtonDashboard.Text = "     Dashboard"
         Me.ButtonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonDashboard.Textcolor = System.Drawing.Color.White
         Me.ButtonDashboard.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -335,32 +488,32 @@ Partial Class MainForm
         '
         Me.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.PanelAnimator.Cursor = Nothing
-        Animation3.AnimateOnlyDifferences = True
-        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
-        Animation3.LeafCoeff = 0!
-        Animation3.MaxTime = 1.0!
-        Animation3.MinTime = 0!
-        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
-        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
-        Animation3.MosaicSize = 0
-        Animation3.Padding = New System.Windows.Forms.Padding(0)
-        Animation3.RotateCoeff = 0!
-        Animation3.RotateLimit = 0!
-        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
-        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
-        Animation3.TimeCoeff = 0!
-        Animation3.TransparencyCoeff = 0!
-        Me.PanelAnimator.DefaultAnimation = Animation3
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.PanelAnimator.DefaultAnimation = Animation2
         '
         'PanelMain
         '
         Me.PanelMain.BackColor = System.Drawing.Color.Gray
         Me.PanelAnimator.SetDecoration(Me.PanelMain, BunifuAnimatorNS.DecorationType.None)
         Me.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelMain.Location = New System.Drawing.Point(242, 46)
+        Me.PanelMain.Location = New System.Drawing.Point(182, 46)
         Me.PanelMain.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelMain.Name = "PanelMain"
-        Me.PanelMain.Size = New System.Drawing.Size(936, 660)
+        Me.PanelMain.Size = New System.Drawing.Size(996, 660)
         Me.PanelMain.TabIndex = 8
         Me.PanelMain.Visible = False
         '
@@ -375,9 +528,10 @@ Partial Class MainForm
         Me.Controls.Add(Me.PanelSideMenu)
         Me.PanelAnimator.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "MainForm"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "MainForm"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
@@ -407,4 +561,8 @@ Partial Class MainForm
     Friend WithEvents ButtonDashboard As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuElipse As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents PanelMain As Panel
+    Friend WithEvents ButtonReport As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonSchedule As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonMyAccount As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonPayment As Bunifu.Framework.UI.BunifuFlatButton
 End Class

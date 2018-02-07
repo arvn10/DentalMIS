@@ -1,4 +1,5 @@
 ﻿Imports DentalMIS.BLL
+Imports DentalMIS.MODEL
 Public Class ProcedureTypeAddEditForm
     Private procedureTypeService As BLL.ProcedureTypeService
     Public procedureTypeID As Integer = 0
@@ -59,6 +60,7 @@ Public Class ProcedureTypeAddEditForm
 
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
+            Dim param As New ProcedureType()
             If HeaderLabel.Text.Contains("New") Then
                 Dim valid As Boolean = True
 
@@ -79,7 +81,7 @@ Public Class ProcedureTypeAddEditForm
                 If Not valid Then
                     MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    Dim param As New ProcedureTypeCreate()
+
                     param.Name = textName.Text
                     param.BasePrice = Convert.ToDouble(textBasePrice.Text)
                     param.PaymentType = comboPaymentType.Text
@@ -97,7 +99,6 @@ Public Class ProcedureTypeAddEditForm
             Else
                 Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If confirm = DialogResult.Yes Then
-                    Dim param As New ProcedureTypeEdit()
 
                     param.ID = procedureTypeID
                     param.Name = textName.Text
@@ -121,8 +122,8 @@ Public Class ProcedureTypeAddEditForm
     Private Sub ProcedureTypeAddEditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             If HeaderLabel.Text.Contains("Edit") Then
-                Dim data As New ProcedureTypeView
-                data = procedureTypeService.ProcedureTypeSearchID(procedureTypeID)(0)
+                Dim data As New ProcedureType
+                data = procedureTypeService.ProcedureTypeSearchID(procedureTypeID)
                 textName.Text = data.Name
                 textBasePrice.Text = data.BasePrice
                 comboPaymentType.Text = data.PaymentType

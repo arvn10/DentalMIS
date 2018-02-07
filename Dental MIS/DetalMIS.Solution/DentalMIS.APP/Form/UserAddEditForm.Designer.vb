@@ -90,43 +90,43 @@ Partial Class UserAddEditForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 160)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 151)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 19)
+        Me.Label5.Size = New System.Drawing.Size(78, 16)
         Me.Label5.TabIndex = 36
         Me.Label5.Text = "User Type :"
         '
         'comboUserType
         '
-        Me.comboUserType.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.comboUserType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboUserType.FormattingEnabled = True
         Me.comboUserType.Items.AddRange(New Object() {""})
-        Me.comboUserType.Location = New System.Drawing.Point(9, 180)
+        Me.comboUserType.Location = New System.Drawing.Point(9, 169)
         Me.comboUserType.Margin = New System.Windows.Forms.Padding(2)
         Me.comboUserType.Name = "comboUserType"
-        Me.comboUserType.Size = New System.Drawing.Size(192, 25)
+        Me.comboUserType.Size = New System.Drawing.Size(192, 24)
         Me.comboUserType.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 68)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 61)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 19)
+        Me.Label1.Size = New System.Drawing.Size(77, 16)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "Username :"
         '
         'textUsername
         '
-        Me.textUsername.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textUsername.Location = New System.Drawing.Point(9, 88)
+        Me.textUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textUsername.Location = New System.Drawing.Point(9, 79)
         Me.textUsername.Margin = New System.Windows.Forms.Padding(2)
         Me.textUsername.Name = "textUsername"
-        Me.textUsername.Size = New System.Drawing.Size(192, 25)
+        Me.textUsername.Size = New System.Drawing.Size(192, 22)
         Me.textUsername.TabIndex = 0
         '
         'BunifuDragControl1
@@ -143,85 +143,85 @@ Partial Class UserAddEditForm
         '
         'textPassword
         '
-        Me.textPassword.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textPassword.Location = New System.Drawing.Point(205, 88)
+        Me.textPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textPassword.Location = New System.Drawing.Point(205, 79)
         Me.textPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.textPassword.Name = "textPassword"
         Me.textPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.textPassword.Size = New System.Drawing.Size(192, 25)
+        Me.textPassword.Size = New System.Drawing.Size(192, 22)
         Me.textPassword.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(202, 68)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(202, 61)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 19)
+        Me.Label2.Size = New System.Drawing.Size(74, 16)
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Password :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(202, 115)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(202, 106)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 19)
+        Me.Label3.Size = New System.Drawing.Size(73, 16)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Lastname :"
         '
         'textLastname
         '
-        Me.textLastname.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textLastname.Location = New System.Drawing.Point(205, 135)
+        Me.textLastname.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textLastname.Location = New System.Drawing.Point(205, 124)
         Me.textLastname.Margin = New System.Windows.Forms.Padding(2)
         Me.textLastname.Name = "textLastname"
-        Me.textLastname.Size = New System.Drawing.Size(192, 25)
+        Me.textLastname.Size = New System.Drawing.Size(192, 22)
         Me.textLastname.TabIndex = 3
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 115)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 106)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(82, 19)
+        Me.Label4.Size = New System.Drawing.Size(73, 16)
         Me.Label4.TabIndex = 39
         Me.Label4.Text = "Firstname :"
         '
         'textFirstname
         '
-        Me.textFirstname.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textFirstname.Location = New System.Drawing.Point(9, 135)
+        Me.textFirstname.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textFirstname.Location = New System.Drawing.Point(9, 124)
         Me.textFirstname.Margin = New System.Windows.Forms.Padding(2)
         Me.textFirstname.Name = "textFirstname"
-        Me.textFirstname.Size = New System.Drawing.Size(192, 25)
+        Me.textFirstname.Size = New System.Drawing.Size(192, 22)
         Me.textFirstname.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(202, 160)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(202, 151)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 19)
+        Me.Label6.Size = New System.Drawing.Size(51, 16)
         Me.Label6.TabIndex = 42
         Me.Label6.Text = "Status :"
         '
         'comboStatus
         '
-        Me.comboStatus.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.comboStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboStatus.FormattingEnabled = True
         Me.comboStatus.Items.AddRange(New Object() {"Active", "Not Active"})
-        Me.comboStatus.Location = New System.Drawing.Point(205, 180)
+        Me.comboStatus.Location = New System.Drawing.Point(205, 169)
         Me.comboStatus.Margin = New System.Windows.Forms.Padding(2)
         Me.comboStatus.Name = "comboStatus"
-        Me.comboStatus.Size = New System.Drawing.Size(192, 25)
+        Me.comboStatus.Size = New System.Drawing.Size(192, 24)
         Me.comboStatus.TabIndex = 5
         '
         'buttonSave
@@ -246,7 +246,7 @@ Partial Class UserAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(312, 210)
+        Me.buttonSave.Location = New System.Drawing.Point(312, 199)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -264,7 +264,7 @@ Partial Class UserAddEditForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(406, 255)
+        Me.ClientSize = New System.Drawing.Size(406, 238)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.comboStatus)

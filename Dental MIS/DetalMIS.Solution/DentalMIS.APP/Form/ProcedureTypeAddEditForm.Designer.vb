@@ -51,7 +51,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.PanelHeader.Controls.Add(Me.ButtonClose)
         Me.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelHeader.Location = New System.Drawing.Point(0, 0)
-        Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelHeader.Name = "PanelHeader"
         Me.PanelHeader.Size = New System.Drawing.Size(406, 46)
         Me.PanelHeader.TabIndex = 2
@@ -77,7 +77,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
         Me.ButtonClose.Location = New System.Drawing.Point(355, 10)
-        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(42, 26)
         Me.ButtonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -88,43 +88,43 @@ Partial Class ProcedureTypeAddEditForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 111)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 103)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(115, 19)
+        Me.Label4.Size = New System.Drawing.Size(102, 16)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Payment Type :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 65)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 61)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 19)
+        Me.Label1.Size = New System.Drawing.Size(51, 16)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Name :"
         '
         'comboPaymentType
         '
-        Me.comboPaymentType.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.comboPaymentType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboPaymentType.FormattingEnabled = True
         Me.comboPaymentType.Items.AddRange(New Object() {"Full Payment", "Installment"})
-        Me.comboPaymentType.Location = New System.Drawing.Point(9, 131)
-        Me.comboPaymentType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comboPaymentType.Location = New System.Drawing.Point(9, 121)
+        Me.comboPaymentType.Margin = New System.Windows.Forms.Padding(2)
         Me.comboPaymentType.Name = "comboPaymentType"
-        Me.comboPaymentType.Size = New System.Drawing.Size(192, 25)
+        Me.comboPaymentType.Size = New System.Drawing.Size(192, 24)
         Me.comboPaymentType.TabIndex = 3
         '
         'textName
         '
-        Me.textName.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textName.Location = New System.Drawing.Point(9, 84)
-        Me.textName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textName.Location = New System.Drawing.Point(9, 79)
+        Me.textName.Margin = New System.Windows.Forms.Padding(2)
         Me.textName.Name = "textName"
-        Me.textName.Size = New System.Drawing.Size(192, 25)
+        Me.textName.Size = New System.Drawing.Size(192, 22)
         Me.textName.TabIndex = 1
         '
         'buttonSave
@@ -149,7 +149,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(311, 206)
+        Me.buttonSave.Location = New System.Drawing.Point(312, 201)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -165,65 +165,65 @@ Partial Class ProcedureTypeAddEditForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(202, 65)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(202, 61)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 19)
+        Me.Label2.Size = New System.Drawing.Size(80, 16)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Base Price :"
         '
         'textBasePrice
         '
-        Me.textBasePrice.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBasePrice.Location = New System.Drawing.Point(205, 84)
-        Me.textBasePrice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBasePrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBasePrice.Location = New System.Drawing.Point(205, 79)
+        Me.textBasePrice.Margin = New System.Windows.Forms.Padding(2)
         Me.textBasePrice.Name = "textBasePrice"
-        Me.textBasePrice.Size = New System.Drawing.Size(192, 25)
+        Me.textBasePrice.Size = New System.Drawing.Size(192, 22)
         Me.textBasePrice.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(202, 111)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(202, 103)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(147, 19)
+        Me.Label3.Size = New System.Drawing.Size(125, 16)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Require Med. Cert. :"
         '
         'comboMedCert
         '
-        Me.comboMedCert.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.comboMedCert.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboMedCert.FormattingEnabled = True
         Me.comboMedCert.Items.AddRange(New Object() {"Yes", "No"})
-        Me.comboMedCert.Location = New System.Drawing.Point(205, 131)
-        Me.comboMedCert.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comboMedCert.Location = New System.Drawing.Point(205, 121)
+        Me.comboMedCert.Margin = New System.Windows.Forms.Padding(2)
         Me.comboMedCert.Name = "comboMedCert"
-        Me.comboMedCert.Size = New System.Drawing.Size(192, 25)
+        Me.comboMedCert.Size = New System.Drawing.Size(192, 24)
         Me.comboMedCert.TabIndex = 4
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 157)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 147)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 19)
+        Me.Label5.Size = New System.Drawing.Size(51, 16)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Status :"
         '
         'comboStatus
         '
-        Me.comboStatus.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.comboStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboStatus.FormattingEnabled = True
         Me.comboStatus.Items.AddRange(New Object() {"Active", "Not Active"})
-        Me.comboStatus.Location = New System.Drawing.Point(9, 176)
-        Me.comboStatus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comboStatus.Location = New System.Drawing.Point(9, 165)
+        Me.comboStatus.Margin = New System.Windows.Forms.Padding(2)
         Me.comboStatus.Name = "comboStatus"
-        Me.comboStatus.Size = New System.Drawing.Size(192, 25)
+        Me.comboStatus.Size = New System.Drawing.Size(192, 24)
         Me.comboStatus.TabIndex = 5
         '
         'BunifuDragControl1
@@ -243,7 +243,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(406, 246)
+        Me.ClientSize = New System.Drawing.Size(406, 241)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.comboStatus)
         Me.Controls.Add(Me.Label3)
@@ -257,10 +257,10 @@ Partial Class ProcedureTypeAddEditForm
         Me.Controls.Add(Me.textName)
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ProcedureTypeAddEditForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ProcedureTypeAddEditForm"
+        Me.Text = "1"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()

@@ -1,4 +1,5 @@
 ﻿Public Class RepositoryTemplate
+    Inherits Database
 #Region "Declaration"
 
 #End Region

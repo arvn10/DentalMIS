@@ -1,76 +1,26 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.DAL
+Imports DentalMIS.MODEL
 Public Class ProcedureService
     Implements IProcedureService
-    Private procedureService As ProcedureRepository
+    Private procedureRepository As ProcedureRepository
     Public Sub New()
-        procedureService = New ProcedureRepository
+        procedureRepository = New ProcedureRepository
     End Sub
 
-    Public Function ProcedureCreate(param As ProcedureCreate) As Long Implements IProcedureService.ProcedureCreate
-        Return procedureService.ProcedureCreate(New DAL.ProcedureCreate With {
-                                                    .PatientID = param.PatientID,
-                                                    .ProcedureTypeID = param.ProcedureTypeID,
-                                                    .DoctorID = param.DoctorID,
-                                                    .Notes = param.Notes,
-                                                    .Prescription = param.Prescription,
-                                                    .ProcedureDate = param.ProcedureDate,
-                                                    .Status = param.Status,
-                                                    .CreatedBy = param.CreatedBy
-                                                })
+    Public Function ProcedureCreate(param As Procedure) As Long Implements IProcedureService.ProcedureCreate
+        Return procedureRepository.ProcedureCreate(param)
     End Function
 
-    Public Function ProcedureEdit(param As ProcedureEdit) As Long Implements IProcedureService.ProcedureEdit
-        Return procedureService.ProcedureEdit(New DAL.ProcedureEdit With {
-                                                    .ID = param.ID,
-                                                    .PatientID = param.PatientID,
-                                                    .ProcedureTypeID = param.ProcedureTypeID,
-                                                    .DoctorID = param.DoctorID,
-                                                    .Notes = param.Notes,
-                                                    .Prescription = param.Prescription,
-                                                    .ProcedureDate = param.ProcedureDate,
-                                                    .Status = param.Status,
-                                                    .UpdatedBy = param.UpdatedBy
-                                                })
+    Public Function ProcedureEdit(param As Procedure) As Long Implements IProcedureService.ProcedureEdit
+        Return procedureRepository.ProcedureEdit(param)
     End Function
 
-    Public Function ProcedureSearchID(id As Long) As List(Of ProcedureView) Implements IProcedureService.ProcedureSearchID
-        Dim data As List(Of ProcedureView) = (From procedure As DAL.ProcedureView In procedureService.ProcedureSearchID(id)
-                                              Select New ProcedureView With {
-                                                  .ID = procedure.ID,
-                                                  .PatientID = procedure.PatientID,
-                                                  .ProcedureTypeID = procedure.ProcedureTypeID,
-                                                  .DoctorID = procedure.DoctorID,
-                                                  .Notes = procedure.Notes,
-                                                  .Prescription = procedure.Prescription,
-                                                  .ProcedureDate = procedure.ProcedureDate,
-                                                  .Status = procedure.Status,
-                                                  .CreatedBy = procedure.CreatedBy,
-                                                  .CreatedDate = procedure.CreatedDate,
-                                                  .UpdatedBy = procedure.UpdatedBy,
-                                                  .UpdatedDate = procedure.UpdatedDate
-                                              }
-                                             )
-        Return data
+    Public Function ProcedureSearchID(id As Long) As Procedure Implements IProcedureService.ProcedureSearchID
+        Return procedureRepository.ProcedureSearchID(id)
     End Function
 
-    Public Function ProcedureSearchLike(searchText As Long) As List(Of ProcedureView) Implements IProcedureService.ProcedureSearchLike
-        Dim data As List(Of ProcedureView) = (From procedure As DAL.ProcedureView In procedureService.ProcedureSearchLike(searchText)
-                                              Select New ProcedureView With {
-                                                  .ID = procedure.ID,
-                                                  .PatientID = procedure.PatientID,
-                                                  .ProcedureTypeID = procedure.ProcedureTypeID,
-                                                  .DoctorID = procedure.DoctorID,
-                                                  .Notes = procedure.Notes,
-                                                  .Prescription = procedure.Prescription,
-                                                  .ProcedureDate = procedure.ProcedureDate,
-                                                  .Status = procedure.Status,
-                                                  .CreatedBy = procedure.CreatedBy,
-                                                  .CreatedDate = procedure.CreatedDate,
-                                                  .UpdatedBy = procedure.UpdatedBy,
-                                                  .UpdatedDate = procedure.UpdatedDate
-                                              }
-                                             )
-        Return data
+    Public Function ProcedureSearchPatientID(patientID As Long, [from] As String, [to] As String) As List(Of Procedure) Implements IProcedureService.ProcedureSearchPatientID
+        Return procedureRepository.ProcedureSearchPatientID(patientID, [from], [to])
     End Function
 End Class

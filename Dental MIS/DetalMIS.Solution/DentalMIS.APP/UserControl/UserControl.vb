@@ -1,4 +1,5 @@
 ﻿Imports DentalMIS.BLL
+Imports DentalMIS.MODEL
 Public Class UserControl
     Private userService As UserService
     Public Sub New()
@@ -10,7 +11,7 @@ Public Class UserControl
         userService = New UserService
     End Sub
     Private Sub LoadData(searchText As String)
-        Dim data As New List(Of UserView)
+        Dim data As New List(Of User)
         data = userService.UserSearchLike(searchText)
         Dim bs As New BindingSource
         bs.DataSource = data
@@ -41,11 +42,14 @@ Public Class UserControl
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
-        DataGrid.DataSource = Nothing
-        Dim form As New UserAddEditForm
-        form.activeUser = MainForm.LabelMenu.Text
-        form.HeaderLabel.Text = "User - New"
-        form.ShowDialog()
+        Try
+            DataGrid.DataSource = Nothing
+            UserAddEditForm.activeUser = MainForm.LabelMenu.Text
+            UserAddEditForm.HeaderLabel.Text = "User - New"
+            UserAddEditForm.ShowDialog()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click

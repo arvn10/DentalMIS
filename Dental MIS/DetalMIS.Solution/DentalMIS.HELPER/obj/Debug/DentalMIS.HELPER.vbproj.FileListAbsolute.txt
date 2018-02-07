@@ -45,10 +45,10 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\MySql.Data.dll
-C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.Resources.resources
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.GenerateResource.Cache
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache

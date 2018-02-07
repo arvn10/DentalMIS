@@ -1,4 +1,4 @@
-﻿
+﻿Imports DentalMIS.MODEL
 Public Class UserTypeRepository
     Inherits Database
 

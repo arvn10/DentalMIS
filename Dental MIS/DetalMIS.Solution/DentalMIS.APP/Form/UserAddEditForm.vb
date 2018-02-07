@@ -1,4 +1,5 @@
 ﻿Imports DentalMIS.BLL
+Imports DentalMIS.MODEL
 Public Class UserAddEditForm
     Private userService As BLL.UserService
     Public userID As Long
@@ -15,6 +16,7 @@ Public Class UserAddEditForm
     End Sub
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
+            Dim param As New User()
             If HeaderLabel.Text.Contains("New") Then
                 Dim valid As Boolean = True
 
@@ -35,7 +37,6 @@ Public Class UserAddEditForm
                 If Not valid Then
                     MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    Dim param As New UserCreate()
                     param.Username = textUsername.Text
                     param.Password = textPassword.Text
                     param.Firstname = textFirstname.Text
@@ -55,7 +56,6 @@ Public Class UserAddEditForm
             Else
                 Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If confirm = DialogResult.Yes Then
-                    Dim param As New UserEdit()
                     param.ID = userID
                     param.Username = textUsername.Text
                     param.Password = textPassword.Text
@@ -96,7 +96,7 @@ Public Class UserAddEditForm
             comboUserType.DataSource = userTypeService.UserTypeGet
             comboUserType.Text = ""
             If HeaderLabel.Text.Contains("Edit") Then
-                Dim data As New UserView
+                Dim data As New User
                 data = userService.UserSearchID(userID).ToList()(0)
                 textUsername.Text = data.Username
                 textPassword.Text = data.Password

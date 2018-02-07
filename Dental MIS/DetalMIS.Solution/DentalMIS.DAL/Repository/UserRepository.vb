@@ -1,7 +1,4 @@
-﻿Imports DentalMIS.DAL.Database
-Imports DentalMIS.DAL.UserCreate
-Imports DentalMIS.DAL.UserEdit
-Imports DentalMIS.DAL.UserView
+﻿Imports DentalMIS.MODEL
 Public Class UserRepository
     Inherits Database
 
@@ -15,7 +12,7 @@ Public Class UserRepository
 #End Region
 
 #Region "Method"
-    Public Function UserCreate(param As UserCreate) As Long
+    Public Function UserCreate(param As User) As Long
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_create`({0}, '{1}', '{2}', '{3}', '{4}', {5}, '{6}')",
                                   param.UserTypeID,
                                   param.Username,
@@ -30,7 +27,7 @@ Public Class UserRepository
         Return id
     End Function
 
-    Public Function UserEdit(param As UserEdit) As Long
+    Public Function UserEdit(param As User) As Long
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_Edit`({0}, {1}, '{2}', '{3}', '{4}', '{5}', {6}, '{7}')",
                                   param.ID,
                                   param.UserTypeID,
@@ -46,14 +43,14 @@ Public Class UserRepository
         Return id
     End Function
 
-    Public Function UserSearchID(ID As Long) As List(Of UserView)
+    Public Function UserSearchID(ID As Long) As List(Of User)
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_search_id`({0})", ID)
         Dim dt As DataTable = ExecuteDataset(procedure)
 
-        Dim datas As New List(Of UserView)
+        Dim datas As New List(Of User)
 
         datas = (From dr As DataRow In dt.Rows
-                 Select New UserView With {
+                 Select New User With {
                     .ID = Convert.ToInt32(dr("id")),
                     .UserTypeID = Convert.ToInt32(dr("user_type_id")),
                     .UserType = dr("user_type").ToString(),
@@ -70,14 +67,14 @@ Public Class UserRepository
         Return datas
     End Function
 
-    Public Function UserSearchStatus(Status As Long) As List(Of UserView)
+    Public Function UserSearchStatus(Status As Long) As List(Of User)
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_search_status`({0})", Status)
         Dim dt As DataTable = ExecuteDataset(procedure)
 
-        Dim datas As New List(Of UserView)
+        Dim datas As New List(Of User)
 
         datas = (From dr As DataRow In dt.Rows
-                 Select New UserView With {
+                 Select New User With {
                     .ID = Convert.ToInt32(dr("id")),
                     .UserTypeID = Convert.ToInt32(dr("user_type_id")),
                     .UserType = dr("user_type").ToString(),
@@ -94,14 +91,14 @@ Public Class UserRepository
         Return datas
     End Function
 
-    Public Function UserSearchLike(SearchText As String) As List(Of UserView)
+    Public Function UserSearchLike(SearchText As String) As List(Of User)
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_search_Like`('{0}')", SearchText)
         Dim dt As DataTable = ExecuteDataset(procedure)
 
-        Dim datas As New List(Of UserView)
+        Dim datas As New List(Of User)
 
         datas = (From dr As DataRow In dt.Rows
-                 Select New UserView With {
+                 Select New User With {
                     .ID = Convert.ToInt32(dr("id")),
                     .UserTypeID = Convert.ToInt32(dr("user_type_id")),
                     .UserType = dr("user_type").ToString(),
@@ -118,14 +115,14 @@ Public Class UserRepository
         Return datas
     End Function
 
-    Public Function UserLogin(Username As String, Password As String) As List(Of UserView)
+    Public Function UserLogin(Username As String, Password As String) As List(Of User)
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_user_login`('{0}', '{1}')", Username, Password)
         Dim dt As DataTable = ExecuteDataset(procedure)
 
-        Dim datas As New List(Of UserView)
+        Dim datas As New List(Of User)
 
         datas = (From dr As DataRow In dt.Rows
-                 Select New UserView With {
+                 Select New User With {
                     .ID = Convert.ToInt32(dr("id")),
                     .UserTypeID = Convert.ToInt32(dr("user_type_id")),
                     .UserType = dr("user_type").ToString(),

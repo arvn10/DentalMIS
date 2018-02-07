@@ -46,7 +46,11 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\bin\Debug\MySql.Data.dll
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.Resources.resources
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.vbproj.GenerateResource.Cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.vbproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.dll
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.pdb
-C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.vbproj.CoreCompileInputs.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\bin\Debug\DentalMIS.MODEL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\bin\Debug\DentalMIS.MODEL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\bin\Debug\DentalMIS.MODEL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.DAL\obj\Debug\DentalMIS.DAL.vbprojResolveAssemblyReference.cache

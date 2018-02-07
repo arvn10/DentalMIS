@@ -1,16 +1,16 @@
-﻿Imports DentalMIS.BLL
-Imports DentalMIS.DAL
+﻿Imports DentalMIS.DAL
+Imports DentalMIS.MODEL
 Public Class PatientMaritalStatusService
     Implements IPatientMaritalStatusService
-    Private patientMaritalStatusService As DAL.PatientMaritalStatusRepository
+    Private patientMaritalStatusService As PatientMaritalStatusRepository
 
     Public Sub New()
-        patientMaritalStatusService = New DAL.PatientMaritalStatusRepository
+        patientMaritalStatusService = New PatientMaritalStatusRepository
     End Sub
 
-    Public Function PatientMaritalStatusCreate(param As PatientMaritalStatusCreate) As Long Implements IPatientMaritalStatusService.PatientMaritalStatusCreate
+    Public Function PatientMaritalStatusCreate(param As PatientMaritalStatus) As Long Implements IPatientMaritalStatusService.PatientMaritalStatusCreate
         Return patientMaritalStatusService.PatientMaritalStatusCreate(
-            New DAL.PatientMaritalStatusCreate With {
+            New PatientMaritalStatus With {
                 .Name = param.Name,
                 .Status = param.Status,
                 .CreatedBy = param.CreatedBy
@@ -18,9 +18,9 @@ Public Class PatientMaritalStatusService
         )
     End Function
 
-    Public Function PatientMaritalStatusEdit(param As PatientMaritalStatusEdit) As Long Implements IPatientMaritalStatusService.PatientMaritalStatusEdit
+    Public Function PatientMaritalStatusEdit(param As PatientMaritalStatus) As Long Implements IPatientMaritalStatusService.PatientMaritalStatusEdit
         Return patientMaritalStatusService.PatientMaritalStatusEdit(
-            New DAL.PatientMaritalStatusEdit With {
+            New PatientMaritalStatus With {
                 .ID = param.ID,
                 .Name = param.Name,
                 .Status = param.Status,
@@ -29,10 +29,10 @@ Public Class PatientMaritalStatusService
         )
     End Function
 
-    Public Function PatientMaritalStatusSearchID(id As Long) As List(Of PatientMaritalStatusView) Implements IPatientMaritalStatusService.PatientMaritalStatusSearchID
-        Dim datas As List(Of PatientMaritalStatusView) =
-            (From data As DAL.PatientMaritalStatusView In patientMaritalStatusService.PatientMaritalStatusSearchID(id)
-             Select New PatientMaritalStatusView With {
+    Public Function PatientMaritalStatusSearchID(id As Long) As List(Of PatientMaritalStatus) Implements IPatientMaritalStatusService.PatientMaritalStatusSearchID
+        Dim datas As List(Of PatientMaritalStatus) =
+            (From data As PatientMaritalStatus In patientMaritalStatusService.PatientMaritalStatusSearchID(id)
+             Select New PatientMaritalStatus With {
                     .ID = data.ID,
                     .Name = data.Name,
                     .Status = data.Status,
@@ -45,10 +45,10 @@ Public Class PatientMaritalStatusService
         Return datas
     End Function
 
-    Public Function PatientMaritalStatusSearchStatus(Status As Integer) As List(Of PatientMaritalStatusView) Implements IPatientMaritalStatusService.PatientMaritalStatusSearchStatus
-        Dim datas As List(Of PatientMaritalStatusView) =
-            (From data As DAL.PatientMaritalStatusView In patientMaritalStatusService.PatientMaritalStatusSearchStatus(Status)
-             Select New PatientMaritalStatusView With {
+    Public Function PatientMaritalStatusSearchStatus(Status As Integer) As List(Of PatientMaritalStatus) Implements IPatientMaritalStatusService.PatientMaritalStatusSearchStatus
+        Dim datas As List(Of PatientMaritalStatus) =
+            (From data As PatientMaritalStatus In patientMaritalStatusService.PatientMaritalStatusSearchStatus(Status)
+             Select New PatientMaritalStatus With {
                     .ID = data.ID,
                     .Name = data.Name,
                     .Status = data.Status,
@@ -61,10 +61,10 @@ Public Class PatientMaritalStatusService
         Return datas
     End Function
 
-    Public Function PatientMaritalStatusSearchLike(SearchValue As String) As List(Of PatientMaritalStatusView) Implements IPatientMaritalStatusService.PatientMaritalStatusSearchLike
-        Dim datas As List(Of PatientMaritalStatusView) =
-            (From data As DAL.PatientMaritalStatusView In patientMaritalStatusService.PatientMaritalStatusSearchLike(SearchValue)
-             Select New PatientMaritalStatusView With {
+    Public Function PatientMaritalStatusSearchLike(SearchValue As String) As List(Of PatientMaritalStatus) Implements IPatientMaritalStatusService.PatientMaritalStatusSearchLike
+        Dim datas As List(Of PatientMaritalStatus) =
+            (From data As PatientMaritalStatus In patientMaritalStatusService.PatientMaritalStatusSearchLike(SearchValue)
+             Select New PatientMaritalStatus With {
                     .ID = data.ID,
                     .Name = data.Name,
                     .Status = data.Status,

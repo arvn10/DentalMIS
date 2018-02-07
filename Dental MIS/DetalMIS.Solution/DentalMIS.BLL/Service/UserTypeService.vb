@@ -1,5 +1,6 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.DAL
+Imports DentalMIS.MODEL
 Public Class UserTypeService
     Implements IUserTypeService
     Private userTypeRepository As UserTypeRepository
@@ -7,24 +8,17 @@ Public Class UserTypeService
         userTypeRepository = New UserTypeRepository()
     End Sub
 
-    Public Function UserTypeCreate(param As UserTypeModel) As Long Implements IUserTypeService.UserTypeCreate
-        Return userTypeRepository.UserTypeCreate(New UserType With {
-                                                    .Name = param.Name,
-                                                    .CreatedBy = param.CreatedBy
-                                                })
+    Public Function UserTypeCreate(param As UserType) As Long Implements IUserTypeService.UserTypeCreate
+        Return userTypeRepository.UserTypeCreate(param)
     End Function
 
-    Public Function UserTypeUpdate(param As UserTypeModel) As Long Implements IUserTypeService.UserTypeUpdate
-        Return userTypeRepository.UserTypeUpdate(New UserType With {
-                                                    .ID = param.ID,
-                                                    .Name = param.Name,
-                                                    .UpdatedBy = param.UpdatedBy
-                                                })
+    Public Function UserTypeUpdate(param As UserType) As Long Implements IUserTypeService.UserTypeUpdate
+        Return userTypeRepository.UserTypeUpdate(param)
     End Function
 
-    Public Function UserTypeGet() As List(Of UserTypeModel) Implements IUserTypeService.UserTypeGet
+    Public Function UserTypeGet() As List(Of UserType) Implements IUserTypeService.UserTypeGet
         Return (From data As UserType In userTypeRepository.UserTypeGet
-                Select New UserTypeModel With {
+                Select New UserType With {
                     .ID = data.ID,
                     .Name = data.Name,
                     .CreatedBy = data.CreatedBy,

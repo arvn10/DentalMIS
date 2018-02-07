@@ -67,23 +67,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\UserType.vb" />
-    <Compile Include="Repository\DoctorRepository.vb" />
+    <Compile Include="Repository\PaymentRepository.vb" />
     <Compile Include="Repository\ProcedureRepository.vb" />
     <Compile Include="Repository\ProcedureToothRepository.vb" />
-    <Compile Include="Model\Doctor.vb" />
-    <Compile Include="Model\Procedure.vb" />
-    <Compile Include="Model\ProcedureTooth.vb" />
     <Compile Include="RepositoryTemplate.vb" />
-    <Compile Include="Repository\PatientMaritalStatusRepository.vb" />
     <Compile Include="Repository\PatientReporsitory.vb" />
     <Compile Include="Repository\ProcedureTypeRepository.vb" />
+    <Compile Include="Repository\ToothRepository.vb" />
     <Compile Include="Repository\UserRepository.vb" />
     <Compile Include="Database.vb" />
-    <Compile Include="Model\Patient.vb" />
-    <Compile Include="Model\PatientMaritalStatus.vb" />
-    <Compile Include="Model\ProcedureType.vb" />
-    <Compile Include="Model\User.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -121,6 +113,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DentalMIS.MODEL\DentalMIS.MODEL.vbproj">
+      <Project>{17d285c2-0196-4c65-95e3-70e0765d5ad2}</Project>
+      <Name>DentalMIS.MODEL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

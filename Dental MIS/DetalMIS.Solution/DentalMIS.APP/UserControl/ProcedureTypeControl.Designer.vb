@@ -23,15 +23,14 @@ Partial Class ProcedureTypeControl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureTypeControl))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonEdit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ButtonNew = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.TextSearch = New System.Windows.Forms.TextBox()
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGrid = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.buttonRefresh = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.DataGrid = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.procedureName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.basePrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,7 +41,6 @@ Partial Class ProcedureTypeControl
         Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.buttonRefresh = New Bunifu.Framework.UI.BunifuFlatButton()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,7 +50,7 @@ Partial Class ProcedureTypeControl
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(27, 19)
+        Me.Label1.Location = New System.Drawing.Point(7, 19)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(243, 37)
@@ -81,13 +79,13 @@ Partial Class ProcedureTypeControl
         Me.ButtonEdit.IconVisible = True
         Me.ButtonEdit.IconZoom = 50.0R
         Me.ButtonEdit.IsTab = False
-        Me.ButtonEdit.Location = New System.Drawing.Point(722, 88)
+        Me.ButtonEdit.Location = New System.Drawing.Point(775, 88)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonEdit.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonEdit.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonEdit.selected = False
-        Me.ButtonEdit.Size = New System.Drawing.Size(85, 33)
+        Me.ButtonEdit.Size = New System.Drawing.Size(32, 33)
         Me.ButtonEdit.TabIndex = 25
         Me.ButtonEdit.Text = "  Edit"
         Me.ButtonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -116,13 +114,13 @@ Partial Class ProcedureTypeControl
         Me.ButtonNew.IconVisible = True
         Me.ButtonNew.IconZoom = 50.0R
         Me.ButtonNew.IsTab = False
-        Me.ButtonNew.Location = New System.Drawing.Point(632, 88)
+        Me.ButtonNew.Location = New System.Drawing.Point(737, 88)
         Me.ButtonNew.Name = "ButtonNew"
         Me.ButtonNew.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonNew.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ButtonNew.OnHoverTextColor = System.Drawing.Color.White
         Me.ButtonNew.selected = False
-        Me.ButtonNew.Size = New System.Drawing.Size(85, 33)
+        Me.ButtonNew.Size = New System.Drawing.Size(32, 33)
         Me.ButtonNew.TabIndex = 24
         Me.ButtonNew.Text = "  New"
         Me.ButtonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -133,11 +131,11 @@ Partial Class ProcedureTypeControl
         '
         Me.TextSearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextSearch.Font = New System.Drawing.Font("Century Gothic", 10.0!)
-        Me.TextSearch.Location = New System.Drawing.Point(147, 93)
-        Me.TextSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextSearch.Location = New System.Drawing.Point(135, 93)
+        Me.TextSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(430, 24)
+        Me.TextSearch.Size = New System.Drawing.Size(559, 24)
         Me.TextSearch.TabIndex = 23
         '
         'BunifuSeparator1
@@ -157,117 +155,13 @@ Partial Class ProcedureTypeControl
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.0!)
-        Me.Label2.Location = New System.Drawing.Point(11, 95)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(11, 98)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 19)
+        Me.Label2.Size = New System.Drawing.Size(120, 16)
         Me.Label2.TabIndex = 26
         Me.Label2.Text = "Enter Search Text :"
-        '
-        'DataGrid
-        '
-        Me.DataGrid.AllowUserToAddRows = False
-        Me.DataGrid.AllowUserToDeleteRows = False
-        Me.DataGrid.AllowUserToResizeColumns = False
-        Me.DataGrid.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DataGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGrid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.basePrice, Me.paymentType, Me.requireMedCert, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        Me.DataGrid.DoubleBuffered = True
-        Me.DataGrid.EnableHeadersVisualStyles = False
-        Me.DataGrid.GridColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.DataGrid.HeaderForeColor = System.Drawing.Color.White
-        Me.DataGrid.Location = New System.Drawing.Point(14, 127)
-        Me.DataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DataGrid.MultiSelect = False
-        Me.DataGrid.Name = "DataGrid"
-        Me.DataGrid.ReadOnly = True
-        Me.DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DataGrid.RowHeadersVisible = False
-        Me.DataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.DataGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGrid.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.DataGrid.RowTemplate.Height = 24
-        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(793, 526)
-        Me.DataGrid.TabIndex = 27
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        '
-        'procedureName
-        '
-        Me.procedureName.HeaderText = "Procedure Name"
-        Me.procedureName.Name = "procedureName"
-        Me.procedureName.ReadOnly = True
-        '
-        'basePrice
-        '
-        Me.basePrice.HeaderText = "Base Price"
-        Me.basePrice.Name = "basePrice"
-        Me.basePrice.ReadOnly = True
-        '
-        'paymentType
-        '
-        Me.paymentType.HeaderText = "Payment Type"
-        Me.paymentType.Name = "paymentType"
-        Me.paymentType.ReadOnly = True
-        '
-        'requireMedCert
-        '
-        Me.requireMedCert.HeaderText = "Require Med. Cert."
-        Me.requireMedCert.Name = "requireMedCert"
-        Me.requireMedCert.ReadOnly = True
-        '
-        'status
-        '
-        Me.status.HeaderText = "Status"
-        Me.status.Name = "status"
-        Me.status.ReadOnly = True
-        '
-        'createdBy
-        '
-        Me.createdBy.HeaderText = "Created By"
-        Me.createdBy.Name = "createdBy"
-        Me.createdBy.ReadOnly = True
-        '
-        'createdDate
-        '
-        Me.createdDate.HeaderText = "Crated Date"
-        Me.createdDate.Name = "createdDate"
-        Me.createdDate.ReadOnly = True
-        '
-        'updatedBy
-        '
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        Me.updatedBy.ReadOnly = True
-        '
-        'updatedDate
-        '
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
-        Me.updatedDate.ReadOnly = True
         '
         'buttonRefresh
         '
@@ -291,32 +185,116 @@ Partial Class ProcedureTypeControl
         Me.buttonRefresh.IconVisible = True
         Me.buttonRefresh.IconZoom = 50.0R
         Me.buttonRefresh.IsTab = False
-        Me.buttonRefresh.Location = New System.Drawing.Point(593, 88)
+        Me.buttonRefresh.Location = New System.Drawing.Point(699, 88)
         Me.buttonRefresh.Name = "buttonRefresh"
         Me.buttonRefresh.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonRefresh.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.buttonRefresh.OnHoverTextColor = System.Drawing.Color.White
         Me.buttonRefresh.selected = False
         Me.buttonRefresh.Size = New System.Drawing.Size(32, 33)
-        Me.buttonRefresh.TabIndex = 28
+        Me.buttonRefresh.TabIndex = 30
         Me.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonRefresh.Textcolor = System.Drawing.Color.White
         Me.buttonRefresh.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'DataGrid
+        '
+        Me.DataGrid.AllowUserToAddRows = False
+        Me.DataGrid.AllowUserToDeleteRows = False
+        Me.DataGrid.AllowUserToResizeColumns = False
+        Me.DataGrid.AllowUserToResizeRows = False
+        Me.DataGrid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.basePrice, Me.paymentType, Me.requireMedCert, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
+        Me.DataGrid.Location = New System.Drawing.Point(14, 127)
+        Me.DataGrid.MultiSelect = False
+        Me.DataGrid.Name = "DataGrid"
+        Me.DataGrid.ReadOnly = True
+        Me.DataGrid.RowHeadersVisible = False
+        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGrid.Size = New System.Drawing.Size(793, 533)
+        Me.DataGrid.TabIndex = 46
+        '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 43
+        '
+        'procedureName
+        '
+        Me.procedureName.HeaderText = "Name"
+        Me.procedureName.Name = "procedureName"
+        Me.procedureName.ReadOnly = True
+        '
+        'basePrice
+        '
+        Me.basePrice.HeaderText = "Base Price"
+        Me.basePrice.Name = "basePrice"
+        Me.basePrice.ReadOnly = True
+        '
+        'paymentType
+        '
+        Me.paymentType.HeaderText = "Payment Type"
+        Me.paymentType.Name = "paymentType"
+        Me.paymentType.ReadOnly = True
+        '
+        'requireMedCert
+        '
+        Me.requireMedCert.HeaderText = "Require Med. Cert?"
+        Me.requireMedCert.Name = "requireMedCert"
+        Me.requireMedCert.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        '
+        'createdBy
+        '
+        Me.createdBy.HeaderText = "Created By"
+        Me.createdBy.Name = "createdBy"
+        Me.createdBy.ReadOnly = True
+        '
+        'createdDate
+        '
+        Me.createdDate.HeaderText = "Created Date"
+        Me.createdDate.Name = "createdDate"
+        Me.createdDate.ReadOnly = True
+        '
+        'updatedBy
+        '
+        Me.updatedBy.HeaderText = "Updated By"
+        Me.updatedBy.Name = "updatedBy"
+        Me.updatedBy.ReadOnly = True
+        '
+        'updatedDate
+        '
+        Me.updatedDate.HeaderText = "Updated Date"
+        Me.updatedDate.Name = "updatedDate"
+        Me.updatedDate.ReadOnly = True
         '
         'ProcedureTypeControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.buttonRefresh)
         Me.Controls.Add(Me.DataGrid)
+        Me.Controls.Add(Me.buttonRefresh)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonNew)
         Me.Controls.Add(Me.TextSearch)
         Me.Controls.Add(Me.BunifuSeparator1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ProcedureTypeControl"
         Me.Size = New System.Drawing.Size(820, 671)
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -330,8 +308,8 @@ Partial Class ProcedureTypeControl
     Friend WithEvents TextSearch As TextBox
     Friend WithEvents BunifuSeparator1 As Bunifu.Framework.UI.BunifuSeparator
     Friend WithEvents Label2 As Label
-    Friend WithEvents DataGrid As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents buttonRefresh As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents DataGrid As DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents procedureName As DataGridViewTextBoxColumn
     Friend WithEvents basePrice As DataGridViewTextBoxColumn

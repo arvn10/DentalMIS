@@ -1,0 +1,10 @@
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\bin\Debug\DentalMIS.MODEL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\bin\Debug\DentalMIS.MODEL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\bin\Debug\DentalMIS.MODEL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.Resources.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.vbproj.GenerateResource.Cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.vbproj.CoreCompileInputs.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.vbprojResolveAssemblyReference.cache

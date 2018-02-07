@@ -9,19 +9,19 @@
         Select Case e.Node.Text
             Case "Procedure Type"
                 ClearControls(PanelMain)
-                Dim procedureTypeControl As New ProcedureTypeControl
-                procedureTypeControl.Dock = DockStyle.Fill
-                PanelMain.Controls.Add(procedureTypeControl)
-            Case "Patient Marital Status"
+                Dim control As New ProcedureTypeControl
+                control.Dock = DockStyle.Fill
+                PanelMain.Controls.Add(control)
+            Case "Audit Trail"
                 ClearControls(PanelMain)
-                Dim patientMaritalStatusControl As New PatientMaritalStatusControl
-                patientMaritalStatusControl.Dock = DockStyle.Fill
-                PanelMain.Controls.Add(patientMaritalStatusControl)
+                Dim control As New AuditTrailControl
+                control.Dock = DockStyle.Fill
+                PanelMain.Controls.Add(control)
             Case "User"
                 ClearControls(PanelMain)
-                Dim userControl As New UserControl
-                userControl.Dock = DockStyle.Fill
-                PanelMain.Controls.Add(userControl)
+                Dim control As New UserControl
+                control.Dock = DockStyle.Fill
+                PanelMain.Controls.Add(control)
         End Select
     End Sub
 

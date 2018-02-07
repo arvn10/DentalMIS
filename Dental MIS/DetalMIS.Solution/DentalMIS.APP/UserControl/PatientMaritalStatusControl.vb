@@ -1,16 +1,15 @@
 ﻿Imports DentalMIS.BLL
+Imports DentalMIS.MODEL
 Public Class PatientMaritalStatusControl
-    Private patientMaritalStatusService As BLL.PatientMaritalStatusService
 
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        patientMaritalStatusService = New PatientMaritalStatusService
     End Sub
     Public Sub LoadData(searchText As String)
-        Dim data As New List(Of PatientMaritalStatusView)
+        Dim data As New List(Of PatientMaritalStatus)
         data = patientMaritalStatusService.PatientMaritalStatusSearchLike(searchText)
         Dim bs As New BindingSource
         bs.DataSource = data
@@ -33,11 +32,14 @@ Public Class PatientMaritalStatusControl
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
-        DataGrid.DataSource = Nothing
-        Dim form As New PatientMaritalStatusAddEditForm
-        form.activeUser = MainForm.LabelMenu.Text
-        form.HeaderLabel.Text = "Patient Marital Status - New"
-        form.ShowDialog()
+        Try
+            DataGrid.DataSource = Nothing
+            PatientMaritalStatusAddEditForm.activeUser = MainForm.LabelMenu.Text
+            PatientMaritalStatusAddEditForm.HeaderLabel.Text = "Patient Marital Status - New"
+            PatientMaritalStatusAddEditForm.ShowDialog()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub PatientMaritalStatusControl_Load(sender As Object, e As EventArgs) Handles Me.Load

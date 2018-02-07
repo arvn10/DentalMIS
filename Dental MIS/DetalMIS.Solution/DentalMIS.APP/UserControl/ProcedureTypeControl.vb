@@ -1,4 +1,5 @@
 ﻿Imports DentalMIS.BLL
+Imports DentalMIS.MODEL
 Public Class ProcedureTypeControl
     Private procedureTypeService As ProcedureTypeService
     Public Sub New()
@@ -10,7 +11,7 @@ Public Class ProcedureTypeControl
     End Sub
 
     Private Sub LoadData(searchText As String)
-        Dim data As New List(Of ProcedureTypeView)
+        Dim data As New List(Of ProcedureType)
         data = procedureTypeService.ProcedureTypeSearchLike(searchText)
         Dim bs As New BindingSource
         bs.DataSource = data
@@ -35,10 +36,14 @@ Public Class ProcedureTypeControl
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
-        DataGrid.DataSource = Nothing
-        ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
-        ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
-        ProcedureTypeAddEditForm.ShowDialog()
+        Try
+            DataGrid.DataSource = Nothing
+            ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+            ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
+            ProcedureTypeAddEditForm.ShowDialog()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click

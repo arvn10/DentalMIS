@@ -22,7 +22,7 @@ Public Class MainForm
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
         If PanelSideMenu.Width = 55 Then
             PanelSideMenu.Visible = False
-            PanelSideMenu.Width = 242
+            PanelSideMenu.Width = 182
             LabelMenu.Visible = True
             PanelAnimator.ShowSync(PanelSideMenu)
         Else
@@ -35,23 +35,23 @@ Public Class MainForm
 
     Private Sub ButtonPatient_Click(sender As Object, e As EventArgs) Handles ButtonPatient.Click
         ClearControls()
-        Dim patientControl As New PatientControl
-        patientControl.Dock = DockStyle.Fill
-        PanelMain.Controls.Add(patientControl)
+        Dim control As New PatientControl
+        control.Dock = DockStyle.Fill
+        PanelMain.Controls.Add(control)
     End Sub
 
     Private Sub ButtonDashboard_Click(sender As Object, e As EventArgs) Handles ButtonDashboard.Click
         ClearControls()
-        Dim dashboardControl As New DashboardControl
-        dashboardControl.Dock = DockStyle.Fill
-        PanelMain.Controls.Add(dashboardControl)
+        Dim control As New DashboardControl
+        control.Dock = DockStyle.Fill
+        PanelMain.Controls.Add(control)
     End Sub
 
     Private Sub ButtonConfiguration_Click(sender As Object, e As EventArgs) Handles ButtonConfiguration.Click
         ClearControls()
-        Dim configurationControl As New ConfigurationControl
-        configurationControl.Dock = DockStyle.Fill
-        PanelMain.Controls.Add(configurationControl)
+        Dim control As New ConfigurationControl
+        control.Dock = DockStyle.Fill
+        PanelMain.Controls.Add(control)
     End Sub
 
     Private Sub buttonLogout_Click(sender As Object, e As EventArgs) Handles buttonLogout.Click
@@ -66,11 +66,36 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.Height = Screen.PrimaryScreen.WorkingArea.Height
+        Me.Width = Screen.PrimaryScreen.WorkingArea.Width
+        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+
         If (Not isLogin) Then
             PanelSideMenu.Visible = False
             PanelMain.Visible = False
             LoginForm.MdiParent = Me
             LoginForm.Show()
         End If
+    End Sub
+
+    Private Sub ButtonPayment_Click(sender As Object, e As EventArgs) Handles ButtonPayment.Click
+        ClearControls()
+        Dim control As New PaymentControl
+        control.Dock = DockStyle.Fill
+        PanelMain.Controls.Add(control)
+    End Sub
+
+    Private Sub ButtonSchedule_Click(sender As Object, e As EventArgs) Handles ButtonSchedule.Click
+        ClearControls()
+        Dim control As New ScheduleControl
+        control.Dock = DockStyle.Fill
+        PanelMain.Controls.Add(control)
+    End Sub
+
+    Private Sub ButtonReport_Click(sender As Object, e As EventArgs) Handles ButtonReport.Click
+        ClearControls()
+        Dim control As New ReportControl
+        control.Dock = DockStyle.Fill
+        PanelMain.Controls.Add(control)
     End Sub
 End Class

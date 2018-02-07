@@ -1,9 +1,9 @@
 ﻿Imports DentalMIS.BLL
+Imports DentalMIS.MODEL
 Public Class PatientMaritalStatusAddEditForm
     Private patientMaritalStatusService As PatientMaritalStatusService
     Public patientMaritalStatusID As Integer = 0
     Public activeUser As String
-
     Public Sub New()
 
         ' This call is required by the designer.
@@ -18,16 +18,17 @@ Public Class PatientMaritalStatusAddEditForm
 
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
+            Dim data As New PatientMaritalStatus()
             If HeaderLabel.Text.Contains("Edit") Then
                 Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If confirm = DialogResult.Yes Then
-                    Dim data As New PatientMaritalStatusEdit()
 
-                    data.ID = patientMaritalStatusID
-                    data.Name = textName.Text
-                    data.Status = If(comboStatus.Text = "Active", 1, 0)
-                    data.UpdatedBy = activeUser
-                    Dim ret As Long = patientMaritalStatusService.PatientMaritalStatusEdit(data)
+
+                    Data.ID = patientMaritalStatusID
+                    Data.Name = textName.Text
+                    Data.Status = If(comboStatus.Text = "Active", 1, 0)
+                    Data.UpdatedBy = activeUser
+                    Dim ret As Long = patientMaritalStatusService.PatientMaritalStatusEdit(Data)
                     If ret > 0 Then
                         MessageBox.Show("Patient Marital Status Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
@@ -53,7 +54,6 @@ Public Class PatientMaritalStatusAddEditForm
                 If Not valid Then
                     MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    Dim data As New PatientMaritalStatusCreate
                     data.Name = textName.Text
                     data.Status = If(comboStatus.Text = "Active", 1, 0)
                     data.CreatedBy = activeUser
@@ -75,7 +75,7 @@ Public Class PatientMaritalStatusAddEditForm
     Private Sub PatientMaritalStatusAddEditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             If HeaderLabel.Text.Contains("Edit") Then
-                Dim data As New PatientMaritalStatusView
+                Dim data As New PatientMaritalStatus
                 data = patientMaritalStatusService.PatientMaritalStatusSearchID(patientMaritalStatusID)(0)
                 textName.Text = data.Name
                 comboStatus.Text = data.Status

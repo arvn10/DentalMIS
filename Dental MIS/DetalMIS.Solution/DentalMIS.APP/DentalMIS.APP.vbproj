@@ -90,12 +90,6 @@
     <Compile Include="Form\DatabaseConfigForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\DoctorAddEditForm.Designer.vb">
-      <DependentUpon>DoctorAddEditForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\DoctorAddEditForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -108,10 +102,16 @@
     <Compile Include="Form\PatientAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\PatientMaritalStatusAddEditForm.Designer.vb">
-      <DependentUpon>PatientMaritalStatusAddEditForm.vb</DependentUpon>
+    <Compile Include="Form\PatientDentalRecordForm.Designer.vb">
+      <DependentUpon>PatientDentalRecordForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\PatientMaritalStatusAddEditForm.vb">
+    <Compile Include="Form\PatientDentalRecordForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcedureAddEditForm.Designer.vb">
+      <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcedureAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\ProcedureTypeAddEditForm.Designer.vb">
@@ -147,6 +147,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControl\AuditTrailControl.Designer.vb">
+      <DependentUpon>AuditTrailControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AuditTrailControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl\ConfigurationControl.Designer.vb">
       <DependentUpon>ConfigurationControl.vb</DependentUpon>
     </Compile>
@@ -165,16 +171,28 @@
     <Compile Include="UserControl\PatientControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\PatientMaritalStatusControl.Designer.vb">
-      <DependentUpon>PatientMaritalStatusControl.vb</DependentUpon>
+    <Compile Include="UserControl\PaymentControl.Designer.vb">
+      <DependentUpon>PaymentControl.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\PatientMaritalStatusControl.vb">
+    <Compile Include="UserControl\PaymentControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\ProcedureTypeControl.Designer.vb">
       <DependentUpon>ProcedureTypeControl.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ProcedureTypeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ReportControl.Designer.vb">
+      <DependentUpon>ReportControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ReportControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ScheduleControl.Designer.vb">
+      <DependentUpon>ScheduleControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ScheduleControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\UserControl.Designer.vb">
@@ -188,17 +206,17 @@
     <EmbeddedResource Include="Form\DatabaseConfigForm.resx">
       <DependentUpon>DatabaseConfigForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\DoctorAddEditForm.resx">
-      <DependentUpon>DoctorAddEditForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PatientAddEditForm.resx">
       <DependentUpon>PatientAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\PatientMaritalStatusAddEditForm.resx">
-      <DependentUpon>PatientMaritalStatusAddEditForm.vb</DependentUpon>
+    <EmbeddedResource Include="Form\PatientDentalRecordForm.resx">
+      <DependentUpon>PatientDentalRecordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcedureAddEditForm.resx">
+      <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProcedureTypeAddEditForm.resx">
       <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
@@ -215,6 +233,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\AuditTrailControl.resx">
+      <DependentUpon>AuditTrailControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ConfigurationControl.resx">
       <DependentUpon>ConfigurationControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,11 +245,17 @@
     <EmbeddedResource Include="UserControl\PatientControl.resx">
       <DependentUpon>PatientControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\PatientMaritalStatusControl.resx">
-      <DependentUpon>PatientMaritalStatusControl.vb</DependentUpon>
+    <EmbeddedResource Include="UserControl\PaymentControl.resx">
+      <DependentUpon>PaymentControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ProcedureTypeControl.resx">
       <DependentUpon>ProcedureTypeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ReportControl.resx">
+      <DependentUpon>ReportControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ScheduleControl.resx">
+      <DependentUpon>ScheduleControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UserControl.resx">
       <DependentUpon>UserControl.vb</DependentUpon>
@@ -253,6 +280,10 @@
     <ProjectReference Include="..\DentalMIS.BLL\DentalMIS.BLL.vbproj">
       <Project>{c14f38d2-9761-4d1f-ad9b-5913c57284cf}</Project>
       <Name>DentalMIS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DentalMIS.MODEL\DentalMIS.MODEL.vbproj">
+      <Project>{17d285c2-0196-4c65-95e3-70e0765d5ad2}</Project>
+      <Name>DentalMIS.MODEL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +330,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-Denture-48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

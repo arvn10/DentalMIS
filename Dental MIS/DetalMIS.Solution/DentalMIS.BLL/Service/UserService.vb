@@ -1,42 +1,26 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.DAL
+Imports DentalMIS.MODEL
 Public Class UserService
     Implements IUserService
 
-    Private userService As DAL.UserRepository
+    Private userService As UserRepository
 
     Public Sub New()
         userService = New UserRepository
     End Sub
 
-    Public Function UserCreate(param As UserCreate) As Long Implements IUserService.UserCreate
-        Return userService.UserCreate(New DAL.UserCreate With {
-                                        .UserTypeID = param.UserTypeID,
-                                        .Username = param.Username,
-                                        .Password = param.Password,
-                                        .Firstname = param.Firstname,
-                                        .Lastname = param.Lastname,
-                                        .Status = param.Status,
-                                        .CreatedBy = param.CreatedBy
-                                      })
+    Public Function UserCreate(param As User) As Long Implements IUserService.UserCreate
+        Return userService.UserCreate(param)
     End Function
 
-    Public Function UserEdit(param As UserEdit) As Long Implements IUserService.UserEdit
-        Return userService.UserEdit(New DAL.UserEdit With {
-                                        .ID = param.ID,
-                                        .UserTypeID = param.UserTypeID,
-                                        .Username = param.Username,
-                                        .Password = param.Password,
-                                        .Firstname = param.Firstname,
-                                        .Lastname = param.Lastname,
-                                        .Status = param.Status,
-                                        .UpdatedBy = param.UpdatedBy
-                                      })
+    Public Function UserEdit(param As User) As Long Implements IUserService.UserEdit
+        Return userService.UserEdit(param)
     End Function
 
-    Public Function UserSearchID(ID As Long) As List(Of UserView) Implements IUserService.UserSearchID
-        Dim datas As List(Of UserView) = (From data As DAL.UserView In userService.UserSearchID(ID)
-                                          Select New UserView With {
+    Public Function UserSearchID(ID As Long) As List(Of User) Implements IUserService.UserSearchID
+        Dim datas As List(Of User) = (From data As User In userService.UserSearchID(ID)
+                                      Select New User With {
                                                    .ID = data.ID,
                                                    .UserTypeID = data.UserTypeID,
                                                    .UserType = data.UserType,
@@ -53,9 +37,9 @@ Public Class UserService
         Return datas
     End Function
 
-    Public Function UserSearchStatus(Status As Long) As List(Of UserView) Implements IUserService.UserSearchStatus
-        Dim datas As List(Of UserView) = (From data As DAL.UserView In userService.UserSearchStatus(Status)
-                                          Select New UserView With {
+    Public Function UserSearchStatus(Status As Long) As List(Of User) Implements IUserService.UserSearchStatus
+        Dim datas As List(Of User) = (From data As User In userService.UserSearchStatus(Status)
+                                      Select New User With {
                                                    .ID = data.ID,
                                                    .UserTypeID = data.UserTypeID,
                                                    .UserType = data.UserType,
@@ -72,9 +56,9 @@ Public Class UserService
         Return datas
     End Function
 
-    Public Function UserSearchLike(SearchText As String) As List(Of UserView) Implements IUserService.UserSearchLike
-        Dim datas As List(Of UserView) = (From data As DAL.UserView In userService.UserSearchLike(SearchText)
-                                          Select New UserView With {
+    Public Function UserSearchLike(SearchText As String) As List(Of User) Implements IUserService.UserSearchLike
+        Dim datas As List(Of User) = (From data As User In userService.UserSearchLike(SearchText)
+                                      Select New User With {
                                                    .ID = data.ID,
                                                    .UserTypeID = data.UserTypeID,
                                                    .UserType = data.UserType,
@@ -91,9 +75,9 @@ Public Class UserService
         Return datas
     End Function
 
-    Public Function UserLogin(Username As String, Password As String) As List(Of UserView) Implements IUserService.UserLogin
-        Dim datas As List(Of UserView) = (From data As DAL.UserView In userService.UserLogin(Username, Password)
-                                          Select New UserView With {
+    Public Function UserLogin(Username As String, Password As String) As List(Of User) Implements IUserService.UserLogin
+        Dim datas As List(Of User) = (From data As User In userService.UserLogin(Username, Password)
+                                      Select New User With {
                                                    .ID = data.ID,
                                                    .UserTypeID = data.UserTypeID,
                                                    .UserType = data.UserType,

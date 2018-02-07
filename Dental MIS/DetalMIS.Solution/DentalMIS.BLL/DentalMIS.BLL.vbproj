@@ -63,22 +63,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IService\IDoctorService.vb" />
-    <Compile Include="IService\IPatientMaritalStatusService.vb" />
     <Compile Include="IService\IPatientService.vb" />
+    <Compile Include="IService\IPaymentService.vb" />
     <Compile Include="IService\IProcedureService.vb" />
-    <Compile Include="IService\IProcedureToothService.vb" />
     <Compile Include="IService\IProcedureTypeService.vb" />
+    <Compile Include="IService\IToothService.vb" />
     <Compile Include="IService\IUserService.vb" />
     <Compile Include="IService\IUserTypeService.vb" />
-    <Compile Include="Model\DoctorModel.vb" />
-    <Compile Include="Model\PatientMaritalStatusModel.vb" />
-    <Compile Include="Model\PatientModel.vb" />
-    <Compile Include="Model\ProcedureModel.vb" />
-    <Compile Include="Model\ProcedureToothModel.vb" />
-    <Compile Include="Model\ProcedureTypeModel.vb" />
-    <Compile Include="Model\UserModel.vb" />
-    <Compile Include="Model\UserTypeModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,12 +85,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Service\DoctorService.vb" />
-    <Compile Include="Service\PatientMaritalStatusService.vb" />
     <Compile Include="Service\PatientService.vb" />
+    <Compile Include="Service\PaymentService.vb" />
     <Compile Include="Service\ProcedureService.vb" />
-    <Compile Include="Service\ProcedureToothService.vb" />
     <Compile Include="Service\ProcedureTypeService.vb" />
+    <Compile Include="Service\ToothService.vb" />
     <Compile Include="Service\UserService.vb" />
     <Compile Include="Service\UserTypeService.vb" />
   </ItemGroup>
@@ -126,6 +116,10 @@
     <ProjectReference Include="..\DentalMIS.DAL\DentalMIS.DAL.vbproj">
       <Project>{11389c11-d68e-49e4-9b80-de58cfbaf52e}</Project>
       <Name>DentalMIS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DentalMIS.MODEL\DentalMIS.MODEL.vbproj">
+      <Project>{17d285c2-0196-4c65-95e3-70e0765d5ad2}</Project>
+      <Name>DentalMIS.MODEL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
