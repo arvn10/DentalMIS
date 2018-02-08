@@ -10,7 +10,7 @@ Public Class UserControl
         ' Add any initialization after the InitializeComponent() call.
         userService = New UserService
     End Sub
-    Private Sub LoadData(searchText As String)
+    Public Sub LoadData(searchText As String)
         Dim data As New List(Of User)
         data = userService.UserSearchLike(searchText)
         Dim bs As New BindingSource
@@ -43,10 +43,11 @@ Public Class UserControl
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
         Try
-            DataGrid.DataSource = Nothing
-            UserAddEditForm.activeUser = MainForm.LabelMenu.Text
-            UserAddEditForm.HeaderLabel.Text = "User - New"
-            UserAddEditForm.ShowDialog()
+            Dim form As New UserAddEditForm
+            form.userControl = Me
+            form.activeUser = MainForm.LabelMenu.Text
+            form.HeaderLabel.Text = "User - New"
+            form.ShowDialog()
         Catch ex As Exception
 
         End Try
@@ -56,6 +57,7 @@ Public Class UserControl
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New UserAddEditForm
+                form.userControl = Me
                 form.activeUser = MainForm.LabelMenu.Text
                 form.userID = DataGrid.CurrentRow.Cells(0).Value
                 form.HeaderLabel.Text = "User - Edit"

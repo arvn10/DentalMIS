@@ -4,7 +4,7 @@ Public Class PatientAddEditForm
     Private patientSvc As PatientService
     Public patientID As Integer = 0
     Public activeUser As String
-
+    Public patientControl As PatientControl
     Public Sub New()
 
         ' This call is required by the designer.
@@ -33,6 +33,7 @@ Public Class PatientAddEditForm
                     Dim ret As Long = patientSvc.PatientEdit(data)
                     If ret > 0 Then
                         MessageBox.Show("Patient Profile Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        patientControl.LoadData("")
                         Me.Dispose()
                     Else
                         MessageBox.Show("Patient Profile Already Exist", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -67,6 +68,7 @@ Public Class PatientAddEditForm
                     Dim ret As Long = patientSvc.PatientCreate(data)
                     If ret > 0 Then
                         MessageBox.Show("Patient Profile Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        patientControl.LoadData("")
                         Me.Dispose()
                     Else
                         MessageBox.Show("Patient Profile Already Exist", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)

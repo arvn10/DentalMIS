@@ -108,6 +108,18 @@
     <Compile Include="Form\PatientDentalRecordForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\PaymentAddEdit.Designer.vb">
+      <DependentUpon>PaymentAddEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PaymentAddEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PaymentForm.Designer.vb">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\ProcedureAddEditForm.Designer.vb">
       <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
     </Compile>
@@ -214,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PatientDentalRecordForm.resx">
       <DependentUpon>PatientDentalRecordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PaymentAddEdit.resx">
+      <DependentUpon>PaymentAddEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PaymentForm.resx">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProcedureAddEditForm.resx">
       <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>

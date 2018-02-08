@@ -10,7 +10,7 @@ Public Class ProcedureTypeControl
         procedureTypeService = New ProcedureTypeService()
     End Sub
 
-    Private Sub LoadData(searchText As String)
+    Public Sub LoadData(searchText As String)
         Dim data As New List(Of ProcedureType)
         data = procedureTypeService.ProcedureTypeSearchLike(searchText)
         Dim bs As New BindingSource
@@ -37,7 +37,7 @@ Public Class ProcedureTypeControl
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
         Try
-            DataGrid.DataSource = Nothing
+            ProcedureTypeAddEditForm.procedureTypeControl = Me
             ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
             ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
             ProcedureTypeAddEditForm.ShowDialog()
@@ -49,11 +49,11 @@ Public Class ProcedureTypeControl
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
             If (DataGrid.Rows.Count > 0) Then
+                ProcedureTypeAddEditForm.procedureTypeControl = Me
                 ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
                 ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
                 ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
                 ProcedureTypeAddEditForm.ShowDialog()
-                DataGrid.DataSource = Nothing
             Else
                 MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

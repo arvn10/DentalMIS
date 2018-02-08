@@ -20,7 +20,7 @@ Public Class PatientControl
         patientSvc = New PatientService()
     End Sub
 
-    Private Sub LoadData(searchText As String)
+    Public Sub LoadData(searchText As String)
         Dim data As List(Of Patient)
         data = patientSvc.PatientSearchLike(searchText)
         Dim bs As New BindingSource
@@ -43,9 +43,9 @@ Public Class PatientControl
     End Sub
 
 
-    Private Sub buttonNew_Click(sender As Object, e As EventArgs) Handles buttonNew.Click
+    Private Sub buttonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
         Try
-            DataGrid.DataSource = Nothing
+            PatientAddEditForm.patientControl = Me
             PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
             PatientAddEditForm.HeaderLabel.Text = "Patient - New"
             PatientAddEditForm.ShowDialog()
@@ -67,11 +67,11 @@ Public Class PatientControl
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New PatientAddEditForm
+                form.patientControl = Me
                 form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
                 form.activeUser = MainForm.LabelMenu.Text
                 form.HeaderLabel.Text = "Patient - Edit"
                 form.ShowDialog()
-                DataGrid.DataSource = Nothing
             Else
                 MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -92,11 +92,11 @@ Public Class PatientControl
         Try
             If DataGrid.Rows.Count > 0 Then
                 Dim form As New PatientDentalRecordForm
+                form.patientControl = Me
                 form.activeUser = MainForm.LabelMenu.Text
                 form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
                 form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
                 form.ShowDialog()
-                DataGrid.DataSource = Nothing
             Else
                 MessageBox.Show("No Patient Dental Record to View", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

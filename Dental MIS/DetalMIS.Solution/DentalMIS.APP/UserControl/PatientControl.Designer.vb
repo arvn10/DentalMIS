@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PatientControl
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,16 @@ Partial Class PatientControl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientControl))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.textSearch = New System.Windows.Forms.TextBox()
         Me.buttonView = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttonEdit = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttonNew = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.buttonRefresh = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Firstname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,6 +41,9 @@ Partial Class PatientControl
         Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.buttonRefresh = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ButtonNew = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -90,7 +92,7 @@ Partial Class PatientControl
         Me.buttonView.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.buttonView.BorderRadius = 0
-        Me.buttonView.ButtonText = ""
+        Me.buttonView.ButtonText = "View Dental Record"
         Me.buttonView.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonView.DisabledColor = System.Drawing.Color.Gray
         Me.buttonView.Iconcolor = System.Drawing.Color.Transparent
@@ -113,6 +115,7 @@ Partial Class PatientControl
         Me.buttonView.selected = False
         Me.buttonView.Size = New System.Drawing.Size(32, 33)
         Me.buttonView.TabIndex = 10
+        Me.buttonView.Text = "View Dental Record"
         Me.buttonView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonView.Textcolor = System.Drawing.Color.White
         Me.buttonView.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -124,7 +127,7 @@ Partial Class PatientControl
         Me.buttonEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.buttonEdit.BorderRadius = 0
-        Me.buttonEdit.ButtonText = ""
+        Me.buttonEdit.ButtonText = "Edit Patient"
         Me.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonEdit.DisabledColor = System.Drawing.Color.Gray
         Me.buttonEdit.Iconcolor = System.Drawing.Color.Transparent
@@ -147,43 +150,10 @@ Partial Class PatientControl
         Me.buttonEdit.selected = False
         Me.buttonEdit.Size = New System.Drawing.Size(32, 33)
         Me.buttonEdit.TabIndex = 9
+        Me.buttonEdit.Text = "Edit Patient"
         Me.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonEdit.Textcolor = System.Drawing.Color.White
         Me.buttonEdit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttonNew
-        '
-        Me.buttonNew.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.buttonNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttonNew.BorderRadius = 0
-        Me.buttonNew.ButtonText = ""
-        Me.buttonNew.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttonNew.DisabledColor = System.Drawing.Color.Gray
-        Me.buttonNew.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttonNew.Iconimage = CType(resources.GetObject("buttonNew.Iconimage"), System.Drawing.Image)
-        Me.buttonNew.Iconimage_right = Nothing
-        Me.buttonNew.Iconimage_right_Selected = Nothing
-        Me.buttonNew.Iconimage_Selected = Nothing
-        Me.buttonNew.IconMarginLeft = 0
-        Me.buttonNew.IconMarginRight = 0
-        Me.buttonNew.IconRightVisible = True
-        Me.buttonNew.IconRightZoom = 0R
-        Me.buttonNew.IconVisible = True
-        Me.buttonNew.IconZoom = 50.0R
-        Me.buttonNew.IsTab = False
-        Me.buttonNew.Location = New System.Drawing.Point(699, 91)
-        Me.buttonNew.Name = "buttonNew"
-        Me.buttonNew.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonNew.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonNew.OnHoverTextColor = System.Drawing.Color.White
-        Me.buttonNew.selected = False
-        Me.buttonNew.Size = New System.Drawing.Size(32, 33)
-        Me.buttonNew.TabIndex = 8
-        Me.buttonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttonNew.Textcolor = System.Drawing.Color.White
-        Me.buttonNew.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Label2
         '
@@ -195,6 +165,90 @@ Partial Class PatientControl
         Me.Label2.Size = New System.Drawing.Size(120, 16)
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Enter Search Text :"
+        '
+        'DataGrid
+        '
+        Me.DataGrid.AllowUserToAddRows = False
+        Me.DataGrid.AllowUserToDeleteRows = False
+        Me.DataGrid.AllowUserToResizeColumns = False
+        Me.DataGrid.AllowUserToResizeRows = False
+        Me.DataGrid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Firstname, Me.Lastname, Me.Address, Me.Gender, Me.Age, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
+        Me.DataGrid.Location = New System.Drawing.Point(14, 125)
+        Me.DataGrid.MultiSelect = False
+        Me.DataGrid.Name = "DataGrid"
+        Me.DataGrid.ReadOnly = True
+        Me.DataGrid.RowHeadersVisible = False
+        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGrid.Size = New System.Drawing.Size(793, 533)
+        Me.DataGrid.TabIndex = 44
+        '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 43
+        '
+        'Firstname
+        '
+        Me.Firstname.HeaderText = "Firstname"
+        Me.Firstname.Name = "Firstname"
+        Me.Firstname.ReadOnly = True
+        '
+        'Lastname
+        '
+        Me.Lastname.HeaderText = "Lastname"
+        Me.Lastname.Name = "Lastname"
+        Me.Lastname.ReadOnly = True
+        '
+        'Address
+        '
+        Me.Address.HeaderText = "Address"
+        Me.Address.Name = "Address"
+        Me.Address.ReadOnly = True
+        '
+        'Gender
+        '
+        Me.Gender.HeaderText = "Gender"
+        Me.Gender.Name = "Gender"
+        Me.Gender.ReadOnly = True
+        '
+        'Age
+        '
+        Me.Age.HeaderText = "Age"
+        Me.Age.Name = "Age"
+        Me.Age.ReadOnly = True
+        '
+        'createdBy
+        '
+        Me.createdBy.HeaderText = "Created By"
+        Me.createdBy.Name = "createdBy"
+        Me.createdBy.ReadOnly = True
+        '
+        'createdDate
+        '
+        Me.createdDate.HeaderText = "Created Date"
+        Me.createdDate.Name = "createdDate"
+        Me.createdDate.ReadOnly = True
+        '
+        'updatedBy
+        '
+        Me.updatedBy.HeaderText = "Updated By"
+        Me.updatedBy.Name = "updatedBy"
+        Me.updatedBy.ReadOnly = True
+        '
+        'updatedDate
+        '
+        Me.updatedDate.HeaderText = "Updated Date"
+        Me.updatedDate.Name = "updatedDate"
+        Me.updatedDate.ReadOnly = True
         '
         'buttonRefresh
         '
@@ -225,96 +279,58 @@ Partial Class PatientControl
         Me.buttonRefresh.OnHoverTextColor = System.Drawing.Color.White
         Me.buttonRefresh.selected = False
         Me.buttonRefresh.Size = New System.Drawing.Size(32, 33)
-        Me.buttonRefresh.TabIndex = 29
+        Me.buttonRefresh.TabIndex = 47
         Me.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonRefresh.Textcolor = System.Drawing.Color.White
         Me.buttonRefresh.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolTip1.SetToolTip(Me.buttonRefresh, "Show All")
         '
-        'DataGrid
+        'ButtonNew
         '
-        Me.DataGrid.AllowUserToAddRows = False
-        Me.DataGrid.AllowUserToDeleteRows = False
-        Me.DataGrid.AllowUserToResizeColumns = False
-        Me.DataGrid.AllowUserToResizeRows = False
-        Me.DataGrid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Firstname, Me.Lastname, Me.Address, Me.Gender, Me.Age, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        Me.DataGrid.Location = New System.Drawing.Point(14, 125)
-        Me.DataGrid.MultiSelect = False
-        Me.DataGrid.Name = "DataGrid"
-        Me.DataGrid.ReadOnly = True
-        Me.DataGrid.RowHeadersVisible = False
-        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(793, 533)
-        Me.DataGrid.TabIndex = 44
-        '
-        'ID
-        '
-        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.Width = 43
-        '
-        'Firstname
-        '
-        Me.Firstname.HeaderText = "Firstname"
-        Me.Firstname.Name = "Firstname"
-        '
-        'Lastname
-        '
-        Me.Lastname.HeaderText = "Lastname"
-        Me.Lastname.Name = "Lastname"
-        '
-        'Address
-        '
-        Me.Address.HeaderText = "Address"
-        Me.Address.Name = "Address"
-        '
-        'Gender
-        '
-        Me.Gender.HeaderText = "Gender"
-        Me.Gender.Name = "Gender"
-        '
-        'Age
-        '
-        Me.Age.HeaderText = "Age"
-        Me.Age.Name = "Age"
-        '
-        'createdBy
-        '
-        Me.createdBy.HeaderText = "Created By"
-        Me.createdBy.Name = "createdBy"
-        '
-        'createdDate
-        '
-        Me.createdDate.HeaderText = "Created Date"
-        Me.createdDate.Name = "createdDate"
-        '
-        'updatedBy
-        '
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        '
-        'updatedDate
-        '
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
+        Me.ButtonNew.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonNew.BorderRadius = 0
+        Me.ButtonNew.ButtonText = "New Patient"
+        Me.ButtonNew.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonNew.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonNew.Iconcolor = System.Drawing.Color.Transparent
+        Me.ButtonNew.Iconimage = CType(resources.GetObject("ButtonNew.Iconimage"), System.Drawing.Image)
+        Me.ButtonNew.Iconimage_right = Nothing
+        Me.ButtonNew.Iconimage_right_Selected = Nothing
+        Me.ButtonNew.Iconimage_Selected = Nothing
+        Me.ButtonNew.IconMarginLeft = 0
+        Me.ButtonNew.IconMarginRight = 0
+        Me.ButtonNew.IconRightVisible = True
+        Me.ButtonNew.IconRightZoom = 0R
+        Me.ButtonNew.IconVisible = True
+        Me.ButtonNew.IconZoom = 50.0R
+        Me.ButtonNew.IsTab = False
+        Me.ButtonNew.Location = New System.Drawing.Point(699, 91)
+        Me.ButtonNew.Name = "ButtonNew"
+        Me.ButtonNew.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonNew.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonNew.OnHoverTextColor = System.Drawing.Color.White
+        Me.ButtonNew.selected = False
+        Me.ButtonNew.Size = New System.Drawing.Size(32, 33)
+        Me.ButtonNew.TabIndex = 46
+        Me.ButtonNew.Text = "New Patient"
+        Me.ButtonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonNew.Textcolor = System.Drawing.Color.White
+        Me.ButtonNew.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'PatientControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.DataGrid)
         Me.Controls.Add(Me.buttonRefresh)
+        Me.Controls.Add(Me.ButtonNew)
+        Me.Controls.Add(Me.DataGrid)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.buttonView)
         Me.Controls.Add(Me.buttonEdit)
-        Me.Controls.Add(Me.buttonNew)
         Me.Controls.Add(Me.textSearch)
         Me.Controls.Add(Me.BunifuSeparator1)
         Me.Controls.Add(Me.Label1)
@@ -330,11 +346,9 @@ Partial Class PatientControl
     Friend WithEvents Label1 As Label
     Friend WithEvents BunifuSeparator1 As Bunifu.Framework.UI.BunifuSeparator
     Friend WithEvents textSearch As TextBox
-    Friend WithEvents buttonNew As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents buttonEdit As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents buttonView As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label2 As Label
-    Friend WithEvents buttonRefresh As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents DataGrid As DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Firstname As DataGridViewTextBoxColumn
@@ -346,4 +360,7 @@ Partial Class PatientControl
     Friend WithEvents createdDate As DataGridViewTextBoxColumn
     Friend WithEvents updatedBy As DataGridViewTextBoxColumn
     Friend WithEvents updatedDate As DataGridViewTextBoxColumn
+    Friend WithEvents buttonRefresh As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonNew As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

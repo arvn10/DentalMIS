@@ -1,7 +1,8 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class ProcedureTypeAddEditForm
-    Private procedureTypeService As BLL.ProcedureTypeService
+    Private procedureTypeService As ProcedureTypeService
+    Public procedureTypeControl As ProcedureTypeControl
     Public procedureTypeID As Integer = 0
     Public activeUser As String
     Public Sub New()
@@ -91,6 +92,7 @@ Public Class ProcedureTypeAddEditForm
                     Dim ret As Long = procedureTypeService.ProcedureTypeCreate(param)
                     If ret > 0 Then
                         MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        procedureTypeControl.LoadData("")
                         Me.Dispose()
                     Else
                         MessageBox.Show("Procedure Type Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -110,6 +112,7 @@ Public Class ProcedureTypeAddEditForm
                     Dim ret As Long = procedureTypeService.ProcedureTypeEdit(param)
                     If ret > 0 Then
                         MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        procedureTypeControl.LoadData("")
                         Me.Dispose()
                     End If
                 End If

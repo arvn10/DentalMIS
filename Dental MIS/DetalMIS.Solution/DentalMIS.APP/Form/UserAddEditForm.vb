@@ -4,7 +4,7 @@ Public Class UserAddEditForm
     Private userService As BLL.UserService
     Public userID As Long
     Public activeUser As String
-
+    Public userControl As UserControl
     Public Sub New()
 
         ' This call is required by the designer.
@@ -47,6 +47,7 @@ Public Class UserAddEditForm
                     Dim ret As Long = userService.UserCreate(param)
                     If ret > 0 Then
                         MessageBox.Show("User Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        userControl.LoadData("")
                         Me.Dispose()
                     Else
                         MessageBox.Show("User Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -67,6 +68,7 @@ Public Class UserAddEditForm
                     Dim ret As Long = userService.UserEdit(param)
                     If ret > 0 Then
                         MessageBox.Show("User Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        userControl.LoadData("")
                         Me.Dispose()
                     End If
                 End If

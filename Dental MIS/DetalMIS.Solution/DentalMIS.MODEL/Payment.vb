@@ -3,7 +3,6 @@
     Public Property ProcedureID As Long
     Public Property AmountPaid As Long
     Public Property TransactionDate As String
-    Public Property Status As String
     Public Property CreatedBy As String
     Public Property CreatedDate As DateTime?
     Public Property UpdatedBy As String

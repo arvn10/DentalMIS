@@ -26,7 +26,7 @@ Public Class PaymentRepository
                                                     param.ProcedureID,
                                                     param.AmountPaid,
                                                     param.TransactionDate,
-                                                    param.CreatedBy
+                                                    param.UpdatedBy
                                                )
 
         Return Convert.ToInt32(ExecuteDataset(procedure).Rows(0)(0))
@@ -40,8 +40,7 @@ Public Class PaymentRepository
         If dt.Rows.Count > 0 Then
             payment.ID = Convert.ToInt32(dt.Rows(0)("id"))
             payment.ProcedureID = Convert.ToInt32(dt.Rows(0)("procedure_id"))
-            payment.TransactionDate = dt.Rows(0)("date").ToString()
-            payment.Status = Convert.ToString(dt.Rows(0)("status"))
+            payment.TransactionDate = Convert.ToDateTime(dt.Rows(0)("date")).Date
             payment.CreatedBy = Convert.ToString(dt.Rows(0)("created_by"))
             payment.CreatedDate = If(IsDBNull(dt.Rows(0)("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dt.Rows(0)("created_date")))
             payment.UpdatedBy = Convert.ToString(dt.Rows(0)("updated_by"))
@@ -59,8 +58,8 @@ Public Class PaymentRepository
                 Select New Payment With {
                     .ID = Convert.ToInt32(dr("id")),
                     .ProcedureID = Convert.ToInt32(dr("procedure_id")),
-                    .TransactionDate = dt.Rows(0)("date").ToString(),
-                    .Status = Convert.ToString(dr("status")),
+                    .AmountPaid = Convert.ToDouble(dr("amount_paid")),
+                    .TransactionDate = Convert.ToDateTime(dt.Rows(0)("date")).Date,
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
                     .UpdatedBy = dr("updated_by").ToString(),

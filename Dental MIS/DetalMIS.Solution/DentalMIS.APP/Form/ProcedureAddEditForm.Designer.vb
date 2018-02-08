@@ -24,21 +24,18 @@ Partial Class ProcedureAddEditForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureAddEditForm))
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.comboProcedureType = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.textPaymentType = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.textPrice = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -53,19 +50,18 @@ Partial Class ProcedureAddEditForm
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.TabPageProcedure = New System.Windows.Forms.TabPage()
         Me.TabPagePayment = New System.Windows.Forms.TabPage()
+        Me.textAmountPaid = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.textPaymentBalance = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.textPaymentCharge = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.amountPaid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.paymentDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.textPaymentCharge = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.textPaymentBalance = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.textAmountPaid = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl.SuspendLayout()
@@ -139,26 +135,6 @@ Partial Class ProcedureAddEditForm
         Me.comboProcedureType.Size = New System.Drawing.Size(208, 23)
         Me.comboProcedureType.TabIndex = 0
         Me.comboProcedureType.Tag = "*"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(217, 3)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 16)
-        Me.Label2.TabIndex = 37
-        Me.Label2.Text = "Payment Type"
-        '
-        'textPaymentType
-        '
-        Me.textPaymentType.BackColor = System.Drawing.SystemColors.Window
-        Me.textPaymentType.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textPaymentType.Location = New System.Drawing.Point(220, 22)
-        Me.textPaymentType.Name = "textPaymentType"
-        Me.textPaymentType.ReadOnly = True
-        Me.textPaymentType.Size = New System.Drawing.Size(208, 23)
-        Me.textPaymentType.TabIndex = 36
         '
         'Label1
         '
@@ -256,7 +232,7 @@ Partial Class ProcedureAddEditForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 93)
+        Me.Label4.Location = New System.Drawing.Point(217, 3)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(48, 16)
         Me.Label4.TabIndex = 50
@@ -266,7 +242,7 @@ Partial Class ProcedureAddEditForm
         '
         Me.comboTooth.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboTooth.FormattingEnabled = True
-        Me.comboTooth.Location = New System.Drawing.Point(6, 112)
+        Me.comboTooth.Location = New System.Drawing.Point(220, 22)
         Me.comboTooth.Name = "comboTooth"
         Me.comboTooth.Size = New System.Drawing.Size(208, 23)
         Me.comboTooth.TabIndex = 49
@@ -277,7 +253,7 @@ Partial Class ProcedureAddEditForm
         Me.dtPickerTransDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtPickerTransDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtPickerTransDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtPickerTransDate.Location = New System.Drawing.Point(220, 112)
+        Me.dtPickerTransDate.Location = New System.Drawing.Point(6, 112)
         Me.dtPickerTransDate.Name = "dtPickerTransDate"
         Me.dtPickerTransDate.Size = New System.Drawing.Size(208, 22)
         Me.dtPickerTransDate.TabIndex = 51
@@ -286,7 +262,7 @@ Partial Class ProcedureAddEditForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(217, 93)
+        Me.Label6.Location = New System.Drawing.Point(3, 93)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 16)
         Me.Label6.TabIndex = 52
@@ -310,9 +286,7 @@ Partial Class ProcedureAddEditForm
         Me.TabPageProcedure.Controls.Add(Me.Label6)
         Me.TabPageProcedure.Controls.Add(Me.comboProcedureType)
         Me.TabPageProcedure.Controls.Add(Me.dtPickerTransDate)
-        Me.TabPageProcedure.Controls.Add(Me.textPaymentType)
         Me.TabPageProcedure.Controls.Add(Me.Label4)
-        Me.TabPageProcedure.Controls.Add(Me.Label2)
         Me.TabPageProcedure.Controls.Add(Me.comboTooth)
         Me.TabPageProcedure.Controls.Add(Me.textPrice)
         Me.TabPageProcedure.Controls.Add(Me.Label1)
@@ -345,110 +319,25 @@ Partial Class ProcedureAddEditForm
         Me.TabPagePayment.Text = "Payment Details"
         Me.TabPagePayment.UseVisualStyleBackColor = True
         '
-        'DataGrid
+        'textAmountPaid
         '
-        Me.DataGrid.AllowUserToAddRows = False
-        Me.DataGrid.AllowUserToDeleteRows = False
-        Me.DataGrid.AllowUserToResizeColumns = False
-        Me.DataGrid.AllowUserToResizeRows = False
-        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.amountPaid, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle14
-        Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DataGrid.Location = New System.Drawing.Point(3, 3)
-        Me.DataGrid.MultiSelect = False
-        Me.DataGrid.Name = "DataGrid"
-        Me.DataGrid.ReadOnly = True
-        Me.DataGrid.RowHeadersVisible = False
-        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(429, 241)
-        Me.DataGrid.TabIndex = 46
+        Me.textAmountPaid.BackColor = System.Drawing.Color.White
+        Me.textAmountPaid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textAmountPaid.Location = New System.Drawing.Point(102, 279)
+        Me.textAmountPaid.Name = "textAmountPaid"
+        Me.textAmountPaid.ReadOnly = True
+        Me.textAmountPaid.Size = New System.Drawing.Size(325, 23)
+        Me.textAmountPaid.TabIndex = 52
         '
-        'ID
+        'Label10
         '
-        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 43
-        '
-        'amountPaid
-        '
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.amountPaid.DefaultCellStyle = DataGridViewCellStyle9
-        Me.amountPaid.HeaderText = "Amount Paid"
-        Me.amountPaid.Name = "amountPaid"
-        Me.amountPaid.ReadOnly = True
-        '
-        'createdBy
-        '
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle10
-        Me.createdBy.HeaderText = "Created By"
-        Me.createdBy.Name = "createdBy"
-        Me.createdBy.ReadOnly = True
-        '
-        'createdDate
-        '
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle11
-        Me.createdDate.HeaderText = "Created Date"
-        Me.createdDate.Name = "createdDate"
-        Me.createdDate.ReadOnly = True
-        '
-        'updatedBy
-        '
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle12
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        Me.updatedBy.ReadOnly = True
-        '
-        'updatedDate
-        '
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle13
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
-        Me.updatedDate.ReadOnly = True
-        '
-        'textPaymentCharge
-        '
-        Me.textPaymentCharge.BackColor = System.Drawing.Color.White
-        Me.textPaymentCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textPaymentCharge.Location = New System.Drawing.Point(102, 250)
-        Me.textPaymentCharge.Name = "textPaymentCharge"
-        Me.textPaymentCharge.ReadOnly = True
-        Me.textPaymentCharge.Size = New System.Drawing.Size(325, 23)
-        Me.textPaymentCharge.TabIndex = 47
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(6, 253)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(58, 16)
-        Me.Label8.TabIndex = 48
-        Me.Label8.Text = "Charge :"
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(6, 282)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(90, 16)
+        Me.Label10.TabIndex = 53
+        Me.Label10.Text = "Amount Paid :"
         '
         'textPaymentBalance
         '
@@ -470,25 +359,102 @@ Partial Class ProcedureAddEditForm
         Me.Label9.TabIndex = 50
         Me.Label9.Text = "Balance :"
         '
-        'textAmountPaid
+        'textPaymentCharge
         '
-        Me.textAmountPaid.BackColor = System.Drawing.Color.White
-        Me.textAmountPaid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textAmountPaid.Location = New System.Drawing.Point(102, 279)
-        Me.textAmountPaid.Name = "textAmountPaid"
-        Me.textAmountPaid.ReadOnly = True
-        Me.textAmountPaid.Size = New System.Drawing.Size(325, 23)
-        Me.textAmountPaid.TabIndex = 52
+        Me.textPaymentCharge.BackColor = System.Drawing.Color.White
+        Me.textPaymentCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textPaymentCharge.Location = New System.Drawing.Point(102, 250)
+        Me.textPaymentCharge.Name = "textPaymentCharge"
+        Me.textPaymentCharge.ReadOnly = True
+        Me.textPaymentCharge.Size = New System.Drawing.Size(325, 23)
+        Me.textPaymentCharge.TabIndex = 47
         '
-        'Label10
+        'Label8
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(6, 282)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(90, 16)
-        Me.Label10.TabIndex = 53
-        Me.Label10.Text = "Amount Paid :"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(6, 253)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(58, 16)
+        Me.Label8.TabIndex = 48
+        Me.Label8.Text = "Charge :"
+        '
+        'DataGrid
+        '
+        Me.DataGrid.AllowUserToAddRows = False
+        Me.DataGrid.AllowUserToDeleteRows = False
+        Me.DataGrid.AllowUserToResizeColumns = False
+        Me.DataGrid.AllowUserToResizeRows = False
+        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.amountPaid, Me.paymentDate, Me.updatedBy, Me.updatedDate})
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DataGrid.Location = New System.Drawing.Point(3, 3)
+        Me.DataGrid.MultiSelect = False
+        Me.DataGrid.Name = "DataGrid"
+        Me.DataGrid.ReadOnly = True
+        Me.DataGrid.RowHeadersVisible = False
+        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGrid.Size = New System.Drawing.Size(429, 241)
+        Me.DataGrid.TabIndex = 46
+        '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 43
+        '
+        'amountPaid
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.amountPaid.DefaultCellStyle = DataGridViewCellStyle2
+        Me.amountPaid.HeaderText = "Amount Paid"
+        Me.amountPaid.Name = "amountPaid"
+        Me.amountPaid.ReadOnly = True
+        '
+        'paymentDate
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.paymentDate.DefaultCellStyle = DataGridViewCellStyle3
+        Me.paymentDate.HeaderText = "Payment Date"
+        Me.paymentDate.Name = "paymentDate"
+        Me.paymentDate.ReadOnly = True
+        '
+        'updatedBy
+        '
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle4
+        Me.updatedBy.HeaderText = "Updated By"
+        Me.updatedBy.Name = "updatedBy"
+        Me.updatedBy.ReadOnly = True
+        '
+        'updatedDate
+        '
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle5
+        Me.updatedDate.HeaderText = "Updated Date"
+        Me.updatedDate.Name = "updatedDate"
+        Me.updatedDate.ReadOnly = True
         '
         'ProcedureAddEditForm
         '
@@ -522,8 +488,6 @@ Partial Class ProcedureAddEditForm
     Friend WithEvents ButtonClose As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Label7 As Label
     Friend WithEvents comboProcedureType As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents textPaymentType As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents textCharge As TextBox
     Friend WithEvents Label1 As Label
@@ -539,16 +503,15 @@ Partial Class ProcedureAddEditForm
     Friend WithEvents TabPageProcedure As TabPage
     Friend WithEvents TabPagePayment As TabPage
     Friend WithEvents DataGrid As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents amountPaid As DataGridViewTextBoxColumn
-    Friend WithEvents createdBy As DataGridViewTextBoxColumn
-    Friend WithEvents createdDate As DataGridViewTextBoxColumn
-    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
-    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
     Friend WithEvents textAmountPaid As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents textPaymentBalance As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents textPaymentCharge As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents amountPaid As DataGridViewTextBoxColumn
+    Friend WithEvents paymentDate As DataGridViewTextBoxColumn
+    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
+    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
 End Class

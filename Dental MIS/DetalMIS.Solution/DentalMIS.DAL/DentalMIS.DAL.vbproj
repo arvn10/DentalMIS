@@ -69,7 +69,6 @@
   <ItemGroup>
     <Compile Include="Repository\PaymentRepository.vb" />
     <Compile Include="Repository\ProcedureRepository.vb" />
-    <Compile Include="Repository\ProcedureToothRepository.vb" />
     <Compile Include="RepositoryTemplate.vb" />
     <Compile Include="Repository\PatientReporsitory.vb" />
     <Compile Include="Repository\ProcedureTypeRepository.vb" />

@@ -4,20 +4,44 @@ Imports DentalMIS.MODEL
 Public Class ProcedureAddEditForm
     Public activeUser As String
     Public patientID As Long
+    Public procedureID As long
     Public patientDentalRecordForm As PatientDentalRecordForm
-    Private paymentSvc As PaymentService
     Private procedureTypeSvc As ProcedureTypeService
+    Private paymentSvc As PaymentService
     Private procedureSvc As ProcedureService
     Private toothSvc As ToothService
     Dim firstRun As Boolean = True
-    Public Sub New()
 
+
+    Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
         procedureTypeSvc = New ProcedureTypeService
         toothSvc = New ToothService
+    End Sub
+
+    Public Sub LoadData()
+        paymentSvc = New PaymentService()
+        Dim data As List(Of Payment)
+        Dim bs As New BindingSource
+        data = paymentSvc.PaymentSearchProcedureID(procedureID)
+        bs.DataSource = data
+        DataGrid.AutoGenerateColumns = False
+        DataGrid.DataSource = bs
+        DataGrid.Columns("ID").DataPropertyName = "ID"
+        DataGrid.Columns("amountPaid").DataPropertyName = "AmountPaid"
+        DataGrid.Columns("paymentDate").DataPropertyName = "TransactionDate"
+
+        DataGrid.Columns("updatedBy").DataPropertyName = "UpdatedBy"
+        DataGrid.Columns("updatedDate").DataPropertyName = "UpdatedDate"
+
+        DataGrid.Columns("amountPaid").DefaultCellStyle.Format = "C"
+        DataGrid.Columns("amountPaid").DefaultCellStyle.FormatProvider = Globalization.CultureInfo.GetCultureInfo("en-PH")
+
+        DataGrid.AutoResizeColumns()
+        DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
     End Sub
 
     Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
@@ -41,6 +65,17 @@ Public Class ProcedureAddEditForm
 
         If HeaderLabel.Text.Contains("Edit") Then
             TabPagePayment.Visible = True
+            Dim data As Procedure
+            procedureSvc = New ProcedureService()
+            data = procedureSvc.ProcedureSearchID(procedureID)
+            comboProcedureType.Text = data.ProcedureName
+            comboTooth.Text = data.Tooth
+            dtPickerTransDate.Value = data.ProcedureDate
+            textPrescription.Text = data.Notes
+            textCharge.Text = data.AmountToPay
+            textAmountPaid.Text = data.AmountPaid
+            textPaymentBalance.Text = data.Balance
+            LoadData()
         Else
             TabPagePayment.Visible = False
         End If
@@ -50,7 +85,6 @@ Public Class ProcedureAddEditForm
         If Not firstRun Then
             Dim procedureType As New ProcedureType
             procedureType = procedureTypeSvc.ProcedureTypeSearchID(comboProcedureType.SelectedValue)
-            textPaymentType.Text = procedureType.PaymentType
             textPrice.Text = procedureType.BasePrice
         End If
     End Sub
@@ -99,7 +133,7 @@ Public Class ProcedureAddEditForm
                     procedureID = procedureSvc.ProcedureCreate(procedure)
                     If procedureID > 0 Then
                         MessageBox.Show("Procedure Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        patientDentalRecordForm.LoadData("", "")
+                        patientDentalRecordForm.LoadData("", "", "")
                         Me.Dispose()
                     End If
                 Else

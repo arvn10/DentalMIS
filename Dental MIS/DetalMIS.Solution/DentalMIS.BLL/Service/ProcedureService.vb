@@ -20,7 +20,15 @@ Public Class ProcedureService
         Return procedureRepository.ProcedureSearchID(id)
     End Function
 
-    Public Function ProcedureSearchPatientID(patientID As Long, [from] As String, [to] As String) As List(Of Procedure) Implements IProcedureService.ProcedureSearchPatientID
-        Return procedureRepository.ProcedureSearchPatientID(patientID, [from], [to])
+    Public Function ProcedureSearchPatientID(patientID As Long, toothNumber As String, [from] As String, [to] As String) As List(Of Procedure) Implements IProcedureService.ProcedureSearchPatientID
+        Return procedureRepository.ProcedureSearchPatientID(patientID, toothNumber, [from], [to])
+    End Function
+
+    Public Function ProcedureSearchPaymentStatus(paymentStatus As String) As List(Of Procedure) Implements IProcedureService.ProcedureSearchPaymentStatus
+        Return procedureRepository.ProcedureSearchPaymentStatus(paymentStatus)
+    End Function
+
+    Public Function ProcedureSearchPaymentLike(searchText As String) As List(Of Procedure) Implements IProcedureService.ProcedureSearchPaymentLike
+        Return procedureRepository.ProcedureSearchPaymentLike(searchText)
     End Function
 End Class
