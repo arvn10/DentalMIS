@@ -1,7 +1,8 @@
-﻿Imports System.Windows.Forms
-
+﻿Imports DentalMIS.MODEL
 Public Class MainForm
+    Public userID As Long
     Public isLogin As Boolean = False
+    Public user As User
     Private Sub ClearControls()
         For Each control As Control In PanelMain.Controls
             PanelMain.Controls.Remove(control)
@@ -97,5 +98,15 @@ Public Class MainForm
         Dim control As New ReportControl
         control.Dock = DockStyle.Fill
         PanelMain.Controls.Add(control)
+    End Sub
+
+    Private Sub ButtonChangePassword_Click(sender As Object, e As EventArgs) Handles ButtonChangePassword.Click
+        Try
+            Dim form As New ChangePasswordForm
+            form.user = user
+            form.ShowDialog()
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

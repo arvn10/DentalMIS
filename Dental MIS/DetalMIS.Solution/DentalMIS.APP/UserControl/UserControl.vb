@@ -41,7 +41,7 @@ Public Class UserControl
         End Try
     End Sub
 
-    Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
+    Private Sub ButtonNew_Click(sender As Object, e As EventArgs)
         Try
             Dim form As New UserAddEditForm
             form.userControl = Me
@@ -53,7 +53,7 @@ Public Class UserControl
         End Try
     End Sub
 
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs)
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New UserAddEditForm
@@ -71,7 +71,41 @@ Public Class UserControl
         End Try
     End Sub
 
-    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
+    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs)
         LoadData("")
+    End Sub
+
+    Private Sub ToolStripButtonShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripButtonShowAll.Click
+        LoadData("")
+    End Sub
+
+    Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
+        Try
+            Dim form As New UserAddEditForm
+            form.userControl = Me
+            form.activeUser = MainForm.LabelMenu.Text
+            form.HeaderLabel.Text = "User - New"
+            form.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
+        Try
+            If (DataGrid.Rows.Count > 0) Then
+                Dim form As New UserAddEditForm
+                form.userControl = Me
+                form.activeUser = MainForm.LabelMenu.Text
+                form.userID = DataGrid.CurrentRow.Cells(0).Value
+                form.HeaderLabel.Text = "User - Edit"
+                form.ShowDialog()
+                DataGrid.DataSource = Nothing
+            Else
+                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

@@ -34,7 +34,7 @@ Partial Class MainForm
         Me.BunifuDragControl = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.PanelSideMenu = New System.Windows.Forms.Panel()
         Me.ButtonPayment = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ButtonMyAccount = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ButtonChangePassword = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ButtonSchedule = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ButtonReport = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttonLogout = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -142,7 +142,7 @@ Partial Class MainForm
         '
         Me.PanelSideMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.PanelSideMenu.Controls.Add(Me.ButtonPayment)
-        Me.PanelSideMenu.Controls.Add(Me.ButtonMyAccount)
+        Me.PanelSideMenu.Controls.Add(Me.ButtonChangePassword)
         Me.PanelSideMenu.Controls.Add(Me.ButtonSchedule)
         Me.PanelSideMenu.Controls.Add(Me.ButtonReport)
         Me.PanelSideMenu.Controls.Add(Me.buttonLogout)
@@ -195,42 +195,42 @@ Partial Class MainForm
         Me.ButtonPayment.Textcolor = System.Drawing.Color.White
         Me.ButtonPayment.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'ButtonMyAccount
+        'ButtonChangePassword
         '
-        Me.ButtonMyAccount.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonMyAccount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonMyAccount.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonMyAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonMyAccount.BorderRadius = 0
-        Me.ButtonMyAccount.ButtonText = "     My Account"
-        Me.ButtonMyAccount.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PanelAnimator.SetDecoration(Me.ButtonMyAccount, BunifuAnimatorNS.DecorationType.None)
-        Me.ButtonMyAccount.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonMyAccount.Iconcolor = System.Drawing.Color.Transparent
-        Me.ButtonMyAccount.Iconimage = CType(resources.GetObject("ButtonMyAccount.Iconimage"), System.Drawing.Image)
-        Me.ButtonMyAccount.Iconimage_right = Nothing
-        Me.ButtonMyAccount.Iconimage_right_Selected = Nothing
-        Me.ButtonMyAccount.Iconimage_Selected = Nothing
-        Me.ButtonMyAccount.IconMarginLeft = 0
-        Me.ButtonMyAccount.IconMarginRight = 0
-        Me.ButtonMyAccount.IconRightVisible = True
-        Me.ButtonMyAccount.IconRightZoom = 0R
-        Me.ButtonMyAccount.IconVisible = True
-        Me.ButtonMyAccount.IconZoom = 70.0R
-        Me.ButtonMyAccount.IsTab = False
-        Me.ButtonMyAccount.Location = New System.Drawing.Point(0, 589)
-        Me.ButtonMyAccount.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonMyAccount.Name = "ButtonMyAccount"
-        Me.ButtonMyAccount.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonMyAccount.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonMyAccount.OnHoverTextColor = System.Drawing.Color.White
-        Me.ButtonMyAccount.selected = False
-        Me.ButtonMyAccount.Size = New System.Drawing.Size(182, 48)
-        Me.ButtonMyAccount.TabIndex = 11
-        Me.ButtonMyAccount.Text = "     My Account"
-        Me.ButtonMyAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonMyAccount.Textcolor = System.Drawing.Color.White
-        Me.ButtonMyAccount.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonChangePassword.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonChangePassword.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonChangePassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonChangePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonChangePassword.BorderRadius = 0
+        Me.ButtonChangePassword.ButtonText = "     Change Password"
+        Me.ButtonChangePassword.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PanelAnimator.SetDecoration(Me.ButtonChangePassword, BunifuAnimatorNS.DecorationType.None)
+        Me.ButtonChangePassword.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonChangePassword.Iconcolor = System.Drawing.Color.Transparent
+        Me.ButtonChangePassword.Iconimage = CType(resources.GetObject("ButtonChangePassword.Iconimage"), System.Drawing.Image)
+        Me.ButtonChangePassword.Iconimage_right = Nothing
+        Me.ButtonChangePassword.Iconimage_right_Selected = Nothing
+        Me.ButtonChangePassword.Iconimage_Selected = Nothing
+        Me.ButtonChangePassword.IconMarginLeft = 0
+        Me.ButtonChangePassword.IconMarginRight = 0
+        Me.ButtonChangePassword.IconRightVisible = True
+        Me.ButtonChangePassword.IconRightZoom = 0R
+        Me.ButtonChangePassword.IconVisible = True
+        Me.ButtonChangePassword.IconZoom = 70.0R
+        Me.ButtonChangePassword.IsTab = False
+        Me.ButtonChangePassword.Location = New System.Drawing.Point(0, 589)
+        Me.ButtonChangePassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonChangePassword.Name = "ButtonChangePassword"
+        Me.ButtonChangePassword.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.ButtonChangePassword.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.ButtonChangePassword.OnHoverTextColor = System.Drawing.Color.White
+        Me.ButtonChangePassword.selected = False
+        Me.ButtonChangePassword.Size = New System.Drawing.Size(182, 48)
+        Me.ButtonChangePassword.TabIndex = 11
+        Me.ButtonChangePassword.Text = "     Change Password"
+        Me.ButtonChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonChangePassword.Textcolor = System.Drawing.Color.White
+        Me.ButtonChangePassword.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'ButtonSchedule
         '
@@ -278,6 +278,7 @@ Partial Class MainForm
         Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonReport, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonReport.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonReport.Enabled = False
         Me.ButtonReport.Iconcolor = System.Drawing.Color.Transparent
         Me.ButtonReport.Iconimage = CType(resources.GetObject("ButtonReport.Iconimage"), System.Drawing.Image)
         Me.ButtonReport.Iconimage_right = Nothing
@@ -351,6 +352,7 @@ Partial Class MainForm
         Me.ButtonConfiguration.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonConfiguration, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonConfiguration.DisabledColor = System.Drawing.Color.Gray
+        Me.ButtonConfiguration.Enabled = False
         Me.ButtonConfiguration.Iconcolor = System.Drawing.Color.Transparent
         Me.ButtonConfiguration.Iconimage = CType(resources.GetObject("ButtonConfiguration.Iconimage"), System.Drawing.Image)
         Me.ButtonConfiguration.Iconimage_right = Nothing
@@ -563,6 +565,6 @@ Partial Class MainForm
     Friend WithEvents PanelMain As Panel
     Friend WithEvents ButtonReport As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ButtonSchedule As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ButtonMyAccount As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ButtonChangePassword As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ButtonPayment As Bunifu.Framework.UI.BunifuFlatButton
 End Class

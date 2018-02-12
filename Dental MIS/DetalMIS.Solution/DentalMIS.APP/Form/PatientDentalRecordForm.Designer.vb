@@ -24,11 +24,11 @@ Partial Class PatientDentalRecordForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientDentalRecordForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
@@ -66,7 +66,6 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth2 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.buttonTooth1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ButtonShowAll = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ButtonSearch = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dtPickerTo = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -86,6 +85,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonEdit = New System.Windows.Forms.ToolStripMenuItem()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolStripMenuItemShowAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxTooth.SuspendLayout()
@@ -216,7 +216,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton17.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton17.Image = CType(resources.GetObject("BunifuImageButton17.Image"), System.Drawing.Image)
         Me.BunifuImageButton17.ImageActive = Nothing
-        Me.BunifuImageButton17.Location = New System.Drawing.Point(583, 150)
+        Me.BunifuImageButton17.Location = New System.Drawing.Point(590, 150)
         Me.BunifuImageButton17.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton17.Name = "BunifuImageButton17"
         Me.BunifuImageButton17.Size = New System.Drawing.Size(33, 62)
@@ -233,7 +233,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton18.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton18.Image = CType(resources.GetObject("BunifuImageButton18.Image"), System.Drawing.Image)
         Me.BunifuImageButton18.ImageActive = Nothing
-        Me.BunifuImageButton18.Location = New System.Drawing.Point(543, 150)
+        Me.BunifuImageButton18.Location = New System.Drawing.Point(550, 150)
         Me.BunifuImageButton18.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton18.Name = "BunifuImageButton18"
         Me.BunifuImageButton18.Size = New System.Drawing.Size(36, 69)
@@ -250,7 +250,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton19.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton19.Image = CType(resources.GetObject("BunifuImageButton19.Image"), System.Drawing.Image)
         Me.BunifuImageButton19.ImageActive = Nothing
-        Me.BunifuImageButton19.Location = New System.Drawing.Point(500, 150)
+        Me.BunifuImageButton19.Location = New System.Drawing.Point(507, 150)
         Me.BunifuImageButton19.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton19.Name = "BunifuImageButton19"
         Me.BunifuImageButton19.Size = New System.Drawing.Size(39, 72)
@@ -267,7 +267,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton20.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton20.Image = CType(resources.GetObject("BunifuImageButton20.Image"), System.Drawing.Image)
         Me.BunifuImageButton20.ImageActive = Nothing
-        Me.BunifuImageButton20.Location = New System.Drawing.Point(470, 150)
+        Me.BunifuImageButton20.Location = New System.Drawing.Point(477, 150)
         Me.BunifuImageButton20.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton20.Name = "BunifuImageButton20"
         Me.BunifuImageButton20.Size = New System.Drawing.Size(26, 78)
@@ -284,7 +284,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton21.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton21.Image = CType(resources.GetObject("BunifuImageButton21.Image"), System.Drawing.Image)
         Me.BunifuImageButton21.ImageActive = Nothing
-        Me.BunifuImageButton21.Location = New System.Drawing.Point(440, 150)
+        Me.BunifuImageButton21.Location = New System.Drawing.Point(447, 150)
         Me.BunifuImageButton21.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton21.Name = "BunifuImageButton21"
         Me.BunifuImageButton21.Size = New System.Drawing.Size(26, 78)
@@ -301,7 +301,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton22.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton22.Image = CType(resources.GetObject("BunifuImageButton22.Image"), System.Drawing.Image)
         Me.BunifuImageButton22.ImageActive = Nothing
-        Me.BunifuImageButton22.Location = New System.Drawing.Point(407, 150)
+        Me.BunifuImageButton22.Location = New System.Drawing.Point(414, 150)
         Me.BunifuImageButton22.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton22.Name = "BunifuImageButton22"
         Me.BunifuImageButton22.Size = New System.Drawing.Size(29, 86)
@@ -318,7 +318,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton23.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton23.Image = CType(resources.GetObject("BunifuImageButton23.Image"), System.Drawing.Image)
         Me.BunifuImageButton23.ImageActive = Nothing
-        Me.BunifuImageButton23.Location = New System.Drawing.Point(381, 150)
+        Me.BunifuImageButton23.Location = New System.Drawing.Point(388, 150)
         Me.BunifuImageButton23.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton23.Name = "BunifuImageButton23"
         Me.BunifuImageButton23.Size = New System.Drawing.Size(22, 77)
@@ -335,7 +335,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton24.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton24.Image = CType(resources.GetObject("BunifuImageButton24.Image"), System.Drawing.Image)
         Me.BunifuImageButton24.ImageActive = Nothing
-        Me.BunifuImageButton24.Location = New System.Drawing.Point(354, 150)
+        Me.BunifuImageButton24.Location = New System.Drawing.Point(361, 150)
         Me.BunifuImageButton24.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton24.Name = "BunifuImageButton24"
         Me.BunifuImageButton24.Size = New System.Drawing.Size(23, 75)
@@ -352,7 +352,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton25.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton25.Image = CType(resources.GetObject("BunifuImageButton25.Image"), System.Drawing.Image)
         Me.BunifuImageButton25.ImageActive = Nothing
-        Me.BunifuImageButton25.Location = New System.Drawing.Point(330, 150)
+        Me.BunifuImageButton25.Location = New System.Drawing.Point(337, 150)
         Me.BunifuImageButton25.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton25.Name = "BunifuImageButton25"
         Me.BunifuImageButton25.Size = New System.Drawing.Size(20, 75)
@@ -369,7 +369,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton26.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton26.Image = CType(resources.GetObject("BunifuImageButton26.Image"), System.Drawing.Image)
         Me.BunifuImageButton26.ImageActive = Nothing
-        Me.BunifuImageButton26.Location = New System.Drawing.Point(304, 150)
+        Me.BunifuImageButton26.Location = New System.Drawing.Point(311, 150)
         Me.BunifuImageButton26.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton26.Name = "BunifuImageButton26"
         Me.BunifuImageButton26.Size = New System.Drawing.Size(22, 78)
@@ -386,7 +386,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton27.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton27.Image = CType(resources.GetObject("BunifuImageButton27.Image"), System.Drawing.Image)
         Me.BunifuImageButton27.ImageActive = Nothing
-        Me.BunifuImageButton27.Location = New System.Drawing.Point(270, 150)
+        Me.BunifuImageButton27.Location = New System.Drawing.Point(277, 150)
         Me.BunifuImageButton27.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton27.Name = "BunifuImageButton27"
         Me.BunifuImageButton27.Size = New System.Drawing.Size(30, 88)
@@ -403,7 +403,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton28.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton28.Image = CType(resources.GetObject("BunifuImageButton28.Image"), System.Drawing.Image)
         Me.BunifuImageButton28.ImageActive = Nothing
-        Me.BunifuImageButton28.Location = New System.Drawing.Point(235, 150)
+        Me.BunifuImageButton28.Location = New System.Drawing.Point(242, 150)
         Me.BunifuImageButton28.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton28.Name = "BunifuImageButton28"
         Me.BunifuImageButton28.Size = New System.Drawing.Size(31, 80)
@@ -420,7 +420,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton29.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton29.Image = CType(resources.GetObject("BunifuImageButton29.Image"), System.Drawing.Image)
         Me.BunifuImageButton29.ImageActive = Nothing
-        Me.BunifuImageButton29.Location = New System.Drawing.Point(202, 150)
+        Me.BunifuImageButton29.Location = New System.Drawing.Point(209, 150)
         Me.BunifuImageButton29.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton29.Name = "BunifuImageButton29"
         Me.BunifuImageButton29.Size = New System.Drawing.Size(29, 76)
@@ -437,7 +437,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton30.Image = CType(resources.GetObject("BunifuImageButton30.Image"), System.Drawing.Image)
         Me.BunifuImageButton30.ImageActive = Nothing
-        Me.BunifuImageButton30.Location = New System.Drawing.Point(156, 150)
+        Me.BunifuImageButton30.Location = New System.Drawing.Point(163, 150)
         Me.BunifuImageButton30.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton30.Name = "BunifuImageButton30"
         Me.BunifuImageButton30.Size = New System.Drawing.Size(42, 73)
@@ -454,7 +454,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton31.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton31.Image = CType(resources.GetObject("BunifuImageButton31.Image"), System.Drawing.Image)
         Me.BunifuImageButton31.ImageActive = Nothing
-        Me.BunifuImageButton31.Location = New System.Drawing.Point(113, 150)
+        Me.BunifuImageButton31.Location = New System.Drawing.Point(120, 150)
         Me.BunifuImageButton31.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton31.Name = "BunifuImageButton31"
         Me.BunifuImageButton31.Size = New System.Drawing.Size(39, 68)
@@ -471,7 +471,7 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton32.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton32.Image = CType(resources.GetObject("BunifuImageButton32.Image"), System.Drawing.Image)
         Me.BunifuImageButton32.ImageActive = Nothing
-        Me.BunifuImageButton32.Location = New System.Drawing.Point(74, 150)
+        Me.BunifuImageButton32.Location = New System.Drawing.Point(81, 150)
         Me.BunifuImageButton32.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuImageButton32.Name = "BunifuImageButton32"
         Me.BunifuImageButton32.Size = New System.Drawing.Size(35, 65)
@@ -488,7 +488,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth16.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth16.Image = CType(resources.GetObject("buttonTooth16.Image"), System.Drawing.Image)
         Me.buttonTooth16.ImageActive = Nothing
-        Me.buttonTooth16.Location = New System.Drawing.Point(597, 84)
+        Me.buttonTooth16.Location = New System.Drawing.Point(604, 84)
         Me.buttonTooth16.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth16.Name = "buttonTooth16"
         Me.buttonTooth16.Size = New System.Drawing.Size(30, 62)
@@ -505,7 +505,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth15.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth15.Image = CType(resources.GetObject("buttonTooth15.Image"), System.Drawing.Image)
         Me.buttonTooth15.ImageActive = Nothing
-        Me.buttonTooth15.Location = New System.Drawing.Point(559, 79)
+        Me.buttonTooth15.Location = New System.Drawing.Point(566, 79)
         Me.buttonTooth15.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth15.Name = "buttonTooth15"
         Me.buttonTooth15.Size = New System.Drawing.Size(34, 67)
@@ -522,7 +522,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth14.Image = CType(resources.GetObject("buttonTooth14.Image"), System.Drawing.Image)
         Me.buttonTooth14.ImageActive = Nothing
-        Me.buttonTooth14.Location = New System.Drawing.Point(516, 70)
+        Me.buttonTooth14.Location = New System.Drawing.Point(523, 70)
         Me.buttonTooth14.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth14.Name = "buttonTooth14"
         Me.buttonTooth14.Size = New System.Drawing.Size(39, 76)
@@ -539,7 +539,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth13.Image = CType(resources.GetObject("buttonTooth13.Image"), System.Drawing.Image)
         Me.buttonTooth13.ImageActive = Nothing
-        Me.buttonTooth13.Location = New System.Drawing.Point(488, 71)
+        Me.buttonTooth13.Location = New System.Drawing.Point(495, 71)
         Me.buttonTooth13.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth13.Name = "buttonTooth13"
         Me.buttonTooth13.Size = New System.Drawing.Size(24, 75)
@@ -556,7 +556,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth12.Image = CType(resources.GetObject("buttonTooth12.Image"), System.Drawing.Image)
         Me.buttonTooth12.ImageActive = Nothing
-        Me.buttonTooth12.Location = New System.Drawing.Point(457, 72)
+        Me.buttonTooth12.Location = New System.Drawing.Point(464, 72)
         Me.buttonTooth12.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth12.Name = "buttonTooth12"
         Me.buttonTooth12.Size = New System.Drawing.Size(27, 74)
@@ -573,7 +573,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth11.Image = CType(resources.GetObject("buttonTooth11.Image"), System.Drawing.Image)
         Me.buttonTooth11.ImageActive = Nothing
-        Me.buttonTooth11.Location = New System.Drawing.Point(420, 54)
+        Me.buttonTooth11.Location = New System.Drawing.Point(427, 54)
         Me.buttonTooth11.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth11.Name = "buttonTooth11"
         Me.buttonTooth11.Size = New System.Drawing.Size(33, 92)
@@ -590,7 +590,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth10.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth10.Image = CType(resources.GetObject("buttonTooth10.Image"), System.Drawing.Image)
         Me.buttonTooth10.ImageActive = Nothing
-        Me.buttonTooth10.Location = New System.Drawing.Point(392, 68)
+        Me.buttonTooth10.Location = New System.Drawing.Point(399, 68)
         Me.buttonTooth10.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth10.Name = "buttonTooth10"
         Me.buttonTooth10.Size = New System.Drawing.Size(24, 78)
@@ -607,7 +607,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth9.Image = CType(resources.GetObject("buttonTooth9.Image"), System.Drawing.Image)
         Me.buttonTooth9.ImageActive = Nothing
-        Me.buttonTooth9.Location = New System.Drawing.Point(354, 58)
+        Me.buttonTooth9.Location = New System.Drawing.Point(361, 58)
         Me.buttonTooth9.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth9.Name = "buttonTooth9"
         Me.buttonTooth9.Size = New System.Drawing.Size(34, 88)
@@ -624,7 +624,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth8.Image = CType(resources.GetObject("buttonTooth8.Image"), System.Drawing.Image)
         Me.buttonTooth8.ImageActive = Nothing
-        Me.buttonTooth8.Location = New System.Drawing.Point(318, 56)
+        Me.buttonTooth8.Location = New System.Drawing.Point(325, 56)
         Me.buttonTooth8.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth8.Name = "buttonTooth8"
         Me.buttonTooth8.Size = New System.Drawing.Size(32, 90)
@@ -641,7 +641,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth7.Image = CType(resources.GetObject("buttonTooth7.Image"), System.Drawing.Image)
         Me.buttonTooth7.ImageActive = Nothing
-        Me.buttonTooth7.Location = New System.Drawing.Point(292, 67)
+        Me.buttonTooth7.Location = New System.Drawing.Point(299, 67)
         Me.buttonTooth7.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth7.Name = "buttonTooth7"
         Me.buttonTooth7.Size = New System.Drawing.Size(22, 79)
@@ -658,7 +658,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth6.Image = CType(resources.GetObject("buttonTooth6.Image"), System.Drawing.Image)
         Me.buttonTooth6.ImageActive = Nothing
-        Me.buttonTooth6.Location = New System.Drawing.Point(255, 54)
+        Me.buttonTooth6.Location = New System.Drawing.Point(262, 54)
         Me.buttonTooth6.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth6.Name = "buttonTooth6"
         Me.buttonTooth6.Size = New System.Drawing.Size(33, 92)
@@ -675,7 +675,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth5.Image = CType(resources.GetObject("buttonTooth5.Image"), System.Drawing.Image)
         Me.buttonTooth5.ImageActive = Nothing
-        Me.buttonTooth5.Location = New System.Drawing.Point(228, 71)
+        Me.buttonTooth5.Location = New System.Drawing.Point(235, 71)
         Me.buttonTooth5.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth5.Name = "buttonTooth5"
         Me.buttonTooth5.Size = New System.Drawing.Size(23, 75)
@@ -692,7 +692,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth4.Image = CType(resources.GetObject("buttonTooth4.Image"), System.Drawing.Image)
         Me.buttonTooth4.ImageActive = Nothing
-        Me.buttonTooth4.Location = New System.Drawing.Point(199, 69)
+        Me.buttonTooth4.Location = New System.Drawing.Point(206, 69)
         Me.buttonTooth4.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth4.Name = "buttonTooth4"
         Me.buttonTooth4.Size = New System.Drawing.Size(25, 77)
@@ -709,7 +709,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth3.Image = CType(resources.GetObject("buttonTooth3.Image"), System.Drawing.Image)
         Me.buttonTooth3.ImageActive = Nothing
-        Me.buttonTooth3.Location = New System.Drawing.Point(152, 70)
+        Me.buttonTooth3.Location = New System.Drawing.Point(159, 70)
         Me.buttonTooth3.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth3.Name = "buttonTooth3"
         Me.buttonTooth3.Size = New System.Drawing.Size(43, 76)
@@ -726,7 +726,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth2.Image = CType(resources.GetObject("buttonTooth2.Image"), System.Drawing.Image)
         Me.buttonTooth2.ImageActive = Nothing
-        Me.buttonTooth2.Location = New System.Drawing.Point(110, 76)
+        Me.buttonTooth2.Location = New System.Drawing.Point(117, 76)
         Me.buttonTooth2.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth2.Name = "buttonTooth2"
         Me.buttonTooth2.Size = New System.Drawing.Size(38, 70)
@@ -743,7 +743,7 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttonTooth1.Image = CType(resources.GetObject("buttonTooth1.Image"), System.Drawing.Image)
         Me.buttonTooth1.ImageActive = Nothing
-        Me.buttonTooth1.Location = New System.Drawing.Point(71, 83)
+        Me.buttonTooth1.Location = New System.Drawing.Point(78, 83)
         Me.buttonTooth1.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonTooth1.Name = "buttonTooth1"
         Me.buttonTooth1.Size = New System.Drawing.Size(35, 63)
@@ -757,7 +757,6 @@ Partial Class PatientDentalRecordForm
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.ButtonShowAll)
         Me.GroupBox2.Controls.Add(Me.ButtonSearch)
         Me.GroupBox2.Controls.Add(Me.dtPickerTo)
         Me.GroupBox2.Controls.Add(Me.Label2)
@@ -772,41 +771,6 @@ Partial Class PatientDentalRecordForm
         Me.GroupBox2.TabIndex = 22
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Procedure(s)"
-        '
-        'ButtonShowAll
-        '
-        Me.ButtonShowAll.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonShowAll.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonShowAll.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonShowAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonShowAll.BorderRadius = 0
-        Me.ButtonShowAll.ButtonText = "Show All"
-        Me.ButtonShowAll.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonShowAll.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonShowAll.Iconcolor = System.Drawing.Color.Transparent
-        Me.ButtonShowAll.Iconimage = CType(resources.GetObject("ButtonShowAll.Iconimage"), System.Drawing.Image)
-        Me.ButtonShowAll.Iconimage_right = Nothing
-        Me.ButtonShowAll.Iconimage_right_Selected = Nothing
-        Me.ButtonShowAll.Iconimage_Selected = Nothing
-        Me.ButtonShowAll.IconMarginLeft = 0
-        Me.ButtonShowAll.IconMarginRight = 0
-        Me.ButtonShowAll.IconRightVisible = True
-        Me.ButtonShowAll.IconRightZoom = 0R
-        Me.ButtonShowAll.IconVisible = True
-        Me.ButtonShowAll.IconZoom = 50.0R
-        Me.ButtonShowAll.IsTab = False
-        Me.ButtonShowAll.Location = New System.Drawing.Point(609, 43)
-        Me.ButtonShowAll.Name = "ButtonShowAll"
-        Me.ButtonShowAll.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonShowAll.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonShowAll.OnHoverTextColor = System.Drawing.Color.White
-        Me.ButtonShowAll.selected = False
-        Me.ButtonShowAll.Size = New System.Drawing.Size(92, 26)
-        Me.ButtonShowAll.TabIndex = 53
-        Me.ButtonShowAll.Text = "Show All"
-        Me.ButtonShowAll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonShowAll.Textcolor = System.Drawing.Color.White
-        Me.ButtonShowAll.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'ButtonSearch
         '
@@ -846,7 +810,7 @@ Partial Class PatientDentalRecordForm
         'dtPickerTo
         '
         Me.dtPickerTo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtPickerTo.Location = New System.Drawing.Point(210, 49)
+        Me.dtPickerTo.Location = New System.Drawing.Point(210, 46)
         Me.dtPickerTo.Name = "dtPickerTo"
         Me.dtPickerTo.Size = New System.Drawing.Size(118, 20)
         Me.dtPickerTo.TabIndex = 50
@@ -854,7 +818,7 @@ Partial Class PatientDentalRecordForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(175, 52)
+        Me.Label2.Location = New System.Drawing.Point(175, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 13)
         Me.Label2.TabIndex = 49
@@ -863,7 +827,7 @@ Partial Class PatientDentalRecordForm
         'dtPickerFrom
         '
         Me.dtPickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtPickerFrom.Location = New System.Drawing.Point(51, 49)
+        Me.dtPickerFrom.Location = New System.Drawing.Point(51, 46)
         Me.dtPickerFrom.Name = "dtPickerFrom"
         Me.dtPickerFrom.Size = New System.Drawing.Size(118, 20)
         Me.dtPickerFrom.TabIndex = 47
@@ -871,7 +835,7 @@ Partial Class PatientDentalRecordForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 52)
+        Me.Label1.Location = New System.Drawing.Point(6, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 46
@@ -909,8 +873,8 @@ Partial Class PatientDentalRecordForm
         '
         'procedureName
         '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle16
         Me.procedureName.HeaderText = "Procedure Name"
         Me.procedureName.Name = "procedureName"
         Me.procedureName.ReadOnly = True
@@ -929,32 +893,32 @@ Partial Class PatientDentalRecordForm
         '
         'createdBy
         '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle17
         Me.createdBy.HeaderText = "Created By"
         Me.createdBy.Name = "createdBy"
         Me.createdBy.ReadOnly = True
         '
         'createdDate
         '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle18
         Me.createdDate.HeaderText = "Created Date"
         Me.createdDate.Name = "createdDate"
         Me.createdDate.ReadOnly = True
         '
         'updatedBy
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle19
         Me.updatedBy.HeaderText = "Updated By"
         Me.updatedBy.Name = "updatedBy"
         Me.updatedBy.ReadOnly = True
         '
         'updatedDate
         '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle20
         Me.updatedDate.HeaderText = "Updated Date"
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
@@ -963,7 +927,7 @@ Partial Class PatientDentalRecordForm
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.buttonNew, Me.buttonEdit})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemShowAll, Me.buttonNew, Me.buttonEdit})
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 16)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(701, 24)
@@ -988,6 +952,13 @@ Partial Class PatientDentalRecordForm
         '
         Me.BunifuElipse.ElipseRadius = 5
         Me.BunifuElipse.TargetControl = Me
+        '
+        'ToolStripMenuItemShowAll
+        '
+        Me.ToolStripMenuItemShowAll.Image = CType(resources.GetObject("ToolStripMenuItemShowAll.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItemShowAll.Name = "ToolStripMenuItemShowAll"
+        Me.ToolStripMenuItemShowAll.Size = New System.Drawing.Size(82, 20)
+        Me.ToolStripMenuItemShowAll.Text = "Show All"
         '
         'PatientDentalRecordForm
         '
@@ -1105,5 +1076,5 @@ Partial Class PatientDentalRecordForm
     Friend WithEvents dtPickerFrom As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents ButtonSearch As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ButtonShowAll As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ToolStripMenuItemShowAll As ToolStripMenuItem
 End Class

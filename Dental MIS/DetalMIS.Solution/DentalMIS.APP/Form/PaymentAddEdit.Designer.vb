@@ -102,7 +102,6 @@ Partial Class PaymentAddEdit
         Me.textAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.textAmount.Location = New System.Drawing.Point(12, 67)
         Me.textAmount.Name = "textAmount"
-        Me.textAmount.ReadOnly = True
         Me.textAmount.Size = New System.Drawing.Size(343, 23)
         Me.textAmount.TabIndex = 53
         '
@@ -164,6 +163,7 @@ Partial Class PaymentAddEdit
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PaymentAddEdit"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PaymentAddEdit"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()

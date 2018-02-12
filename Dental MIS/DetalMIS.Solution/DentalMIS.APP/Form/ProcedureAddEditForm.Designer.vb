@@ -23,13 +23,13 @@ Partial Class ProcedureAddEditForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureAddEditForm))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureAddEditForm))
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
@@ -62,6 +62,7 @@ Partial Class ProcedureAddEditForm
         Me.paymentDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.buttonPrintDC = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl.SuspendLayout()
@@ -456,12 +457,48 @@ Partial Class ProcedureAddEditForm
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
         '
+        'buttonPrintDC
+        '
+        Me.buttonPrintDC.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.buttonPrintDC.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.buttonPrintDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttonPrintDC.BorderRadius = 0
+        Me.buttonPrintDC.ButtonText = "  Print Dental Certificate"
+        Me.buttonPrintDC.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttonPrintDC.DisabledColor = System.Drawing.Color.Gray
+        Me.buttonPrintDC.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttonPrintDC.Iconimage = CType(resources.GetObject("buttonPrintDC.Iconimage"), System.Drawing.Image)
+        Me.buttonPrintDC.Iconimage_right = Nothing
+        Me.buttonPrintDC.Iconimage_right_Selected = Nothing
+        Me.buttonPrintDC.Iconimage_Selected = Nothing
+        Me.buttonPrintDC.IconMarginLeft = 0
+        Me.buttonPrintDC.IconMarginRight = 0
+        Me.buttonPrintDC.IconRightVisible = True
+        Me.buttonPrintDC.IconRightZoom = 0R
+        Me.buttonPrintDC.IconVisible = True
+        Me.buttonPrintDC.IconZoom = 50.0R
+        Me.buttonPrintDC.IsTab = False
+        Me.buttonPrintDC.Location = New System.Drawing.Point(4, 415)
+        Me.buttonPrintDC.Name = "buttonPrintDC"
+        Me.buttonPrintDC.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.buttonPrintDC.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.buttonPrintDC.OnHoverTextColor = System.Drawing.Color.White
+        Me.buttonPrintDC.selected = False
+        Me.buttonPrintDC.Size = New System.Drawing.Size(177, 33)
+        Me.buttonPrintDC.TabIndex = 54
+        Me.buttonPrintDC.Text = "  Print Dental Certificate"
+        Me.buttonPrintDC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.buttonPrintDC.Textcolor = System.Drawing.Color.White
+        Me.buttonPrintDC.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttonPrintDC.Visible = False
+        '
         'ProcedureAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(443, 455)
+        Me.Controls.Add(Me.buttonPrintDC)
         Me.Controls.Add(Me.TabControl)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.PanelHeader)
@@ -514,4 +551,5 @@ Partial Class ProcedureAddEditForm
     Friend WithEvents paymentDate As DataGridViewTextBoxColumn
     Friend WithEvents updatedBy As DataGridViewTextBoxColumn
     Friend WithEvents updatedDate As DataGridViewTextBoxColumn
+    Friend WithEvents buttonPrintDC As Bunifu.Framework.UI.BunifuFlatButton
 End Class

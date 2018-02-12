@@ -4,13 +4,13 @@ Imports MySql.Data.MySqlClient
 Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class LoginForm
-    Private userService As UserService
+    Private userService As IUserService
+    Private auditTrailService As IAuditTrailService
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         userService = New UserService()
-
     End Sub
 
     Private Sub Login()
@@ -25,6 +25,13 @@ Public Class LoginForm
                 If userList.Count > 0 Then
                     Dim user As User = userList(0)
                     Dim dashboardControl As New DashboardControl
+                    MainForm.userID = user.ID
+                    MainForm.user = user
+
+                    If user.UserType = "Doctor" Or user.UserType = "Administrator" Then
+                        MainForm.ButtonConfiguration.Enabled = True
+                        MainForm.ButtonReport.Enabled = True
+                    End If
 
                     MainForm.LabelMenu.Text = user.Firstname & " " & user.Lastname
                     MainForm.PanelSideMenu.Visible = True
@@ -39,6 +46,7 @@ Public Class LoginForm
                     MessageBox.Show("Username or Password is incorrect.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     textUsername.Clear()
                     textPassword.Clear()
+                    textUsername.Select()
                 End If
             Catch ex As Exception
                 MessageBox.Show(ex.Message.ToString())

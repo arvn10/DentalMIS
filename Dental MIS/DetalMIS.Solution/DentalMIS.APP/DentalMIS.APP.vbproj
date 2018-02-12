@@ -54,21 +54,61 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Calendar, Version=1.0.6136.3800, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.Calendar.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsFormsCalendar">
+      <HintPath>..\..\..\..\..\..\Desktop\WinFormsCalendar_1.1\WindowsFormsCalendar.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -96,6 +136,12 @@
     <Compile Include="Form\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\ChangePasswordForm.Designer.vb">
+      <DependentUpon>ChangePasswordForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ChangePasswordForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\PatientAddEditForm.Designer.vb">
       <DependentUpon>PatientAddEditForm.vb</DependentUpon>
     </Compile>
@@ -120,6 +166,12 @@
     <Compile Include="Form\PaymentForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\PrintDentalCertificateForm.Designer.vb">
+      <DependentUpon>PrintDentalCertificateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PrintDentalCertificateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\ProcedureAddEditForm.Designer.vb">
       <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
     </Compile>
@@ -130,6 +182,12 @@
       <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\ProcedureTypeAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ScheduleAddEditForm.Designer.vb">
+      <DependentUpon>ScheduleAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ScheduleAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\UserAddEditForm.Designer.vb">
@@ -158,6 +216,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\DentalCertificate.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentalCertificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControl\AuditTrailControl.Designer.vb">
       <DependentUpon>AuditTrailControl.vb</DependentUpon>
@@ -221,6 +285,9 @@
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\PatientAddEditForm.resx">
       <DependentUpon>PatientAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,11 +300,17 @@
     <EmbeddedResource Include="Form\PaymentForm.resx">
       <DependentUpon>PaymentForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\PrintDentalCertificateForm.resx">
+      <DependentUpon>PrintDentalCertificateForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\ProcedureAddEditForm.resx">
       <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProcedureTypeAddEditForm.resx">
       <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ScheduleAddEditForm.resx">
+      <DependentUpon>ScheduleAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UserAddEditForm.resx">
       <DependentUpon>UserAddEditForm.vb</DependentUpon>
@@ -250,6 +323,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DentalCertificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DentalCertificate.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\AuditTrailControl.resx">
       <DependentUpon>AuditTrailControl.vb</DependentUpon>
@@ -349,8 +426,9 @@
   <ItemGroup>
     <Content Include="icons8-Denture-48.ico" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Report\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

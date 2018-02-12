@@ -3,6 +3,9 @@
     Public Property PatientID As Long
     Public Property ProcedureTypeID As Long
     Public Property FullName As String
+    Public Property Age As Integer
+    Public Property Address As String
+    Public Property Gender As String
     Public Property ProcedureName As String
     Public Property ToothNumber As Long
     Public Property Tooth As String

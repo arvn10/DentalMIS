@@ -27,9 +27,9 @@ Partial Class PatientControl
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.textSearch = New System.Windows.Forms.TextBox()
-        Me.buttonView = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttonEdit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Firstname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,10 +41,14 @@ Partial Class PatientControl
         Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.buttonRefresh = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ButtonNew = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButtonShowAll = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonEdit = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonViewDR = New System.Windows.Forms.ToolStripButton()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -82,78 +86,8 @@ Partial Class PatientControl
         Me.textSearch.Location = New System.Drawing.Point(135, 96)
         Me.textSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.textSearch.Name = "textSearch"
-        Me.textSearch.Size = New System.Drawing.Size(521, 24)
+        Me.textSearch.Size = New System.Drawing.Size(672, 24)
         Me.textSearch.TabIndex = 6
-        '
-        'buttonView
-        '
-        Me.buttonView.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonView.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.buttonView.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttonView.BorderRadius = 0
-        Me.buttonView.ButtonText = "View Dental Record"
-        Me.buttonView.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttonView.DisabledColor = System.Drawing.Color.Gray
-        Me.buttonView.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttonView.Iconimage = CType(resources.GetObject("buttonView.Iconimage"), System.Drawing.Image)
-        Me.buttonView.Iconimage_right = Nothing
-        Me.buttonView.Iconimage_right_Selected = Nothing
-        Me.buttonView.Iconimage_Selected = Nothing
-        Me.buttonView.IconMarginLeft = 0
-        Me.buttonView.IconMarginRight = 0
-        Me.buttonView.IconRightVisible = True
-        Me.buttonView.IconRightZoom = 0R
-        Me.buttonView.IconVisible = True
-        Me.buttonView.IconZoom = 50.0R
-        Me.buttonView.IsTab = False
-        Me.buttonView.Location = New System.Drawing.Point(775, 91)
-        Me.buttonView.Name = "buttonView"
-        Me.buttonView.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonView.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonView.OnHoverTextColor = System.Drawing.Color.White
-        Me.buttonView.selected = False
-        Me.buttonView.Size = New System.Drawing.Size(32, 33)
-        Me.buttonView.TabIndex = 10
-        Me.buttonView.Text = "View Dental Record"
-        Me.buttonView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttonView.Textcolor = System.Drawing.Color.White
-        Me.buttonView.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttonEdit
-        '
-        Me.buttonEdit.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.buttonEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttonEdit.BorderRadius = 0
-        Me.buttonEdit.ButtonText = "Edit Patient"
-        Me.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttonEdit.DisabledColor = System.Drawing.Color.Gray
-        Me.buttonEdit.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttonEdit.Iconimage = CType(resources.GetObject("buttonEdit.Iconimage"), System.Drawing.Image)
-        Me.buttonEdit.Iconimage_right = Nothing
-        Me.buttonEdit.Iconimage_right_Selected = Nothing
-        Me.buttonEdit.Iconimage_Selected = Nothing
-        Me.buttonEdit.IconMarginLeft = 0
-        Me.buttonEdit.IconMarginRight = 0
-        Me.buttonEdit.IconRightVisible = True
-        Me.buttonEdit.IconRightZoom = 0R
-        Me.buttonEdit.IconVisible = True
-        Me.buttonEdit.IconZoom = 50.0R
-        Me.buttonEdit.IsTab = False
-        Me.buttonEdit.Location = New System.Drawing.Point(737, 91)
-        Me.buttonEdit.Name = "buttonEdit"
-        Me.buttonEdit.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonEdit.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonEdit.OnHoverTextColor = System.Drawing.Color.White
-        Me.buttonEdit.selected = False
-        Me.buttonEdit.Size = New System.Drawing.Size(32, 33)
-        Me.buttonEdit.TabIndex = 9
-        Me.buttonEdit.Text = "Edit Patient"
-        Me.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttonEdit.Textcolor = System.Drawing.Color.White
-        Me.buttonEdit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Label2
         '
@@ -166,27 +100,40 @@ Partial Class PatientControl
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Enter Search Text :"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.DataGrid)
+        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 125)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(793, 531)
+        Me.GroupBox1.TabIndex = 48
+        Me.GroupBox1.TabStop = False
+        '
         'DataGrid
         '
         Me.DataGrid.AllowUserToAddRows = False
         Me.DataGrid.AllowUserToDeleteRows = False
         Me.DataGrid.AllowUserToResizeColumns = False
         Me.DataGrid.AllowUserToResizeRows = False
-        Me.DataGrid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Firstname, Me.Lastname, Me.Address, Me.Gender, Me.Age, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        Me.DataGrid.Location = New System.Drawing.Point(14, 125)
+        Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGrid.Location = New System.Drawing.Point(3, 41)
         Me.DataGrid.MultiSelect = False
         Me.DataGrid.Name = "DataGrid"
         Me.DataGrid.ReadOnly = True
         Me.DataGrid.RowHeadersVisible = False
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(793, 533)
-        Me.DataGrid.TabIndex = 44
+        Me.DataGrid.Size = New System.Drawing.Size(787, 487)
+        Me.DataGrid.TabIndex = 45
         '
         'ID
         '
@@ -250,94 +197,69 @@ Partial Class PatientControl
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
         '
-        'buttonRefresh
+        'ToolStrip1
         '
-        Me.buttonRefresh.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttonRefresh.BorderRadius = 0
-        Me.buttonRefresh.ButtonText = ""
-        Me.buttonRefresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttonRefresh.DisabledColor = System.Drawing.Color.Gray
-        Me.buttonRefresh.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttonRefresh.Iconimage = CType(resources.GetObject("buttonRefresh.Iconimage"), System.Drawing.Image)
-        Me.buttonRefresh.Iconimage_right = Nothing
-        Me.buttonRefresh.Iconimage_right_Selected = Nothing
-        Me.buttonRefresh.Iconimage_Selected = Nothing
-        Me.buttonRefresh.IconMarginLeft = 0
-        Me.buttonRefresh.IconMarginRight = 0
-        Me.buttonRefresh.IconRightVisible = True
-        Me.buttonRefresh.IconRightZoom = 0R
-        Me.buttonRefresh.IconVisible = True
-        Me.buttonRefresh.IconZoom = 50.0R
-        Me.buttonRefresh.IsTab = False
-        Me.buttonRefresh.Location = New System.Drawing.Point(661, 91)
-        Me.buttonRefresh.Name = "buttonRefresh"
-        Me.buttonRefresh.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonRefresh.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonRefresh.OnHoverTextColor = System.Drawing.Color.White
-        Me.buttonRefresh.selected = False
-        Me.buttonRefresh.Size = New System.Drawing.Size(32, 33)
-        Me.buttonRefresh.TabIndex = 47
-        Me.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttonRefresh.Textcolor = System.Drawing.Color.White
-        Me.buttonRefresh.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolTip1.SetToolTip(Me.buttonRefresh, "Show All")
+        Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonShowAll, Me.ToolStripButtonNew, Me.ToolStripButtonEdit, Me.ToolStripButtonViewDR})
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 16)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ToolStrip1.Size = New System.Drawing.Size(787, 25)
+        Me.ToolStrip1.TabIndex = 46
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ButtonNew
+        'ToolStripButtonShowAll
         '
-        Me.ButtonNew.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonNew.BorderRadius = 0
-        Me.ButtonNew.ButtonText = "New Patient"
-        Me.ButtonNew.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonNew.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonNew.Iconcolor = System.Drawing.Color.Transparent
-        Me.ButtonNew.Iconimage = CType(resources.GetObject("ButtonNew.Iconimage"), System.Drawing.Image)
-        Me.ButtonNew.Iconimage_right = Nothing
-        Me.ButtonNew.Iconimage_right_Selected = Nothing
-        Me.ButtonNew.Iconimage_Selected = Nothing
-        Me.ButtonNew.IconMarginLeft = 0
-        Me.ButtonNew.IconMarginRight = 0
-        Me.ButtonNew.IconRightVisible = True
-        Me.ButtonNew.IconRightZoom = 0R
-        Me.ButtonNew.IconVisible = True
-        Me.ButtonNew.IconZoom = 50.0R
-        Me.ButtonNew.IsTab = False
-        Me.ButtonNew.Location = New System.Drawing.Point(699, 91)
-        Me.ButtonNew.Name = "ButtonNew"
-        Me.ButtonNew.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonNew.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonNew.OnHoverTextColor = System.Drawing.Color.White
-        Me.ButtonNew.selected = False
-        Me.ButtonNew.Size = New System.Drawing.Size(32, 33)
-        Me.ButtonNew.TabIndex = 46
-        Me.ButtonNew.Text = "New Patient"
-        Me.ButtonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonNew.Textcolor = System.Drawing.Color.White
-        Me.ButtonNew.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButtonShowAll.Image = CType(resources.GetObject("ToolStripButtonShowAll.Image"), System.Drawing.Image)
+        Me.ToolStripButtonShowAll.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonShowAll.Name = "ToolStripButtonShowAll"
+        Me.ToolStripButtonShowAll.Size = New System.Drawing.Size(74, 22)
+        Me.ToolStripButtonShowAll.Text = "Show All"
+        '
+        'ToolStripButtonNew
+        '
+        Me.ToolStripButtonNew.Image = CType(resources.GetObject("ToolStripButtonNew.Image"), System.Drawing.Image)
+        Me.ToolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonNew.Name = "ToolStripButtonNew"
+        Me.ToolStripButtonNew.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripButtonNew.Text = "New"
+        '
+        'ToolStripButtonEdit
+        '
+        Me.ToolStripButtonEdit.Image = CType(resources.GetObject("ToolStripButtonEdit.Image"), System.Drawing.Image)
+        Me.ToolStripButtonEdit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonEdit.Name = "ToolStripButtonEdit"
+        Me.ToolStripButtonEdit.Size = New System.Drawing.Size(48, 22)
+        Me.ToolStripButtonEdit.Text = "Edit"
+        '
+        'ToolStripButtonViewDR
+        '
+        Me.ToolStripButtonViewDR.Image = CType(resources.GetObject("ToolStripButtonViewDR.Image"), System.Drawing.Image)
+        Me.ToolStripButtonViewDR.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonViewDR.Name = "ToolStripButtonViewDR"
+        Me.ToolStripButtonViewDR.Size = New System.Drawing.Size(135, 22)
+        Me.ToolStripButtonViewDR.Text = "View Dental Record"
         '
         'PatientControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.buttonRefresh)
-        Me.Controls.Add(Me.ButtonNew)
-        Me.Controls.Add(Me.DataGrid)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.buttonView)
-        Me.Controls.Add(Me.buttonEdit)
         Me.Controls.Add(Me.textSearch)
         Me.Controls.Add(Me.BunifuSeparator1)
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "PatientControl"
         Me.Size = New System.Drawing.Size(820, 671)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -346,9 +268,9 @@ Partial Class PatientControl
     Friend WithEvents Label1 As Label
     Friend WithEvents BunifuSeparator1 As Bunifu.Framework.UI.BunifuSeparator
     Friend WithEvents textSearch As TextBox
-    Friend WithEvents buttonEdit As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents buttonView As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Label2 As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataGrid As DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Firstname As DataGridViewTextBoxColumn
@@ -360,7 +282,9 @@ Partial Class PatientControl
     Friend WithEvents createdDate As DataGridViewTextBoxColumn
     Friend WithEvents updatedBy As DataGridViewTextBoxColumn
     Friend WithEvents updatedDate As DataGridViewTextBoxColumn
-    Friend WithEvents buttonRefresh As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ButtonNew As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolStripButtonShowAll As ToolStripButton
+    Friend WithEvents ToolStripButtonNew As ToolStripButton
+    Friend WithEvents ToolStripButtonEdit As ToolStripButton
+    Friend WithEvents ToolStripButtonViewDR As ToolStripButton
 End Class

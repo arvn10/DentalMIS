@@ -2,8 +2,7 @@
 Imports DentalMIS.MODEL
 Public Class PaymentControl
     Public activeUser As String
-    Private procedureSvc As ProcedureService
-
+    Private procedureSvc As IProcedureService
 
     Public Sub LoadData(searchText As String)
         procedureSvc = New ProcedureService()
@@ -44,14 +43,36 @@ Public Class PaymentControl
         LoadData(textSearch.Text)
     End Sub
 
-    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
+    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs)
         LoadData("")
     End Sub
 
-    Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
+    Private Sub buttonEdit_Click(sender As Object, e As EventArgs)
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New PaymentForm
+                form.paymentControl = Me
+                form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
+                form.activeUser = MainForm.LabelMenu.Text
+                form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
+                form.ShowDialog()
+            Else
+                MessageBox.Show("No item(s) to view", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ToolStripButtonShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripButtonShowAll.Click
+        LoadData("")
+    End Sub
+
+    Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
+        Try
+            If (DataGrid.Rows.Count > 0) Then
+                Dim form As New PaymentForm
+                form.paymentControl = Me
                 form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
                 form.activeUser = MainForm.LabelMenu.Text
                 form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()

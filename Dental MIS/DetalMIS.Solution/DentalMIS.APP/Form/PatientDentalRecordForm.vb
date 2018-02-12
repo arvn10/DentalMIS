@@ -6,7 +6,7 @@ Public Class PatientDentalRecordForm
     Public patientID As Integer
     Public activeUser As String
     Public patientControl As PatientControl
-    Private procedureSvc As ProcedureService
+    Private procedureSvc As IProcedureService
 
     Public Sub LoadData(toothNumber As String, [from] As String, [to] As String)
         procedureSvc = New ProcedureService()
@@ -70,8 +70,8 @@ Public Class PatientDentalRecordForm
         LoadData("", dtPickerFrom.Value.ToString("yyyy-MM-dd"), dtPickerTo.Value.ToString("yyyy-MM-dd"))
     End Sub
 
-    Private Sub ButtonShowAll_Click(sender As Object, e As EventArgs) Handles ButtonShowAll.Click
-        LoadData("", "", "")
+    Private Sub ButtonShowAll_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
@@ -92,5 +92,9 @@ Public Class PatientDentalRecordForm
 
     Private Sub PatientDentalRecordForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         patientControl.LoadData("")
+    End Sub
+
+    Private Sub ToolStripMenuItemShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemShowAll.Click
+        LoadData("", "", "")
     End Sub
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class ProcedureTypeAddEditForm
-    Private procedureTypeService As ProcedureTypeService
+    Private procedureTypeService As IProcedureTypeService
     Public procedureTypeControl As ProcedureTypeControl
     Public procedureTypeID As Integer = 0
     Public activeUser As String

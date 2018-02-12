@@ -35,7 +35,7 @@ Public Class ProcedureTypeControl
         
     End Sub
 
-    Private Sub ButtonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
+    Private Sub ButtonNew_Click(sender As Object, e As EventArgs)
         Try
             ProcedureTypeAddEditForm.procedureTypeControl = Me
             ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
@@ -46,7 +46,7 @@ Public Class ProcedureTypeControl
         End Try
     End Sub
 
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs)
         Try
             If (DataGrid.Rows.Count > 0) Then
                 ProcedureTypeAddEditForm.procedureTypeControl = Me
@@ -74,7 +74,7 @@ Public Class ProcedureTypeControl
 
     End Sub
 
-    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
+    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs)
         LoadData("")
     End Sub
 
@@ -82,5 +82,36 @@ Public Class ProcedureTypeControl
         ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
         ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
         ProcedureTypeAddEditForm.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripButtonShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripButtonShowAll.Click
+        LoadData("")
+    End Sub
+
+    Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
+        Try
+            ProcedureTypeAddEditForm.procedureTypeControl = Me
+            ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+            ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
+            ProcedureTypeAddEditForm.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
+        Try
+            If (DataGrid.Rows.Count > 0) Then
+                ProcedureTypeAddEditForm.procedureTypeControl = Me
+                ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+                ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
+                ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
+                ProcedureTypeAddEditForm.ShowDialog()
+            Else
+                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

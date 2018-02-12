@@ -11,7 +11,7 @@ Public Class PaymentRepository
 
 #Region "Method"
     Public Function PaymentCreate(param As Payment) As Long
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_payment_create`({0}, {1}, '{3}', '{4}')",
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_payment_create`({0}, {1}, '{2}', '{3}')",
                                                     param.ProcedureID,
                                                     param.AmountPaid,
                                                     param.TransactionDate,

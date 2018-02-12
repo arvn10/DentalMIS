@@ -22,20 +22,17 @@ Partial Class UserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControl))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControl))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ButtonEdit = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ButtonNew = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.TextSearch = New System.Windows.Forms.TextBox()
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
-        Me.buttonRefresh = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.username = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,7 +44,14 @@ Partial Class UserControl
         Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButtonShowAll = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonEdit = New System.Windows.Forms.ToolStripButton()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -74,74 +78,6 @@ Partial Class UserControl
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "User"
         '
-        'ButtonEdit
-        '
-        Me.ButtonEdit.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonEdit.BorderRadius = 0
-        Me.ButtonEdit.ButtonText = ""
-        Me.ButtonEdit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonEdit.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonEdit.Iconcolor = System.Drawing.Color.Transparent
-        Me.ButtonEdit.Iconimage = CType(resources.GetObject("ButtonEdit.Iconimage"), System.Drawing.Image)
-        Me.ButtonEdit.Iconimage_right = Nothing
-        Me.ButtonEdit.Iconimage_right_Selected = Nothing
-        Me.ButtonEdit.Iconimage_Selected = Nothing
-        Me.ButtonEdit.IconMarginLeft = 0
-        Me.ButtonEdit.IconMarginRight = 0
-        Me.ButtonEdit.IconRightVisible = True
-        Me.ButtonEdit.IconRightZoom = 0R
-        Me.ButtonEdit.IconVisible = True
-        Me.ButtonEdit.IconZoom = 50.0R
-        Me.ButtonEdit.IsTab = False
-        Me.ButtonEdit.Location = New System.Drawing.Point(775, 88)
-        Me.ButtonEdit.Name = "ButtonEdit"
-        Me.ButtonEdit.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonEdit.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonEdit.OnHoverTextColor = System.Drawing.Color.White
-        Me.ButtonEdit.selected = False
-        Me.ButtonEdit.Size = New System.Drawing.Size(32, 33)
-        Me.ButtonEdit.TabIndex = 41
-        Me.ButtonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonEdit.Textcolor = System.Drawing.Color.White
-        Me.ButtonEdit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'ButtonNew
-        '
-        Me.ButtonNew.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonNew.BorderRadius = 0
-        Me.ButtonNew.ButtonText = ""
-        Me.ButtonNew.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonNew.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonNew.Iconcolor = System.Drawing.Color.Transparent
-        Me.ButtonNew.Iconimage = CType(resources.GetObject("ButtonNew.Iconimage"), System.Drawing.Image)
-        Me.ButtonNew.Iconimage_right = Nothing
-        Me.ButtonNew.Iconimage_right_Selected = Nothing
-        Me.ButtonNew.Iconimage_Selected = Nothing
-        Me.ButtonNew.IconMarginLeft = 0
-        Me.ButtonNew.IconMarginRight = 0
-        Me.ButtonNew.IconRightVisible = True
-        Me.ButtonNew.IconRightZoom = 0R
-        Me.ButtonNew.IconVisible = True
-        Me.ButtonNew.IconZoom = 50.0R
-        Me.ButtonNew.IsTab = False
-        Me.ButtonNew.Location = New System.Drawing.Point(737, 88)
-        Me.ButtonNew.Name = "ButtonNew"
-        Me.ButtonNew.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.ButtonNew.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonNew.OnHoverTextColor = System.Drawing.Color.White
-        Me.ButtonNew.selected = False
-        Me.ButtonNew.Size = New System.Drawing.Size(32, 33)
-        Me.ButtonNew.TabIndex = 40
-        Me.ButtonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonNew.Textcolor = System.Drawing.Color.White
-        Me.ButtonNew.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
         'TextSearch
         '
         Me.TextSearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -150,7 +86,7 @@ Partial Class UserControl
         Me.TextSearch.Location = New System.Drawing.Point(135, 93)
         Me.TextSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.TextSearch.Name = "TextSearch"
-        Me.TextSearch.Size = New System.Drawing.Size(559, 24)
+        Me.TextSearch.Size = New System.Drawing.Size(672, 24)
         Me.TextSearch.TabIndex = 39
         '
         'BunifuSeparator1
@@ -167,60 +103,25 @@ Partial Class UserControl
         Me.BunifuSeparator1.Transparency = 255
         Me.BunifuSeparator1.Vertical = False
         '
-        'buttonRefresh
-        '
-        Me.buttonRefresh.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttonRefresh.BorderRadius = 0
-        Me.buttonRefresh.ButtonText = ""
-        Me.buttonRefresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttonRefresh.DisabledColor = System.Drawing.Color.Gray
-        Me.buttonRefresh.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttonRefresh.Iconimage = CType(resources.GetObject("buttonRefresh.Iconimage"), System.Drawing.Image)
-        Me.buttonRefresh.Iconimage_right = Nothing
-        Me.buttonRefresh.Iconimage_right_Selected = Nothing
-        Me.buttonRefresh.Iconimage_Selected = Nothing
-        Me.buttonRefresh.IconMarginLeft = 0
-        Me.buttonRefresh.IconMarginRight = 0
-        Me.buttonRefresh.IconRightVisible = True
-        Me.buttonRefresh.IconRightZoom = 0R
-        Me.buttonRefresh.IconVisible = True
-        Me.buttonRefresh.IconZoom = 50.0R
-        Me.buttonRefresh.IsTab = False
-        Me.buttonRefresh.Location = New System.Drawing.Point(699, 88)
-        Me.buttonRefresh.Name = "buttonRefresh"
-        Me.buttonRefresh.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.buttonRefresh.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.buttonRefresh.OnHoverTextColor = System.Drawing.Color.White
-        Me.buttonRefresh.selected = False
-        Me.buttonRefresh.Size = New System.Drawing.Size(32, 33)
-        Me.buttonRefresh.TabIndex = 45
-        Me.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttonRefresh.Textcolor = System.Drawing.Color.White
-        Me.buttonRefresh.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
         'DataGrid
         '
         Me.DataGrid.AllowUserToAddRows = False
         Me.DataGrid.AllowUserToDeleteRows = False
         Me.DataGrid.AllowUserToResizeColumns = False
         Me.DataGrid.AllowUserToResizeRows = False
-        Me.DataGrid.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.username, Me.firstname, Me.lastname, Me.userType, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        Me.DataGrid.Location = New System.Drawing.Point(14, 127)
+        Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGrid.Location = New System.Drawing.Point(3, 41)
         Me.DataGrid.MultiSelect = False
         Me.DataGrid.Name = "DataGrid"
         Me.DataGrid.ReadOnly = True
         Me.DataGrid.RowHeadersVisible = False
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(793, 530)
+        Me.DataGrid.Size = New System.Drawing.Size(787, 490)
         Me.DataGrid.TabIndex = 46
         '
         'ID
@@ -297,34 +198,82 @@ Partial Class UserControl
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.DataGrid)
+        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 122)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(793, 534)
+        Me.GroupBox1.TabIndex = 47
+        Me.GroupBox1.TabStop = False
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonShowAll, Me.ToolStripButtonNew, Me.ToolStripButtonEdit})
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 16)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ToolStrip1.Size = New System.Drawing.Size(787, 25)
+        Me.ToolStrip1.TabIndex = 48
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButtonShowAll
+        '
+        Me.ToolStripButtonShowAll.Image = CType(resources.GetObject("ToolStripButtonShowAll.Image"), System.Drawing.Image)
+        Me.ToolStripButtonShowAll.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonShowAll.Name = "ToolStripButtonShowAll"
+        Me.ToolStripButtonShowAll.Size = New System.Drawing.Size(74, 22)
+        Me.ToolStripButtonShowAll.Text = "Show All"
+        '
+        'ToolStripButtonNew
+        '
+        Me.ToolStripButtonNew.Image = CType(resources.GetObject("ToolStripButtonNew.Image"), System.Drawing.Image)
+        Me.ToolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonNew.Name = "ToolStripButtonNew"
+        Me.ToolStripButtonNew.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripButtonNew.Text = "New"
+        '
+        'ToolStripButtonEdit
+        '
+        Me.ToolStripButtonEdit.Image = CType(resources.GetObject("ToolStripButtonEdit.Image"), System.Drawing.Image)
+        Me.ToolStripButtonEdit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonEdit.Name = "ToolStripButtonEdit"
+        Me.ToolStripButtonEdit.Size = New System.Drawing.Size(48, 22)
+        Me.ToolStripButtonEdit.Text = "Edit"
+        '
         'UserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.DataGrid)
-        Me.Controls.Add(Me.buttonRefresh)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ButtonEdit)
-        Me.Controls.Add(Me.ButtonNew)
         Me.Controls.Add(Me.TextSearch)
         Me.Controls.Add(Me.BunifuSeparator1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UserControl"
         Me.Size = New System.Drawing.Size(820, 671)
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ButtonEdit As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents ButtonNew As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents TextSearch As TextBox
     Friend WithEvents BunifuSeparator1 As Bunifu.Framework.UI.BunifuSeparator
-    Friend WithEvents buttonRefresh As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents DataGrid As DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents username As DataGridViewTextBoxColumn
@@ -336,4 +285,9 @@ Partial Class UserControl
     Friend WithEvents createdDate As DataGridViewTextBoxColumn
     Friend WithEvents updatedBy As DataGridViewTextBoxColumn
     Friend WithEvents updatedDate As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolStripButtonShowAll As ToolStripButton
+    Friend WithEvents ToolStripButtonNew As ToolStripButton
+    Friend WithEvents ToolStripButtonEdit As ToolStripButton
 End Class

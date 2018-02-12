@@ -6,10 +6,10 @@ Public Class ProcedureAddEditForm
     Public patientID As Long
     Public procedureID As long
     Public patientDentalRecordForm As PatientDentalRecordForm
-    Private procedureTypeSvc As ProcedureTypeService
-    Private paymentSvc As PaymentService
-    Private procedureSvc As ProcedureService
-    Private toothSvc As ToothService
+    Private procedureTypeSvc As IProcedureTypeService
+    Private paymentSvc As IPaymentService
+    Private procedureSvc As IProcedureService
+    Private toothSvc As IToothService
     Dim firstRun As Boolean = True
 
 
@@ -76,6 +76,7 @@ Public Class ProcedureAddEditForm
             textAmountPaid.Text = data.AmountPaid
             textPaymentBalance.Text = data.Balance
             LoadData()
+            buttonPrintDC.Visible = True
         Else
             TabPagePayment.Visible = False
         End If
@@ -85,21 +86,10 @@ Public Class ProcedureAddEditForm
         If Not firstRun Then
             Dim procedureType As New ProcedureType
             procedureType = procedureTypeSvc.ProcedureTypeSearchID(comboProcedureType.SelectedValue)
-            textPrice.Text = procedureType.BasePrice
+            textPrice.Text = procedureType.BasePrice.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
         End If
     End Sub
 
-    Private Sub comboProcedureType_Click(sender As Object, e As EventArgs) Handles comboProcedureType.Click
-
-    End Sub
-
-    Private Sub comboProcedureType_SelectedValueChanged(sender As Object, e As EventArgs) Handles comboProcedureType.SelectedValueChanged
-
-    End Sub
-
-    Private Sub ProcedureAddEditForm_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-
-    End Sub
 
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
@@ -187,7 +177,9 @@ Public Class ProcedureAddEditForm
         textPaymentCharge.Text = textCharge.Text
     End Sub
 
-    Private Sub ProcedureAddEditForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-
+    Private Sub buttonPrintDC_Click(sender As Object, e As EventArgs) Handles buttonPrintDC.Click
+        Dim form As New PrintDentalCertificateForm
+        form.procedureID = procedureID
+        form.ShowDialog()
     End Sub
 End Class

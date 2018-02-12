@@ -1,7 +1,7 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class PatientAddEditForm
-    Private patientSvc As PatientService
+    Private patientSvc As IPatientService
     Public patientID As Integer = 0
     Public activeUser As String
     Public patientControl As PatientControl

@@ -1,14 +1,6 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class PatientControl
-    Public ReadOnly Property ButtonRefreshIns() As Bunifu.Framework.UI.BunifuFlatButton
-        ' Rename the property name to what you like, e.g.
-        ' Public ReadOnly Property TextBox1Ref() As TextBox
-        Get
-            Return Me.buttonRefresh
-        End Get
-    End Property
-
     Private patientSvc As PatientService
 
     Public Sub New()
@@ -43,7 +35,7 @@ Public Class PatientControl
     End Sub
 
 
-    Private Sub buttonNew_Click(sender As Object, e As EventArgs) Handles ButtonNew.Click
+    Private Sub buttonNew_Click(sender As Object, e As EventArgs)
         Try
             PatientAddEditForm.patientControl = Me
             PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
@@ -52,7 +44,6 @@ Public Class PatientControl
         Catch ex As Exception
 
         End Try
-
     End Sub
 
     Private Sub textSearch_TextChanged(sender As Object, e As EventArgs) Handles textSearch.TextChanged
@@ -63,7 +54,7 @@ Public Class PatientControl
         End If
     End Sub
 
-    Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
+    Private Sub buttonEdit_Click(sender As Object, e As EventArgs)
         Try
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New PatientAddEditForm
@@ -84,11 +75,11 @@ Public Class PatientControl
 
     End Sub
 
-    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
+    Private Sub buttonRefresh_Click(sender As Object, e As EventArgs)
         LoadData("")
     End Sub
 
-    Private Sub buttonView_Click(sender As Object, e As EventArgs) Handles buttonView.Click
+    Private Sub buttonView_Click(sender As Object, e As EventArgs)
         Try
             If DataGrid.Rows.Count > 0 Then
                 Dim form As New PatientDentalRecordForm
@@ -104,6 +95,55 @@ Public Class PatientControl
         Catch ex As Exception
 
         End Try
+    End Sub
 
+    Private Sub ToolStripButtonShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripButtonShowAll.Click
+        LoadData("")
+    End Sub
+
+    Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
+        Try
+            PatientAddEditForm.patientControl = Me
+            PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
+            PatientAddEditForm.HeaderLabel.Text = "Patient - New"
+            PatientAddEditForm.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
+        Try
+            If (DataGrid.Rows.Count > 0) Then
+                Dim form As New PatientAddEditForm
+                form.patientControl = Me
+                form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
+                form.activeUser = MainForm.LabelMenu.Text
+                form.HeaderLabel.Text = "Patient - Edit"
+                form.ShowDialog()
+            Else
+                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ToolStripButtonViewDR_Click(sender As Object, e As EventArgs) Handles ToolStripButtonViewDR.Click
+        Try
+            If DataGrid.Rows.Count > 0 Then
+                Dim form As New PatientDentalRecordForm
+                form.patientControl = Me
+                form.activeUser = MainForm.LabelMenu.Text
+                form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
+                form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
+                form.ShowDialog()
+            Else
+                MessageBox.Show("No Patient Dental Record to View", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class UserAddEditForm
-    Private userService As BLL.UserService
+    Private userService As IUserService
     Public userID As Long
     Public activeUser As String
     Public userControl As UserControl
