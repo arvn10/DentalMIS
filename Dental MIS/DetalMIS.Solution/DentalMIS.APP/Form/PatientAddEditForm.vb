@@ -18,52 +18,44 @@ Public Class PatientAddEditForm
         Try
             patientSvc = New PatientService()
             Dim data As New Patient()
-            If HeaderLabel.Text.Contains("Edit") Then
-                Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If confirm = DialogResult.Yes Then
-                    data.ID = patientID
-                    data.Firstname = textFirstname.Text
-                    data.Lastname = textLastname.Text
-                    data.MiddleInitial = textMI.Text
-                    data.Address = textAddres.Text
-                    data.Age = Convert.ToInt32(textAge.Text)
-                    data.Gender = comboGender.Text
-                    data.Occupation = textOccupation.Text
-                    data.UpdatedBy = activeUser
-                    Dim ret As Long = patientSvc.PatientEdit(data)
-                    If ret > 0 Then
-                        MessageBox.Show("Patient Profile Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        patientControl.LoadData("")
-                        Me.Dispose()
-                    Else
-                        MessageBox.Show("Patient Profile Already Exist", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Dim valid As Boolean = True
+
+            For Each control As Control In Me.Controls
+                If (control.GetType() Is GetType(TextBox)) Then
+                    Dim textBox As TextBox = CType(control, TextBox)
+                    If textBox.Text = String.Empty And textBox.Name <> "textOccupation" And textBox.Name <> "textMI" Then
+                        valid = False
+                    End If
+                ElseIf (control.GetType() Is GetType(ComboBox)) Then
+                    Dim comboBox As ComboBox = CType(control, ComboBox)
+                    If comboBox.Text = String.Empty Then
+                        valid = False
                     End If
                 End If
-            Else
-                Dim valid As Boolean = True
+            Next
 
-                For Each control As Control In Me.Controls
-                    If (control.GetType() Is GetType(TextBox)) Then
-                        Dim textBox As TextBox = CType(control, TextBox)
-                        If textBox.Text = String.Empty And textBox.Name <> "textOccupation" And textBox.Name <> "textMI" Then
-                            valid = False
-                        End If
-                    ElseIf (control.GetType() Is GetType(ComboBox)) Then
-                        Dim comboBox As ComboBox = CType(control, ComboBox)
-                        If comboBox.Text = String.Empty Then
-                            valid = False
+            If valid Then
+                data.Firstname = textFirstname.Text
+                data.Lastname = textLastname.Text
+                data.MiddleInitial = textMI.Text
+                data.Address = textAddres.Text
+                data.Age = Convert.ToInt32(textAge.Text)
+                data.Gender = comboGender.Text
+                data.Occupation = textOccupation.Text
+
+                If HeaderLabel.Text.Contains("Edit") Then
+                    Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If confirm = DialogResult.Yes Then
+                        data.ID = patientID
+                        data.UpdatedBy = activeUser
+                        Dim ret As Long = patientSvc.PatientEdit(data)
+                        If ret > 0 Then
+                            MessageBox.Show("Patient Profile Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            patientControl.LoadData("")
+                            Me.Dispose()
                         End If
                     End If
-                Next
-
-                If valid Then
-                    data.Firstname = textFirstname.Text
-                    data.Lastname = textLastname.Text
-                    data.MiddleInitial = textMI.Text
-                    data.Address = textAddres.Text
-                    data.Age = Convert.ToInt32(textAge.Text)
-                    data.Gender = comboGender.Text
-                    data.Occupation = textOccupation.Text
+                Else
                     data.CreatedBy = activeUser
                     Dim ret As Long = patientSvc.PatientCreate(data)
                     If ret > 0 Then
@@ -73,11 +65,11 @@ Public Class PatientAddEditForm
                     Else
                         MessageBox.Show("Patient Profile Already Exist", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
-                Else
-                    MessageBox.Show("Fill up all the required fields", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
-
+            Else
+                MessageBox.Show("Fill up all the required fields", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message.ToString(), "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

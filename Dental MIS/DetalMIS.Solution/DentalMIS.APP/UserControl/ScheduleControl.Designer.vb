@@ -22,6 +22,7 @@ Partial Class ScheduleControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim CalendarHighlightRange1 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
         Dim CalendarHighlightRange2 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
         Dim CalendarHighlightRange3 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
@@ -36,6 +37,8 @@ Partial Class ScheduleControl
         Me.calendarSchedule = New System.Windows.Forms.Calendar.Calendar()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButtonSave = New System.Windows.Forms.ToolStripButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -101,10 +104,11 @@ Partial Class ScheduleControl
         '
         'calendarSchedule
         '
+        Me.calendarSchedule.AllowItemEdit = False
         Me.calendarSchedule.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.calendarSchedule.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.calendarSchedule.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         CalendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday
         CalendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00")
         CalendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00")
@@ -149,6 +153,10 @@ Partial Class ScheduleControl
         Me.ToolStripButtonSave.Text = "Save"
         Me.ToolStripButtonSave.ToolTipText = "Save"
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'ScheduleControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -176,4 +184,6 @@ Partial Class ScheduleControl
     Friend WithEvents DateTimePickerDate As DateTimePicker
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButtonSave As ToolStripButton
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Timer1 As Timer
 End Class

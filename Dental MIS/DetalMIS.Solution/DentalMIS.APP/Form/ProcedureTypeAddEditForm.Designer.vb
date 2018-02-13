@@ -92,9 +92,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.Label4.Location = New System.Drawing.Point(6, 103)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 16)
+        Me.Label4.Size = New System.Drawing.Size(107, 16)
         Me.Label4.TabIndex = 13
-        Me.Label4.Text = "Payment Type :"
+        Me.Label4.Text = "*Payment Type :"
         '
         'Label1
         '
@@ -103,9 +103,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.Label1.Location = New System.Drawing.Point(6, 61)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 16)
+        Me.Label1.Size = New System.Drawing.Size(56, 16)
         Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Name :"
+        Me.Label1.Text = "*Name :"
         '
         'comboPaymentType
         '
@@ -169,9 +169,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.Label2.Location = New System.Drawing.Point(202, 61)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(85, 16)
         Me.Label2.TabIndex = 20
-        Me.Label2.Text = "Base Price :"
+        Me.Label2.Text = "*Base Price :"
         '
         'textBasePrice
         '
@@ -189,9 +189,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.Label3.Location = New System.Drawing.Point(202, 103)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 16)
+        Me.Label3.Size = New System.Drawing.Size(130, 16)
         Me.Label3.TabIndex = 22
-        Me.Label3.Text = "Require Med. Cert. :"
+        Me.Label3.Text = "*Require Med. Cert. :"
         '
         'comboMedCert
         '
@@ -211,9 +211,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.Label5.Location = New System.Drawing.Point(6, 147)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 16)
+        Me.Label5.Size = New System.Drawing.Size(56, 16)
         Me.Label5.TabIndex = 24
-        Me.Label5.Text = "Status :"
+        Me.Label5.Text = "*Status :"
         '
         'comboStatus
         '

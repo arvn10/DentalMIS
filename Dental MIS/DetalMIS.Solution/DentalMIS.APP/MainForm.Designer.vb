@@ -24,7 +24,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
@@ -278,7 +278,6 @@ Partial Class MainForm
         Me.ButtonReport.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonReport, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonReport.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonReport.Enabled = False
         Me.ButtonReport.Iconcolor = System.Drawing.Color.Transparent
         Me.ButtonReport.Iconimage = CType(resources.GetObject("ButtonReport.Iconimage"), System.Drawing.Image)
         Me.ButtonReport.Iconimage_right = Nothing
@@ -304,6 +303,7 @@ Partial Class MainForm
         Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonReport.Textcolor = System.Drawing.Color.White
         Me.ButtonReport.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonReport.Visible = False
         '
         'buttonLogout
         '
@@ -352,7 +352,6 @@ Partial Class MainForm
         Me.ButtonConfiguration.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PanelAnimator.SetDecoration(Me.ButtonConfiguration, BunifuAnimatorNS.DecorationType.None)
         Me.ButtonConfiguration.DisabledColor = System.Drawing.Color.Gray
-        Me.ButtonConfiguration.Enabled = False
         Me.ButtonConfiguration.Iconcolor = System.Drawing.Color.Transparent
         Me.ButtonConfiguration.Iconimage = CType(resources.GetObject("ButtonConfiguration.Iconimage"), System.Drawing.Image)
         Me.ButtonConfiguration.Iconimage_right = Nothing
@@ -378,6 +377,7 @@ Partial Class MainForm
         Me.ButtonConfiguration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConfiguration.Textcolor = System.Drawing.Color.White
         Me.ButtonConfiguration.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonConfiguration.Visible = False
         '
         'ButtonPatient
         '
@@ -490,22 +490,22 @@ Partial Class MainForm
         '
         Me.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.PanelAnimator.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.PanelAnimator.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.PanelAnimator.DefaultAnimation = Animation1
         '
         'PanelMain
         '

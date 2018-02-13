@@ -94,9 +94,9 @@ Partial Class UserAddEditForm
         Me.Label5.Location = New System.Drawing.Point(6, 151)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 16)
+        Me.Label5.Size = New System.Drawing.Size(83, 16)
         Me.Label5.TabIndex = 36
-        Me.Label5.Text = "User Type :"
+        Me.Label5.Text = "*User Type :"
         '
         'comboUserType
         '
@@ -116,9 +116,10 @@ Partial Class UserAddEditForm
         Me.Label1.Location = New System.Drawing.Point(6, 61)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 16)
+        Me.Label1.Size = New System.Drawing.Size(82, 16)
         Me.Label1.TabIndex = 31
-        Me.Label1.Text = "Username :"
+        Me.Label1.Tag = "*"
+        Me.Label1.Text = "*Username :"
         '
         'textUsername
         '
@@ -158,9 +159,10 @@ Partial Class UserAddEditForm
         Me.Label2.Location = New System.Drawing.Point(202, 61)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 16)
+        Me.Label2.Size = New System.Drawing.Size(79, 16)
         Me.Label2.TabIndex = 34
-        Me.Label2.Text = "Password :"
+        Me.Label2.Tag = "*"
+        Me.Label2.Text = "*Password :"
         '
         'Label3
         '
@@ -169,9 +171,10 @@ Partial Class UserAddEditForm
         Me.Label3.Location = New System.Drawing.Point(202, 106)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 16)
+        Me.Label3.Size = New System.Drawing.Size(78, 16)
         Me.Label3.TabIndex = 40
-        Me.Label3.Text = "Lastname :"
+        Me.Label3.Tag = "*"
+        Me.Label3.Text = "*Lastname :"
         '
         'textLastname
         '
@@ -189,9 +192,10 @@ Partial Class UserAddEditForm
         Me.Label4.Location = New System.Drawing.Point(6, 106)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 16)
+        Me.Label4.Size = New System.Drawing.Size(78, 16)
         Me.Label4.TabIndex = 39
-        Me.Label4.Text = "Firstname :"
+        Me.Label4.Tag = "*"
+        Me.Label4.Text = "*Firstname :"
         '
         'textFirstname
         '
@@ -209,9 +213,9 @@ Partial Class UserAddEditForm
         Me.Label6.Location = New System.Drawing.Point(202, 151)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 16)
+        Me.Label6.Size = New System.Drawing.Size(56, 16)
         Me.Label6.TabIndex = 42
-        Me.Label6.Text = "Status :"
+        Me.Label6.Text = "*Status :"
         '
         'comboStatus
         '

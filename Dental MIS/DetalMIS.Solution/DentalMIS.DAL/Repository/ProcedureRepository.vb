@@ -15,7 +15,7 @@ Public Class ProcedureRepository
     End Function
 
     Public Function ProcedureEdit(param As Procedure) As Long
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_procedure_create`({0}, {1}, {2}, {3}, {4}, '{5}', '{6}', '{7}')",
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_procedure_edit`({0}, {1}, {2}, {3}, {4}, '{5}', '{6}', '{7}')",
                                                 param.ID,
                                                 param.PatientID,
                                                 param.ProcedureTypeID,

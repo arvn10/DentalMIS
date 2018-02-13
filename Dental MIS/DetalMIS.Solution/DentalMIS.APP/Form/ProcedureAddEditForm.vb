@@ -1,10 +1,11 @@
 ﻿Imports System.ComponentModel
+Imports System.Globalization
 Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class ProcedureAddEditForm
     Public activeUser As String
     Public patientID As Long
-    Public procedureID As long
+    Public procedureID As Long
     Public patientDentalRecordForm As PatientDentalRecordForm
     Private procedureTypeSvc As IProcedureTypeService
     Private paymentSvc As IPaymentService
@@ -68,13 +69,15 @@ Public Class ProcedureAddEditForm
             Dim data As Procedure
             procedureSvc = New ProcedureService()
             data = procedureSvc.ProcedureSearchID(procedureID)
+            patientID = data.PatientID
             comboProcedureType.Text = data.ProcedureName
             comboTooth.Text = data.Tooth
             dtPickerTransDate.Value = data.ProcedureDate
             textPrescription.Text = data.Notes
-            textCharge.Text = data.AmountToPay
-            textAmountPaid.Text = data.AmountPaid
-            textPaymentBalance.Text = data.Balance
+            textCharge.Text = data.AmountToPay.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            textPaymentCharge.Text = textCharge.Text
+            textAmountPaid.Text = data.AmountPaid.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            textPaymentBalance.Text = data.Balance.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             LoadData()
             buttonPrintDC.Visible = True
         Else
@@ -82,55 +85,63 @@ Public Class ProcedureAddEditForm
         End If
     End Sub
 
-    Private Sub comboProcedureType_TextChanged(sender As Object, e As EventArgs) Handles comboProcedureType.TextChanged
-        If Not firstRun Then
-            Dim procedureType As New ProcedureType
-            procedureType = procedureTypeSvc.ProcedureTypeSearchID(comboProcedureType.SelectedValue)
-            textPrice.Text = procedureType.BasePrice.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
-        End If
-    End Sub
-
 
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
             procedureSvc = New ProcedureService
-            Dim procedureID As Long
             Dim procedure As New Procedure
-            If HeaderLabel.Text.Contains("New") Then
-                Dim valid As Boolean = True
-                For Each control As Control In Me.Controls
-                    If (control.GetType() Is GetType(TextBox)) Then
-                        Dim textBox As TextBox = CType(control, TextBox)
-                        If textBox.Text = String.Empty And textBox.Tag = "*" Then
-                            valid = False
-                        End If
-                    ElseIf (control.GetType() Is GetType(ComboBox)) Then
-                        Dim comboBox As ComboBox = CType(control, ComboBox)
-                        If (comboBox.Text = String.Empty Or comboBox.Text.Contains("Select")) And comboBox.Tag = "*" Then
-                            valid = False
-                        End If
+            Dim valid As Boolean = True
+            For Each control As Control In Me.TabPageProcedure.Controls
+                If (control.GetType() Is GetType(TextBox)) Then
+                    Dim textBox As TextBox = CType(control, TextBox)
+                    If textBox.Text = String.Empty And textBox.Tag = "*" Then
+                        valid = False
                     End If
-                Next
+                ElseIf (control.GetType() Is GetType(ComboBox)) Then
+                    Dim comboBox As ComboBox = CType(control, ComboBox)
+                    If (comboBox.Text = String.Empty Or comboBox.Text.Contains("Select")) And comboBox.Tag = "*" Then
+                        valid = False
+                    End If
+                End If
+            Next
 
-                If valid Then
-                    procedure.PatientID = patientID
-                    procedure.ProcedureTypeID = Convert.ToInt64(comboProcedureType.SelectedValue)
-                    procedure.ToothNumber = Convert.ToInt64(comboTooth.SelectedValue)
-                    procedure.AmountToPay = Convert.ToInt64(textCharge.Text)
-                    procedure.ProcedureDate = dtPickerTransDate.Value.Date.ToString("yyyy-MM-dd")
-                    procedure.Notes = textPrescription.Text
+
+            If valid Then
+                procedure.PatientID = patientID
+                procedure.ProcedureTypeID = Convert.ToInt64(comboProcedureType.SelectedValue)
+                procedure.ToothNumber = Convert.ToInt64(comboTooth.SelectedValue)
+                procedure.AmountToPay = Convert.ToInt64(textCharge.Text)
+                procedure.ProcedureDate = dtPickerTransDate.Value.Date.ToString("yyyy-MM-dd")
+                procedure.Notes = textPrescription.Text
+
+                If HeaderLabel.Text.Contains("New") Then
                     procedure.ProcedureCreatedBy = activeUser
                     procedureID = procedureSvc.ProcedureCreate(procedure)
+
                     If procedureID > 0 Then
                         MessageBox.Show("Procedure Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         patientDentalRecordForm.LoadData("", "", "")
                         Me.Dispose()
                     End If
                 Else
-                    MessageBox.Show("Fill all the required fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
-            Else
+                    Dim msg = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If msg = DialogResult.Yes Then
+                        procedure.ID = procedureID
+                        procedure.ProcedureUpdatedBy = activeUser
+                        procedureID = 0
+                        procedureID = procedureSvc.ProcedureEdit(procedure)
 
+                        If procedureID > 0 Then
+                            MessageBox.Show("Procedure Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            patientDentalRecordForm.LoadData("", "", "")
+                            Me.Dispose()
+                        End If
+                    End If
+                End If
+
+
+            Else
+                MessageBox.Show("Fill all the required fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -173,13 +184,33 @@ Public Class ProcedureAddEditForm
         End Select
     End Sub
 
-    Private Sub textCharge_TextChanged(sender As Object, e As EventArgs) Handles textCharge.TextChanged
-        textPaymentCharge.Text = textCharge.Text
-    End Sub
-
     Private Sub buttonPrintDC_Click(sender As Object, e As EventArgs) Handles buttonPrintDC.Click
         Dim form As New PrintDentalCertificateForm
         form.procedureID = procedureID
         form.ShowDialog()
+    End Sub
+
+    Private Sub comboProcedureType_TextChanged(sender As Object, e As EventArgs) Handles comboProcedureType.TextChanged
+        If Not firstRun Then
+            Dim procedureType As New ProcedureType
+            procedureType = procedureTypeSvc.ProcedureTypeSearchID(comboProcedureType.SelectedValue)
+            textPrice.Text = procedureType.BasePrice.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+        End If
+    End Sub
+
+    Private Sub textCharge_Leave(sender As Object, e As EventArgs) Handles textCharge.Leave
+        If textCharge.Text <> String.Empty Then
+            Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency)
+            textCharge.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            textPaymentCharge.Text = textCharge.Text
+            textPaymentBalance.Text = (Double.Parse(textPaymentCharge.Text, NumberStyles.Currency) - Double.Parse(textAmountPaid.Text, NumberStyles.Currency)).ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+        End If
+    End Sub
+
+    Private Sub textCharge_Enter(sender As Object, e As EventArgs) Handles textCharge.Enter
+        If textCharge.Text <> String.Empty Then
+            Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency)
+            textCharge.Text = amount.ToString()
+        End If
     End Sub
 End Class

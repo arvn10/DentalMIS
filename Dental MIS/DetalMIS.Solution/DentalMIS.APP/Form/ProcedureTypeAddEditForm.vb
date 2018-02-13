@@ -62,32 +62,35 @@ Public Class ProcedureTypeAddEditForm
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         Try
             Dim param As New ProcedureType()
-            If HeaderLabel.Text.Contains("New") Then
-                Dim valid As Boolean = True
+            Dim valid As Boolean = True
 
-                For Each control As Control In Me.Controls
-                    If (control.GetType() Is GetType(TextBox)) Then
-                        Dim textBox As TextBox = CType(control, TextBox)
-                        If textBox.Text = String.Empty Then
-                            valid = False
-                        End If
-                    ElseIf (control.GetType() Is GetType(ComboBox)) Then
-                        Dim comboBox As ComboBox = CType(control, ComboBox)
-                        If comboBox.Text = String.Empty Then
-                            valid = False
-                        End If
+            For Each control As Control In Me.Controls
+                If (control.GetType() Is GetType(TextBox)) Then
+                    Dim textBox As TextBox = CType(control, TextBox)
+                    If textBox.Text = String.Empty Then
+                        valid = False
                     End If
-                Next
+                ElseIf (control.GetType() Is GetType(ComboBox)) Then
+                    Dim comboBox As ComboBox = CType(control, ComboBox)
+                    If comboBox.Text = String.Empty Then
+                        valid = False
+                    End If
+                End If
+            Next
 
-                If Not valid Then
-                    MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Else
+            If Not valid Then
+                MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
 
-                    param.Name = textName.Text
-                    param.BasePrice = Convert.ToDouble(textBasePrice.Text)
-                    param.PaymentType = comboPaymentType.Text
-                    param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
-                    param.Status = If(comboStatus.Text = "Active", 1, 0)
+
+                param.Name = textName.Text
+                param.BasePrice = Convert.ToDouble(textBasePrice.Text)
+                param.PaymentType = comboPaymentType.Text
+                param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
+                param.Status = If(comboStatus.Text = "Active", 1, 0)
+
+
+                If HeaderLabel.Text.Contains("New") Then
                     param.CreatedBy = activeUser
                     Dim ret As Long = procedureTypeService.ProcedureTypeCreate(param)
                     If ret > 0 Then
@@ -97,23 +100,16 @@ Public Class ProcedureTypeAddEditForm
                     Else
                         MessageBox.Show("Procedure Type Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
-                End If
-            Else
-                Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If confirm = DialogResult.Yes Then
-
-                    param.ID = procedureTypeID
-                    param.Name = textName.Text
-                    param.BasePrice = Convert.ToDouble(textBasePrice.Text)
-                    param.PaymentType = comboPaymentType.Text
-                    param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
-                    param.Status = If(comboStatus.Text = "Active", 1, 0)
-                    param.UpdatedBy = activeUser
-                    Dim ret As Long = procedureTypeService.ProcedureTypeEdit(param)
-                    If ret > 0 Then
-                        MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        procedureTypeControl.LoadData("")
-                        Me.Dispose()
+                Else
+                    Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If confirm = DialogResult.Yes Then
+                        param.UpdatedBy = activeUser
+                        Dim ret As Long = procedureTypeService.ProcedureTypeEdit(param)
+                        If ret > 0 Then
+                            MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            procedureTypeControl.LoadData("")
+                            Me.Dispose()
+                        End If
                     End If
                 End If
             End If

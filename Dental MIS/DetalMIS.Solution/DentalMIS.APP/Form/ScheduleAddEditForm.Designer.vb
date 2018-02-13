@@ -102,6 +102,7 @@ Partial Class ScheduleAddEditForm
         Me.textTitle.Name = "textTitle"
         Me.textTitle.Size = New System.Drawing.Size(347, 23)
         Me.textTitle.TabIndex = 22
+        Me.textTitle.Tag = "*"
         '
         'Label2
         '
@@ -121,11 +122,12 @@ Partial Class ScheduleAddEditForm
         Me.textDescription.Name = "textDescription"
         Me.textDescription.Size = New System.Drawing.Size(347, 102)
         Me.textDescription.TabIndex = 24
+        Me.textDescription.Tag = "*"
         '
         'dateTimePickerStart
         '
         Me.dateTimePickerStart.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateTimePickerStart.CustomFormat = "yyyy-MM-dd hh:mm:ss tt"
+        Me.dateTimePickerStart.CustomFormat = "hh:mm:ss tt"
         Me.dateTimePickerStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateTimePickerStart.Location = New System.Drawing.Point(12, 236)
@@ -139,9 +141,9 @@ Partial Class ScheduleAddEditForm
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(11, 217)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
+        Me.Label3.Size = New System.Drawing.Size(74, 16)
         Me.Label3.TabIndex = 27
-        Me.Label3.Text = "*Start"
+        Me.Label3.Text = "*Start Time"
         '
         'Label4
         '
@@ -149,14 +151,14 @@ Partial Class ScheduleAddEditForm
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(11, 261)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 16)
+        Me.Label4.Size = New System.Drawing.Size(71, 16)
         Me.Label4.TabIndex = 29
-        Me.Label4.Text = "*End"
+        Me.Label4.Text = "*End Time"
         '
         'dateTimePickerEnd
         '
         Me.dateTimePickerEnd.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateTimePickerEnd.CustomFormat = "yyyy-MM-dd hh:mm:ss tt"
+        Me.dateTimePickerEnd.CustomFormat = "hh:mm:ss tt"
         Me.dateTimePickerEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateTimePickerEnd.Location = New System.Drawing.Point(12, 280)

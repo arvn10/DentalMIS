@@ -12,10 +12,6 @@ Public Class PaymentAddEdit
         Me.Dispose()
     End Sub
 
-    Private Sub textAmount_TextChanged(sender As Object, e As EventArgs) Handles textAmount.TextChanged
-
-    End Sub
-
     Private Sub textAmount_Leave(sender As Object, e As EventArgs) Handles textAmount.Leave
         If textAmount.Text <> String.Empty Then
             Dim amount As Double = Double.Parse(textAmount.Text, NumberStyles.Currency)
@@ -31,42 +27,38 @@ Public Class PaymentAddEdit
     End Sub
 
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
-        'Try
-        paymentSvc = New PaymentService()
-        Dim payment As New Payment()
-        If HeaderLabel.Text.Contains("New") Then
+        Try
+            paymentSvc = New PaymentService()
+            Dim payment As New Payment()
             If textAmount.Text <> String.Empty Then
-                payment.ProcedureID = procedureID
-                payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
-                payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
-                payment.CreatedBy = activeUser
-                If paymentSvc.PaymentCreate(payment) > 0 Then
-                    MessageBox.Show("Payment Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    paymentForm.LoadData()
-                    Me.Dispose()
+                If HeaderLabel.Text.Contains("New") Then
+                    payment.ProcedureID = procedureID
+                    payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
+                    payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
+                    payment.CreatedBy = activeUser
+                    If paymentSvc.PaymentCreate(payment) > 0 Then
+                        MessageBox.Show("Payment Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        paymentForm.LoadData()
+                        Me.Dispose()
+                    End If
+                Else
+                    payment.ID = paymentID
+                    payment.ProcedureID = procedureID
+                    payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
+                    payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
+                    payment.CreatedBy = activeUser
+                    If paymentSvc.PaymentEdit(payment) > 0 Then
+                        MessageBox.Show("Payment Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        paymentForm.LoadData()
+                        Me.Dispose()
+                    End If
                 End If
             Else
                 MessageBox.Show("Fill up required field(s)", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-        Else
-            If textAmount.Text <> String.Empty Then
-                payment.ID = paymentID
-                payment.ProcedureID = procedureID
-                payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
-                payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
-                payment.CreatedBy = activeUser
-                If paymentSvc.PaymentEdit(payment) > 0 Then
-                    MessageBox.Show("Payment Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    paymentForm.LoadData()
-                    Me.Dispose()
-                End If
-            Else
-                MessageBox.Show("Fill up required field(s)", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        End If
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub textAmount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textAmount.KeyPress
@@ -99,4 +91,5 @@ Public Class PaymentAddEdit
                 e.Handled = Not AllowedKeys.Contains(e.KeyChar)
         End Select
     End Sub
+
 End Class

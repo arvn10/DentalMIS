@@ -82,6 +82,7 @@
     <Compile Include="RepositoryTemplate.vb" />
     <Compile Include="Repository\PatientReporsitory.vb" />
     <Compile Include="Repository\ProcedureTypeRepository.vb" />
+    <Compile Include="Repository\ScheduleRepository.vb" />
     <Compile Include="Repository\ToothRepository.vb" />
     <Compile Include="Repository\UserRepository.vb" />
     <Compile Include="Database.vb" />

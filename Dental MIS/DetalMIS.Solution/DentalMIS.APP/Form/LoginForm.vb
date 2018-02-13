@@ -29,8 +29,8 @@ Public Class LoginForm
                     MainForm.user = user
 
                     If user.UserType = "Doctor" Or user.UserType = "Administrator" Then
-                        MainForm.ButtonConfiguration.Enabled = True
-                        MainForm.ButtonReport.Enabled = True
+                        MainForm.ButtonConfiguration.Visible = True
+                        MainForm.ButtonReport.Visible = True
                     End If
 
                     MainForm.LabelMenu.Text = user.Firstname & " " & user.Lastname

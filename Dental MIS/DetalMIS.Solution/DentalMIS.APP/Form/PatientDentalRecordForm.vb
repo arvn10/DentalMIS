@@ -80,6 +80,7 @@ Public Class PatientDentalRecordForm
                 Dim form As New ProcedureAddEditForm
                 form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
                 form.activeUser = activeUser
+                form.patientDentalRecordForm = Me
                 form.HeaderLabel.Text = "Procedure - Edit"
                 form.ShowDialog()
             Else
