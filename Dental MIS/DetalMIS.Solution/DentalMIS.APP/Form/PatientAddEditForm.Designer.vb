@@ -194,7 +194,6 @@ Partial Class PatientAddEditForm
         Me.comboGender.Name = "comboGender"
         Me.comboGender.Size = New System.Drawing.Size(208, 23)
         Me.comboGender.TabIndex = 5
-        Me.comboGender.Text = "-Select Item-"
         '
         'Label6
         '

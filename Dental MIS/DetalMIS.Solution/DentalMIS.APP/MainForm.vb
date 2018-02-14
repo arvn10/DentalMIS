@@ -3,7 +3,7 @@ Public Class MainForm
     Public userID As Long
     Public isLogin As Boolean = False
     Public user As User
-    Private Sub ClearControls()
+    Public Sub ClearControls()
         For Each control As Control In PanelMain.Controls
             PanelMain.Controls.Remove(control)
         Next
@@ -61,6 +61,7 @@ Public Class MainForm
             isLogin = False
             PanelSideMenu.Visible = False
             PanelMain.Visible = False
+            buttonLogout.Refresh()
             LoginForm.MdiParent = Me
             LoginForm.Show()
         End If

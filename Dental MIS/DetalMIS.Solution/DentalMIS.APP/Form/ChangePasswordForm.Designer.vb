@@ -184,7 +184,7 @@ Partial Class ChangePasswordForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ChangePasswordForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MyProfileForm"
+        Me.Text = "ChangePasswordForm"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()

@@ -122,13 +122,13 @@ Partial Class PaymentControl
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.fullName, Me.tooth, Me.procedure, Me.amountToPay, Me.amountPaid, Me.balance, Me.paymentStatus, Me.procedureDate, Me.updatedBy, Me.updatedDate})
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGrid.Location = New System.Drawing.Point(3, 16)
+        Me.DataGrid.Location = New System.Drawing.Point(3, 41)
         Me.DataGrid.MultiSelect = False
         Me.DataGrid.Name = "DataGrid"
         Me.DataGrid.ReadOnly = True
         Me.DataGrid.RowHeadersVisible = False
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(786, 508)
+        Me.DataGrid.Size = New System.Drawing.Size(786, 483)
         Me.DataGrid.TabIndex = 46
         '
         'ID
@@ -202,14 +202,13 @@ Partial Class PaymentControl
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonShowAll, Me.ToolStripButtonEdit})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 16)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(125, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(786, 25)
         Me.ToolStrip1.TabIndex = 47
         Me.ToolStrip1.Text = "ToolStrip1"
         '

@@ -25,15 +25,21 @@ Public Class LoginForm
                 If userList.Count > 0 Then
                     Dim user As User = userList(0)
                     Dim dashboardControl As New DashboardControl
+                    Dim form As New MainForm
+                    MainForm.Refresh()
                     MainForm.userID = user.ID
                     MainForm.user = user
 
-                    If user.UserType = "Doctor" Or user.UserType = "Administrator" Then
+                    If user.UserType = "Doctor" Then
                         MainForm.ButtonConfiguration.Visible = True
                         MainForm.ButtonReport.Visible = True
+                    Else
+                        MainForm.ButtonConfiguration.Visible = False
+                        MainForm.ButtonReport.Visible = False
                     End If
 
                     MainForm.LabelMenu.Text = user.Firstname & " " & user.Lastname
+                    MainForm.ClearControls()
                     MainForm.PanelSideMenu.Visible = True
                     MainForm.PanelMain.Visible = True
                     dashboardControl.Dock = DockStyle.Fill

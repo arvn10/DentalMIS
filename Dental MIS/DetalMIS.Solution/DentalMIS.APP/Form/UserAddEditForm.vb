@@ -37,21 +37,28 @@ Public Class UserAddEditForm
                 If Not valid Then
                     MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    param.Username = textUsername.Text
-                    param.Password = textPassword.Text
-                    param.Firstname = textFirstname.Text
-                    param.Lastname = textLastname.Text
-                    param.UserTypeID = comboUserType.SelectedValue
-                    param.Status = If(comboStatus.Text = "Active", 1, 0)
-                    param.CreatedBy = activeUser
-                    Dim ret As Long = userService.UserCreate(param)
-                    If ret > 0 Then
-                        MessageBox.Show("User Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        userControl.LoadData("")
-                        Me.Dispose()
+                    If textPassword.Text.Length > 7 Then
+                        param.Username = textUsername.Text
+                        param.Password = textPassword.Text
+                        param.Firstname = textFirstname.Text
+                        param.Lastname = textLastname.Text
+                        param.UserTypeID = comboUserType.SelectedValue
+                        param.Status = If(comboStatus.Text = "Active", 1, 0)
+                        param.CreatedBy = activeUser
+                        Dim ret As Long = userService.UserCreate(param)
+                        If ret > 0 Then
+                            MessageBox.Show("User Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            userControl.LoadData("")
+                            Me.Dispose()
+                        Else
+                            MessageBox.Show("User Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
                     Else
-                        MessageBox.Show("User Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show("Password must contain minimum of 8 characters.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        textPassword.Clear()
+                        textPassword.Select()
                     End If
+
                 End If
 
             Else

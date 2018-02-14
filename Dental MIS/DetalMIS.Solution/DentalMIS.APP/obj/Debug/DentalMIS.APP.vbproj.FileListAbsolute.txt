@@ -283,3 +283,4 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\Olaes Dental MIS.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Debug\WindowsFormsCalendar.dll
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.ScheduleAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Debug\DentalMIS.APP.BackUpDatabaseControl.resources

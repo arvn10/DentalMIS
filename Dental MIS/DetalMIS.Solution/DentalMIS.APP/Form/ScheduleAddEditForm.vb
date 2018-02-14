@@ -35,16 +35,41 @@ Public Class ScheduleAddEditForm
     End Sub
 
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
-        If HeaderLabel.Text.Contains("New") Then
-            schedule.Text = textTitle.Text
-            schedule.StartDate = dateTimePickerStart.Value
-            schedule.EndDate = dateTimePickerEnd.Value
-            schedule.ApplyColor(panelColor.BackColor)
-            schedule.ForeColor = Color.Black
-            schedule.Tag = $"0,{textDescription.Text},{activeUser}"
-            Me.Dispose()
-        Else
+        Dim valid As Boolean = True
+        For Each control As Control In Me.Controls
+            If (control.GetType() Is GetType(TextBox)) Then
+                Dim textBox As TextBox = CType(control, TextBox)
+                If textBox.Text = String.Empty And textBox.Tag = "*" Then
+                    valid = False
+                End If
+            ElseIf (control.GetType() Is GetType(ComboBox)) Then
+                Dim comboBox As ComboBox = CType(control, ComboBox)
+                If (comboBox.Text = String.Empty Or comboBox.Text.Contains("Select")) And comboBox.Tag = "*" Then
+                    valid = False
+                End If
+            End If
+        Next
 
+        If valid Then
+            If dateTimePickerStart.Value >= dateTimePickerEnd.Value Then
+                MessageBox.Show("Start Time Cannot be greater than or equal to End Time.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                If HeaderLabel.Text.Contains("New") Then
+                    schedule.Text = textTitle.Text
+                    schedule.StartDate = dateTimePickerStart.Value
+                    schedule.EndDate = dateTimePickerEnd.Value
+                    schedule.ApplyColor(panelColor.BackColor)
+                    schedule.ForeColor = Color.Black
+                    schedule.Tag = $"0,{textDescription.Text},{activeUser}"
+                    Me.Dispose()
+                Else
+
+                End If
+            End If
+        Else
+            MessageBox.Show("Fill up all the required fields", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
+
     End Sub
 End Class

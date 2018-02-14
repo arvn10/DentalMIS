@@ -28,7 +28,7 @@ Public Class PatientAddEditForm
                     End If
                 ElseIf (control.GetType() Is GetType(ComboBox)) Then
                     Dim comboBox As ComboBox = CType(control, ComboBox)
-                    If comboBox.Text = String.Empty Then
+                    If comboBox.Text = String.Empty Or comboBox.Text.Contains("Select") Then
                         valid = False
                     End If
                 End If

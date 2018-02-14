@@ -22,6 +22,11 @@
                 Dim control As New UserControl
                 control.Dock = DockStyle.Fill
                 PanelMain.Controls.Add(control)
+            Case "Backup"
+                ClearControls(PanelMain)
+                Dim control As New BackUpDatabaseControl
+                control.Dock = DockStyle.Fill
+                PanelMain.Controls.Add(control)
         End Select
     End Sub
 

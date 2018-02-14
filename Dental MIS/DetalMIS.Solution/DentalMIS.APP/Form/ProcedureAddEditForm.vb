@@ -55,13 +55,13 @@ Public Class ProcedureAddEditForm
         comboProcedureType.DisplayMember = "Name"
         comboProcedureType.ValueMember = "ID"
         comboProcedureType.DataSource = procedureTypeList
-        comboProcedureType.Text = "-Select Item-"
+
         Dim toothList As List(Of Tooth)
         toothList = toothSvc.ToothSearch()
         comboTooth.DisplayMember = "Tooth"
         comboTooth.ValueMember = "ToothNumber"
         comboTooth.DataSource = toothList
-        comboTooth.Text = "-Select Tooth-"
+
         firstRun = False
 
         If HeaderLabel.Text.Contains("Edit") Then

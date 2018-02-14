@@ -229,6 +229,12 @@
     <Compile Include="UserControl\AuditTrailControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControl\BackUpDatabaseControl.Designer.vb">
+      <DependentUpon>BackUpDatabaseControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BackUpDatabaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl\ConfigurationControl.Designer.vb">
       <DependentUpon>ConfigurationControl.vb</DependentUpon>
     </Compile>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\AuditTrailControl.resx">
       <DependentUpon>AuditTrailControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\BackUpDatabaseControl.resx">
+      <DependentUpon>BackUpDatabaseControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ConfigurationControl.resx">
       <DependentUpon>ConfigurationControl.vb</DependentUpon>

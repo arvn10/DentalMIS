@@ -100,7 +100,6 @@ Public Class UserControl
                 form.userID = DataGrid.CurrentRow.Cells(0).Value
                 form.HeaderLabel.Text = "User - Edit"
                 form.ShowDialog()
-                DataGrid.DataSource = Nothing
             Else
                 MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
