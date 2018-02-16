@@ -23,11 +23,11 @@ Partial Class ScheduleControl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim CalendarHighlightRange6 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange7 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange8 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange9 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange10 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange1 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange2 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange3 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange4 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange5 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScheduleControl))
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,6 +37,7 @@ Partial Class ScheduleControl
         Me.calendarSchedule = New System.Windows.Forms.Calendar.Calendar()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButtonSave = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
@@ -105,26 +106,28 @@ Partial Class ScheduleControl
         'calendarSchedule
         '
         Me.calendarSchedule.AllowItemEdit = False
+        Me.calendarSchedule.AllowItemResize = False
+        Me.calendarSchedule.AllowNew = False
         Me.calendarSchedule.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.calendarSchedule.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        CalendarHighlightRange6.DayOfWeek = System.DayOfWeek.Monday
-        CalendarHighlightRange6.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange6.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange7.DayOfWeek = System.DayOfWeek.Tuesday
-        CalendarHighlightRange7.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange7.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange8.DayOfWeek = System.DayOfWeek.Wednesday
-        CalendarHighlightRange8.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange8.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange9.DayOfWeek = System.DayOfWeek.Thursday
-        CalendarHighlightRange9.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange9.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange10.DayOfWeek = System.DayOfWeek.Friday
-        CalendarHighlightRange10.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange10.StartTime = System.TimeSpan.Parse("08:00:00")
-        Me.calendarSchedule.HighlightRanges = New System.Windows.Forms.Calendar.CalendarHighlightRange() {CalendarHighlightRange6, CalendarHighlightRange7, CalendarHighlightRange8, CalendarHighlightRange9, CalendarHighlightRange10}
+        CalendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday
+        CalendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday
+        CalendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday
+        CalendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday
+        CalendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday
+        CalendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00")
+        Me.calendarSchedule.HighlightRanges = New System.Windows.Forms.Calendar.CalendarHighlightRange() {CalendarHighlightRange1, CalendarHighlightRange2, CalendarHighlightRange3, CalendarHighlightRange4, CalendarHighlightRange5}
         Me.calendarSchedule.Location = New System.Drawing.Point(3, 79)
         Me.calendarSchedule.Name = "calendarSchedule"
         Me.calendarSchedule.Size = New System.Drawing.Size(814, 485)
@@ -136,7 +139,7 @@ Partial Class ScheduleControl
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonSave})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonSave, Me.ToolStripButtonNew})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 16)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -152,6 +155,15 @@ Partial Class ScheduleControl
         Me.ToolStripButtonSave.Size = New System.Drawing.Size(54, 22)
         Me.ToolStripButtonSave.Text = "Save"
         Me.ToolStripButtonSave.ToolTipText = "Save"
+        '
+        'ToolStripButtonNew
+        '
+        Me.ToolStripButtonNew.Image = CType(resources.GetObject("ToolStripButtonNew.Image"), System.Drawing.Image)
+        Me.ToolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonNew.Name = "ToolStripButtonNew"
+        Me.ToolStripButtonNew.Size = New System.Drawing.Size(48, 22)
+        Me.ToolStripButtonNew.Text = "Add"
+        Me.ToolStripButtonNew.ToolTipText = "New"
         '
         'Timer1
         '
@@ -186,4 +198,5 @@ Partial Class ScheduleControl
     Friend WithEvents ToolStripButtonSave As ToolStripButton
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ToolStripButtonNew As ToolStripButton
 End Class

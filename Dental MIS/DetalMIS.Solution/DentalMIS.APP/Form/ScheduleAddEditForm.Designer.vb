@@ -132,6 +132,7 @@ Partial Class ScheduleAddEditForm
         Me.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateTimePickerStart.Location = New System.Drawing.Point(12, 236)
         Me.dateTimePickerStart.Name = "dateTimePickerStart"
+        Me.dateTimePickerStart.ShowUpDown = True
         Me.dateTimePickerStart.Size = New System.Drawing.Size(347, 22)
         Me.dateTimePickerStart.TabIndex = 26
         '
@@ -163,6 +164,7 @@ Partial Class ScheduleAddEditForm
         Me.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateTimePickerEnd.Location = New System.Drawing.Point(12, 280)
         Me.dateTimePickerEnd.Name = "dateTimePickerEnd"
+        Me.dateTimePickerEnd.ShowUpDown = True
         Me.dateTimePickerEnd.Size = New System.Drawing.Size(347, 22)
         Me.dateTimePickerEnd.TabIndex = 28
         '

@@ -3,6 +3,7 @@ Imports DentalMIS.DAL
 Public Class AuditTrailService
     Implements IAuditTrailService
     Private auditTrailRepository As AuditTrailRepository
+
     Public Sub New()
         auditTrailRepository = New AuditTrailRepository()
     End Sub

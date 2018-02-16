@@ -30,7 +30,7 @@ CREATE TABLE `audit_trail` (
   `created_by` varchar(45) DEFAULT NULL,
   `created_date` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `audit_trail` (
 
 LOCK TABLES `audit_trail` WRITE;
 /*!40000 ALTER TABLE `audit_trail` DISABLE KEYS */;
-INSERT INTO `audit_trail` VALUES (1,'Payment Create  Procedure ID 4','Super Admin','2018-02-11 03:04:18'),(2,'User Edit User ID 1','Super Admin','2018-02-12 01:42:29'),(3,'User Edit User ID 1','Super Admin','2018-02-12 01:48:19'),(4,'User Edit User ID 1','Super Admin','2018-02-12 01:48:42'),(5,'User Edit User ID 1','Super Admin','2018-02-12 01:49:04');
+INSERT INTO `audit_trail` VALUES (1,'Payment Create  Procedure ID 4','Super Admin','2018-02-11 03:04:18'),(2,'User Edit User ID 1','Super Admin','2018-02-12 01:42:29'),(3,'User Edit User ID 1','Super Admin','2018-02-12 01:48:19'),(4,'User Edit User ID 1','Super Admin','2018-02-12 01:48:42'),(5,'User Edit User ID 1','Super Admin','2018-02-12 01:49:04'),(6,'Procedure Create Patient ID 0','Super Admin','2018-02-13 22:55:30'),(7,'Procedure Create Patient ID 0','Super Admin','2018-02-13 22:59:23'),(8,'Procedure Edit Patient ID 1','Super Admin','2018-02-14 00:36:14'),(9,'User Edit User ID 1','Super Admin','2018-02-14 00:37:18'),(10,'Patient Edit  Test','Super Admin','2018-02-14 00:46:46'),(11,'Patient Edit Test Test','Super Admin','2018-02-14 00:46:54'),(12,'Patient Create Qwe Qwe','Super Admin','2018-02-14 22:40:58'),(13,'Patient Edit Qwe Qwe','Super Admin','2018-02-14 22:41:10'),(14,'Patient Create Qwe Qwe','Super Admin','2018-02-14 22:42:03'),(15,'Patient Edit Qwe Qwe','Super Admin','2018-02-14 22:42:34'),(16,'Patient Edit Qwe Qwe','Super Admin','2018-02-14 22:42:47'),(17,'Patient Edit Qwe Qwe','Super Admin','2018-02-14 22:42:57'),(18,'Patient Edit Qwe Qwe','Super Admin','2018-02-14 22:43:27'),(19,'User Edit User ID 2','Super Admin','2018-02-15 01:58:03');
 /*!40000 ALTER TABLE `audit_trail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,7 +64,7 @@ CREATE TABLE `patient` (
   `updated_by` varchar(45) DEFAULT NULL,
   `updated_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `patient` (
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-INSERT INTO `patient` VALUES (1,'Test','Test','Y','Test',5,'Male','Test','Super Admin','2017-11-12 15:55:24','Super Admin','2018-02-08 19:21:12'),(2,'Test','Test','TEST','Qweqrq Qweqwe Qwe',15,'Male','test','Super Admin','2017-11-20 23:41:24',NULL,NULL),(3,'Test','Test','MI','Test',15,'Male','test','Super Admin','2017-11-20 23:43:33',NULL,NULL),(4,'testasd','testasd','testasd','testasd',10,'Male','testasd','testasd','2018-01-29 21:02:03',NULL,NULL),(5,'Qweqwr','Qweqwre','q','Qwe',15,'Male','qweqrq','Super Admin','2018-01-29 21:06:11','Super Admin','2018-01-29 22:47:49'),(6,'Asdasd','Qweqwe','Q','Qweqw',4,'Male','qweqweq','Super Admin','2018-02-08 18:43:21',NULL,NULL);
+INSERT INTO `patient` VALUES (1,'Test','Test','Y','Test',5,'Male','Test','Super Admin','2017-11-12 15:55:24','Super Admin','2018-02-14 00:46:54'),(2,'Test','Test','TEST','Qweqrq Qweqwe Qwe',15,'Male','test','Super Admin','2017-11-20 23:41:24',NULL,NULL),(3,'Test','Test','MI','Test',15,'Male','test','Super Admin','2017-11-20 23:43:33',NULL,NULL),(4,'testasd','testasd','testasd','testasd',10,'Male','testasd','testasd','2018-01-29 21:02:03',NULL,NULL),(5,'Qweqwr','Qweqwre','q','Qwe',15,'Male','qweqrq','Super Admin','2018-01-29 21:06:11','Super Admin','2018-01-29 22:47:49'),(6,'Asdasd','Qweqwe','Q','Qweqw',4,'Male','qweqweq','Super Admin','2018-02-08 18:43:21',NULL,NULL),(7,'Qwe','Qwe','QWE','Q',21,'Male','q','Super Admin','2018-02-14 22:40:58','Super Admin','2018-02-14 22:43:27'),(8,'Qwe','Qwe','Q','Q',21,'Male','','Super Admin','2018-02-14 22:42:03',NULL,NULL);
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -256,7 +256,7 @@ CREATE TABLE `procedure` (
 
 LOCK TABLES `procedure` WRITE;
 /*!40000 ALTER TABLE `procedure` DISABLE KEYS */;
-INSERT INTO `procedure` VALUES (1,1,2,2,500,'test','2018-02-06','Super Admin','2018-02-06 00:36:08',NULL,NULL),(2,1,1,2,550,'test2','2018-02-06','Super Admin','2018-02-06 00:54:05',NULL,NULL),(3,1,3,1,123,'test','2018-02-07','Super Admin','2018-02-07 02:25:33',NULL,NULL),(4,1,2,2,500,'test','2018-02-07','Super Admin','2018-02-07 02:57:47',NULL,NULL);
+INSERT INTO `procedure` VALUES (1,1,2,2,500,'test','2018-02-06','Super Admin','2018-02-06 00:36:08',NULL,NULL),(2,1,1,2,550,'test2','2018-02-06','Super Admin','2018-02-06 00:54:05',NULL,NULL),(3,1,3,1,123,'test','2018-02-07','Super Admin','2018-02-07 02:25:33',NULL,NULL),(4,1,2,1,500,'testa','2018-02-07','Super Admin','2018-02-07 02:57:47','Super Admin','2018-02-14 00:36:14');
 /*!40000 ALTER TABLE `procedure` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -475,6 +475,7 @@ CREATE TABLE `schedule` (
   `description` text,
   `start_time` datetime DEFAULT NULL,
   `end_time` datetime DEFAULT NULL,
+  `background_color` varchar(45) DEFAULT NULL,
   `created_by` varchar(45) DEFAULT NULL,
   `created_date` datetime DEFAULT NULL,
   `updated_by` varchar(45) DEFAULT NULL,
@@ -595,7 +596,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,1,'admin','password','Super','Admin',1,'Super Admin','2017-05-10 09:11:00','Super Admin','2018-02-12 01:49:04'),(2,1,'TestUser','password','Test','User',1,'Super Admin','2017-10-05 21:15:28',NULL,NULL);
+INSERT INTO `user` VALUES (1,1,'admin','password','Super','Admin',1,'Super Admin','2017-05-10 09:11:00','Super Admin','2018-02-14 00:37:18'),(2,2,'TestUser','password','Test','User',1,'Super Admin','2017-10-05 21:15:28','Test User','2018-02-15 01:58:03');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -660,7 +661,7 @@ CREATE TABLE `user_type` (
   `updated_by` varchar(45) DEFAULT NULL,
   `updated_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -669,7 +670,7 @@ CREATE TABLE `user_type` (
 
 LOCK TABLES `user_type` WRITE;
 /*!40000 ALTER TABLE `user_type` DISABLE KEYS */;
-INSERT INTO `user_type` VALUES (1,'Administrator','Service Account','2017-09-14 03:04:00',NULL,NULL),(2,'Doctor','Service Account','2017-10-01 00:13:00',NULL,NULL),(3,'Secretary','Service Account','2017-10-01 00:13:00',NULL,NULL);
+INSERT INTO `user_type` VALUES (1,'Doctor','Service Account','2017-10-01 00:13:00',NULL,NULL),(2,'Secretary','Service Account','2017-10-01 00:13:00',NULL,NULL);
 /*!40000 ALTER TABLE `user_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -719,8 +720,8 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_audit_trail_select`(in
-	`@from` NVARCHAR(10),
-    `@to` NVARCHAR(10)
+	`@from` NVARCHAR(20),
+    `@to` NVARCHAR(20)
 )
 BEGIN
 	SELECT 
@@ -1717,6 +1718,119 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `usp_schedule_create` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_schedule_create`(in
+	`@title` TEXT,
+    `@description` TEXT,
+    `@start_time` NVARCHAR(20),
+    `@end_time` NVARCHAR(20),
+    `@background_color` NVARCHAR(20),
+    `@created_by` NVARCHAR(20)
+)
+BEGIN
+	INSERT INTO `dental_mis`.`schedule`
+	(`title`,
+	`description`,
+	`start_time`,
+	`end_time`,
+    `background_color`,
+	`created_by`,
+	`created_date`)
+	VALUES
+	(`@title`,
+	`@description`,
+	`@start_time`,
+	`@end_time`,
+    `@background_color`,
+	`@created_by`,
+	NOW());
+	
+    SELECT LAST_INSERT_ID();
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `usp_schedule_edit` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_schedule_edit`(in
+	`@id` BIGINT,
+	`@title` TEXT,
+    `@description` TEXT,
+    `@start_time` NVARCHAR(20),
+    `@end_time` NVARCHAR(20),
+    `@background_color` NVARCHAR(45),
+    `@updated_by` NVARCHAR(20)
+)
+BEGIN
+	UPDATE `dental_mis`.`schedule`
+	SET
+	`title` = `@title`,
+	`description` = `@description`,
+	`start_time` = `@start_time`,
+	`end_time` = `@end_time`,
+    `background_color` = `@background_color`,
+	`updated_by` = `@end_time`,
+	`updated_date` = NOW()
+	WHERE `id` = `@id`;
+
+    SELECT `@id`;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `usp_schedule_select` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `usp_schedule_select`(in
+	`@date` NVARCHAR(20)
+)
+BEGIN
+	SELECT `schedule`.`id`,
+		`schedule`.`title`,
+		`schedule`.`description`,
+		`schedule`.`start_time`,
+		`schedule`.`end_time`,
+        `schedule`.`background_color`,
+		`schedule`.`created_by`,
+		`schedule`.`created_date`,
+		`schedule`.`updated_by`,
+		`schedule`.`updated_date`
+	FROM `dental_mis`.`schedule`
+    WHERE DATE_FORMAT(`schedule`.`start_time`, '%Y-%m-%d') = `@date`;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `usp_user_create` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -2107,4 +2221,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-13  6:40:17
+-- Dump completed on 2018-02-17  3:45:17

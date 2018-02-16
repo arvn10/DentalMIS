@@ -1,12 +1,33 @@
 ﻿Imports System.Windows.Forms.Calendar
-
+Imports DentalMIS.MODEL
+Imports DentalMIS.BLL
 Public Class ScheduleControl
-    Public schedules As New List(Of CalendarItem)()
+    Public calendarItems As New List(Of CalendarItem)()
+    Private scheduleSvc As IScheduleService
+    Public schedules As New List(Of Schedule)
+    Public Sub GetSchedules()
+        If schedules.Count = 0 Then
+            scheduleSvc = New ScheduleService()
+            schedules = scheduleSvc.ScheduleSelect(DateTimePickerDate.Value.Date)
+        End If
 
-    Public Sub LoadData()
-        For Each item As CalendarItem In schedules
-            If calendarSchedule.ViewIntersects(item) Then
-                calendarSchedule.Items.Add(item)
+        For Each schedule As Schedule In schedules
+            If schedule.ActionType <> "Delete" Then
+                Dim calendar As New CalendarItem(calendarSchedule, schedule.StartTime, schedule.EndTime, schedule.Title)
+                calendar.ApplyColor(Color.FromName(schedule.BackgroundColor))
+                calendar.ForeColor = Color.Black
+                calendar.Tag = $"{schedule.ID},{schedule.Description},{schedule.CreatedBy},{schedule.UpdatedBy}"
+                calendarItems.Add(calendar)
+            End If
+        Next
+
+        LoadSchedule()
+    End Sub
+
+    Public Sub LoadSchedule()
+        For Each calendar As CalendarItem In calendarItems
+            If calendarSchedule.ViewIntersects(calendar) Then
+                calendarSchedule.Items.Add(calendar)
             End If
         Next
     End Sub
@@ -31,52 +52,29 @@ Public Class ScheduleControl
     Private Sub ScheduleControl_Load(sender As Object, e As EventArgs) Handles Me.Load
         calendarSchedule.ViewStart = DateTimePickerDate.Value
         calendarSchedule.ViewEnd = DateTimePickerDate.Value
+        GetSchedules()
     End Sub
 
     Private Sub DateTimePickerDate_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerDate.ValueChanged
         calendarSchedule.SetViewRange(DateTimePickerDate.Value, DateTimePickerDate.Value)
+        schedules.Clear()
+        GetSchedules()
     End Sub
 
     Private Sub calendarSchedule_ItemDeleting(sender As Object, e As CalendarItemCancelEventArgs) Handles calendarSchedule.ItemDeleting
-        MessageBox.Show(e.Item.Text)
+        MessageBox.Show(e.Item.Tag)
     End Sub
 
     Private Sub calendarSchedule_ItemCreating(sender As Object, e As CalendarItemCancelEventArgs) Handles calendarSchedule.ItemCreating
-        Try
-            Dim form As New ScheduleAddEditForm()
-            form.scheduleControl = Me
-            form.activeUser = MainForm.LabelMenu.Text
-            form.selectedDate = e.Item.StartDate
-            form.HeaderLabel.Text = "Schedule - New"
-            form.schedule = e.Item
-            form.ShowDialog()
-            e.Item.Locked = True
-            If e.Item.Text = String.Empty Then
-                e.Cancel = True
-            End If
-        Catch ex As Exception
-
-        End Try
+        e.Cancel = True
     End Sub
 
     Private Sub calendarSchedule_LoadItems(sender As Object, e As CalendarLoadEventArgs) Handles calendarSchedule.LoadItems
-        LoadData()
+        LoadSchedule()
     End Sub
 
     Private Sub calendarSchedule_ItemDoubleClick(sender As Object, e As CalendarItemEventArgs) Handles calendarSchedule.ItemDoubleClick
-        'Try
-        '    If Not e.Item.IsEditing Then
-        '        Dim form As New ScheduleAddEditForm()
-        '        form.scheduleControl = Me
-        '        form.activeUser = MainForm.LabelMenu.Text
-        '        form.selectedDate = e.Item.StartDate
-        '        form.HeaderLabel.Text = "Schedule - Edit"
-        '        form.schedule = e.Item
-        '        form.ShowDialog()
-        '    End If
-        'Catch ex As Exception
-
-        'End Try
+        MessageBox.Show(e.Item.Text)
     End Sub
 
     Private Sub calendarSchedule_ItemMouseHover(sender As Object, e As CalendarItemEventArgs) Handles calendarSchedule.ItemMouseHover
@@ -104,10 +102,27 @@ Public Class ScheduleControl
     End Sub
 
     Private Sub calendarSchedule_ItemCreated(sender As Object, e As CalendarItemCancelEventArgs) Handles calendarSchedule.ItemCreated
-
+        e.Cancel = True
     End Sub
 
     Private Sub calendarSchedule_ItemTextEditing(sender As Object, e As CalendarItemCancelEventArgs) Handles calendarSchedule.ItemTextEditing
         e.Cancel = True
+    End Sub
+
+    Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
+        Try
+            Dim form As New ScheduleAddEditForm()
+            form.scheduleControl = Me
+            form.activeUser = MainForm.LabelMenu.Text
+            form.selectedDate = DateTimePickerDate.Value.Date
+            form.HeaderLabel.Text = "Schedule - New"
+            form.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub calendarSchedule_Leave(sender As Object, e As EventArgs) Handles calendarSchedule.Leave
+
     End Sub
 End Class

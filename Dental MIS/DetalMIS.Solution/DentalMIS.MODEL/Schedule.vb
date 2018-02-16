@@ -4,6 +4,8 @@
     Public Property Description As String
     Public Property StartTime As DateTime
     Public Property EndTime As DateTime
+    Public Property BackgroundColor As String
+    Public Property ActionType As String
     Public Property CreatedBy As String
     Public Property CreatedDate As DateTime?
     Public Property UpdatedBy As String
