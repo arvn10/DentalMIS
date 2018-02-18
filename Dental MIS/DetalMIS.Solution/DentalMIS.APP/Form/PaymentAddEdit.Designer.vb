@@ -162,9 +162,10 @@ Partial Class PaymentAddEdit
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PaymentAddEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PaymentAddEdit"
+        Me.Text = "Payment"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()

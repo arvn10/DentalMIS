@@ -66,6 +66,31 @@ Public Class ProcedureTypeRepository
 
     End Function
 
+    Public Function ProcedureTypeSearchTooth(patientID As Long, toothNumber As Integer) As List(Of ProcedureType)
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_procedure_type_search_tooth`({0},{1})",
+                                                patientID,
+                                                toothNumber)
+        Dim datas As List(Of ProcedureType)
+        Dim dt As DataTable = ExecuteDataset(procedure)
+
+        datas = (From dr As DataRow In dt.Rows
+                 Select New ProcedureType With {
+                    .ID = Convert.ToInt32(dr("id")),
+                    .Name = dr("name").ToString(),
+                    .BasePrice = Convert.ToDouble(dr("base_price")),
+                    .PaymentType = dr("payment_type").ToString(),
+                    .RequireMedCert = dr("require_med_cert"),
+                    .Status = dr("status").ToString(),
+                    .CreatedBy = dr("created_by").ToString(),
+                    .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
+                    .UpdatedBy = dr("updated_by").ToString(),
+                    .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
+                }).ToList()
+
+        Return datas
+
+    End Function
+
     Public Function ProcedureTypeSearchRequireMedCert(requireMedCert As Integer) As List(Of ProcedureType)
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_procedure_type_search_require_med_cert`({0})",
                                                 requireMedCert)
@@ -112,6 +137,58 @@ Public Class ProcedureTypeRepository
 
         Return datas
 
+    End Function
+
+    Public Function ProcedureTypeNotAllowedCreate(param As ProcedureNotAllowed) As Long
+        Dim procedure As String = $"CALL `dental_mis`.`usp_procedure_type_not_allowed_create`({param.ProcedureID}, {param.ProcedureNotAllowedID}, {param.Status}, '{param.CreatedBy}');"
+        Dim dt As DataTable = ExecuteDataset(procedure)
+        Return dt.Rows(0)(0)
+    End Function
+
+    Public Function ProcedureTypeNotAllowedEdit(param As ProcedureNotAllowed) As Long
+        Dim procedure As String = $"CALL `dental_mis`.`usp_procedure_type_not_allowed_edit`({param.ID},{param.ProcedureID},{param.ProcedureNotAllowedID}, {param.Status}, '{param.UpdatedBy}');"
+        Dim dt As DataTable = ExecuteDataset(procedure)
+        Return dt.Rows(0)(0)
+    End Function
+
+    Public Function ProcedureTypeNotAllowedSelect(procedureID As Long) As List(Of ProcedureNotAllowed)
+        Dim procedure As String = $"CALL `dental_mis`.`usp_procedure_type_not_allowed_select`({procedureID});"
+        Dim dt As DataTable = ExecuteDataset(procedure)
+        Dim data As New List(Of ProcedureNotAllowed)
+        data = (From dr As DataRow In dt.Rows
+                Select New ProcedureNotAllowed With {
+                    .ID = Convert.ToInt64(dr("id")),
+                    .ProcedureID = Convert.ToInt64(dr("procedure_type_id")),
+                    .ProcedureNotAllowedID = Convert.ToInt64(dr("procedure_type_id_not_allowed")),
+                    .ProcedureName = Convert.ToString(dr("name")),
+                    .Status = IIf(dr("status") = 1, "Active", "Not Active"),
+                    .CreatedBy = dr("created_by").ToString(),
+                    .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
+                    .UpdatedBy = dr("updated_by").ToString(),
+                    .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
+                }
+               ).ToList()
+        Return data
+    End Function
+
+    Public Function ProcedureTypeNotAllowedSelectID(id As Long) As ProcedureNotAllowed
+        Dim procedure As String = $"CALL `dental_mis`.`usp_procedure_type_not_allowed_select_id`({id});"
+        Dim dt As DataTable = ExecuteDataset(procedure)
+        Dim data As New ProcedureNotAllowed
+        data = (From dr As DataRow In dt.Rows
+                Select New ProcedureNotAllowed With {
+                    .ID = Convert.ToInt64(dr("id")),
+                    .ProcedureID = Convert.ToInt64(dr("procedure_type_id")),
+                    .ProcedureNotAllowedID = Convert.ToInt64(dr("procedure_type_id_not_allowed")),
+                    .ProcedureName = Convert.ToString(dr("name")),
+                    .Status = IIf(dr("status") = 1, "Active", "Not Active"),
+                    .CreatedBy = dr("created_by").ToString(),
+                    .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
+                    .UpdatedBy = dr("updated_by").ToString(),
+                    .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
+                }
+               ).FirstOrDefault()
+        Return data
     End Function
 #End Region
 

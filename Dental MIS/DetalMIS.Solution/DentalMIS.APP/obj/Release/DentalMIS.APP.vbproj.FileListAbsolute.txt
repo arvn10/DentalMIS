@@ -1,0 +1,76 @@
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\Olaes Dental MIS.exe.config
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\Olaes Dental MIS.exe
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\Olaes Dental MIS.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\Olaes Dental MIS.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\Bunifu_UI_v1.5.3.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportSource.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.Shared.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.Windows.Forms.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.BLL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.MODEL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\FlashControlV71.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\MySql.Data.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\MySqlBackup.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\System.Windows.Forms.Calendar.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\WindowsFormsCalendar.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.DAL.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\stdole.dll
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.BLL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.BLL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.MODEL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.MODEL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\MySql.Data.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.DAL.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.DAL.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\bin\Release\DentalMIS.DAL.dll.config
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.vbprojResolveAssemblyReference.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.vbproj.Olaes Dental MIS.exe.config
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.BackUpForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.DatabaseConfigForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ForgotPasswordForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.LoginForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ChangePasswordForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PatientAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PatientDentalRecordForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PaymentAddEdit.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PaymentForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PrintDentalCertificateForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ProcedureAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ProcedureTypeAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ProcedureTypeNotAllowedAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ScheduleAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.SecretQuestionAddEdit.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.UserAddEditForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.MainForm.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.Resources.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.AuditTrailControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.BackUpDatabaseControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ConfigurationControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.DashboardControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PatientControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.PaymentControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ProcedureTypeControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ReportControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.ScheduleControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.SecretQuestionControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.UserControl.resources
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.vbproj.GenerateResource.Cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\DentalMIS.APP.vbproj.CoreCompileInputs.cache
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\Olaes Dental MIS.exe
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\Olaes Dental MIS.xml
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.APP\obj\Release\Olaes Dental MIS.pdb

@@ -23,9 +23,10 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.PanelLogin = New System.Windows.Forms.Panel()
+        Me.forgotPassword = New System.Windows.Forms.LinkLabel()
         Me.textPassword = New System.Windows.Forms.TextBox()
         Me.textUsername = New System.Windows.Forms.TextBox()
         Me.LabelConnecting = New System.Windows.Forms.Label()
@@ -47,6 +48,7 @@ Partial Class LoginForm
         'PanelLogin
         '
         Me.PanelLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.PanelLogin.Controls.Add(Me.forgotPassword)
         Me.PanelLogin.Controls.Add(Me.textPassword)
         Me.PanelLogin.Controls.Add(Me.textUsername)
         Me.PanelLogin.Controls.Add(Me.LabelConnecting)
@@ -62,8 +64,21 @@ Partial Class LoginForm
         Me.PanelLogin.Location = New System.Drawing.Point(0, 0)
         Me.PanelLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelLogin.Name = "PanelLogin"
-        Me.PanelLogin.Size = New System.Drawing.Size(314, 254)
+        Me.PanelLogin.Size = New System.Drawing.Size(314, 273)
         Me.PanelLogin.TabIndex = 0
+        '
+        'forgotPassword
+        '
+        Me.forgotPassword.AutoSize = True
+        Me.FormAnimator.SetDecoration(Me.forgotPassword, BunifuAnimatorNS.DecorationType.None)
+        Me.forgotPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.forgotPassword.LinkColor = System.Drawing.Color.White
+        Me.forgotPassword.Location = New System.Drawing.Point(165, 176)
+        Me.forgotPassword.Name = "forgotPassword"
+        Me.forgotPassword.Size = New System.Drawing.Size(138, 20)
+        Me.forgotPassword.TabIndex = 12
+        Me.forgotPassword.TabStop = True
+        Me.forgotPassword.Text = "Forgot Password?"
         '
         'textPassword
         '
@@ -93,7 +108,7 @@ Partial Class LoginForm
         Me.LabelConnecting.AutoSize = True
         Me.FormAnimator.SetDecoration(Me.LabelConnecting, BunifuAnimatorNS.DecorationType.None)
         Me.LabelConnecting.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.LabelConnecting.Location = New System.Drawing.Point(7, 225)
+        Me.LabelConnecting.Location = New System.Drawing.Point(9, 242)
         Me.LabelConnecting.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelConnecting.Name = "LabelConnecting"
         Me.LabelConnecting.Size = New System.Drawing.Size(220, 21)
@@ -161,7 +176,7 @@ Partial Class LoginForm
         Me.buttonLogin.IconVisible = True
         Me.buttonLogin.IconZoom = 90.0R
         Me.buttonLogin.IsTab = False
-        Me.buttonLogin.Location = New System.Drawing.Point(11, 183)
+        Me.buttonLogin.Location = New System.Drawing.Point(13, 200)
         Me.buttonLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonLogin.Name = "buttonLogin"
         Me.buttonLogin.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -231,31 +246,32 @@ Partial Class LoginForm
         '
         Me.FormAnimator.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.FormAnimator.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.FormAnimator.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.FormAnimator.DefaultAnimation = Animation2
         '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(315, 254)
+        Me.ClientSize = New System.Drawing.Size(315, 273)
         Me.Controls.Add(Me.PanelLogin)
         Me.FormAnimator.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -282,4 +298,5 @@ Partial Class LoginForm
     Friend WithEvents LabelConnecting As Label
     Friend WithEvents textPassword As TextBox
     Friend WithEvents textUsername As TextBox
+    Friend WithEvents forgotPassword As LinkLabel
 End Class

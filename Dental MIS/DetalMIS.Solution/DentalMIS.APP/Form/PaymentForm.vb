@@ -50,16 +50,27 @@ Public Class PaymentForm
     End Sub
 
     Private Sub buttonNew_Click(sender As Object, e As EventArgs) Handles buttonNew.Click
-        Try
-            Dim form As New PaymentAddEdit
+        On Error Resume Next
+        Dim form As New PaymentAddEdit
+        form.paymentForm = Me
+        form.activeUser = activeUser
+        form.procedureID = procedureID
+        form.HeaderLabel.Text = "Payment - New"
+        form.ShowDialog()
+    End Sub
+
+    Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
+        On Error Resume Next
+        Dim form As New PaymentAddEdit
+        If DataGrid.Rows.Count > 0 Then
             form.paymentForm = Me
+            form.paymentID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
             form.activeUser = activeUser
             form.procedureID = procedureID
-            form.HeaderLabel.Text = "Payment - New"
+            form.HeaderLabel.Text = "Payment - Edit"
             form.ShowDialog()
-        Catch ex As Exception
-
-        End Try
-
+        Else
+            MessageBox.Show("No Item(s) to edit.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class

@@ -102,48 +102,38 @@ Public Class PatientControl
     End Sub
 
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
-        Try
-            PatientAddEditForm.patientControl = Me
-            PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
-            PatientAddEditForm.HeaderLabel.Text = "Patient - New"
-            PatientAddEditForm.ShowDialog()
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        PatientAddEditForm.patientControl = Me
+        PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
+        PatientAddEditForm.HeaderLabel.Text = "Patient - New"
+        PatientAddEditForm.ShowDialog()
     End Sub
 
     Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                Dim form As New PatientAddEditForm
-                form.patientControl = Me
-                form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
-                form.activeUser = MainForm.LabelMenu.Text
-                form.HeaderLabel.Text = "Patient - Edit"
-                form.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            Dim form As New PatientAddEditForm
+            form.patientControl = Me
+            form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
+            form.activeUser = MainForm.LabelMenu.Text
+            form.HeaderLabel.Text = "Patient - Edit"
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Private Sub ToolStripButtonViewDR_Click(sender As Object, e As EventArgs) Handles ToolStripButtonViewDR.Click
-        Try
-            If DataGrid.Rows.Count > 0 Then
-                Dim form As New PatientDentalRecordForm
-                form.patientControl = Me
-                form.activeUser = MainForm.LabelMenu.Text
-                form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
-                form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
-                form.ShowDialog()
-            Else
-                MessageBox.Show("No Patient Dental Record to View", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        If DataGrid.Rows.Count > 0 Then
+            Dim form As New PatientDentalRecordForm
+            form.patientControl = Me
+            form.activeUser = MainForm.LabelMenu.Text
+            form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
+            form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No Patient Dental Record to View", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class

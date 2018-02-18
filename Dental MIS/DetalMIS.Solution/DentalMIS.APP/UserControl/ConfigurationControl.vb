@@ -22,11 +22,17 @@
                 Dim control As New UserControl
                 control.Dock = DockStyle.Fill
                 PanelMain.Controls.Add(control)
+            Case "Secret Question"
+                ClearControls(PanelMain)
+                Dim control As New SecretQuestionControl
+                control.Dock = DockStyle.Fill
+                PanelMain.Controls.Add(control)
             Case "Backup"
                 ClearControls(PanelMain)
                 Dim control As New BackUpDatabaseControl
                 control.Dock = DockStyle.Fill
                 PanelMain.Controls.Add(control)
+                BackUpForm.ShowDialog()
         End Select
     End Sub
 

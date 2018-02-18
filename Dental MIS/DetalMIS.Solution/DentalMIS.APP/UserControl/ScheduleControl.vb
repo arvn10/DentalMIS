@@ -6,17 +6,18 @@ Public Class ScheduleControl
     Private scheduleSvc As IScheduleService
     Public schedules As New List(Of Schedule)
     Public Sub GetSchedules()
+        calendarItems.Clear()
         If schedules.Count = 0 Then
             scheduleSvc = New ScheduleService()
             schedules = scheduleSvc.ScheduleSelect(DateTimePickerDate.Value.Date)
         End If
 
         For Each schedule As Schedule In schedules
-            If schedule.ActionType <> "Delete" Then
+            If Not schedule.IsDeleted Then
                 Dim calendar As New CalendarItem(calendarSchedule, schedule.StartTime, schedule.EndTime, schedule.Title)
-                calendar.ApplyColor(Color.FromName(schedule.BackgroundColor))
+                calendar.ApplyColor(Color.FromArgb(schedule.BackgroundColor))
                 calendar.ForeColor = Color.Black
-                calendar.Tag = $"{schedule.ID},{schedule.Description},{schedule.CreatedBy},{schedule.UpdatedBy}"
+                calendar.Tag = $"{schedule.Index},{schedule.ID},{schedule.Description},{schedule.CreatedBy},{schedule.UpdatedBy}"
                 calendarItems.Add(calendar)
             End If
         Next
@@ -25,28 +26,39 @@ Public Class ScheduleControl
     End Sub
 
     Public Sub LoadSchedule()
+        calendarSchedule.Items.Clear()
+
         For Each calendar As CalendarItem In calendarItems
             If calendarSchedule.ViewIntersects(calendar) Then
                 calendarSchedule.Items.Add(calendar)
             End If
         Next
+
     End Sub
     Private Sub ToolStripButtonSave_Click(sender As Object, e As EventArgs) Handles ToolStripButtonSave.Click
-        For Each item As CalendarItem In calendarSchedule.Items
-            Console.WriteLine(item)
-        Next
-    End Sub
+        Dim msg = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If msg = DialogResult.Yes Then
+            scheduleSvc = New ScheduleService()
+            Dim processedItem As Integer = 0
+            For Each item As Schedule In schedules
+                If item.ActionType = "Insert" Then
+                    If scheduleSvc.ScheduleCreate(item) > 0 Then
+                        processedItem += 1
+                    End If
+                ElseIf item.ActionType = "Update" Then
 
-    Private Sub OtherToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Using dlg As New ColorDialog()
-            If dlg.ShowDialog() = DialogResult.OK Then
-                For Each item As CalendarItem In calendarSchedule.GetSelectedItems
-                    item.BackgroundColor = dlg.Color
-                    item.BorderColor = dlg.Color
-                    calendarSchedule.Invalidate(item)
-                Next
+                    If scheduleSvc.ScheduleEdit(item) > 0 Then
+                        processedItem += 1
+                    End If
+                End If
+            Next
+
+            If processedItem > 0 Then
+                MessageBox.Show("Calendar Saved!", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                schedules.Clear()
+                GetSchedules()
             End If
-        End Using
+        End If
     End Sub
 
     Private Sub ScheduleControl_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -62,7 +74,16 @@ Public Class ScheduleControl
     End Sub
 
     Private Sub calendarSchedule_ItemDeleting(sender As Object, e As CalendarItemCancelEventArgs) Handles calendarSchedule.ItemDeleting
-        MessageBox.Show(e.Item.Tag)
+        Dim msg = MessageBox.Show("Delete Schedule?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If msg = DialogResult.Yes Then
+            Dim parts As String() = IIf(e.Item.Tag <> String.Empty, e.Item.Tag.ToString().Split(","), "")
+            Dim tempSchedule As Schedule = schedules.Where(Function(s) s.Index = Convert.ToInt32(parts(0))).FirstOrDefault()
+            Dim index As Integer = schedules.IndexOf(tempSchedule)
+            tempSchedule.IsDeleted = True
+            tempSchedule.ActionType = "Update"
+            tempSchedule.UpdatedBy = MainForm.LabelMenu.Text
+            schedules(index) = tempSchedule
+        End If
     End Sub
 
     Private Sub calendarSchedule_ItemCreating(sender As Object, e As CalendarItemCancelEventArgs) Handles calendarSchedule.ItemCreating
@@ -74,7 +95,28 @@ Public Class ScheduleControl
     End Sub
 
     Private Sub calendarSchedule_ItemDoubleClick(sender As Object, e As CalendarItemEventArgs) Handles calendarSchedule.ItemDoubleClick
-        MessageBox.Show(e.Item.Text)
+        Try
+            Dim schedule As New Schedule
+            Dim parts As String() = IIf(e.Item.Tag <> String.Empty, e.Item.Tag.ToString().Split(","), "")
+            Dim form As New ScheduleAddEditForm
+
+            schedule.Index = Convert.ToInt32(parts(0))
+            schedule.ID = Convert.ToInt64(parts(1))
+            schedule.Title = e.Item.Text
+            schedule.Description = parts(3)
+            schedule.StartTime = e.Item.StartDate
+            schedule.EndTime = e.Item.EndDate
+            schedule.BackgroundColor = e.Item.BackgroundColor.ToArgb
+
+            form.scheduleControl = Me
+            form.schedule = schedule
+            form.activeUser = MainForm.LabelMenu.Text
+            form.selectedDate = DateTimePickerDate.Value.Date
+            form.HeaderLabel.Text = "Schedule - Edit"
+            form.ShowDialog()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub calendarSchedule_ItemMouseHover(sender As Object, e As CalendarItemEventArgs) Handles calendarSchedule.ItemMouseHover
@@ -83,7 +125,7 @@ Public Class ScheduleControl
             Dim scheduleDetails As String() = IIf(e.Item.Tag <> String.Empty, e.Item.Tag.ToString().Split(", "), "")
             If scheduleDetails.Length > 0 Then
                 toolTipText = "Title : " + e.Item.Text + vbNewLine +
-                              "Description : " + scheduleDetails(1) + vbNewLine +
+                              "Description : " + scheduleDetails(2) + vbNewLine +
                               "Start Time : " + e.Item.StartDate.ToString("yyyy-MM-dd hh:mm:ss tt") + vbNewLine +
                               "End Time : " + e.Item.EndDate.ToString("yyyy-MM-dd hh:mm:ss tt")
 
@@ -110,19 +152,12 @@ Public Class ScheduleControl
     End Sub
 
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
-        Try
-            Dim form As New ScheduleAddEditForm()
-            form.scheduleControl = Me
-            form.activeUser = MainForm.LabelMenu.Text
-            form.selectedDate = DateTimePickerDate.Value.Date
-            form.HeaderLabel.Text = "Schedule - New"
-            form.ShowDialog()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub calendarSchedule_Leave(sender As Object, e As EventArgs) Handles calendarSchedule.Leave
-
+        On Error Resume Next
+        Dim form As New ScheduleAddEditForm()
+        form.scheduleControl = Me
+        form.activeUser = MainForm.LabelMenu.Text
+        form.selectedDate = DateTimePickerDate.Value.Date
+        form.HeaderLabel.Text = "Schedule - New"
+        form.ShowDialog()
     End Sub
 End Class

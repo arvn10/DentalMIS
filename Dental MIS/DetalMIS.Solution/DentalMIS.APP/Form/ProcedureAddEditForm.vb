@@ -50,28 +50,24 @@ Public Class ProcedureAddEditForm
     End Sub
 
     Private Sub ProcedureAddEditForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Dim procedureTypeList As List(Of ProcedureType)
-        procedureTypeList = procedureTypeSvc.ProcedureTypeSearchLike("")
-        comboProcedureType.DisplayMember = "Name"
-        comboProcedureType.ValueMember = "ID"
-        comboProcedureType.DataSource = procedureTypeList
+
 
         Dim toothList As List(Of Tooth)
         toothList = toothSvc.ToothSearch()
         comboTooth.DisplayMember = "Tooth"
         comboTooth.ValueMember = "ToothNumber"
         comboTooth.DataSource = toothList
-
+        comboTooth.Text = ""
         firstRun = False
 
         If HeaderLabel.Text.Contains("Edit") Then
-            TabPagePayment.Visible = True
+            TabPagePayment.Enabled = True
             Dim data As Procedure
             procedureSvc = New ProcedureService()
             data = procedureSvc.ProcedureSearchID(procedureID)
             patientID = data.PatientID
-            comboProcedureType.Text = data.ProcedureName
             comboTooth.Text = data.Tooth
+            comboProcedureType.Text = data.ProcedureName
             dtPickerTransDate.Value = data.ProcedureDate
             textPrescription.Text = data.Notes
             textCharge.Text = data.AmountToPay.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
@@ -79,9 +75,8 @@ Public Class ProcedureAddEditForm
             textAmountPaid.Text = data.AmountPaid.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textPaymentBalance.Text = data.Balance.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             LoadData()
-            buttonPrintDC.Visible = True
         Else
-            TabPagePayment.Visible = False
+            TabPagePayment.Enabled = False
         End If
     End Sub
 
@@ -110,7 +105,7 @@ Public Class ProcedureAddEditForm
                 procedure.PatientID = patientID
                 procedure.ProcedureTypeID = Convert.ToInt64(comboProcedureType.SelectedValue)
                 procedure.ToothNumber = Convert.ToInt64(comboTooth.SelectedValue)
-                procedure.AmountToPay = Convert.ToInt64(textCharge.Text)
+                procedure.AmountToPay = Double.Parse(textCharge.Text, NumberStyles.Currency)
                 procedure.ProcedureDate = dtPickerTransDate.Value.Date.ToString("yyyy-MM-dd")
                 procedure.Notes = textPrescription.Text
 
@@ -184,10 +179,8 @@ Public Class ProcedureAddEditForm
         End Select
     End Sub
 
-    Private Sub buttonPrintDC_Click(sender As Object, e As EventArgs) Handles buttonPrintDC.Click
-        Dim form As New PrintDentalCertificateForm
-        form.procedureID = procedureID
-        form.ShowDialog()
+    Private Sub buttonPrintDC_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub comboProcedureType_TextChanged(sender As Object, e As EventArgs) Handles comboProcedureType.TextChanged
@@ -203,7 +196,13 @@ Public Class ProcedureAddEditForm
             Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency)
             textCharge.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textPaymentCharge.Text = textCharge.Text
-            textPaymentBalance.Text = (Double.Parse(textPaymentCharge.Text, NumberStyles.Currency) - Double.Parse(textAmountPaid.Text, NumberStyles.Currency)).ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            If textAmountPaid.Text <> String.Empty Then
+                textPaymentBalance.Text = (Double.Parse(textPaymentCharge.Text, NumberStyles.Currency) - Double.Parse(textAmountPaid.Text, NumberStyles.Currency)).ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            Else
+                Dim val As Double = 0
+                textPaymentBalance.Text = val.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            End If
+
         End If
     End Sub
 
@@ -212,5 +211,28 @@ Public Class ProcedureAddEditForm
             Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency)
             textCharge.Text = amount.ToString()
         End If
+    End Sub
+
+    Private Sub comboTooth_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub comboTooth_SelectedValueChanged(sender As Object, e As EventArgs) Handles comboTooth.SelectedValueChanged
+        Dim procedureTypeList As List(Of ProcedureType)
+        If HeaderLabel.Text.Contains("New") Then
+            procedureTypeList = procedureTypeSvc.ProcedureTypeSearchTooth(patientID, comboTooth.SelectedValue)
+            comboProcedureType.DisplayMember = "Name"
+            comboProcedureType.ValueMember = "ID"
+            comboProcedureType.DataSource = procedureTypeList
+            comboProcedureType.Text = ""
+        Else
+            procedureTypeList = procedureTypeSvc.ProcedureTypeSearchLike("")
+            comboProcedureType.DisplayMember = "Name"
+            comboProcedureType.ValueMember = "ID"
+            comboProcedureType.DataSource = procedureTypeList
+            comboProcedureType.Text = ""
+        End If
+        textPrice.Clear()
+        textCharge.Clear()
     End Sub
 End Class

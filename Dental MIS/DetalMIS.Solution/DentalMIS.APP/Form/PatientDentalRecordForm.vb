@@ -49,19 +49,20 @@ Public Class PatientDentalRecordForm
     End Sub
 
     Private Sub buttonNew_Click(sender As Object, e As EventArgs) Handles buttonNew.Click
-        Try
-            Dim form As New ProcedureAddEditForm
-            form.activeUser = activeUser
-            form.patientID = patientID
-            form.patientDentalRecordForm = Me
-            form.HeaderLabel.Text = "Procedure - New"
-            form.ShowDialog()
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        Dim form As New ProcedureAddEditForm
+        form.activeUser = activeUser
+        form.patientID = patientID
+        form.patientDentalRecordForm = Me
+        form.HeaderLabel.Text = "Procedure - New"
+        form.ShowDialog()
     End Sub
 
     Private Sub PatientDentalRecordForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If MainForm.user.UserType = "Secretary" Then
+            buttonNew.Visible = False
+            buttonEdit.Visible = False
+        End If
         LoadData("", "", "")
         LoadToothButtonControls()
     End Sub
@@ -75,20 +76,18 @@ Public Class PatientDentalRecordForm
     End Sub
 
     Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                Dim form As New ProcedureAddEditForm
-                form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
-                form.activeUser = activeUser
-                form.patientDentalRecordForm = Me
-                form.HeaderLabel.Text = "Procedure - Edit"
-                form.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            Dim form As New ProcedureAddEditForm
+            form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
+            form.patientID = patientID
+            form.activeUser = activeUser
+            form.patientDentalRecordForm = Me
+            form.HeaderLabel.Text = "Procedure - Edit"
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Private Sub PatientDentalRecordForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -98,4 +97,18 @@ Public Class PatientDentalRecordForm
     Private Sub ToolStripMenuItemShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemShowAll.Click
         LoadData("", "", "")
     End Sub
+
+    Private Sub ToolStripMenuItemPrint_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemPrint.Click
+
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            Dim form As New PrintDentalCertificateForm
+            form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to Print", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+    End Sub
+
 End Class

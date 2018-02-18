@@ -69,6 +69,7 @@
     <Compile Include="IService\IProcedureService.vb" />
     <Compile Include="IService\IProcedureTypeService.vb" />
     <Compile Include="IService\IScheduleService.vb" />
+    <Compile Include="IService\ISecretQuestionService.vb" />
     <Compile Include="IService\IToothService.vb" />
     <Compile Include="IService\IUserService.vb" />
     <Compile Include="IService\IUserTypeService.vb" />
@@ -93,6 +94,7 @@
     <Compile Include="Service\ProcedureService.vb" />
     <Compile Include="Service\ProcedureTypeService.vb" />
     <Compile Include="Service\ScheduleService.vb" />
+    <Compile Include="Service\SecretQuestionService.vb" />
     <Compile Include="Service\ToothService.vb" />
     <Compile Include="Service\UserService.vb" />
     <Compile Include="Service\UserTypeService.vb" />

@@ -110,9 +110,9 @@ Partial Class ScheduleAddEditForm
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(9, 93)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 16)
+        Me.Label2.Size = New System.Drawing.Size(76, 16)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "*Description"
+        Me.Label2.Text = "Description"
         '
         'textDescription
         '
@@ -122,7 +122,7 @@ Partial Class ScheduleAddEditForm
         Me.textDescription.Name = "textDescription"
         Me.textDescription.Size = New System.Drawing.Size(347, 102)
         Me.textDescription.TabIndex = 24
-        Me.textDescription.Tag = "*"
+        Me.textDescription.Tag = ""
         '
         'dateTimePickerStart
         '
@@ -277,9 +277,10 @@ Partial Class ScheduleAddEditForm
         Me.Controls.Add(Me.textTitle)
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ScheduleAddEditForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ScheduleAddEditForm"
+        Me.Text = "Schedule"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()

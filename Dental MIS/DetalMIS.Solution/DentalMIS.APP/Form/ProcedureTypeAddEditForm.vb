@@ -1,4 +1,5 @@
-﻿Imports DentalMIS.BLL
+﻿Imports System.Globalization
+Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class ProcedureTypeAddEditForm
     Private procedureTypeService As IProcedureTypeService
@@ -10,6 +11,25 @@ Public Class ProcedureTypeAddEditForm
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         procedureTypeService = New ProcedureTypeService()
+    End Sub
+
+    Public Sub LoadData()
+        Dim data As New List(Of ProcedureNotAllowed)
+        data = procedureTypeService.ProcedureTypeNotAllowedSelect(procedureTypeID)
+        Dim bs As New BindingSource
+        bs.DataSource = data
+        DataGrid.AutoGenerateColumns = False
+        DataGrid.DataSource = bs
+        DataGrid.Columns("ID").DataPropertyName = "ID"
+        DataGrid.Columns("procedureName").DataPropertyName = "ProcedureName"
+        DataGrid.Columns("status").DataPropertyName = "Status"
+        DataGrid.Columns("createdBy").DataPropertyName = "CreatedBy"
+        DataGrid.Columns("createdDate").DataPropertyName = "CreatedDate"
+        DataGrid.Columns("updatedBy").DataPropertyName = "UpdatedBy"
+        DataGrid.Columns("updatedDate").DataPropertyName = "UpdatedDate"
+
+        DataGrid.AutoResizeColumns()
+        DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
     End Sub
 
     Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
@@ -64,7 +84,7 @@ Public Class ProcedureTypeAddEditForm
             Dim param As New ProcedureType()
             Dim valid As Boolean = True
 
-            For Each control As Control In Me.Controls
+            For Each control As Control In TabPageDetails.Controls
                 If (control.GetType() Is GetType(TextBox)) Then
                     Dim textBox As TextBox = CType(control, TextBox)
                     If textBox.Text = String.Empty Then
@@ -84,7 +104,7 @@ Public Class ProcedureTypeAddEditForm
 
 
                 param.Name = textName.Text
-                param.BasePrice = Convert.ToDouble(textBasePrice.Text)
+                param.BasePrice = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
                 param.PaymentType = comboPaymentType.Text
                 param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
                 param.Status = If(comboStatus.Text = "Active", 1, 0)
@@ -103,6 +123,7 @@ Public Class ProcedureTypeAddEditForm
                 Else
                     Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If confirm = DialogResult.Yes Then
+                        param.ID = procedureTypeID
                         param.UpdatedBy = activeUser
                         Dim ret As Long = procedureTypeService.ProcedureTypeEdit(param)
                         If ret > 0 Then
@@ -122,16 +143,58 @@ Public Class ProcedureTypeAddEditForm
         Try
             If HeaderLabel.Text.Contains("Edit") Then
                 Dim data As New ProcedureType
+                TabPageNotAllowed.Enabled = True
+                LoadData()
                 data = procedureTypeService.ProcedureTypeSearchID(procedureTypeID)
                 textName.Text = data.Name
-                textBasePrice.Text = data.BasePrice
+                textBasePrice.Text = data.BasePrice.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
                 comboPaymentType.Text = data.PaymentType
                 comboMedCert.Text = data.RequireMedCert
                 comboStatus.Text = data.Status
+            Else
+                TabPageNotAllowed.Enabled = False
             End If
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub ToolStripButtonShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripButtonShowAll.Click
+        LoadData()
+    End Sub
+
+    Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
+        On Error Resume Next
+        Dim form As New ProcedureTypeNotAllowedAddEditForm
+        form.procedureTypeAddEditForm = Me
+        form.activeUser = MainForm.LabelMenu.Text
+        form.procedureTypeID = procedureTypeID
+        form.HeaderLabel.Text = "Procedure Type Not Allowed - New"
+        form.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
+        On Error Resume Next
+        Dim form As New ProcedureTypeNotAllowedAddEditForm
+        form.procedureTypeAddEditForm = Me
+        form.procedureTypeNotAllowedID = DataGrid.CurrentRow.Cells(0).Value
+        form.activeUser = MainForm.LabelMenu.Text
+        form.HeaderLabel.Text = "Procedure Type Not Allowed - Edit"
+        form.ShowDialog()
+    End Sub
+
+    Private Sub textBasePrice_Enter(sender As Object, e As EventArgs) Handles textBasePrice.Enter
+        If textBasePrice.Text <> String.Empty Then
+            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
+            textBasePrice.Text = amount.ToString()
+        End If
+    End Sub
+
+    Private Sub textBasePrice_Leave(sender As Object, e As EventArgs) Handles textBasePrice.Leave
+        If textBasePrice.Text <> String.Empty Then
+            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
+            textBasePrice.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+        End If
     End Sub
 End Class

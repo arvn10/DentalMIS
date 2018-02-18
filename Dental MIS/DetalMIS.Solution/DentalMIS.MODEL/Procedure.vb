@@ -24,3 +24,14 @@
     Public Property PaymentUpdatedBy As String
     Public Property PaymentUpdatedDate As DateTime?
 End Class
+
+Public Class ProcedureReport
+    Public Property ProcedureDate As Date
+    Public Property FullName As String
+    Public Property Tooth As String
+    Public Property ProcedureName As String
+    Public Property AmountToPay As Long
+    Public Property AmountPaid As Long
+    Public Property Balance As Long
+    Public Property PaymentStatus As String
+End Class

@@ -175,4 +175,24 @@ Public Class ProcedureRepository
         Return data
     End Function
 
+
+    Public Function ProcedureSearchPaymentReport(paymentStatus As String, [from] As Date, [to] As Date) As List(Of ProcedureReport)
+        Dim procedure As String = $"CALL `dental_mis`.`usp_procedure_payment_search_report`('{paymentStatus}', '{[from].ToString("yyyy-MM-dd")}', '{[to].ToString("yyyy-MM-dd")}');"
+        Dim dt As DataTable = ExecuteDataset(procedure)
+        Dim data As New List(Of ProcedureReport)
+
+        data = (From dr As DataRow In dt.Rows
+                Select New ProcedureReport With {
+                    .FullName = dr("full_name").ToString(),
+                    .ProcedureName = dr("procedure_name").ToString(),
+                    .Tooth = dr("tooth").ToString(),
+                    .ProcedureDate = Convert.ToDateTime(dr("procedure_date")),
+                    .AmountToPay = Convert.ToDouble(dr("amount_to_pay")),
+                    .AmountPaid = Convert.ToDouble(dr("amount_paid")),
+                    .Balance = Convert.ToDouble(dr("balance")),
+                    .PaymentStatus = Convert.ToString(dr("payment_status"))
+                 }).ToList()
+        Return data
+    End Function
+
 End Class

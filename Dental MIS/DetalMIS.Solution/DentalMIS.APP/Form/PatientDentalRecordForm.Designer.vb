@@ -24,11 +24,11 @@ Partial Class PatientDentalRecordForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientDentalRecordForm))
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
@@ -81,11 +81,12 @@ Partial Class PatientDentalRecordForm
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItemShowAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.buttonNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.buttonEdit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemPrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ToolStripMenuItemShowAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxTooth.SuspendLayout()
@@ -873,8 +874,8 @@ Partial Class PatientDentalRecordForm
         '
         'procedureName
         '
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle6
         Me.procedureName.HeaderText = "Procedure Name"
         Me.procedureName.Name = "procedureName"
         Me.procedureName.ReadOnly = True
@@ -893,32 +894,32 @@ Partial Class PatientDentalRecordForm
         '
         'createdBy
         '
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle7
         Me.createdBy.HeaderText = "Created By"
         Me.createdBy.Name = "createdBy"
         Me.createdBy.ReadOnly = True
         '
         'createdDate
         '
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle8
         Me.createdDate.HeaderText = "Created Date"
         Me.createdDate.Name = "createdDate"
         Me.createdDate.ReadOnly = True
         '
         'updatedBy
         '
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle9
         Me.updatedBy.HeaderText = "Updated By"
         Me.updatedBy.Name = "updatedBy"
         Me.updatedBy.ReadOnly = True
         '
         'updatedDate
         '
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle10
         Me.updatedDate.HeaderText = "Updated Date"
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
@@ -927,12 +928,19 @@ Partial Class PatientDentalRecordForm
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemShowAll, Me.buttonNew, Me.buttonEdit})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemShowAll, Me.buttonNew, Me.buttonEdit, Me.ToolStripMenuItemPrint})
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 16)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(701, 24)
         Me.MenuStrip1.TabIndex = 41
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripMenuItemShowAll
+        '
+        Me.ToolStripMenuItemShowAll.Image = CType(resources.GetObject("ToolStripMenuItemShowAll.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItemShowAll.Name = "ToolStripMenuItemShowAll"
+        Me.ToolStripMenuItemShowAll.Size = New System.Drawing.Size(82, 20)
+        Me.ToolStripMenuItemShowAll.Text = "Show All"
         '
         'buttonNew
         '
@@ -948,17 +956,17 @@ Partial Class PatientDentalRecordForm
         Me.buttonEdit.Size = New System.Drawing.Size(56, 20)
         Me.buttonEdit.Text = "Edit"
         '
+        'ToolStripMenuItemPrint
+        '
+        Me.ToolStripMenuItemPrint.Image = CType(resources.GetObject("ToolStripMenuItemPrint.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItemPrint.Name = "ToolStripMenuItemPrint"
+        Me.ToolStripMenuItemPrint.Size = New System.Drawing.Size(156, 20)
+        Me.ToolStripMenuItemPrint.Text = "Print Dental Certificate"
+        '
         'BunifuElipse
         '
         Me.BunifuElipse.ElipseRadius = 5
         Me.BunifuElipse.TargetControl = Me
-        '
-        'ToolStripMenuItemShowAll
-        '
-        Me.ToolStripMenuItemShowAll.Image = CType(resources.GetObject("ToolStripMenuItemShowAll.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItemShowAll.Name = "ToolStripMenuItemShowAll"
-        Me.ToolStripMenuItemShowAll.Size = New System.Drawing.Size(82, 20)
-        Me.ToolStripMenuItemShowAll.Text = "Show All"
         '
         'PatientDentalRecordForm
         '
@@ -970,10 +978,11 @@ Partial Class PatientDentalRecordForm
         Me.Controls.Add(Me.GroupBoxTooth)
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "PatientDentalRecordForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PatientDentalRecordForm"
+        Me.Text = "Patient Dental Record"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1077,4 +1086,5 @@ Partial Class PatientDentalRecordForm
     Friend WithEvents Label1 As Label
     Friend WithEvents ButtonSearch As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ToolStripMenuItemShowAll As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemPrint As ToolStripMenuItem
 End Class

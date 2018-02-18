@@ -22,22 +22,24 @@ Partial Class ReportControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Transaction")
-        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Paid")
-        Dim TreeNode33 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("With Balance")
-        Dim TreeNode34 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Payment", New System.Windows.Forms.TreeNode() {TreeNode32, TreeNode33})
-        Dim TreeNode35 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schedule")
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportControl))
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("All")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Paid")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Not Paid")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Transaction", New System.Windows.Forms.TreeNode() {TreeNode6, TreeNode7, TreeNode8})
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schedule")
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelMain = New System.Windows.Forms.Panel()
-        Me.TreeViewConfig = New System.Windows.Forms.TreeView()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.ButtonSearch = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dtPickerTo = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtPickerFrom = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.TreeViewConfig = New System.Windows.Forms.TreeView()
+        Me.transactionReport1 = New DentalMIS.APP.TransactionReport()
+        Me.scheduleReport1 = New DentalMIS.APP.ScheduleReport()
         Me.PanelMain.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,33 +89,30 @@ Partial Class ReportControl
         Me.PanelMain.Size = New System.Drawing.Size(612, 565)
         Me.PanelMain.TabIndex = 9
         '
-        'TreeViewConfig
+        'CrystalReportViewer1
         '
-        Me.TreeViewConfig.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TreeViewConfig.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.TreeViewConfig.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TreeViewConfig.Location = New System.Drawing.Point(12, 93)
-        Me.TreeViewConfig.Margin = New System.Windows.Forms.Padding(2)
-        Me.TreeViewConfig.Name = "TreeViewConfig"
-        TreeNode31.Name = "transactionReport"
-        TreeNode31.Text = "Transaction"
-        TreeNode32.Name = "paid"
-        TreeNode32.Text = "Paid"
-        TreeNode33.Name = "withBalance"
-        TreeNode33.Text = "With Balance"
-        TreeNode34.Name = "Payment"
-        TreeNode34.Text = "Payment"
-        TreeNode35.Name = "schedule"
-        TreeNode35.Text = "Schedule"
-        Me.TreeViewConfig.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode31, TreeNode34, TreeNode35})
-        Me.TreeViewConfig.Size = New System.Drawing.Size(178, 565)
-        Me.TreeViewConfig.TabIndex = 8
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 39)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ShowCloseButton = False
+        Me.CrystalReportViewer1.ShowCopyButton = False
+        Me.CrystalReportViewer1.ShowGroupTreeButton = False
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.ShowParameterPanelButton = False
+        Me.CrystalReportViewer1.ShowTextSearchButton = False
+        Me.CrystalReportViewer1.ShowZoomButton = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(610, 525)
+        Me.CrystalReportViewer1.TabIndex = 58
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'ButtonSearch
         '
         Me.ButtonSearch.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ButtonSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.ButtonSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonSearch.BorderRadius = 0
@@ -179,25 +178,28 @@ Partial Class ReportControl
         Me.Label3.TabIndex = 53
         Me.Label3.Text = "From : "
         '
-        'CrystalReportViewer1
+        'TreeViewConfig
         '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 39)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ShowCloseButton = False
-        Me.CrystalReportViewer1.ShowCopyButton = False
-        Me.CrystalReportViewer1.ShowGroupTreeButton = False
-        Me.CrystalReportViewer1.ShowLogo = False
-        Me.CrystalReportViewer1.ShowTextSearchButton = False
-        Me.CrystalReportViewer1.ShowZoomButton = False
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(610, 525)
-        Me.CrystalReportViewer1.TabIndex = 58
-        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.TreeViewConfig.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TreeViewConfig.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TreeViewConfig.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TreeViewConfig.Location = New System.Drawing.Point(12, 93)
+        Me.TreeViewConfig.Margin = New System.Windows.Forms.Padding(2)
+        Me.TreeViewConfig.Name = "TreeViewConfig"
+        TreeNode6.Name = "All"
+        TreeNode6.Text = "All"
+        TreeNode7.Name = "paid"
+        TreeNode7.Text = "Paid"
+        TreeNode8.Name = "notPaid"
+        TreeNode8.Text = "Not Paid"
+        TreeNode9.Name = "Transaction"
+        TreeNode9.Text = "Transaction"
+        TreeNode10.Name = "schedule"
+        TreeNode10.Text = "Schedule"
+        Me.TreeViewConfig.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10})
+        Me.TreeViewConfig.Size = New System.Drawing.Size(178, 565)
+        Me.TreeViewConfig.TabIndex = 8
         '
         'ReportControl
         '
@@ -227,4 +229,6 @@ Partial Class ReportControl
     Friend WithEvents dtPickerFrom As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents transactionReport1 As TransactionReport
+    Friend WithEvents scheduleReport1 As ScheduleReport
 End Class

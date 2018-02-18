@@ -87,6 +87,7 @@
     <Compile Include="ProcedureTooth.vb" />
     <Compile Include="ProcedureType.vb" />
     <Compile Include="Schedule.vb" />
+    <Compile Include="SecretQuestion.vb" />
     <Compile Include="Tooth.vb" />
     <Compile Include="User.vb" />
     <Compile Include="UserType.vb" />

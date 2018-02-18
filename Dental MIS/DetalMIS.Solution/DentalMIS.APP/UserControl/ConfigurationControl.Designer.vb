@@ -25,8 +25,9 @@ Partial Class ConfigurationControl
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Procedure Type")
         Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("User")
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Audit Trail")
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Backup")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Database", New System.Windows.Forms.TreeNode() {TreeNode4})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Secret Question")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Backup")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Database", New System.Windows.Forms.TreeNode() {TreeNode5})
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TreeViewConfig = New System.Windows.Forms.TreeView()
@@ -77,13 +78,15 @@ Partial Class ConfigurationControl
         TreeNode2.Text = "User"
         TreeNode3.Name = "NodeAuditTrail"
         TreeNode3.Text = "Audit Trail"
-        TreeNode4.ImageIndex = 5
-        TreeNode4.Name = "databaseBackup"
-        TreeNode4.Text = "Backup"
-        TreeNode5.ImageIndex = 4
-        TreeNode5.Name = "database"
-        TreeNode5.Text = "Database"
-        Me.TreeViewConfig.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3, TreeNode5})
+        TreeNode4.Name = "secretQuestion"
+        TreeNode4.Text = "Secret Question"
+        TreeNode5.ImageIndex = 5
+        TreeNode5.Name = "databaseBackup"
+        TreeNode5.Text = "Backup"
+        TreeNode6.ImageIndex = 4
+        TreeNode6.Name = "database"
+        TreeNode6.Text = "Database"
+        Me.TreeViewConfig.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3, TreeNode4, TreeNode6})
         Me.TreeViewConfig.Size = New System.Drawing.Size(178, 565)
         Me.TreeViewConfig.TabIndex = 6
         '

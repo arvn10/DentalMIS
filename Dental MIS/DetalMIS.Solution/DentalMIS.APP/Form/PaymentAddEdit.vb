@@ -46,7 +46,7 @@ Public Class PaymentAddEdit
                     payment.ProcedureID = procedureID
                     payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
                     payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
-                    payment.CreatedBy = activeUser
+                    payment.UpdatedBy = activeUser
                     If paymentSvc.PaymentEdit(payment) > 0 Then
                         MessageBox.Show("Payment Saved", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         paymentForm.LoadData()
@@ -92,4 +92,12 @@ Public Class PaymentAddEdit
         End Select
     End Sub
 
+    Private Sub PaymentAddEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If HeaderLabel.Text.Contains("Edit") Then
+            Dim payment As New Payment()
+            paymentSvc = New PaymentService
+            payment = paymentSvc.PaymentSearchID(paymentID)
+            textAmount.Text = payment.AmountPaid.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+        End If
+    End Sub
 End Class

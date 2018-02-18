@@ -102,12 +102,9 @@ Public Class MainForm
     End Sub
 
     Private Sub ButtonChangePassword_Click(sender As Object, e As EventArgs) Handles ButtonChangePassword.Click
-        Try
-            Dim form As New ChangePasswordForm
-            form.user = user
-            form.ShowDialog()
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        Dim form As New ChangePasswordForm
+        form.user = user
+        form.ShowDialog()
     End Sub
 End Class

@@ -48,20 +48,17 @@ Public Class PaymentControl
     End Sub
 
     Private Sub buttonEdit_Click(sender As Object, e As EventArgs)
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                Dim form As New PaymentForm
-                form.paymentControl = Me
-                form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
-                form.activeUser = MainForm.LabelMenu.Text
-                form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
-                form.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to view", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            Dim form As New PaymentForm
+            form.paymentControl = Me
+            form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
+            form.activeUser = MainForm.LabelMenu.Text
+            form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to view", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Private Sub ToolStripButtonShowAll_Click(sender As Object, e As EventArgs) Handles ToolStripButtonShowAll.Click
@@ -69,19 +66,16 @@ Public Class PaymentControl
     End Sub
 
     Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                Dim form As New PaymentForm
-                form.paymentControl = Me
-                form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
-                form.activeUser = MainForm.LabelMenu.Text
-                form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
-                form.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to view", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            Dim form As New PaymentForm
+            form.paymentControl = Me
+            form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
+            form.activeUser = MainForm.LabelMenu.Text
+            form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to view", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class

@@ -10,15 +10,15 @@ Public Class LoginForm
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
-        userService = New UserService()
     End Sub
 
     Private Sub Login()
+        userService = New UserService()
         If textUsername.Text = String.Empty Or textPassword.Text = String.Empty Then
             MessageBox.Show("Enter Username and the Password.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Try
-                Me.Height = 231
+                Me.Height = 250
                 LabelConnecting.Text = "Logging in..."
                 Dim userList As New List(Of User)
                 userList = userService.UserLogin(textUsername.Text, textPassword.Text)
@@ -124,14 +124,19 @@ Public Class LoginForm
             buttonLogin.Enabled = True
             ButtonSettingConnected.Visible = True
             ButtonSettingDisconnected.Visible = False
-            Me.Height = 231
+            Me.Height = 250
             LabelConnecting.Visible = False
         ElseIf e.Cancelled Then
             buttonLogin.Enabled = False
             ButtonSettingDisconnected.Visible = True
             ButtonSettingConnected.Visible = False
-            Me.Height = 231
+            Me.Height = 250
             LabelConnecting.Visible = False
         End If
+    End Sub
+
+    Private Sub forgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles forgotPassword.LinkClicked
+        Dim form As New ForgotPasswordForm
+        form.ShowDialog()
     End Sub
 End Class

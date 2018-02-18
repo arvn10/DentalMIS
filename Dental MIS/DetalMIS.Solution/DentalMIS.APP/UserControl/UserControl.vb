@@ -80,31 +80,25 @@ Public Class UserControl
     End Sub
 
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
-        Try
-            Dim form As New UserAddEditForm
-            form.userControl = Me
-            form.activeUser = MainForm.LabelMenu.Text
-            form.HeaderLabel.Text = "User - New"
-            form.ShowDialog()
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        Dim form As New UserAddEditForm
+        form.userControl = Me
+        form.activeUser = MainForm.LabelMenu.Text
+        form.HeaderLabel.Text = "User - New"
+        form.ShowDialog()
     End Sub
 
     Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                Dim form As New UserAddEditForm
-                form.userControl = Me
-                form.activeUser = MainForm.LabelMenu.Text
-                form.userID = DataGrid.CurrentRow.Cells(0).Value
-                form.HeaderLabel.Text = "User - Edit"
-                form.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            Dim form As New UserAddEditForm
+            form.userControl = Me
+            form.activeUser = MainForm.LabelMenu.Text
+            form.userID = DataGrid.CurrentRow.Cells(0).Value
+            form.HeaderLabel.Text = "User - Edit"
+            form.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 End Class

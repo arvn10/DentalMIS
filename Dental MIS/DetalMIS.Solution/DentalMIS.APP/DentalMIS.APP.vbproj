@@ -60,27 +60,15 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\packages\MySqlBackup.NET\MySqlBackup.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
@@ -124,10 +112,39 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Dataset\ScheduleDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ScheduleDataSet.vb">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TransactionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TransactionDataSet.vb">
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BackUpForm.Designer.vb">
+      <DependentUpon>BackUpForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BackUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\DatabaseConfigForm.Designer.vb">
       <DependentUpon>DatabaseConfigForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\DatabaseConfigForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ForgotPasswordForm.Designer.vb">
+      <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ForgotPasswordForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\LoginForm.Designer.vb">
@@ -184,10 +201,22 @@
     <Compile Include="Form\ProcedureTypeAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\ProcedureTypeNotAllowedAddEditForm.Designer.vb">
+      <DependentUpon>ProcedureTypeNotAllowedAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcedureTypeNotAllowedAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\ScheduleAddEditForm.Designer.vb">
       <DependentUpon>ScheduleAddEditForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\ScheduleAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SecretQuestionAddEdit.Designer.vb">
+      <DependentUpon>SecretQuestionAddEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SecretQuestionAddEdit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\UserAddEditForm.Designer.vb">
@@ -221,6 +250,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DentalCertificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ScheduleReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TransactionReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControl\AuditTrailControl.Designer.vb">
@@ -277,6 +318,12 @@
     <Compile Include="UserControl\ScheduleControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControl\SecretQuestionControl.Designer.vb">
+      <DependentUpon>SecretQuestionControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SecretQuestionControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl\UserControl.Designer.vb">
       <DependentUpon>UserControl.vb</DependentUpon>
     </Compile>
@@ -285,8 +332,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\BackUpForm.resx">
+      <DependentUpon>BackUpForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\DatabaseConfigForm.resx">
       <DependentUpon>DatabaseConfigForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ForgotPasswordForm.resx">
+      <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
@@ -315,8 +368,14 @@
     <EmbeddedResource Include="Form\ProcedureTypeAddEditForm.resx">
       <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcedureTypeNotAllowedAddEditForm.resx">
+      <DependentUpon>ProcedureTypeNotAllowedAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\ScheduleAddEditForm.resx">
       <DependentUpon>ScheduleAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SecretQuestionAddEdit.resx">
+      <DependentUpon>SecretQuestionAddEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\UserAddEditForm.resx">
       <DependentUpon>UserAddEditForm.vb</DependentUpon>
@@ -333,6 +392,14 @@
     <EmbeddedResource Include="Report\DentalCertificate.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DentalCertificate.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ScheduleReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ScheduleReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransactionReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\AuditTrailControl.resx">
       <DependentUpon>AuditTrailControl.vb</DependentUpon>
@@ -361,11 +428,36 @@
     <EmbeddedResource Include="UserControl\ScheduleControl.resx">
       <DependentUpon>ScheduleControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\SecretQuestionControl.resx">
+      <DependentUpon>SecretQuestionControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UserControl.resx">
       <DependentUpon>UserControl.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Dataset\ScheduleDataSet.xsc">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\ScheduleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\ScheduleDataSet.xss">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TransactionDataSet.xsc">
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TransactionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\TransactionDataSet.xss">
+      <DependentUpon>TransactionDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

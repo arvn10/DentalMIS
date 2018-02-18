@@ -277,9 +277,10 @@ Partial Class DatabaseConfigForm
         Me.ClientSize = New System.Drawing.Size(313, 283)
         Me.Controls.Add(Me.PanelDatabase)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DatabaseConfigForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "DatabaseConfigForm"
+        Me.Text = "Connection Manager"
         Me.PanelDatabase.ResumeLayout(False)
         Me.PanelDatabase.PerformLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()

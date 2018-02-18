@@ -7,3 +7,5 @@
     Public Property UpdatedBy As String
     Public Property UpdatedDate As DateTime?
 End Class
+
+

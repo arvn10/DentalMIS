@@ -19,4 +19,8 @@ Public Class ScheduleService
     Public Function ScheduleSelect(scheduleDate As Date) As List(Of Schedule) Implements IScheduleService.ScheduleSelect
         Return scheduleRepository.ScheduleSelect(scheduleDate)
     End Function
+
+    Public Function ScheduleReport(from As Date, [to] As Date) As List(Of ScheduleReport) Implements IScheduleService.ScheduleReport
+        Return scheduleRepository.ScheduleReport(from, [to])
+    End Function
 End Class

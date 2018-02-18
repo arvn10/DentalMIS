@@ -22,5 +22,45 @@ Olaes Dental MIS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:DentalMIS.APP.ScheduleDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.ScheduleDataSet.ScheduleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.ScheduleDataSet.ScheduleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.ScheduleDataSet.ScheduleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:DentalMIS.APP.TransactionDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.TransactionDataSet.ProcedureDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.TransactionDataSet.ProcedureRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.TransactionDataSet.ProcedureRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 </members>
 </doc>

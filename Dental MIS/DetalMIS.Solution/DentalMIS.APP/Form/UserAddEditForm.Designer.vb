@@ -42,6 +42,10 @@ Partial Class UserAddEditForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.comboStatus = New System.Windows.Forms.ComboBox()
         Me.buttonSave = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.comboSecretQuestion = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.textSecretQuestionAnswer = New System.Windows.Forms.TextBox()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -108,6 +112,7 @@ Partial Class UserAddEditForm
         Me.comboUserType.Name = "comboUserType"
         Me.comboUserType.Size = New System.Drawing.Size(192, 24)
         Me.comboUserType.TabIndex = 4
+        Me.comboUserType.Tag = "*"
         '
         'Label1
         '
@@ -129,6 +134,7 @@ Partial Class UserAddEditForm
         Me.textUsername.Name = "textUsername"
         Me.textUsername.Size = New System.Drawing.Size(192, 22)
         Me.textUsername.TabIndex = 0
+        Me.textUsername.Tag = "*"
         '
         'BunifuDragControl1
         '
@@ -151,6 +157,7 @@ Partial Class UserAddEditForm
         Me.textPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.textPassword.Size = New System.Drawing.Size(192, 22)
         Me.textPassword.TabIndex = 1
+        Me.textPassword.Tag = "*"
         '
         'Label2
         '
@@ -184,6 +191,7 @@ Partial Class UserAddEditForm
         Me.textLastname.Name = "textLastname"
         Me.textLastname.Size = New System.Drawing.Size(192, 22)
         Me.textLastname.TabIndex = 3
+        Me.textLastname.Tag = "*"
         '
         'Label4
         '
@@ -205,6 +213,7 @@ Partial Class UserAddEditForm
         Me.textFirstname.Name = "textFirstname"
         Me.textFirstname.Size = New System.Drawing.Size(192, 22)
         Me.textFirstname.TabIndex = 2
+        Me.textFirstname.Tag = "*"
         '
         'Label6
         '
@@ -227,6 +236,7 @@ Partial Class UserAddEditForm
         Me.comboStatus.Name = "comboStatus"
         Me.comboStatus.Size = New System.Drawing.Size(192, 24)
         Me.comboStatus.TabIndex = 5
+        Me.comboStatus.Tag = "*"
         '
         'buttonSave
         '
@@ -250,25 +260,76 @@ Partial Class UserAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(312, 199)
+        Me.buttonSave.Location = New System.Drawing.Point(312, 306)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.buttonSave.OnHoverTextColor = System.Drawing.Color.White
         Me.buttonSave.selected = False
         Me.buttonSave.Size = New System.Drawing.Size(85, 33)
-        Me.buttonSave.TabIndex = 43
+        Me.buttonSave.TabIndex = 11
         Me.buttonSave.Text = "  Save"
         Me.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.buttonSave.Textcolor = System.Drawing.Color.White
         Me.buttonSave.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(6, 195)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(114, 16)
+        Me.Label7.TabIndex = 45
+        Me.Label7.Text = "*Secret Question :"
+        '
+        'comboSecretQuestion
+        '
+        Me.comboSecretQuestion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboSecretQuestion.FormattingEnabled = True
+        Me.comboSecretQuestion.Items.AddRange(New Object() {"Active", "Not Active"})
+        Me.comboSecretQuestion.Location = New System.Drawing.Point(9, 213)
+        Me.comboSecretQuestion.Margin = New System.Windows.Forms.Padding(2)
+        Me.comboSecretQuestion.Name = "comboSecretQuestion"
+        Me.comboSecretQuestion.Size = New System.Drawing.Size(388, 24)
+        Me.comboSecretQuestion.TabIndex = 9
+        Me.comboSecretQuestion.Tag = "*"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(6, 239)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 16)
+        Me.Label8.TabIndex = 47
+        Me.Label8.Tag = "*"
+        Me.Label8.Text = "*Answer :"
+        '
+        'textSecretQuestionAnswer
+        '
+        Me.textSecretQuestionAnswer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textSecretQuestionAnswer.Location = New System.Drawing.Point(9, 257)
+        Me.textSecretQuestionAnswer.Margin = New System.Windows.Forms.Padding(2)
+        Me.textSecretQuestionAnswer.Multiline = True
+        Me.textSecretQuestionAnswer.Name = "textSecretQuestionAnswer"
+        Me.textSecretQuestionAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.textSecretQuestionAnswer.Size = New System.Drawing.Size(388, 44)
+        Me.textSecretQuestionAnswer.TabIndex = 10
+        Me.textSecretQuestionAnswer.Tag = "*"
         '
         'UserAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(406, 238)
+        Me.ClientSize = New System.Drawing.Size(406, 346)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.textSecretQuestionAnswer)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.comboSecretQuestion)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.comboStatus)
@@ -284,9 +345,11 @@ Partial Class UserAddEditForm
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.textUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UserAddEditForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "User"
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()
@@ -313,4 +376,8 @@ Partial Class UserAddEditForm
     Friend WithEvents Label2 As Label
     Friend WithEvents textPassword As TextBox
     Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Label8 As Label
+    Friend WithEvents textSecretQuestionAnswer As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents comboSecretQuestion As ComboBox
 End Class

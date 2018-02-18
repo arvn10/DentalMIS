@@ -23,19 +23,19 @@ Public Class UserAddEditForm
                 For Each control As Control In Me.Controls
                     If (control.GetType() Is GetType(TextBox)) Then
                         Dim textBox As TextBox = CType(control, TextBox)
-                        If textBox.Text = String.Empty Then
+                        If textBox.Text = String.Empty And textBox.Tag = "*" Then
                             valid = False
                         End If
                     ElseIf (control.GetType() Is GetType(ComboBox)) Then
                         Dim comboBox As ComboBox = CType(control, ComboBox)
-                        If comboBox.Text = String.Empty Then
+                        If comboBox.Text = String.Empty And comboBox.Tag = "*" Then
                             valid = False
                         End If
                     End If
                 Next
 
                 If Not valid Then
-                    MessageBox.Show("Fill up all fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Fill up all required fields.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
                     If textPassword.Text.Length > 7 Then
                         param.Username = textUsername.Text
@@ -43,6 +43,8 @@ Public Class UserAddEditForm
                         param.Firstname = textFirstname.Text
                         param.Lastname = textLastname.Text
                         param.UserTypeID = comboUserType.SelectedValue
+                        param.SecretQuestionID = comboSecretQuestion.SelectedValue
+                        param.SecretQuestionAnswer = textSecretQuestionAnswer.Text
                         param.Status = If(comboStatus.Text = "Active", 1, 0)
                         param.CreatedBy = activeUser
                         Dim ret As Long = userService.UserCreate(param)
@@ -70,6 +72,8 @@ Public Class UserAddEditForm
                     param.Firstname = textFirstname.Text
                     param.Lastname = textLastname.Text
                     param.UserTypeID = comboUserType.SelectedValue
+                    param.SecretQuestionID = comboSecretQuestion.SelectedValue
+                    param.SecretQuestionAnswer = textSecretQuestionAnswer.Text
                     param.Status = If(comboStatus.Text = "Active", 1, 0)
                     param.UpdatedBy = activeUser
                     Dim ret As Long = userService.UserEdit(param)
@@ -104,6 +108,12 @@ Public Class UserAddEditForm
             comboUserType.ValueMember = "ID"
             comboUserType.DataSource = userTypeService.UserTypeGet
             comboUserType.Text = ""
+
+            Dim secretQuestionService As New SecretQuestionService
+            comboSecretQuestion.DisplayMember = "Question"
+            comboSecretQuestion.ValueMember = "ID"
+            comboSecretQuestion.DataSource = secretQuestionService.SecretQuestionSelect("")
+            comboSecretQuestion.Text = ""
             If HeaderLabel.Text.Contains("Edit") Then
                 Dim data As New User
                 data = userService.UserSearchID(userID).ToList()(0)
@@ -113,6 +123,8 @@ Public Class UserAddEditForm
                 textLastname.Text = data.Lastname
                 comboUserType.Text = data.UserType
                 comboStatus.Text = data.Status
+                comboSecretQuestion.Text = data.SecretQuestion
+                textSecretQuestionAnswer.Text = data.SecretQuestionAnswer
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -137,5 +149,9 @@ Public Class UserAddEditForm
 
     Private Sub textLastname_Leave(sender As Object, e As EventArgs) Handles textLastname.Leave
         textLastname.Text = StrConv(textLastname.Text, VbStrConv.ProperCase)
+    End Sub
+
+    Private Sub comboSecretQuestion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles comboSecretQuestion.KeyPress
+        e.Handled = True
     End Sub
 End Class

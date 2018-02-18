@@ -31,4 +31,8 @@ Public Class ProcedureService
     Public Function ProcedureSearchPaymentLike(searchText As String) As List(Of Procedure) Implements IProcedureService.ProcedureSearchPaymentLike
         Return procedureRepository.ProcedureSearchPaymentLike(searchText)
     End Function
+
+    Public Function ProcedureSearchPaymentReport(paymentStatus As String, from As Date, [to] As Date) As List(Of ProcedureReport) Implements IProcedureService.ProcedureSearchPaymentReport
+        Return procedureRepository.ProcedureSearchPaymentReport(paymentStatus, from, [to])
+    End Function
 End Class

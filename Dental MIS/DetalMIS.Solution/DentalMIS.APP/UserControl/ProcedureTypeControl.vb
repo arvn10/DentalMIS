@@ -1,7 +1,10 @@
-﻿Imports DentalMIS.BLL
+﻿Imports System.Security.Permissions
+Imports System.Threading
+Imports DentalMIS.BLL
 Imports DentalMIS.MODEL
 Public Class ProcedureTypeControl
     Private procedureTypeService As ProcedureTypeService
+
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -28,11 +31,14 @@ Public Class ProcedureTypeControl
         DataGrid.Columns("updatedBy").DataPropertyName = "UpdatedBy"
         DataGrid.Columns("updatedDate").DataPropertyName = "UpdatedDate"
 
+        DataGrid.Columns("basePrice").DefaultCellStyle.Format = "C"
+        DataGrid.Columns("basePrice").DefaultCellStyle.FormatProvider = Globalization.CultureInfo.GetCultureInfo("en-PH")
         DataGrid.AutoResizeColumns()
         DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
     End Sub
+
     Private Sub ProcedureTypeControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs)
@@ -44,23 +50,6 @@ Public Class ProcedureTypeControl
         Catch ex As Exception
 
         End Try
-    End Sub
-
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs)
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                ProcedureTypeAddEditForm.procedureTypeControl = Me
-                ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
-                ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
-                ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
-                ProcedureTypeAddEditForm.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-
-        End Try
-
     End Sub
 
     Private Sub TextSearch_TextChanged(sender As Object, e As EventArgs) Handles TextSearch.TextChanged
@@ -89,29 +78,24 @@ Public Class ProcedureTypeControl
     End Sub
 
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
-        Try
-            ProcedureTypeAddEditForm.procedureTypeControl = Me
-            ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
-            ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
-            ProcedureTypeAddEditForm.ShowDialog()
-        Catch ex As Exception
-
-        End Try
+        On Error Resume Next
+        ProcedureTypeAddEditForm.procedureTypeControl = Me
+        ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+        ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
+        ProcedureTypeAddEditForm.ShowDialog()
     End Sub
 
     Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
-        Try
-            If (DataGrid.Rows.Count > 0) Then
-                ProcedureTypeAddEditForm.procedureTypeControl = Me
-                ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
-                ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
-                ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
-                ProcedureTypeAddEditForm.ShowDialog()
-            Else
-                MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
+        On Error Resume Next
+        If (DataGrid.Rows.Count > 0) Then
+            ProcedureTypeAddEditForm.procedureTypeControl = Me
+            ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+            ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
+            ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
+            ProcedureTypeAddEditForm.ShowDialog()
+        Else
+            MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
 
-        End Try
     End Sub
 End Class

@@ -21,7 +21,7 @@ Public Class PaymentRepository
     End Function
 
     Public Function PaymentEdit(param As Payment) As Long
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_payment_edit`({0}, {2}, '{3}', '{4}', '{5}')",
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_payment_edit`({0}, {1}, '{2}', '{3}', '{4}')",
                                                     param.ID,
                                                     param.ProcedureID,
                                                     param.AmountPaid,
@@ -40,7 +40,8 @@ Public Class PaymentRepository
         If dt.Rows.Count > 0 Then
             payment.ID = Convert.ToInt32(dt.Rows(0)("id"))
             payment.ProcedureID = Convert.ToInt32(dt.Rows(0)("procedure_id"))
-            payment.TransactionDate = Convert.ToDateTime(dt.Rows(0)("date")).Date
+            payment.AmountPaid = Convert.ToDouble(dt.Rows(0)("amount_paid"))
+            payment.TransactionDate = Convert.ToDateTime(dt.Rows(0)("date"))
             payment.CreatedBy = Convert.ToString(dt.Rows(0)("created_by"))
             payment.CreatedDate = If(IsDBNull(dt.Rows(0)("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dt.Rows(0)("created_date")))
             payment.UpdatedBy = Convert.ToString(dt.Rows(0)("updated_by"))
@@ -59,7 +60,7 @@ Public Class PaymentRepository
                     .ID = Convert.ToInt32(dr("id")),
                     .ProcedureID = Convert.ToInt32(dr("procedure_id")),
                     .AmountPaid = Convert.ToDouble(dr("amount_paid")),
-                    .TransactionDate = Convert.ToDateTime(dt.Rows(0)("date")).Date,
+                    .TransactionDate = Convert.ToDateTime(dr("date")),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
                     .UpdatedBy = dr("updated_by").ToString(),

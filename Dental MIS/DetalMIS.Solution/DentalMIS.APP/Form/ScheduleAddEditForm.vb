@@ -27,11 +27,12 @@ Public Class ScheduleAddEditForm
         dateTimePickerEnd.Value = selectedDate
 
         If HeaderLabel.Text.Contains("Edit") Then
-            Dim description As String
+            scheduleID = schedule.ID
             textTitle.Text = schedule.Title
             dateTimePickerStart.Value = schedule.StartTime
             dateTimePickerEnd.Value = schedule.EndTime
-
+            textDescription.Text = schedule.Description
+            panelColor.BackColor = Color.FromArgb(schedule.BackgroundColor)
         End If
     End Sub
 
@@ -52,36 +53,73 @@ Public Class ScheduleAddEditForm
         Next
 
         If valid Then
+            Dim ifExist As Integer = 0
             If dateTimePickerStart.Value >= dateTimePickerEnd.Value Then
                 MessageBox.Show("Start Time Cannot be greater than or equal to End Time.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-
                 If HeaderLabel.Text.Contains("New") Then
-                    Dim ifExist As Integer
-                    If scheduleControl.schedules.Count > 0 Then
-                        ifExist = scheduleControl.schedules.Where(Function(s) s.StartTime >= dateTimePickerStart.Value Or s.EndTime = dateTimePickerEnd.Value).Count
+
+                    'If scheduleControl.schedules.Count > 0 Then
+                    '    ifExist = scheduleControl.schedules.Where(Function(s) (s.StartTime >= dateTimePickerStart.Value And s.StartTime <= dateTimePickerEnd.Value) Or
+                    '                                                          (s.EndTime >= dateTimePickerStart.Value And s.EndTime <= dateTimePickerEnd.Value)).Count
+                    'End If
+
+                    'If ifExist > 0 Then
+                    '    MessageBox.Show("Schedule already taken or there is a conflict with your selected schedule.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    'Else
+                    schedule = New Schedule
+                    If scheduleControl.schedules.Count = 0 Then
+                        schedule.Index = 1
                     Else
-                        ifExist = 0
+                        schedule.Index = scheduleControl.schedules(scheduleControl.schedules.Count - 1).Index + 1
                     End If
 
-                    If ifExist > 0 Then
-                        MessageBox.Show("Schedule already taken or there is a conflict with your selected schedule.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Else
-                        Dim schedule As New Schedule
-                        schedule.ID = 0
+                    schedule.ID = 0
+                    schedule.Title = textTitle.Text
+                    schedule.Description = textDescription.Text
+                    schedule.StartTime = dateTimePickerStart.Value
+                    schedule.EndTime = dateTimePickerEnd.Value
+                    schedule.ActionType = "Insert"
+                    schedule.BackgroundColor = panelColor.BackColor.ToArgb
+                    schedule.CreatedBy = activeUser
+                    scheduleControl.schedules.Add(schedule)
+                    scheduleControl.GetSchedules()
+                    Me.Dispose()
+                    'End If
+                Else
+
+                    'If (schedule.StartTime <> dateTimePickerStart.Value And schedule.StartTime <> dateTimePickerEnd.Value) Or
+                    '   (schedule.EndTime > dateTimePickerStart.Value And schedule.EndTime < dateTimePickerEnd.Value) Then
+                    '    ifExist = scheduleControl.schedules.Where(Function(s) (s.StartTime >= dateTimePickerStart.Value And s.StartTime <= dateTimePickerEnd.Value) And
+                    '                                                              (s.EndTime > dateTimePickerStart.Value And s.EndTime < dateTimePickerEnd.Value)).Count
+                    'End If
+
+                    'If schedule.StartTime <> dateTimePickerStart.Value Then
+
+                    'End If
+
+                    'If ifExist > 0 Then
+                    '    MessageBox.Show("Schedule already taken or there is a conflict with your selected schedule.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    'Else
+                    Dim msg = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If msg = DialogResult.Yes Then
+                        Dim tempSchedule As Schedule = scheduleControl.schedules.Where(Function(s) s.Index = schedule.Index).FirstOrDefault()
+                        Dim index As Integer = scheduleControl.schedules.IndexOf(tempSchedule)
+
+                        schedule.Index = schedule.Index
+                        schedule.ID = scheduleID
                         schedule.Title = textTitle.Text
                         schedule.Description = textDescription.Text
                         schedule.StartTime = dateTimePickerStart.Value
                         schedule.EndTime = dateTimePickerEnd.Value
-                        schedule.ActionType = "Insert"
-                        schedule.BackgroundColor = panelColor.BackColor.Name
-                        schedule.CreatedBy = activeUser
-                        scheduleControl.schedules.Add(schedule)
+                        schedule.ActionType = IIf(scheduleID = 0, "Insert", "Update")
+                        schedule.BackgroundColor = panelColor.BackColor.ToArgb
+                        schedule.UpdatedBy = activeUser
+                        scheduleControl.schedules(index) = schedule
                         scheduleControl.GetSchedules()
                         Me.Dispose()
                     End If
-                Else
-
+                    'End If
                 End If
             End If
         Else

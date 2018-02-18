@@ -22,13 +22,13 @@ Partial Class DashboardControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CalendarHighlightRange1 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange2 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange3 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange4 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim CalendarHighlightRange5 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim CalendarHighlightRange11 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange12 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange13 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange14 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim CalendarHighlightRange15 As System.Windows.Forms.Calendar.CalendarHighlightRange = New System.Windows.Forms.Calendar.CalendarHighlightRange()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -42,6 +42,8 @@ Partial Class DashboardControl
         Me.amountPaid = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.procedureDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,22 +96,22 @@ Partial Class DashboardControl
         Me.calendarSchedule.AllowNew = False
         Me.calendarSchedule.Dock = System.Windows.Forms.DockStyle.Fill
         Me.calendarSchedule.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        CalendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday
-        CalendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange1.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange2.DayOfWeek = System.DayOfWeek.Tuesday
-        CalendarHighlightRange2.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange2.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange3.DayOfWeek = System.DayOfWeek.Wednesday
-        CalendarHighlightRange3.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange3.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange4.DayOfWeek = System.DayOfWeek.Thursday
-        CalendarHighlightRange4.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange4.StartTime = System.TimeSpan.Parse("08:00:00")
-        CalendarHighlightRange5.DayOfWeek = System.DayOfWeek.Friday
-        CalendarHighlightRange5.EndTime = System.TimeSpan.Parse("17:00:00")
-        CalendarHighlightRange5.StartTime = System.TimeSpan.Parse("08:00:00")
-        Me.calendarSchedule.HighlightRanges = New System.Windows.Forms.Calendar.CalendarHighlightRange() {CalendarHighlightRange1, CalendarHighlightRange2, CalendarHighlightRange3, CalendarHighlightRange4, CalendarHighlightRange5}
+        CalendarHighlightRange11.DayOfWeek = System.DayOfWeek.Monday
+        CalendarHighlightRange11.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange11.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange12.DayOfWeek = System.DayOfWeek.Tuesday
+        CalendarHighlightRange12.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange12.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange13.DayOfWeek = System.DayOfWeek.Wednesday
+        CalendarHighlightRange13.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange13.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange14.DayOfWeek = System.DayOfWeek.Thursday
+        CalendarHighlightRange14.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange14.StartTime = System.TimeSpan.Parse("08:00:00")
+        CalendarHighlightRange15.DayOfWeek = System.DayOfWeek.Friday
+        CalendarHighlightRange15.EndTime = System.TimeSpan.Parse("17:00:00")
+        CalendarHighlightRange15.StartTime = System.TimeSpan.Parse("08:00:00")
+        Me.calendarSchedule.HighlightRanges = New System.Windows.Forms.Calendar.CalendarHighlightRange() {CalendarHighlightRange11, CalendarHighlightRange12, CalendarHighlightRange13, CalendarHighlightRange14, CalendarHighlightRange15}
         Me.calendarSchedule.Location = New System.Drawing.Point(3, 22)
         Me.calendarSchedule.Name = "calendarSchedule"
         Me.calendarSchedule.Size = New System.Drawing.Size(336, 528)
@@ -139,14 +141,6 @@ Partial Class DashboardControl
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fullName, Me.tooth, Me.procedure, Me.amountToPay, Me.amountPaid, Me.balance, Me.procedureDate})
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
@@ -155,8 +149,8 @@ Partial Class DashboardControl
         Me.DataGrid.Name = "DataGrid"
         Me.DataGrid.ReadOnly = True
         Me.DataGrid.RowHeadersVisible = False
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGrid.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGrid.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGrid.Size = New System.Drawing.Size(445, 528)
         Me.DataGrid.TabIndex = 47
@@ -203,6 +197,10 @@ Partial Class DashboardControl
         Me.procedureDate.Name = "procedureDate"
         Me.procedureDate.ReadOnly = True
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'DashboardControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -236,4 +234,6 @@ Partial Class DashboardControl
     Friend WithEvents amountPaid As DataGridViewTextBoxColumn
     Friend WithEvents balance As DataGridViewTextBoxColumn
     Friend WithEvents procedureDate As DataGridViewTextBoxColumn
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Timer1 As Timer
 End Class
