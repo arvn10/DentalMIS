@@ -53,7 +53,7 @@ Public Class PaymentControl
             Dim form As New PaymentForm
             form.paymentControl = Me
             form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
             form.ShowDialog()
         Else
@@ -71,7 +71,7 @@ Public Class PaymentControl
             Dim form As New PaymentForm
             form.paymentControl = Me
             form.procedureID = Convert.ToInt64(DataGrid.CurrentRow.Cells(0).Value)
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.HeaderLabel.Text = "Payment - " + DataGrid.CurrentRow.Cells(1).Value.ToString()
             form.ShowDialog()
         Else

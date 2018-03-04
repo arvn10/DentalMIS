@@ -204,6 +204,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.Label5.Size = New System.Drawing.Size(56, 16)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "*Status :"
+        Me.Label5.Visible = False
         '
         'comboStatus
         '
@@ -215,6 +216,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.comboStatus.Name = "comboStatus"
         Me.comboStatus.Size = New System.Drawing.Size(192, 24)
         Me.comboStatus.TabIndex = 5
+        Me.comboStatus.Visible = False
         '
         'BunifuDragControl1
         '

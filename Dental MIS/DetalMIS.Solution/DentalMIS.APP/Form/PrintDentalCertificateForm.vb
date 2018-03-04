@@ -8,6 +8,7 @@ Public Class PrintDentalCertificateForm
         Dim procedure As New Procedure
         procedure = procedureSvc.ProcedureSearchID(procedureID)
         dentalCertificate1.SetParameterValue("name", procedure.FullName)
+        dentalCertificate1.SetParameterValue("date", procedure.ProcedureDate)
         dentalCertificate1.SetParameterValue("age", procedure.Age)
         dentalCertificate1.SetParameterValue("gender", procedure.Gender)
         dentalCertificate1.SetParameterValue("address", procedure.Address)

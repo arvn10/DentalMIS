@@ -225,6 +225,7 @@ Partial Class UserAddEditForm
         Me.Label6.Size = New System.Drawing.Size(56, 16)
         Me.Label6.TabIndex = 42
         Me.Label6.Text = "*Status :"
+        Me.Label6.Visible = False
         '
         'comboStatus
         '
@@ -237,6 +238,7 @@ Partial Class UserAddEditForm
         Me.comboStatus.Size = New System.Drawing.Size(192, 24)
         Me.comboStatus.TabIndex = 5
         Me.comboStatus.Tag = "*"
+        Me.comboStatus.Visible = False
         '
         'buttonSave
         '

@@ -93,7 +93,13 @@ Public Class ProcedureTypeAddEditForm
                 ElseIf (control.GetType() Is GetType(ComboBox)) Then
                     Dim comboBox As ComboBox = CType(control, ComboBox)
                     If comboBox.Text = String.Empty Then
-                        valid = False
+                        If comboBox.Name = "comboStatus" Then
+                            If HeaderLabel.Text.Contains("Edit") Then
+                                valid = False
+                            End If
+                        Else
+                            valid = False
+                        End If
                     End If
                 End If
             Next
@@ -107,10 +113,9 @@ Public Class ProcedureTypeAddEditForm
                 param.BasePrice = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
                 param.PaymentType = comboPaymentType.Text
                 param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
-                param.Status = If(comboStatus.Text = "Active", 1, 0)
-
 
                 If HeaderLabel.Text.Contains("New") Then
+                    param.Status = 1
                     param.CreatedBy = activeUser
                     Dim ret As Long = procedureTypeService.ProcedureTypeCreate(param)
                     If ret > 0 Then
@@ -124,6 +129,7 @@ Public Class ProcedureTypeAddEditForm
                     Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If confirm = DialogResult.Yes Then
                         param.ID = procedureTypeID
+                        param.Status = If(comboStatus.Text = "Active", 1, 0)
                         param.UpdatedBy = activeUser
                         Dim ret As Long = procedureTypeService.ProcedureTypeEdit(param)
                         If ret > 0 Then
@@ -142,6 +148,8 @@ Public Class ProcedureTypeAddEditForm
     Private Sub ProcedureTypeAddEditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             If HeaderLabel.Text.Contains("Edit") Then
+                comboStatus.Visible = True
+                Label5.Visible = True
                 Dim data As New ProcedureType
                 TabPageNotAllowed.Enabled = True
                 LoadData()
@@ -168,7 +176,7 @@ Public Class ProcedureTypeAddEditForm
         On Error Resume Next
         Dim form As New ProcedureTypeNotAllowedAddEditForm
         form.procedureTypeAddEditForm = Me
-        form.activeUser = MainForm.LabelMenu.Text
+        form.activeUser = activeUser
         form.procedureTypeID = procedureTypeID
         form.HeaderLabel.Text = "Procedure Type Not Allowed - New"
         form.ShowDialog()
@@ -179,7 +187,7 @@ Public Class ProcedureTypeAddEditForm
         Dim form As New ProcedureTypeNotAllowedAddEditForm
         form.procedureTypeAddEditForm = Me
         form.procedureTypeNotAllowedID = DataGrid.CurrentRow.Cells(0).Value
-        form.activeUser = MainForm.LabelMenu.Text
+        form.activeUser = activeUser
         form.HeaderLabel.Text = "Procedure Type Not Allowed - Edit"
         form.ShowDialog()
     End Sub

@@ -139,6 +139,7 @@ Partial Class ProcedureTypeNotAllowedAddEditForm
         Me.Label1.Size = New System.Drawing.Size(50, 16)
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "*Status"
+        Me.Label1.Visible = False
         '
         'comboStatus
         '
@@ -150,6 +151,7 @@ Partial Class ProcedureTypeNotAllowedAddEditForm
         Me.comboStatus.Size = New System.Drawing.Size(392, 23)
         Me.comboStatus.TabIndex = 1
         Me.comboStatus.Tag = "*"
+        Me.comboStatus.Visible = False
         '
         'ProcedureTypeNotAllowedAddEditForm
         '

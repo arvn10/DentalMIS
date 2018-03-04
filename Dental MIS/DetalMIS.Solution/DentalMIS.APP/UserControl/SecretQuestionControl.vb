@@ -31,7 +31,7 @@ Public Class SecretQuestionControl
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
         On Error Resume Next
         Dim form As New SecretQuestionAddEdit()
-        form.activeUser = MainForm.LabelMenu.Text
+        form.activeUser = MainForm.user.ID
         form.secretQuestionControl = Me
         form.HeaderLabel.Text = "Secret Question - New"
         form.ShowDialog()
@@ -40,10 +40,14 @@ Public Class SecretQuestionControl
     Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
         On Error Resume Next
         Dim form As New SecretQuestionAddEdit()
-        form.activeUser = MainForm.LabelMenu.Text
+        form.activeUser = MainForm.user.ID
         form.secretQuestionControl = Me
         form.secretQuestionID = DataGrid.CurrentRow.Cells(0).Value
         form.HeaderLabel.Text = "Secret Question - Edit"
         form.ShowDialog()
+    End Sub
+
+    Private Sub SecretQuestionControl_Load(sender As Object, e As EventArgs) Handles Me.Load
+        LoadData("")
     End Sub
 End Class

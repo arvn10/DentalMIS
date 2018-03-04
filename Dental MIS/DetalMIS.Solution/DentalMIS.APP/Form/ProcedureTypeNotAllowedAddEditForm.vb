@@ -16,6 +16,8 @@ Public Class ProcedureTypeNotAllowedAddEditForm
         comboProcedureType.DataSource = procedureTypeList
         comboProcedureType.Text = ""
         If HeaderLabel.Text.Contains("Edit") Then
+            comboStatus.Visible = True
+            Label1.Visible = True
             procedureTypeNotAllowed = New ProcedureNotAllowed
             procedureTypeNotAllowed = procedureTypeSvc.ProcedureTypeNotAllowedSelectID(procedureTypeNotAllowedID)
             comboProcedureType.Text = procedureTypeNotAllowed.ProcedureName
@@ -36,8 +38,9 @@ Public Class ProcedureTypeNotAllowedAddEditForm
             procedureTypeNotAllowed = New ProcedureNotAllowed
             procedureTypeNotAllowed.ProcedureNotAllowedID = comboProcedureType.SelectedValue
             procedureTypeNotAllowed.ProcedureID = procedureTypeID
-            procedureTypeNotAllowed.Status = IIf(comboStatus.Text = "Active", True, False)
+
             If HeaderLabel.Text.Contains("New") Then
+                procedureTypeNotAllowed.Status = True
                 procedureTypeNotAllowed.CreatedBy = activeUser
                 If procedureTypeSvc.ProcedureTypeNotAllowedCreate(procedureTypeNotAllowed) > 0 Then
                     MessageBox.Show("Procedure Type Saved!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -47,7 +50,7 @@ Public Class ProcedureTypeNotAllowedAddEditForm
                     MessageBox.Show("Procedure Type Exist!", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
-
+                procedureTypeNotAllowed.Status = If(comboStatus.Text = "Active", True, False)
                 procedureTypeNotAllowed.ID = procedureTypeNotAllowedID
                 procedureTypeNotAllowed.UpdatedBy = activeUser
                 Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)

@@ -38,13 +38,13 @@ Public Class ProcedureTypeControl
     End Sub
 
     Private Sub ProcedureTypeControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadData("")
     End Sub
 
     Private Sub ButtonNew_Click(sender As Object, e As EventArgs)
         Try
             ProcedureTypeAddEditForm.procedureTypeControl = Me
-            ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+            ProcedureTypeAddEditForm.activeUser = MainForm.user.ID
             ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
             ProcedureTypeAddEditForm.ShowDialog()
         Catch ex As Exception
@@ -68,7 +68,7 @@ Public Class ProcedureTypeControl
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
-        ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+        ProcedureTypeAddEditForm.activeUser = MainForm.user.ID
         ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
         ProcedureTypeAddEditForm.ShowDialog()
     End Sub
@@ -80,7 +80,7 @@ Public Class ProcedureTypeControl
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
         On Error Resume Next
         ProcedureTypeAddEditForm.procedureTypeControl = Me
-        ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+        ProcedureTypeAddEditForm.activeUser = MainForm.user.ID
         ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - New"
         ProcedureTypeAddEditForm.ShowDialog()
     End Sub
@@ -89,7 +89,7 @@ Public Class ProcedureTypeControl
         On Error Resume Next
         If (DataGrid.Rows.Count > 0) Then
             ProcedureTypeAddEditForm.procedureTypeControl = Me
-            ProcedureTypeAddEditForm.activeUser = MainForm.LabelMenu.Text
+            ProcedureTypeAddEditForm.activeUser = MainForm.user.ID
             ProcedureTypeAddEditForm.procedureTypeID = DataGrid.CurrentRow.Cells(0).Value
             ProcedureTypeAddEditForm.HeaderLabel.Text = "Procedure Type - Edit"
             ProcedureTypeAddEditForm.ShowDialog()

@@ -32,8 +32,6 @@ Partial Class ScheduleAddEditForm
         Me.textDescription = New System.Windows.Forms.TextBox()
         Me.dateTimePickerStart = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dateTimePickerEnd = New System.Windows.Forms.DateTimePicker()
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
         Me.panelColor = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -146,33 +144,11 @@ Partial Class ScheduleAddEditForm
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "*Start Time"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(11, 261)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 16)
-        Me.Label4.TabIndex = 29
-        Me.Label4.Text = "*End Time"
-        '
-        'dateTimePickerEnd
-        '
-        Me.dateTimePickerEnd.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateTimePickerEnd.CustomFormat = "hh:mm:ss tt"
-        Me.dateTimePickerEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dateTimePickerEnd.Location = New System.Drawing.Point(12, 280)
-        Me.dateTimePickerEnd.Name = "dateTimePickerEnd"
-        Me.dateTimePickerEnd.ShowUpDown = True
-        Me.dateTimePickerEnd.Size = New System.Drawing.Size(347, 22)
-        Me.dateTimePickerEnd.TabIndex = 28
-        '
         'panelColor
         '
         Me.panelColor.BackColor = System.Drawing.Color.White
         Me.panelColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelColor.Location = New System.Drawing.Point(139, 325)
+        Me.panelColor.Location = New System.Drawing.Point(140, 280)
         Me.panelColor.Name = "panelColor"
         Me.panelColor.Size = New System.Drawing.Size(220, 22)
         Me.panelColor.TabIndex = 30
@@ -181,7 +157,7 @@ Partial Class ScheduleAddEditForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 305)
+        Me.Label5.Location = New System.Drawing.Point(9, 261)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 16)
         Me.Label5.TabIndex = 31
@@ -209,7 +185,7 @@ Partial Class ScheduleAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(274, 353)
+        Me.buttonSave.Location = New System.Drawing.Point(274, 308)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -244,7 +220,7 @@ Partial Class ScheduleAddEditForm
         Me.buttonColor.IconVisible = True
         Me.buttonColor.IconZoom = 50.0R
         Me.buttonColor.IsTab = False
-        Me.buttonColor.Location = New System.Drawing.Point(12, 325)
+        Me.buttonColor.Location = New System.Drawing.Point(12, 280)
         Me.buttonColor.Name = "buttonColor"
         Me.buttonColor.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonColor.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -262,13 +238,11 @@ Partial Class ScheduleAddEditForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(371, 397)
+        Me.ClientSize = New System.Drawing.Size(371, 347)
         Me.Controls.Add(Me.buttonColor)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.panelColor)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.dateTimePickerEnd)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.dateTimePickerStart)
         Me.Controls.Add(Me.Label2)
@@ -298,8 +272,6 @@ Partial Class ScheduleAddEditForm
     Friend WithEvents textDescription As TextBox
     Friend WithEvents dateTimePickerStart As DateTimePicker
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents dateTimePickerEnd As DateTimePicker
     Friend WithEvents ColorDialog As ColorDialog
     Friend WithEvents panelColor As Panel
     Friend WithEvents Label5 As Label

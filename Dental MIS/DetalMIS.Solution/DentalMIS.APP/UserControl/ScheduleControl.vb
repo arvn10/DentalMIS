@@ -68,6 +68,13 @@ Public Class ScheduleControl
     End Sub
 
     Private Sub DateTimePickerDate_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerDate.ValueChanged
+        If DateTimePickerDate.Value.Date < DateTime.Now.Date Then
+            ToolStripButtonNew.Enabled = False
+            ToolStripButtonSave.Enabled = False
+        Else
+            ToolStripButtonNew.Enabled = True
+            ToolStripButtonSave.Enabled = True
+        End If
         calendarSchedule.SetViewRange(DateTimePickerDate.Value, DateTimePickerDate.Value)
         schedules.Clear()
         GetSchedules()
@@ -81,7 +88,7 @@ Public Class ScheduleControl
             Dim index As Integer = schedules.IndexOf(tempSchedule)
             tempSchedule.IsDeleted = True
             tempSchedule.ActionType = "Update"
-            tempSchedule.UpdatedBy = MainForm.LabelMenu.Text
+            tempSchedule.UpdatedBy = MainForm.user.ID
             schedules(index) = tempSchedule
         End If
     End Sub
@@ -110,7 +117,7 @@ Public Class ScheduleControl
 
             form.scheduleControl = Me
             form.schedule = schedule
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.selectedDate = DateTimePickerDate.Value.Date
             form.HeaderLabel.Text = "Schedule - Edit"
             form.ShowDialog()
@@ -155,7 +162,7 @@ Public Class ScheduleControl
         On Error Resume Next
         Dim form As New ScheduleAddEditForm()
         form.scheduleControl = Me
-        form.activeUser = MainForm.LabelMenu.Text
+        form.activeUser = MainForm.user.ID
         form.selectedDate = DateTimePickerDate.Value.Date
         form.HeaderLabel.Text = "Schedule - New"
         form.ShowDialog()

@@ -45,7 +45,7 @@ Public Class UserAddEditForm
                         param.UserTypeID = comboUserType.SelectedValue
                         param.SecretQuestionID = comboSecretQuestion.SelectedValue
                         param.SecretQuestionAnswer = textSecretQuestionAnswer.Text
-                        param.Status = If(comboStatus.Text = "Active", 1, 0)
+                        param.Status = 1
                         param.CreatedBy = activeUser
                         Dim ret As Long = userService.UserCreate(param)
                         If ret > 0 Then
@@ -115,6 +115,8 @@ Public Class UserAddEditForm
             comboSecretQuestion.DataSource = secretQuestionService.SecretQuestionSelect("")
             comboSecretQuestion.Text = ""
             If HeaderLabel.Text.Contains("Edit") Then
+                comboStatus.Visible = True
+                Label6.Visible = True
                 Dim data As New User
                 data = userService.UserSearchID(userID).ToList()(0)
                 textUsername.Text = data.Username

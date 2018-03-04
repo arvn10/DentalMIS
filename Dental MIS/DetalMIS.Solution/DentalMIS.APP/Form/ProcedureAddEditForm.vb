@@ -202,7 +202,6 @@ Public Class ProcedureAddEditForm
                 Dim val As Double = 0
                 textPaymentBalance.Text = val.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             End If
-
         End If
     End Sub
 
@@ -234,5 +233,14 @@ Public Class ProcedureAddEditForm
         End If
         textPrice.Clear()
         textCharge.Clear()
+    End Sub
+
+    Private Sub textCharge_TextChanged(sender As Object, e As EventArgs) Handles textCharge.TextChanged
+        If textCharge.Text <> String.Empty Then
+            If Double.Parse(textCharge.Text, NumberStyles.Currency) > Double.Parse(textPrice.Text, NumberStyles.Currency) Then
+                MessageBox.Show("Charge cannot be greater than Price", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                textCharge.Clear()
+            End If
+        End If
     End Sub
 End Class

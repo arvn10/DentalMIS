@@ -45,7 +45,7 @@ Public Class UserControl
         Try
             Dim form As New UserAddEditForm
             form.userControl = Me
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.HeaderLabel.Text = "User - New"
             form.ShowDialog()
         Catch ex As Exception
@@ -58,7 +58,7 @@ Public Class UserControl
             If (DataGrid.Rows.Count > 0) Then
                 Dim form As New UserAddEditForm
                 form.userControl = Me
-                form.activeUser = MainForm.LabelMenu.Text
+                form.activeUser = MainForm.user.ID
                 form.userID = DataGrid.CurrentRow.Cells(0).Value
                 form.HeaderLabel.Text = "User - Edit"
                 form.ShowDialog()
@@ -83,7 +83,7 @@ Public Class UserControl
         On Error Resume Next
         Dim form As New UserAddEditForm
         form.userControl = Me
-        form.activeUser = MainForm.LabelMenu.Text
+        form.activeUser = MainForm.user.ID
         form.HeaderLabel.Text = "User - New"
         form.ShowDialog()
     End Sub
@@ -93,12 +93,16 @@ Public Class UserControl
         If (DataGrid.Rows.Count > 0) Then
             Dim form As New UserAddEditForm
             form.userControl = Me
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.userID = DataGrid.CurrentRow.Cells(0).Value
             form.HeaderLabel.Text = "User - Edit"
             form.ShowDialog()
         Else
             MessageBox.Show("No item(s) to edit", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub UserControl_Load(sender As Object, e As EventArgs) Handles Me.Load
+        LoadData("")
     End Sub
 End Class

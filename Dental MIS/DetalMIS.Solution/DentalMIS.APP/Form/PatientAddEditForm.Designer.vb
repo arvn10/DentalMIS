@@ -201,9 +201,9 @@ Partial Class PatientAddEditForm
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(58, 203)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 16)
+        Me.Label6.Size = New System.Drawing.Size(36, 16)
         Me.Label6.TabIndex = 32
-        Me.Label6.Text = "*Gender"
+        Me.Label6.Text = "*Sex"
         '
         'Label8
         '
@@ -221,7 +221,7 @@ Partial Class PatientAddEditForm
         Me.textOccupation.Location = New System.Drawing.Point(12, 267)
         Me.textOccupation.Multiline = True
         Me.textOccupation.Name = "textOccupation"
-        Me.textOccupation.Size = New System.Drawing.Size(471, 75)
+        Me.textOccupation.Size = New System.Drawing.Size(471, 41)
         Me.textOccupation.TabIndex = 7
         '
         'buttonSave
@@ -246,7 +246,7 @@ Partial Class PatientAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(398, 348)
+        Me.buttonSave.Location = New System.Drawing.Point(398, 314)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -264,7 +264,7 @@ Partial Class PatientAddEditForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(495, 389)
+        Me.ClientSize = New System.Drawing.Size(495, 355)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.textOccupation)

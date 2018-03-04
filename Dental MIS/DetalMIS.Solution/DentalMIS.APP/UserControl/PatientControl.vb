@@ -38,7 +38,7 @@ Public Class PatientControl
     Private Sub buttonNew_Click(sender As Object, e As EventArgs)
         Try
             PatientAddEditForm.patientControl = Me
-            PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
+            PatientAddEditForm.activeUser = MainForm.user.ID
             PatientAddEditForm.HeaderLabel.Text = "Patient - New"
             PatientAddEditForm.ShowDialog()
         Catch ex As Exception
@@ -60,7 +60,7 @@ Public Class PatientControl
                 Dim form As New PatientAddEditForm
                 form.patientControl = Me
                 form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
-                form.activeUser = MainForm.LabelMenu.Text
+                form.activeUser = MainForm.user.ID
                 form.HeaderLabel.Text = "Patient - Edit"
                 form.ShowDialog()
             Else
@@ -72,7 +72,7 @@ Public Class PatientControl
     End Sub
 
     Private Sub PatientControl_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        LoadData("")
     End Sub
 
     Private Sub buttonRefresh_Click(sender As Object, e As EventArgs)
@@ -84,7 +84,7 @@ Public Class PatientControl
             If DataGrid.Rows.Count > 0 Then
                 Dim form As New PatientDentalRecordForm
                 form.patientControl = Me
-                form.activeUser = MainForm.LabelMenu.Text
+                form.activeUser = MainForm.user.ID
                 form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
                 form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
                 form.ShowDialog()
@@ -104,7 +104,7 @@ Public Class PatientControl
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
         On Error Resume Next
         PatientAddEditForm.patientControl = Me
-        PatientAddEditForm.activeUser = MainForm.LabelMenu.Text
+        PatientAddEditForm.activeUser = MainForm.user.ID
         PatientAddEditForm.HeaderLabel.Text = "Patient - New"
         PatientAddEditForm.ShowDialog()
     End Sub
@@ -115,7 +115,7 @@ Public Class PatientControl
             Dim form As New PatientAddEditForm
             form.patientControl = Me
             form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.HeaderLabel.Text = "Patient - Edit"
             form.ShowDialog()
         Else
@@ -128,7 +128,7 @@ Public Class PatientControl
         If DataGrid.Rows.Count > 0 Then
             Dim form As New PatientDentalRecordForm
             form.patientControl = Me
-            form.activeUser = MainForm.LabelMenu.Text
+            form.activeUser = MainForm.user.ID
             form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
             form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
             form.ShowDialog()

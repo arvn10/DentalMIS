@@ -18,7 +18,7 @@ Public Class AuditTrailControl
         DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
     End Sub
     Private Sub AuditTrailControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadData("", "")
     End Sub
 
     Private Sub buttonSearch_Click(sender As Object, e As EventArgs) Handles buttonSearch.Click
