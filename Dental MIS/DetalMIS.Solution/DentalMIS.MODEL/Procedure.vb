@@ -11,6 +11,7 @@
     Public Property Tooth As String
     Public Property Notes As String
     Public Property ProcedureDate As String
+    Public Property PaymentType As String
     Public Property AmountToPay As Long
     Public Property AmountPaid As Long
     Public Property Balance As Long

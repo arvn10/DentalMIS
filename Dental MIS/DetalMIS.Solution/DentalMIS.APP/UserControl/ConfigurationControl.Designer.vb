@@ -65,7 +65,7 @@ Partial Class ConfigurationControl
         '
         Me.TreeViewConfig.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TreeViewConfig.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TreeViewConfig.BackColor = System.Drawing.Color.White
         Me.TreeViewConfig.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TreeViewConfig.Location = New System.Drawing.Point(14, 92)
         Me.TreeViewConfig.Margin = New System.Windows.Forms.Padding(2)
@@ -95,7 +95,7 @@ Partial Class ConfigurationControl
         Me.PanelMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelMain.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.PanelMain.BackColor = System.Drawing.Color.White
         Me.PanelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelMain.Location = New System.Drawing.Point(196, 92)
         Me.PanelMain.Margin = New System.Windows.Forms.Padding(2)

@@ -103,7 +103,7 @@ Partial Class ProcedureTypeControl
         Me.DataGrid.AllowUserToDeleteRows = False
         Me.DataGrid.AllowUserToResizeColumns = False
         Me.DataGrid.AllowUserToResizeRows = False
-        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGrid.BackgroundColor = System.Drawing.Color.White
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -131,54 +131,63 @@ Partial Class ProcedureTypeControl
         Me.procedureName.HeaderText = "Name"
         Me.procedureName.Name = "procedureName"
         Me.procedureName.ReadOnly = True
+        Me.procedureName.Width = 83
         '
         'basePrice
         '
         Me.basePrice.HeaderText = "Base Price"
         Me.basePrice.Name = "basePrice"
         Me.basePrice.ReadOnly = True
+        Me.basePrice.Width = 82
         '
         'paymentType
         '
         Me.paymentType.HeaderText = "Payment Type"
         Me.paymentType.Name = "paymentType"
         Me.paymentType.ReadOnly = True
+        Me.paymentType.Width = 83
         '
         'requireMedCert
         '
         Me.requireMedCert.HeaderText = "Require Med. Cert?"
         Me.requireMedCert.Name = "requireMedCert"
         Me.requireMedCert.ReadOnly = True
+        Me.requireMedCert.Width = 82
         '
         'status
         '
         Me.status.HeaderText = "Status"
         Me.status.Name = "status"
         Me.status.ReadOnly = True
+        Me.status.Width = 83
         '
         'createdBy
         '
         Me.createdBy.HeaderText = "Created By"
         Me.createdBy.Name = "createdBy"
         Me.createdBy.ReadOnly = True
+        Me.createdBy.Width = 82
         '
         'createdDate
         '
         Me.createdDate.HeaderText = "Created Date"
         Me.createdDate.Name = "createdDate"
         Me.createdDate.ReadOnly = True
+        Me.createdDate.Width = 83
         '
         'updatedBy
         '
         Me.updatedBy.HeaderText = "Updated By"
         Me.updatedBy.Name = "updatedBy"
         Me.updatedBy.ReadOnly = True
+        Me.updatedBy.Width = 82
         '
         'updatedDate
         '
         Me.updatedDate.HeaderText = "Updated Date"
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
+        Me.updatedDate.Width = 83
         '
         'GroupBox1
         '

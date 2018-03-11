@@ -160,6 +160,7 @@ Partial Class BackUpForm
         '
         'textSavePath
         '
+        Me.textSavePath.BackColor = System.Drawing.Color.White
         Me.textSavePath.Location = New System.Drawing.Point(9, 293)
         Me.textSavePath.Multiline = True
         Me.textSavePath.Name = "textSavePath"
@@ -172,7 +173,7 @@ Partial Class BackUpForm
         Me.CircleProgressBar.animationIterval = 5
         Me.CircleProgressBar.animationSpeed = 300
         Me.CircleProgressBar.AutoSize = True
-        Me.CircleProgressBar.BackColor = System.Drawing.Color.White
+        Me.CircleProgressBar.BackColor = System.Drawing.Color.WhiteSmoke
         Me.CircleProgressBar.BackgroundImage = CType(resources.GetObject("CircleProgressBar.BackgroundImage"), System.Drawing.Image)
         Me.CircleProgressBar.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!)
         Me.CircleProgressBar.ForeColor = System.Drawing.Color.SeaGreen
@@ -201,7 +202,7 @@ Partial Class BackUpForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(455, 447)
         Me.Controls.Add(Me.buttonBrowse)
         Me.Controls.Add(Me.buttonStart)

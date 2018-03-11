@@ -137,17 +137,17 @@
   <data name="ToolStripButtonNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI3SURBVGhD7Zi/LgRRFMb3NbTeQ7DLand1CmoqKpUnIEKz
-        lWKnQlBo/Em2I1FQWCLRofICEpEohrPO4e7JN7tz7g53IvMlv8Td3Pnmx5yZnSgVKVLkn2WkdnQ9Wj+K
-        Q0IOrGMPKgwB69iDykLAOvagshCwjj2oLASsY0/r4T3OA6xjDyoLAevYg8pCwDr2oLIQsI49qCwErGMP
-        KhOGlm876LUvbreGdexBZYI+sSvjg9utYR17UFkIWMceVBYC1rEHlQn60rvj4IPbrWEde1CZoE/syvjg
-        dmtYxx5UFgLWsQeVhYB17EFlgr707jikYWHvOT68f+vqTIJ17EFlgojodT+GV+7ircuXrq71i+N48XQt
-        njlYiCvRVAf6mT5rXJ3nd4Qal2fx9O7ct3QS5Wjisdys1lgrfdBJs2K51YCyvRiLJjdYLV3QiQUZCb1O
-        gmZe9vrIC+PN6ibr9Y+cECFieo2guZcblsYGiRE6aA+RepxELkvqO7NQitBBewi6J1ixd5DAINDTBgkJ
-        OmiPkOoqIAlBxkOvEds3r509SyerUEbQQXuEz3shYs3kiBxC5PQaIXtm9ue7JKxxjy1H1f7/cpQTZ4Ur
-        QFijj2fN5CCJQdAC1ujjWTM5SGIQMh2hZqXNmslBEoOQq5vYh1w9Rn3J5IusOfnEin8f+sshKUIH7SG8
-        3kyzDL2QIbE0mF7mfjM+v0Ru5CU0CjTPSNaF9gQfm14hOXos0rP9R7rS/vosx+JFiuQqpdIHwBNOdixX
-        qPsAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI3SURBVGhD7Zi/LgRRFMb3NbTeQ7Abq0W3BbWtqLbyBERo
+        tlLsVAgKzSLRkShW4U8kOlReQCISxXDWOdw9+WZ3zt3hTmS+5Je4mzvf/JgzsxOlIkWK/LOMzbSvxmfb
+        cUjIgXXsQYUhYB17UFkIWMceVBYC1rEHlYWAdew5fXiP8wDr2IPKQsA69qCyELCOPagsBKxjDyoLAevY
+        g8qEkcZtF732xe3WsI49qEzQJ3ZlfHC7NaxjDyoLAevYg8pCwDr2oDJBX3p3HHxwuzWsYw8qE/SJXRkf
+        3G4N69iDykLAOvagshCwjj2oTNCX3h2HNNT3nuPD+7eeziRYxx5UJoiIXg9idOUu3uq89HStXxzFSydr
+        ce2gHlei6S70M33WvDzP7wg1O2fx3O7Ct3QS5ajyWG5VZ1grfdBJs6Jx2oSy/ZiIpjZYLV3QiQUZCb1O
+        gmZe9vrIC5Ot6ibrDY6cECFieo2guZcblsYGiRE6aA+RepxELktmd+ahFKGD9hB0T7Bi/yCBYaCnDRIS
+        dNAeIdVVQBKCjIdeI7ZvXrt7lo9XoYygg/YIn/dCxJrJETmEyOk1QvbU9hd7JKxxjy1H1cH/cpQTZ4Ur
+        QFijj2fN5CCJYdAC1ujjWTM5SGIYMh2hVuWaNZODJIYhVzexD7l6jPqSyRdZa+qJFf8+9JdDUoQO2kN4
+        vZlmGXohQ2JpML3M/WZ8foncyEtoFGiekawL7Qk+Nv1CcvRYpGf7j3Tl+uuzHIsXKZKrlEofoa9OdDvT
+        tCsAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

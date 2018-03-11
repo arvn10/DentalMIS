@@ -26,7 +26,7 @@ Public Class PatientDentalRecordForm
         DataGrid.Columns("updatedDate").DataPropertyName = "ProcedureUpdatedDate"
 
         DataGrid.AutoResizeColumns()
-        DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader
     End Sub
 
 

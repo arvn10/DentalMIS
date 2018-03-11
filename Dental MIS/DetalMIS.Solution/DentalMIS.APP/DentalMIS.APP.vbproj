@@ -147,6 +147,12 @@
     <Compile Include="Form\ForgotPasswordForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\LoginFailedForm.Designer.vb">
+      <DependentUpon>LoginFailedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginFailedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginFailedForm.resx">
+      <DependentUpon>LoginFailedForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>

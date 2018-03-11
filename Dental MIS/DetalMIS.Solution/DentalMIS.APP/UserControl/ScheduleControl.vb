@@ -33,7 +33,6 @@ Public Class ScheduleControl
                 calendarSchedule.Items.Add(calendar)
             End If
         Next
-
     End Sub
     Private Sub ToolStripButtonSave_Click(sender As Object, e As EventArgs) Handles ToolStripButtonSave.Click
         Dim msg = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -70,7 +69,8 @@ Public Class ScheduleControl
     Private Sub DateTimePickerDate_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerDate.ValueChanged
         If DateTimePickerDate.Value.Date < DateTime.Now.Date Then
             ToolStripButtonNew.Enabled = False
-            ToolStripButtonSave.Enabled = False
+        ElseIf DateTimePickerDate.Value.DayOfWeek = DayOfWeek.Sunday Then
+            ToolStripButtonNew.Enabled = False
         Else
             ToolStripButtonNew.Enabled = True
             ToolStripButtonSave.Enabled = True

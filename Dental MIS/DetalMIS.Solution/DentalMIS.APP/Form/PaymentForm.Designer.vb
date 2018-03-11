@@ -23,10 +23,10 @@ Partial Class PaymentForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PaymentForm))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
@@ -50,6 +50,8 @@ Partial Class PaymentForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.textTooth = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.textPaymentType = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -102,17 +104,17 @@ Partial Class PaymentForm
         '
         Me.textTotalAmountPaid.BackColor = System.Drawing.Color.White
         Me.textTotalAmountPaid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textTotalAmountPaid.Location = New System.Drawing.Point(142, 138)
+        Me.textTotalAmountPaid.Location = New System.Drawing.Point(142, 167)
         Me.textTotalAmountPaid.Name = "textTotalAmountPaid"
         Me.textTotalAmountPaid.ReadOnly = True
         Me.textTotalAmountPaid.Size = New System.Drawing.Size(385, 23)
-        Me.textTotalAmountPaid.TabIndex = 59
+        Me.textTotalAmountPaid.TabIndex = 4
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(12, 141)
+        Me.Label10.Location = New System.Drawing.Point(12, 170)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(124, 16)
         Me.Label10.TabIndex = 60
@@ -122,17 +124,17 @@ Partial Class PaymentForm
         '
         Me.textBalance.BackColor = System.Drawing.Color.White
         Me.textBalance.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textBalance.Location = New System.Drawing.Point(142, 167)
+        Me.textBalance.Location = New System.Drawing.Point(142, 196)
         Me.textBalance.Name = "textBalance"
         Me.textBalance.ReadOnly = True
         Me.textBalance.Size = New System.Drawing.Size(385, 23)
-        Me.textBalance.TabIndex = 57
+        Me.textBalance.TabIndex = 5
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(12, 170)
+        Me.Label9.Location = New System.Drawing.Point(12, 199)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(64, 16)
         Me.Label9.TabIndex = 58
@@ -142,17 +144,17 @@ Partial Class PaymentForm
         '
         Me.textCharge.BackColor = System.Drawing.Color.White
         Me.textCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textCharge.Location = New System.Drawing.Point(142, 109)
+        Me.textCharge.Location = New System.Drawing.Point(142, 138)
         Me.textCharge.Name = "textCharge"
         Me.textCharge.ReadOnly = True
         Me.textCharge.Size = New System.Drawing.Size(385, 23)
-        Me.textCharge.TabIndex = 55
+        Me.textCharge.TabIndex = 3
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(12, 112)
+        Me.Label8.Location = New System.Drawing.Point(12, 141)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(58, 16)
         Me.Label8.TabIndex = 56
@@ -160,9 +162,10 @@ Partial Class PaymentForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.GroupBox1.Controls.Add(Me.DataGrid)
         Me.GroupBox1.Controls.Add(Me.MenuStrip1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 196)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 225)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(515, 215)
         Me.GroupBox1.TabIndex = 61
@@ -178,24 +181,24 @@ Partial Class PaymentForm
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.amountPaid, Me.paymentDate, Me.updatedBy, Me.updatedDate})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid.Location = New System.Drawing.Point(3, 40)
         Me.DataGrid.MultiSelect = False
@@ -204,7 +207,8 @@ Partial Class PaymentForm
         Me.DataGrid.RowHeadersVisible = False
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGrid.Size = New System.Drawing.Size(509, 172)
-        Me.DataGrid.TabIndex = 47
+        Me.DataGrid.StandardTab = True
+        Me.DataGrid.TabIndex = 7
         '
         'ID
         '
@@ -216,16 +220,16 @@ Partial Class PaymentForm
         '
         'amountPaid
         '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.amountPaid.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.amountPaid.DefaultCellStyle = DataGridViewCellStyle2
         Me.amountPaid.HeaderText = "Amount Paid"
         Me.amountPaid.Name = "amountPaid"
         Me.amountPaid.ReadOnly = True
         '
         'paymentDate
         '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.paymentDate.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.paymentDate.DefaultCellStyle = DataGridViewCellStyle3
         Me.paymentDate.HeaderText = "Payment Date"
         Me.paymentDate.Name = "paymentDate"
         Me.paymentDate.ReadOnly = True
@@ -250,7 +254,7 @@ Partial Class PaymentForm
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 16)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(509, 24)
-        Me.MenuStrip1.TabIndex = 48
+        Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'buttonNew
@@ -275,7 +279,7 @@ Partial Class PaymentForm
         Me.textProcedure.Name = "textProcedure"
         Me.textProcedure.ReadOnly = True
         Me.textProcedure.Size = New System.Drawing.Size(385, 23)
-        Me.textProcedure.TabIndex = 62
+        Me.textProcedure.TabIndex = 0
         '
         'Label1
         '
@@ -295,7 +299,7 @@ Partial Class PaymentForm
         Me.textTooth.Name = "textTooth"
         Me.textTooth.ReadOnly = True
         Me.textTooth.Size = New System.Drawing.Size(385, 23)
-        Me.textTooth.TabIndex = 64
+        Me.textTooth.TabIndex = 1
         '
         'Label2
         '
@@ -307,12 +311,34 @@ Partial Class PaymentForm
         Me.Label2.TabIndex = 65
         Me.Label2.Text = "Affected Tooth :"
         '
+        'textPaymentType
+        '
+        Me.textPaymentType.BackColor = System.Drawing.Color.White
+        Me.textPaymentType.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textPaymentType.Location = New System.Drawing.Point(142, 109)
+        Me.textPaymentType.Name = "textPaymentType"
+        Me.textPaymentType.ReadOnly = True
+        Me.textPaymentType.Size = New System.Drawing.Size(385, 23)
+        Me.textPaymentType.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 112)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(96, 16)
+        Me.Label3.TabIndex = 67
+        Me.Label3.Text = "Payment Type"
+        '
         'PaymentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(540, 421)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(540, 449)
+        Me.Controls.Add(Me.textPaymentType)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.textTooth)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.textProcedure)
@@ -366,4 +392,6 @@ Partial Class PaymentForm
     Friend WithEvents paymentDate As DataGridViewTextBoxColumn
     Friend WithEvents updatedBy As DataGridViewTextBoxColumn
     Friend WithEvents updatedDate As DataGridViewTextBoxColumn
+    Friend WithEvents textPaymentType As TextBox
+    Friend WithEvents Label3 As Label
 End Class

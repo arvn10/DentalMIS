@@ -6,6 +6,7 @@ Imports DentalMIS.MODEL
 Public Class LoginForm
     Private userService As IUserService
     Private auditTrailService As IAuditTrailService
+    Dim attempts As Integer = 0
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -16,6 +17,17 @@ Public Class LoginForm
         userService = New UserService()
         If textUsername.Text = String.Empty Or textPassword.Text = String.Empty Then
             MessageBox.Show("Enter Username and the Password.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            attempts += 1
+            If attempts > 2 Then
+                Try
+                    attempts = 0
+                    Dim form As New LoginFailedForm
+                    form.textUsername.Text = textUsername.Text
+                    form.ShowDialog()
+                Catch ex As Exception
+
+                End Try
+            End If
         Else
             Try
                 Me.Height = 250
@@ -50,6 +62,17 @@ Public Class LoginForm
                     textUsername.Select()
                 Else
                     MessageBox.Show("Username or Password is incorrect.", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    attempts += 1
+                    If attempts > 2 Then
+                        Try
+                            attempts = 0
+                            Dim form As New LoginFailedForm
+                            form.textUsername.Text = textUsername.Text
+                            form.ShowDialog()
+                        Catch ex As Exception
+
+                        End Try
+                    End If
                     textUsername.Clear()
                     textPassword.Clear()
                     textUsername.Select()

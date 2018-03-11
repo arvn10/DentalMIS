@@ -111,6 +111,7 @@ Partial Class ScheduleControl
         Me.calendarSchedule.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.calendarSchedule.FirstDayOfWeek = System.DayOfWeek.Monday
         Me.calendarSchedule.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         CalendarHighlightRange1.DayOfWeek = System.DayOfWeek.Monday
         CalendarHighlightRange1.EndTime = System.TimeSpan.Parse("17:00:00")
@@ -149,6 +150,7 @@ Partial Class ScheduleControl
         '
         'ToolStripButtonSave
         '
+        Me.ToolStripButtonSave.Enabled = False
         Me.ToolStripButtonSave.Image = CType(resources.GetObject("ToolStripButtonSave.Image"), System.Drawing.Image)
         Me.ToolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButtonSave.Name = "ToolStripButtonSave"
@@ -158,6 +160,7 @@ Partial Class ScheduleControl
         '
         'ToolStripButtonNew
         '
+        Me.ToolStripButtonNew.Enabled = False
         Me.ToolStripButtonNew.Image = CType(resources.GetObject("ToolStripButtonNew.Image"), System.Drawing.Image)
         Me.ToolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButtonNew.Name = "ToolStripButtonNew"

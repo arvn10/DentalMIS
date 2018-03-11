@@ -24,11 +24,11 @@ Partial Class ProcedureTypeAddEditForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureTypeAddEditForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
@@ -234,14 +234,16 @@ Partial Class ProcedureTypeAddEditForm
         '
         Me.TabControl1.Controls.Add(Me.TabPageDetails)
         Me.TabControl1.Controls.Add(Me.TabPageNotAllowed)
-        Me.TabControl1.Location = New System.Drawing.Point(9, 51)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 46)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(411, 207)
+        Me.TabControl1.Size = New System.Drawing.Size(428, 220)
         Me.TabControl1.TabIndex = 25
         '
         'TabPageDetails
         '
+        Me.TabPageDetails.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TabPageDetails.Controls.Add(Me.buttonSave)
         Me.TabPageDetails.Controls.Add(Me.textBasePrice)
         Me.TabPageDetails.Controls.Add(Me.Label5)
@@ -256,10 +258,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.TabPageDetails.Location = New System.Drawing.Point(4, 22)
         Me.TabPageDetails.Name = "TabPageDetails"
         Me.TabPageDetails.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageDetails.Size = New System.Drawing.Size(403, 181)
+        Me.TabPageDetails.Size = New System.Drawing.Size(420, 194)
         Me.TabPageDetails.TabIndex = 0
         Me.TabPageDetails.Text = "Procedure Details"
-        Me.TabPageDetails.UseVisualStyleBackColor = True
         '
         'buttonSave
         '
@@ -283,7 +284,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(310, 142)
+        Me.buttonSave.Location = New System.Drawing.Point(327, 142)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -303,7 +304,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.TabPageNotAllowed.Location = New System.Drawing.Point(4, 22)
         Me.TabPageNotAllowed.Name = "TabPageNotAllowed"
         Me.TabPageNotAllowed.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageNotAllowed.Size = New System.Drawing.Size(403, 181)
+        Me.TabPageNotAllowed.Size = New System.Drawing.Size(420, 194)
         Me.TabPageNotAllowed.TabIndex = 1
         Me.TabPageNotAllowed.Text = "Procedure Not Allowed To Pair"
         Me.TabPageNotAllowed.UseVisualStyleBackColor = True
@@ -317,24 +318,24 @@ Partial Class ProcedureTypeAddEditForm
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid.Location = New System.Drawing.Point(3, 28)
         Me.DataGrid.MultiSelect = False
@@ -342,7 +343,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.DataGrid.ReadOnly = True
         Me.DataGrid.RowHeadersVisible = False
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(397, 150)
+        Me.DataGrid.Size = New System.Drawing.Size(414, 163)
         Me.DataGrid.TabIndex = 47
         '
         'ID
@@ -355,8 +356,8 @@ Partial Class ProcedureTypeAddEditForm
         '
         'procedureName
         '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle7
         Me.procedureName.HeaderText = "Procedure Name"
         Me.procedureName.Name = "procedureName"
         Me.procedureName.ReadOnly = True
@@ -381,16 +382,16 @@ Partial Class ProcedureTypeAddEditForm
         '
         'updatedBy
         '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle8
         Me.updatedBy.HeaderText = "Updated By"
         Me.updatedBy.Name = "updatedBy"
         Me.updatedBy.ReadOnly = True
         '
         'updatedDate
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle9
         Me.updatedDate.HeaderText = "Updated Date"
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
@@ -404,7 +405,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 3)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(397, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(414, 25)
         Me.ToolStrip1.TabIndex = 48
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -436,7 +437,7 @@ Partial Class ProcedureTypeAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(428, 266)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.PanelHeader)

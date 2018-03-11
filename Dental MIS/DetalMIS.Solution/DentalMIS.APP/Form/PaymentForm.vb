@@ -7,15 +7,16 @@ Public Class PaymentForm
     Public paymentControl As PaymentControl
     Private paymentSvc As IPaymentService
     Private procedureSvc As IProcedureService
+    Dim procedure As Procedure
     Public Sub LoadData()
 
         paymentSvc = New PaymentService()
         procedureSvc = New ProcedureService()
 
-        Dim procedure As Procedure
         procedure = procedureSvc.ProcedureSearchID(procedureID)
         textProcedure.Text = procedure.ProcedureName
         textTooth.Text = procedure.Tooth
+        textPaymentType.Text = procedure.PaymentType
         textCharge.Text = procedure.AmountToPay.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
         textTotalAmountPaid.Text = procedure.AmountPaid.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
         textBalance.Text = procedure.Balance.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
@@ -47,6 +48,7 @@ Public Class PaymentForm
 
     Private Sub PaymentForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadData()
+        MessageBox.Show(procedure.PaymentType)
     End Sub
 
     Private Sub buttonNew_Click(sender As Object, e As EventArgs) Handles buttonNew.Click

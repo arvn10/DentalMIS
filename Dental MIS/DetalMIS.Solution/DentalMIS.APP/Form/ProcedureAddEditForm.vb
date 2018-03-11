@@ -12,6 +12,7 @@ Public Class ProcedureAddEditForm
     Private procedureSvc As IProcedureService
     Private toothSvc As IToothService
     Dim firstRun As Boolean = True
+    Dim activeTextCharge As Boolean = False
 
 
     Public Sub New()
@@ -149,34 +150,40 @@ Public Class ProcedureAddEditForm
     End Sub
 
     Private Sub textCharge_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textCharge.KeyPress
-        Dim AllowedKeys As String = "0123456789."
-        Select Case e.KeyChar
 
-            Case Convert.ToChar(Keys.Enter) ' Enter is pressed
+        If Not String.IsNullOrWhiteSpace(comboProcedureType.Text) Then
+            Dim AllowedKeys As String = "0123456789."
+            Select Case e.KeyChar
+
+                Case Convert.ToChar(Keys.Enter) ' Enter is pressed
                 ' Call method here...
 
-            Case Convert.ToChar(Keys.Back) ' Backspace is pressed
-                e.Handled = False ' Delete the character
+                Case Convert.ToChar(Keys.Back) ' Backspace is pressed
+                    e.Handled = False ' Delete the character
 
-            Case Convert.ToChar(Keys.Left)
-                e.Handled = False
+                Case Convert.ToChar(Keys.Left)
+                    e.Handled = False
 
-            Case Convert.ToChar(Keys.Right)
-                e.Handled = False
+                Case Convert.ToChar(Keys.Right)
+                    e.Handled = False
 
-            Case Convert.ToChar(Keys.Up)
-                e.Handled = False
+                Case Convert.ToChar(Keys.Up)
+                    e.Handled = False
 
-            Case Convert.ToChar(Keys.Down)
-                e.Handled = False
+                Case Convert.ToChar(Keys.Down)
+                    e.Handled = False
 
-            Case Convert.ToChar(Keys.Capital Or Keys.RButton) ' CTRL+V is pressed
-                ' Paste clipboard content only if contains allowed keys
-                e.Handled = Not Clipboard.GetText().All(Function(c) AllowedKeys.Contains(c))
+                Case Convert.ToChar(Keys.Capital Or Keys.RButton) ' CTRL+V is pressed
+                    ' Paste clipboard content only if contains allowed keys
+                    e.Handled = Not Clipboard.GetText().All(Function(c) AllowedKeys.Contains(c))
 
-            Case Else ' Other key is pressed
-                e.Handled = Not AllowedKeys.Contains(e.KeyChar)
-        End Select
+                Case Else ' Other key is pressed
+                    e.Handled = Not AllowedKeys.Contains(e.KeyChar)
+            End Select
+        Else
+            e.Handled = True
+        End If
+
     End Sub
 
     Private Sub buttonPrintDC_Click(sender As Object, e As EventArgs)
@@ -236,7 +243,7 @@ Public Class ProcedureAddEditForm
     End Sub
 
     Private Sub textCharge_TextChanged(sender As Object, e As EventArgs) Handles textCharge.TextChanged
-        If textCharge.Text <> String.Empty Then
+        If textCharge.Text <> String.Empty And comboProcedureType.Text <> String.Empty Then
             If Double.Parse(textCharge.Text, NumberStyles.Currency) > Double.Parse(textPrice.Text, NumberStyles.Currency) Then
                 MessageBox.Show("Charge cannot be greater than Price", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 textCharge.Clear()
