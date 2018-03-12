@@ -30,7 +30,7 @@ CREATE TABLE `audit_trail` (
   `created_by` varchar(45) DEFAULT NULL,
   `created_date` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `audit_trail` (
 
 LOCK TABLES `audit_trail` WRITE;
 /*!40000 ALTER TABLE `audit_trail` DISABLE KEYS */;
-INSERT INTO `audit_trail` VALUES (1,'Patient Create Test Qwe','1','2018-02-22 01:13:54'),(2,'Patient Edit Test Qwea','1','2018-02-22 01:14:25'),(3,'Procedure Type Create Extraction','1','2018-02-22 01:17:16'),(4,'Procedure Type Edit Extraction','1','2018-02-22 01:17:28'),(5,'Procedure Type Edit Extraction','1','2018-02-22 22:59:44'),(6,'Procedure Type Create qwe','1','2018-02-22 22:59:53'),(7,'User Edit User ID 1','1','2018-03-04 23:44:31'),(8,'User Edit User ID 2','1','2018-03-04 23:44:31'),(9,'Procedure Type Edit Extraction','1','2018-03-07 22:04:02'),(10,'Procedure Type Edit Extraction','1','2018-03-07 22:04:10'),(11,'Procedure Create Patient ID 2','1','2018-03-07 22:47:24'),(12,'User Edit User ID 1','1','2018-03-12 00:57:27'),(13,'User Edit User ID 1','1','2018-03-12 00:59:53'),(14,'User Edit User ID 1','1','2018-03-12 01:04:56');
+INSERT INTO `audit_trail` VALUES (1,'Patient Create Test Qwe','1','2018-02-22 01:13:54'),(2,'Patient Edit Test Qwea','1','2018-02-22 01:14:25'),(3,'Procedure Type Create Extraction','1','2018-02-22 01:17:16'),(4,'Procedure Type Edit Extraction','1','2018-02-22 01:17:28'),(5,'Procedure Type Edit Extraction','1','2018-02-22 22:59:44'),(6,'Procedure Type Create qwe','1','2018-02-22 22:59:53'),(7,'User Edit User ID 1','1','2018-03-04 23:44:31'),(8,'User Edit User ID 2','1','2018-03-04 23:44:31'),(9,'Procedure Type Edit Extraction','1','2018-03-07 22:04:02'),(10,'Procedure Type Edit Extraction','1','2018-03-07 22:04:10'),(11,'Procedure Create Patient ID 2','1','2018-03-07 22:47:24'),(12,'User Edit User ID 1','1','2018-03-12 00:57:27'),(13,'User Edit User ID 1','1','2018-03-12 00:59:53'),(14,'User Edit User ID 1','1','2018-03-12 01:04:56'),(15,'User Edit User ID 1','1','2018-03-12 23:33:20'),(16,'User Edit User ID 1','1','2018-03-12 23:33:34');
 /*!40000 ALTER TABLE `audit_trail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -703,7 +703,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,1,1,'admin','password123','red','Admin','User',1,'1',NULL,'1','2018-03-12 01:04:56'),(2,2,1,'secretary','password','blackq','Secretary','Account',1,'1','2018-02-19 03:07:41','Admin User','2018-02-19 05:55:41');
+INSERT INTO `user` VALUES (1,1,1,'admin','password123','red','Admin','User',1,'1',NULL,'1','2018-03-12 23:33:34'),(2,2,1,'secretary','password','blackq','Secretary','Account',1,'1','2018-02-19 03:07:41','Admin User','2018-02-19 05:55:41');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -1811,7 +1811,7 @@ BEGIN
 	`cc`.`id` = `ptn`.`created_by`
 	LEFT JOIN `dental_mis`.`user` `cu` ON
 	`cu`.`id` = `ptn`.`updated_by`      
-    WHERE `pt`.`status` = true AND
+    WHERE 
 		  `ptn`.`id` = `@id`;
 
 END ;;
@@ -1942,7 +1942,7 @@ BEGIN
 		`cc`.`id` = `pt`.`created_by`
 		LEFT JOIN `dental_mis`.`user` `cu` ON
 		`cu`.`id` = `pt`.`updated_by`  
-        WHERE `pt`.`id` NOT IN(
+        WHERE `pt`.`status` AND `pt`.`id` NOT IN(
 											SELECT pt.id FROM dental_mis.procedure_type pt
 											LEFT JOIN dental_mis.procedure_type_not_allowed ptn
 											ON pt.id = ptn.procedure_type_id_not_allowed
@@ -2721,4 +2721,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-12  1:32:45
+-- Dump completed on 2018-03-12 23:53:19

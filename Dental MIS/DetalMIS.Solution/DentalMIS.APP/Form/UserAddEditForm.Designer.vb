@@ -351,7 +351,7 @@ Partial Class UserAddEditForm
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UserAddEditForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "User"
+        Me.Text = " "
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()
