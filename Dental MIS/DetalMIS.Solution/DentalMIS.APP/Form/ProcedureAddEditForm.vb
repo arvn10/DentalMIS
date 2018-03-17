@@ -106,7 +106,7 @@ Public Class ProcedureAddEditForm
                 procedure.PatientID = patientID
                 procedure.ProcedureTypeID = Convert.ToInt64(comboProcedureType.SelectedValue)
                 procedure.ToothNumber = Convert.ToInt64(comboTooth.SelectedValue)
-                procedure.AmountToPay = Double.Parse(textCharge.Text, NumberStyles.Currency)
+                procedure.AmountToPay = Double.Parse(textCharge.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
                 procedure.ProcedureDate = dtPickerTransDate.Value.Date.ToString("yyyy-MM-dd")
                 procedure.Notes = textPrescription.Text
 
@@ -200,11 +200,11 @@ Public Class ProcedureAddEditForm
 
     Private Sub textCharge_Leave(sender As Object, e As EventArgs) Handles textCharge.Leave
         If textCharge.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency)
+            Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textCharge.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textPaymentCharge.Text = textCharge.Text
             If textAmountPaid.Text <> String.Empty Then
-                textPaymentBalance.Text = (Double.Parse(textPaymentCharge.Text, NumberStyles.Currency) - Double.Parse(textAmountPaid.Text, NumberStyles.Currency)).ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
+                textPaymentBalance.Text = (Double.Parse(textPaymentCharge.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH")) - Double.Parse(textAmountPaid.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))).ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
             Else
                 Dim val As Double = 0
                 textPaymentBalance.Text = val.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
@@ -214,7 +214,7 @@ Public Class ProcedureAddEditForm
 
     Private Sub textCharge_Enter(sender As Object, e As EventArgs) Handles textCharge.Enter
         If textCharge.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency)
+            Dim amount As Double = Double.Parse(textCharge.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textCharge.Text = amount.ToString()
         End If
     End Sub
@@ -244,7 +244,7 @@ Public Class ProcedureAddEditForm
 
     Private Sub textCharge_TextChanged(sender As Object, e As EventArgs) Handles textCharge.TextChanged
         If textCharge.Text <> String.Empty And comboProcedureType.Text <> String.Empty Then
-            If Double.Parse(textCharge.Text, NumberStyles.Currency) > Double.Parse(textPrice.Text, NumberStyles.Currency) Then
+            If Double.Parse(textCharge.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH")) > Double.Parse(textPrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH")) Then
                 MessageBox.Show("Charge cannot be greater than Price", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 textCharge.Clear()
             End If

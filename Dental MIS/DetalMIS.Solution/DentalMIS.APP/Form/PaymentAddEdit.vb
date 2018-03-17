@@ -14,14 +14,14 @@ Public Class PaymentAddEdit
 
     Private Sub textAmount_Leave(sender As Object, e As EventArgs) Handles textAmount.Leave
         If textAmount.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textAmount.Text, NumberStyles.Currency)
+            Dim amount As Double = Double.Parse(textAmount.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textAmount.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
         End If
     End Sub
 
     Private Sub textAmount_Enter(sender As Object, e As EventArgs) Handles textAmount.Enter
         If textAmount.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textAmount.Text, NumberStyles.Currency)
+            Dim amount As Double = Double.Parse(textAmount.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textAmount.Text = amount.ToString()
         End If
     End Sub
@@ -33,7 +33,7 @@ Public Class PaymentAddEdit
             If textAmount.Text <> String.Empty Then
                 If HeaderLabel.Text.Contains("New") Then
                     payment.ProcedureID = procedureID
-                    payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
+                    payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
                     payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
                     payment.CreatedBy = activeUser
                     If paymentSvc.PaymentCreate(payment) > 0 Then
@@ -44,7 +44,7 @@ Public Class PaymentAddEdit
                 Else
                     payment.ID = paymentID
                     payment.ProcedureID = procedureID
-                    payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency)
+                    payment.AmountPaid = Double.Parse(textAmount.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
                     payment.TransactionDate = dtPickerPaymentDate.Value.ToString("yyyy-MM-dd")
                     payment.UpdatedBy = activeUser
                     If paymentSvc.PaymentEdit(payment) > 0 Then

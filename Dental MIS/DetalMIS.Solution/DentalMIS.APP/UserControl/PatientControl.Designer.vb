@@ -31,21 +31,19 @@ Partial Class PatientControl
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Firstname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Lastname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Address = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Gender = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Age = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButtonShowAll = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonEdit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonViewDR = New System.Windows.Forms.ToolStripButton()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PatientNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fullname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Address = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -124,7 +122,7 @@ Partial Class PatientControl
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Firstname, Me.Lastname, Me.Address, Me.Gender, Me.Age, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.PatientNumber, Me.Fullname, Me.Address, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid.Location = New System.Drawing.Point(3, 41)
         Me.DataGrid.MultiSelect = False
@@ -134,68 +132,6 @@ Partial Class PatientControl
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGrid.Size = New System.Drawing.Size(787, 487)
         Me.DataGrid.TabIndex = 45
-        '
-        'ID
-        '
-        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 43
-        '
-        'Firstname
-        '
-        Me.Firstname.HeaderText = "Firstname"
-        Me.Firstname.Name = "Firstname"
-        Me.Firstname.ReadOnly = True
-        '
-        'Lastname
-        '
-        Me.Lastname.HeaderText = "Lastname"
-        Me.Lastname.Name = "Lastname"
-        Me.Lastname.ReadOnly = True
-        '
-        'Address
-        '
-        Me.Address.HeaderText = "Address"
-        Me.Address.Name = "Address"
-        Me.Address.ReadOnly = True
-        '
-        'Gender
-        '
-        Me.Gender.HeaderText = "Gender"
-        Me.Gender.Name = "Gender"
-        Me.Gender.ReadOnly = True
-        '
-        'Age
-        '
-        Me.Age.HeaderText = "Age"
-        Me.Age.Name = "Age"
-        Me.Age.ReadOnly = True
-        '
-        'createdBy
-        '
-        Me.createdBy.HeaderText = "Created By"
-        Me.createdBy.Name = "createdBy"
-        Me.createdBy.ReadOnly = True
-        '
-        'createdDate
-        '
-        Me.createdDate.HeaderText = "Created Date"
-        Me.createdDate.Name = "createdDate"
-        Me.createdDate.ReadOnly = True
-        '
-        'updatedBy
-        '
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        Me.updatedBy.ReadOnly = True
-        '
-        'updatedDate
-        '
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
-        Me.updatedDate.ReadOnly = True
         '
         'ToolStrip1
         '
@@ -242,6 +178,57 @@ Partial Class PatientControl
         Me.ToolStripButtonViewDR.Size = New System.Drawing.Size(135, 22)
         Me.ToolStripButtonViewDR.Text = "View Dental Record"
         '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        Me.ID.Width = 24
+        '
+        'PatientNumber
+        '
+        Me.PatientNumber.HeaderText = "Patient Number"
+        Me.PatientNumber.Name = "PatientNumber"
+        Me.PatientNumber.ReadOnly = True
+        '
+        'Fullname
+        '
+        Me.Fullname.HeaderText = "Fullname"
+        Me.Fullname.Name = "Fullname"
+        Me.Fullname.ReadOnly = True
+        '
+        'Address
+        '
+        Me.Address.HeaderText = "Address"
+        Me.Address.Name = "Address"
+        Me.Address.ReadOnly = True
+        '
+        'createdBy
+        '
+        Me.createdBy.HeaderText = "Created By"
+        Me.createdBy.Name = "createdBy"
+        Me.createdBy.ReadOnly = True
+        '
+        'createdDate
+        '
+        Me.createdDate.HeaderText = "Created Date"
+        Me.createdDate.Name = "createdDate"
+        Me.createdDate.ReadOnly = True
+        '
+        'updatedBy
+        '
+        Me.updatedBy.HeaderText = "Updated By"
+        Me.updatedBy.Name = "updatedBy"
+        Me.updatedBy.ReadOnly = True
+        '
+        'updatedDate
+        '
+        Me.updatedDate.HeaderText = "Updated Date"
+        Me.updatedDate.Name = "updatedDate"
+        Me.updatedDate.ReadOnly = True
+        '
         'PatientControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -272,19 +259,17 @@ Partial Class PatientControl
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataGrid As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Firstname As DataGridViewTextBoxColumn
-    Friend WithEvents Lastname As DataGridViewTextBoxColumn
-    Friend WithEvents Address As DataGridViewTextBoxColumn
-    Friend WithEvents Gender As DataGridViewTextBoxColumn
-    Friend WithEvents Age As DataGridViewTextBoxColumn
-    Friend WithEvents createdBy As DataGridViewTextBoxColumn
-    Friend WithEvents createdDate As DataGridViewTextBoxColumn
-    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
-    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButtonShowAll As ToolStripButton
     Friend WithEvents ToolStripButtonNew As ToolStripButton
     Friend WithEvents ToolStripButtonEdit As ToolStripButton
     Friend WithEvents ToolStripButtonViewDR As ToolStripButton
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents PatientNumber As DataGridViewTextBoxColumn
+    Friend WithEvents Fullname As DataGridViewTextBoxColumn
+    Friend WithEvents Address As DataGridViewTextBoxColumn
+    Friend WithEvents createdBy As DataGridViewTextBoxColumn
+    Friend WithEvents createdDate As DataGridViewTextBoxColumn
+    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
+    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
 End Class

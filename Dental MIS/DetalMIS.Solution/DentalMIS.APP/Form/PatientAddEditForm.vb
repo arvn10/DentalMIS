@@ -37,12 +37,15 @@ Public Class PatientAddEditForm
             If valid Then
                 data.Firstname = textFirstname.Text
                 data.Lastname = textLastname.Text
-                data.MiddleInitial = textMI.Text
-                data.Address = textAddres.Text
-                data.Age = Convert.ToInt32(textAge.Text)
+                data.MiddleName = textMI.Text
+                data.AddressNumber = textHouseNumber.Text
+                data.AddressStreetBuilding = textStreet.Text
+                data.AddressMunicipality = textCity.Text
+                data.BirthDate = dateBirthdate.Value.Date
+                data.Age = textAge.Text
                 data.Gender = comboGender.Text
                 data.Occupation = textOccupation.Text
-
+                data.CivilStatus = comboCivilStatus.Text
                 If HeaderLabel.Text.Contains("Edit") Then
                     Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If confirm = DialogResult.Yes Then
@@ -96,11 +99,7 @@ Public Class PatientAddEditForm
     End Sub
 
     Private Sub textMI_Leave(sender As Object, e As EventArgs) Handles textMI.Leave
-        textMI.Text = StrConv(textMI.Text, VbStrConv.Uppercase)
-    End Sub
-
-    Private Sub textAddres_Leave(sender As Object, e As EventArgs) Handles textAddres.Leave
-        textAddres.Text = StrConv(textAddres.Text, VbStrConv.ProperCase)
+        textMI.Text = StrConv(textMI.Text, VbStrConv.ProperCase)
     End Sub
 
     Private Sub textOccupation_Leave(sender As Object, e As EventArgs) Handles textOccupation.Leave
@@ -142,21 +141,81 @@ Public Class PatientAddEditForm
     End Sub
 
     Private Sub buttonSave_Load(sender As Object, e As EventArgs) Handles buttonSave.Load
+
+    End Sub
+
+    Private Sub PatientAddEditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If HeaderLabel.Text.Contains("Edit") Then
             Try
                 patientSvc = New PatientService()
                 Dim data As New Patient()
                 data = patientSvc.PatientSearchID(patientID)
                 textFirstname.Text = data.Firstname
-                textMI.Text = data.MiddleInitial
+                textMI.Text = data.MiddleName
                 textLastname.Text = data.Lastname
-                textAddres.Text = data.Address
+                textHouseNumber.Text = data.AddressNumber
+                textStreet.Text = data.AddressStreetBuilding
+                textCity.Text = data.AddressMunicipality
+                dateBirthdate.Value = data.BirthDate
                 textAge.Text = data.Age
                 comboGender.Text = data.Gender
                 textOccupation.Text = data.Occupation
+                comboCivilStatus.Text = data.CivilStatus
+                textContactNumber.Text = data.ContactNumber
             Catch ex As Exception
                 MessageBox.Show(ex.ToString, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
+    End Sub
+
+    Private Sub dateBirthdate_ValueChanged(sender As Object, e As EventArgs) Handles dateBirthdate.ValueChanged
+        Dim dt1 As Date = dateBirthdate.Value.Date
+        Dim dt2 As Date = DateTime.Now.Date
+        Dim dt3 As TimeSpan = (dt2 - dt1)
+        Dim diff As Double = dt3.Days
+
+        textAge.Text = Str(Int(diff / 365.25))
+    End Sub
+
+    Private Sub textContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textContactNumber.KeyPress
+        Dim AllowedKeys As String = "0123456789"
+        Select Case e.KeyChar
+            Case Convert.ToChar(Keys.Enter)
+
+            Case Convert.ToChar(Keys.Back)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Left)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Right)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Up)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Down)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Capital Or Keys.RButton)
+                e.Handled = Not Clipboard.GetText().All(Function(c) AllowedKeys.Contains(c))
+
+            Case Else
+                e.Handled = Not AllowedKeys.Contains(e.KeyChar)
+        End Select
+    End Sub
+
+    Private Sub textStreet_Leave(sender As Object, e As EventArgs) Handles textStreet.Leave
+        textStreet.Text = StrConv(textStreet.Text, VbStrConv.ProperCase)
+    End Sub
+
+    Private Sub textCity_Leave(sender As Object, e As EventArgs) Handles textCity.Leave
+        textCity.Text = StrConv(textCity.Text, VbStrConv.ProperCase)
     End Sub
 End Class

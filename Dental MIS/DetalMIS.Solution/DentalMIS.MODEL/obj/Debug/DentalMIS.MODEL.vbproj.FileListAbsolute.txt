@@ -7,3 +7,12 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.dll
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.pdb
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\bin\Debug\DentalMIS.MODEL.dll
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\bin\Debug\DentalMIS.MODEL.pdb
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\bin\Debug\DentalMIS.MODEL.xml
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.Resources.resources
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.vbproj.GenerateResource.cache
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.vbproj.CoreCompileInputs.cache
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.dll
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.xml
+C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.MODEL\obj\Debug\DentalMIS.MODEL.pdb

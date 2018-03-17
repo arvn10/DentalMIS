@@ -34,8 +34,6 @@ Partial Class PatientAddEditForm
         Me.textLastname = New System.Windows.Forms.TextBox()
         Me.textMI = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.textAddres = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.textAge = New System.Windows.Forms.TextBox()
         Me.comboGender = New System.Windows.Forms.ComboBox()
@@ -43,6 +41,18 @@ Partial Class PatientAddEditForm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.textOccupation = New System.Windows.Forms.TextBox()
         Me.buttonSave = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.dateBirthdate = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.textHouseNumber = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.textStreet = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.textCity = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.comboCivilStatus = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.textContactNumber = New System.Windows.Forms.TextBox()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,7 +67,7 @@ Partial Class PatientAddEditForm
         Me.PanelHeader.Location = New System.Drawing.Point(0, 0)
         Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelHeader.Name = "PanelHeader"
-        Me.PanelHeader.Size = New System.Drawing.Size(495, 46)
+        Me.PanelHeader.Size = New System.Drawing.Size(660, 46)
         Me.PanelHeader.TabIndex = 19
         '
         'HeaderLabel
@@ -80,7 +90,7 @@ Partial Class PatientAddEditForm
         Me.ButtonClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(444, 10)
+        Me.ButtonClose.Location = New System.Drawing.Point(609, 10)
         Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(42, 26)
@@ -135,7 +145,7 @@ Partial Class PatientAddEditForm
         Me.textMI.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.textMI.Location = New System.Drawing.Point(440, 80)
         Me.textMI.Name = "textMI"
-        Me.textMI.Size = New System.Drawing.Size(43, 23)
+        Me.textMI.Size = New System.Drawing.Size(208, 23)
         Me.textMI.TabIndex = 2
         '
         'Label3
@@ -144,34 +154,15 @@ Partial Class PatientAddEditForm
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(437, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 16)
+        Me.Label3.Size = New System.Drawing.Size(89, 16)
         Me.Label3.TabIndex = 25
-        Me.Label3.Text = "M.I."
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(9, 106)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 16)
-        Me.Label4.TabIndex = 27
-        Me.Label4.Text = "*Address"
-        '
-        'textAddres
-        '
-        Me.textAddres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textAddres.Location = New System.Drawing.Point(12, 125)
-        Me.textAddres.Multiline = True
-        Me.textAddres.Name = "textAddres"
-        Me.textAddres.Size = New System.Drawing.Size(471, 75)
-        Me.textAddres.TabIndex = 3
+        Me.Label3.Text = "Middle Name"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 203)
+        Me.Label5.Location = New System.Drawing.Point(145, 153)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 16)
         Me.Label5.TabIndex = 29
@@ -179,27 +170,30 @@ Partial Class PatientAddEditForm
         '
         'textAge
         '
+        Me.textAge.BackColor = System.Drawing.Color.White
         Me.textAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textAge.Location = New System.Drawing.Point(12, 222)
+        Me.textAge.Location = New System.Drawing.Point(153, 170)
         Me.textAge.Name = "textAge"
-        Me.textAge.Size = New System.Drawing.Size(43, 23)
-        Me.textAge.TabIndex = 4
+        Me.textAge.ReadOnly = True
+        Me.textAge.Size = New System.Drawing.Size(67, 23)
+        Me.textAge.TabIndex = 100
         '
         'comboGender
         '
         Me.comboGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboGender.FormattingEnabled = True
         Me.comboGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.comboGender.Location = New System.Drawing.Point(61, 222)
+        Me.comboGender.Location = New System.Drawing.Point(226, 170)
         Me.comboGender.Name = "comboGender"
         Me.comboGender.Size = New System.Drawing.Size(208, 23)
-        Me.comboGender.TabIndex = 5
+        Me.comboGender.TabIndex = 7
+        Me.comboGender.Tag = "*"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(58, 203)
+        Me.Label6.Location = New System.Drawing.Point(223, 151)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(36, 16)
         Me.Label6.TabIndex = 32
@@ -209,7 +203,7 @@ Partial Class PatientAddEditForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(9, 248)
+        Me.Label8.Location = New System.Drawing.Point(9, 241)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 16)
         Me.Label8.TabIndex = 35
@@ -218,11 +212,11 @@ Partial Class PatientAddEditForm
         'textOccupation
         '
         Me.textOccupation.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textOccupation.Location = New System.Drawing.Point(12, 267)
+        Me.textOccupation.Location = New System.Drawing.Point(12, 260)
         Me.textOccupation.Multiline = True
         Me.textOccupation.Name = "textOccupation"
-        Me.textOccupation.Size = New System.Drawing.Size(471, 41)
-        Me.textOccupation.TabIndex = 7
+        Me.textOccupation.Size = New System.Drawing.Size(422, 41)
+        Me.textOccupation.TabIndex = 10
         '
         'buttonSave
         '
@@ -246,7 +240,7 @@ Partial Class PatientAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(398, 314)
+        Me.buttonSave.Location = New System.Drawing.Point(563, 303)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -259,12 +253,141 @@ Partial Class PatientAddEditForm
         Me.buttonSave.Textcolor = System.Drawing.Color.White
         Me.buttonSave.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'dateBirthdate
+        '
+        Me.dateBirthdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.dateBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dateBirthdate.Location = New System.Drawing.Point(12, 170)
+        Me.dateBirthdate.Name = "dateBirthdate"
+        Me.dateBirthdate.Size = New System.Drawing.Size(135, 23)
+        Me.dateBirthdate.TabIndex = 6
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(9, 151)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(71, 16)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "*Birth Date"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(9, 106)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(104, 16)
+        Me.Label9.TabIndex = 40
+        Me.Label9.Text = "*House Number"
+        '
+        'textHouseNumber
+        '
+        Me.textHouseNumber.BackColor = System.Drawing.Color.White
+        Me.textHouseNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textHouseNumber.Location = New System.Drawing.Point(12, 125)
+        Me.textHouseNumber.Name = "textHouseNumber"
+        Me.textHouseNumber.Size = New System.Drawing.Size(101, 23)
+        Me.textHouseNumber.TabIndex = 3
+        Me.textHouseNumber.Tag = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(116, 106)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(214, 16)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "*Street/Building Name/Municipality"
+        '
+        'textStreet
+        '
+        Me.textStreet.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textStreet.Location = New System.Drawing.Point(119, 125)
+        Me.textStreet.Name = "textStreet"
+        Me.textStreet.Size = New System.Drawing.Size(315, 23)
+        Me.textStreet.TabIndex = 4
+        Me.textStreet.Tag = "*"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(437, 106)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(87, 16)
+        Me.Label10.TabIndex = 44
+        Me.Label10.Text = "Province/City"
+        '
+        'textCity
+        '
+        Me.textCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textCity.Location = New System.Drawing.Point(440, 125)
+        Me.textCity.Name = "textCity"
+        Me.textCity.Size = New System.Drawing.Size(208, 23)
+        Me.textCity.TabIndex = 5
+        Me.textCity.Tag = "*"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(9, 196)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(78, 16)
+        Me.Label11.TabIndex = 46
+        Me.Label11.Text = "*Civil Status"
+        '
+        'comboCivilStatus
+        '
+        Me.comboCivilStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboCivilStatus.FormattingEnabled = True
+        Me.comboCivilStatus.Items.AddRange(New Object() {"Single", "Maried", "Widowed", "Separated"})
+        Me.comboCivilStatus.Location = New System.Drawing.Point(12, 215)
+        Me.comboCivilStatus.Name = "comboCivilStatus"
+        Me.comboCivilStatus.Size = New System.Drawing.Size(208, 23)
+        Me.comboCivilStatus.TabIndex = 8
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(223, 196)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(109, 16)
+        Me.Label12.TabIndex = 48
+        Me.Label12.Text = "*Contact Number"
+        '
+        'textContactNumber
+        '
+        Me.textContactNumber.BackColor = System.Drawing.Color.White
+        Me.textContactNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textContactNumber.Location = New System.Drawing.Point(226, 215)
+        Me.textContactNumber.Name = "textContactNumber"
+        Me.textContactNumber.Size = New System.Drawing.Size(208, 23)
+        Me.textContactNumber.TabIndex = 9
+        Me.textContactNumber.Tag = "*"
+        '
         'PatientAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(495, 355)
+        Me.ClientSize = New System.Drawing.Size(660, 348)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.textContactNumber)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.comboCivilStatus)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.textCity)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.textStreet)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.textHouseNumber)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.dateBirthdate)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.textOccupation)
@@ -272,8 +395,6 @@ Partial Class PatientAddEditForm
         Me.Controls.Add(Me.comboGender)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.textAge)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.textAddres)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.textMI)
         Me.Controls.Add(Me.Label2)
@@ -307,10 +428,20 @@ Partial Class PatientAddEditForm
     Friend WithEvents comboGender As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents textAge As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents textAddres As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents textMI As TextBox
     Friend WithEvents textOccupation As TextBox
     Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Label7 As Label
+    Friend WithEvents dateBirthdate As DateTimePicker
+    Friend WithEvents Label9 As Label
+    Friend WithEvents textHouseNumber As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents textContactNumber As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents comboCivilStatus As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents textCity As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents textStreet As TextBox
 End Class

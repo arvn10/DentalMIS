@@ -18,65 +18,10 @@ Public Class PatientService
     End Function
 
     Public Function PatientSearchID(id As Long) As Patient Implements IPatientService.PatientSearchID
-        Dim datas As Patient =
-            (From data As Patient In patientService.PatientSearchID(id)
-             Select New Patient With {
-                    .ID = data.ID,
-                    .Firstname = data.Firstname,
-                    .Lastname = data.Lastname,
-                    .MiddleInitial = data.MiddleInitial,
-                    .Address = data.Address,
-                    .Age = data.Age,
-                    .Occupation = data.Occupation,
-                    .Gender = data.Gender,
-                    .CreatedBy = data.CreatedBy,
-                    .CreatedDate = data.CreatedDate,
-                    .UpdatedBy = data.UpdatedBy,
-                    .UpdatedDate = data.UpdatedDate
-                 }
-                ).FirstOrDefault()
-        Return datas
-    End Function
-
-    Public Function PatientSearchAge(age As Long) As List(Of Patient) Implements IPatientService.PatientSearchAge
-        Dim datas As List(Of Patient) =
-            (From data As Patient In patientService.PatientSearchAge(age)
-             Select New Patient With {
-                    .ID = data.ID,
-                    .Firstname = data.Firstname,
-                    .Lastname = data.Lastname,
-                    .MiddleInitial = data.MiddleInitial,
-                    .Address = data.Address,
-                    .Age = data.Age,
-                    .Occupation = data.Occupation,
-                    .Gender = data.Gender,
-                    .CreatedBy = data.CreatedBy,
-                    .CreatedDate = data.CreatedDate,
-                    .UpdatedBy = data.UpdatedBy,
-                    .UpdatedDate = data.UpdatedDate
-                 }
-                ).ToList()
-        Return datas
+        Return patientService.PatientSearchID(id)
     End Function
 
     Public Function PatientSearchLike(searchText As String) As List(Of Patient) Implements IPatientService.PatientSearchLike
-        Dim datas As List(Of Patient) =
-            (From data As Patient In patientService.PatientSearchLike(searchText)
-             Select New Patient With {
-                    .ID = data.ID,
-                    .Firstname = data.Firstname,
-                    .Lastname = data.Lastname,
-                    .MiddleInitial = data.MiddleInitial,
-                    .Address = data.Address,
-                    .Age = data.Age,
-                    .Occupation = data.Occupation,
-                    .Gender = data.Gender,
-                    .CreatedBy = data.CreatedBy,
-                    .CreatedDate = data.CreatedDate,
-                    .UpdatedBy = data.UpdatedBy,
-                    .UpdatedDate = data.UpdatedDate
-                 }
-                ).ToList()
-        Return datas
+        Return patientService.PatientSearchLike(searchText)
     End Function
 End Class

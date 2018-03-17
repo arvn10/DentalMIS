@@ -14,78 +14,71 @@ Public Class PatientReporsitory
 
 #Region "Method"
     Public Function PatientCreate(param As Patient) As Long
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_patient_create`('{0}', '{1}', '{2}', '{3}', {4}, '{5}', '{6}', '{7}')",
-                                                    param.Firstname,
-                                                    param.Lastname,
-                                                    param.MiddleInitial,
-                                                    param.Address,
-                                                    param.Age,
-                                                    param.Gender,
-                                                    param.Occupation,
-                                                    param.CreatedBy
-                                               )
+        Dim procedure As String = $"CALL `dental_mis`.`usp_patient_create`(
+                                    '{param.Firstname}', 
+                                    '{param.Lastname}', 
+                                    '{param.MiddleName}', 
+                                    '{param.AddressNumber}', 
+                                    '{param.AddressStreetBuilding}', 
+                                    '{param.AddressMunicipality}', 
+                                    '{param.BirthDate.ToString("yyyy-MM-dd")}', 
+                                    '{param.Age}', 
+                                    '{param.Gender}', 
+                                    '{param.Occupation}', 
+                                    '{param.ContactNumber}', 
+                                    '{param.CivilStatus}', 
+                                    '{param.CreatedBy}');"
         Return Convert.ToInt32(ExecuteDataset(procedure).Rows(0)(0))
     End Function
 
     Public Function PatientEdit(param As Patient) As Long
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_patient_edit` ({0}, '{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}')",
-                                                    param.ID,
-                                                    param.Firstname,
-                                                    param.Lastname,
-                                                    param.MiddleInitial,
-                                                    param.Address,
-                                                    param.Age,
-                                                    param.Gender,
-                                                    param.Occupation,
-                                                    param.UpdatedBy
-                                               )
+        Dim procedure As String = $"CALL `dental_mis`.`usp_patient_edit`(
+                                    '{param.ID}',
+                                    '{param.Firstname}', 
+                                    '{param.Lastname}', 
+                                    '{param.MiddleName}', 
+                                    '{param.AddressNumber}', 
+                                    '{param.AddressStreetBuilding}', 
+                                    '{param.AddressMunicipality}', 
+                                    '{param.BirthDate.ToString("yyyy-MM-dd")}', 
+                                    '{param.Age}', 
+                                    '{param.Gender}', 
+                                    '{param.Occupation}', 
+                                    '{param.ContactNumber}', 
+                                    '{param.CivilStatus}', 
+                                    '{param.UpdatedBy}');"
         Return Convert.ToInt32(ExecuteDataset(procedure).Rows(0)(0))
     End Function
 
-    Public Function PatientSearchID(id As Long) As List(Of Patient)
+    Public Function PatientSearchID(id As Long) As Patient
         Dim procedure As String = String.Format("CALL `dental_mis`.`usp_patient_search_id`({0})", id)
         Dim dt As DataTable = ExecuteDataset(procedure)
-        Dim datas As List(Of Patient)
+        Dim data As Patient
 
-        datas = (From dr As DataRow In dt.Rows
-                 Select New Patient With {
+        data = (From dr As DataRow In dt.Rows
+                Select New Patient With {
                     .ID = Convert.ToInt32(dr("id")),
+                    .PatientNumber = dr("patient_number").ToString(),
                     .Firstname = dr("firstname").ToString(),
                     .Lastname = dr("lastname").ToString(),
-                    .MiddleInitial = dr("middle_initial").ToString(),
+                    .MiddleName = dr("middle_name").ToString(),
+                    .FullName = dr("full_name").ToString(),
+                    .AddressNumber = dr("address_house_number").ToString(),
+                    .AddressStreetBuilding = dr("address_street_building").ToString(),
+                    .AddressMunicipality = dr("address_municipality").ToString(),
                     .Address = dr("address").ToString(),
+                    .BirthDate = Convert.ToDateTime(dr("birthday")).Date,
                     .Age = Convert.ToInt32(dr("age").ToString()),
                     .Gender = dr("gender").ToString(),
                     .Occupation = dr("occupation").ToString(),
+                    .ContactNumber = dr("contact_number").ToString(),
+                    .CivilStatus = dr("civil_status").ToString(),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
                     .UpdatedBy = dr("updated_by").ToString(),
                     .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
-                }).ToList()
-        Return datas
-    End Function
-
-    Public Function PatientSearchAge(age As Long) As List(Of Patient)
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_patient_search_age`({0})", age)
-        Dim dt As DataTable = ExecuteDataset(procedure)
-        Dim datas As List(Of Patient)
-
-        datas = (From dr As DataRow In dt.Rows
-                 Select New Patient With {
-                    .ID = Convert.ToInt32(dr("id")),
-                    .Firstname = dr("firstname").ToString(),
-                    .Lastname = dr("lastname").ToString(),
-                    .MiddleInitial = dr("middle_initial").ToString(),
-                    .Address = dr("address").ToString(),
-                    .Age = Convert.ToInt32(dr("age").ToString()),
-                    .Gender = dr("gender").ToString(),
-                    .Occupation = dr("occupation").ToString(),
-                    .CreatedBy = dr("created_by").ToString(),
-                    .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
-                    .UpdatedBy = dr("updated_by").ToString(),
-                    .UpdatedDate = If(IsDBNull(dr("updated_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("updated_date")))
-                }).ToList()
-        Return datas
+                }).FirstOrDefault()
+        Return data
     End Function
 
     Public Function PatientSearchLike(searchText As String) As List(Of Patient)
@@ -96,13 +89,21 @@ Public Class PatientReporsitory
         datas = (From dr As DataRow In dt.Rows
                  Select New Patient With {
                     .ID = Convert.ToInt32(dr("id")),
+                    .PatientNumber = dr("patient_number").ToString(),
                     .Firstname = dr("firstname").ToString(),
                     .Lastname = dr("lastname").ToString(),
-                    .MiddleInitial = dr("middle_initial").ToString(),
+                    .MiddleName = dr("middle_name").ToString(),
+                    .FullName = dr("full_name").ToString(),
+                    .AddressNumber = dr("address_house_number").ToString(),
+                    .AddressStreetBuilding = dr("address_street_building").ToString(),
+                    .AddressMunicipality = dr("address_municipality").ToString(),
                     .Address = dr("address").ToString(),
+                    .BirthDate = Convert.ToDateTime(dr("birthday")).Date,
                     .Age = Convert.ToInt32(dr("age").ToString()),
                     .Gender = dr("gender").ToString(),
                     .Occupation = dr("occupation").ToString(),
+                    .ContactNumber = dr("contact_number").ToString(),
+                    .CivilStatus = dr("civil_status").ToString(),
                     .CreatedBy = dr("created_by").ToString(),
                     .CreatedDate = If(IsDBNull(dr("created_date")), CType(Nothing, DateTime?), Convert.ToDateTime(dr("created_date"))),
                     .UpdatedBy = dr("updated_by").ToString(),

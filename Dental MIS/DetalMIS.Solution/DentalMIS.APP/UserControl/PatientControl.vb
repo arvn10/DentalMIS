@@ -20,11 +20,9 @@ Public Class PatientControl
         DataGrid.AutoGenerateColumns = False
         DataGrid.DataSource = bs
         DataGrid.Columns("ID").DataPropertyName = "ID"
-        DataGrid.Columns("Firstname").DataPropertyName = "Firstname"
-        DataGrid.Columns("Lastname").DataPropertyName = "Lastname"
+        DataGrid.Columns("PatientNumber").DataPropertyName = "PatientNumber"
+        DataGrid.Columns("Fullname").DataPropertyName = "Fullname"
         DataGrid.Columns("Address").DataPropertyName = "Address"
-        DataGrid.Columns("Age").DataPropertyName = "Age"
-        DataGrid.Columns("Gender").DataPropertyName = "Gender"
         DataGrid.Columns("createdBy").DataPropertyName = "CreatedBy"
         DataGrid.Columns("createdDate").DataPropertyName = "CreatedDate"
         DataGrid.Columns("updatedBy").DataPropertyName = "UpdatedBy"

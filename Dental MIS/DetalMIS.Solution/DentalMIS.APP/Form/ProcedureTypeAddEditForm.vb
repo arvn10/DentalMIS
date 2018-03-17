@@ -110,7 +110,7 @@ Public Class ProcedureTypeAddEditForm
 
 
                 param.Name = textName.Text
-                param.BasePrice = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
+                param.BasePrice = Double.Parse(textBasePrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
                 param.PaymentType = comboPaymentType.Text
                 param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
 
@@ -194,14 +194,14 @@ Public Class ProcedureTypeAddEditForm
 
     Private Sub textBasePrice_Enter(sender As Object, e As EventArgs) Handles textBasePrice.Enter
         If textBasePrice.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
+            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textBasePrice.Text = amount.ToString()
         End If
     End Sub
 
     Private Sub textBasePrice_Leave(sender As Object, e As EventArgs) Handles textBasePrice.Leave
         If textBasePrice.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency)
+            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
             textBasePrice.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
         End If
     End Sub
