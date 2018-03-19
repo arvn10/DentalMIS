@@ -299,12 +299,6 @@ Partial Public Class TransactionDataSet
         
         Private columnProcedureName As Global.System.Data.DataColumn
         
-        Private columnToothNumber As Global.System.Data.DataColumn
-        
-        Private columnTooth As Global.System.Data.DataColumn
-        
-        Private columnNotes As Global.System.Data.DataColumn
-        
         Private columnProcedureDate As Global.System.Data.DataColumn
         
         Private columnAmountToPay As Global.System.Data.DataColumn
@@ -330,6 +324,8 @@ Partial Public Class TransactionDataSet
         Private columnPaymentUpdatedBy As Global.System.Data.DataColumn
         
         Private columnPaymentUpdatedDate As Global.System.Data.DataColumn
+        
+        Private columnTooth As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -427,30 +423,6 @@ Partial Public Class TransactionDataSet
         Public ReadOnly Property ProcedureNameColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnProcedureName
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ToothNumberColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnToothNumber
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property ToothColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTooth
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property NotesColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnNotes
             End Get
         End Property
         
@@ -559,6 +531,14 @@ Partial Public Class TransactionDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ToothColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTooth
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -604,9 +584,6 @@ Partial Public Class TransactionDataSet
                     ByVal Address As String,  _
                     ByVal Gender As String,  _
                     ByVal ProcedureName As String,  _
-                    ByVal ToothNumber As String,  _
-                    ByVal Tooth As String,  _
-                    ByVal Notes As String,  _
                     ByVal ProcedureDate As String,  _
                     ByVal AmountToPay As String,  _
                     ByVal AmountPaid As String,  _
@@ -619,9 +596,10 @@ Partial Public Class TransactionDataSet
                     ByVal PaymentCreatedBy As String,  _
                     ByVal PaymentCreateDate As String,  _
                     ByVal PaymentUpdatedBy As String,  _
-                    ByVal PaymentUpdatedDate As String) As ProcedureRow
+                    ByVal PaymentUpdatedDate As String,  _
+                    ByVal Tooth As String) As ProcedureRow
             Dim rowProcedureRow As ProcedureRow = CType(Me.NewRow,ProcedureRow)
-            Dim columnValuesArray() As Object = New Object() {ID, PatientID, ProcedureTypeID, FullName, Age, Address, Gender, ProcedureName, ToothNumber, Tooth, Notes, ProcedureDate, AmountToPay, AmountPaid, Balance, PaymentStatus, ProcedureCreatedBy, ProcedureCreatedDate, ProcedureUpdatedBy, ProcedureUpdatedDate, PaymentCreatedBy, PaymentCreateDate, PaymentUpdatedBy, PaymentUpdatedDate}
+            Dim columnValuesArray() As Object = New Object() {ID, PatientID, ProcedureTypeID, FullName, Age, Address, Gender, ProcedureName, ProcedureDate, AmountToPay, AmountPaid, Balance, PaymentStatus, ProcedureCreatedBy, ProcedureCreatedDate, ProcedureUpdatedBy, ProcedureUpdatedDate, PaymentCreatedBy, PaymentCreateDate, PaymentUpdatedBy, PaymentUpdatedDate, Tooth}
             rowProcedureRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowProcedureRow)
             Return rowProcedureRow
@@ -652,9 +630,6 @@ Partial Public Class TransactionDataSet
             Me.columnAddress = MyBase.Columns("Address")
             Me.columnGender = MyBase.Columns("Gender")
             Me.columnProcedureName = MyBase.Columns("ProcedureName")
-            Me.columnToothNumber = MyBase.Columns("ToothNumber")
-            Me.columnTooth = MyBase.Columns("Tooth")
-            Me.columnNotes = MyBase.Columns("Notes")
             Me.columnProcedureDate = MyBase.Columns("ProcedureDate")
             Me.columnAmountToPay = MyBase.Columns("AmountToPay")
             Me.columnAmountPaid = MyBase.Columns("AmountPaid")
@@ -668,6 +643,7 @@ Partial Public Class TransactionDataSet
             Me.columnPaymentCreateDate = MyBase.Columns("PaymentCreateDate")
             Me.columnPaymentUpdatedBy = MyBase.Columns("PaymentUpdatedBy")
             Me.columnPaymentUpdatedDate = MyBase.Columns("PaymentUpdatedDate")
+            Me.columnTooth = MyBase.Columns("Tooth")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -689,12 +665,6 @@ Partial Public Class TransactionDataSet
             MyBase.Columns.Add(Me.columnGender)
             Me.columnProcedureName = New Global.System.Data.DataColumn("ProcedureName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnProcedureName)
-            Me.columnToothNumber = New Global.System.Data.DataColumn("ToothNumber", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnToothNumber)
-            Me.columnTooth = New Global.System.Data.DataColumn("Tooth", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTooth)
-            Me.columnNotes = New Global.System.Data.DataColumn("Notes", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNotes)
             Me.columnProcedureDate = New Global.System.Data.DataColumn("ProcedureDate", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnProcedureDate)
             Me.columnAmountToPay = New Global.System.Data.DataColumn("AmountToPay", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -721,6 +691,8 @@ Partial Public Class TransactionDataSet
             MyBase.Columns.Add(Me.columnPaymentUpdatedBy)
             Me.columnPaymentUpdatedDate = New Global.System.Data.DataColumn("PaymentUpdatedDate", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPaymentUpdatedDate)
+            Me.columnTooth = New Global.System.Data.DataColumn("Tooth", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTooth)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -987,51 +959,6 @@ Partial Public Class TransactionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ToothNumber() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableProcedure.ToothNumberColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ToothNumber' in table 'Procedure' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableProcedure.ToothNumberColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Tooth() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableProcedure.ToothColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tooth' in table 'Procedure' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableProcedure.ToothColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Notes() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableProcedure.NotesColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Notes' in table 'Procedure' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableProcedure.NotesColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property ProcedureDate() As String
             Get
                 Try 
@@ -1227,6 +1154,21 @@ Partial Public Class TransactionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Tooth() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableProcedure.ToothColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Tooth' in table 'Procedure' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableProcedure.ToothColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsIDNull() As Boolean
             Return Me.IsNull(Me.tableProcedure.IDColumn)
         End Function
@@ -1319,42 +1261,6 @@ Partial Public Class TransactionDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetProcedureNameNull()
             Me(Me.tableProcedure.ProcedureNameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsToothNumberNull() As Boolean
-            Return Me.IsNull(Me.tableProcedure.ToothNumberColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetToothNumberNull()
-            Me(Me.tableProcedure.ToothNumberColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsToothNull() As Boolean
-            Return Me.IsNull(Me.tableProcedure.ToothColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetToothNull()
-            Me(Me.tableProcedure.ToothColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsNotesNull() As Boolean
-            Return Me.IsNull(Me.tableProcedure.NotesColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetNotesNull()
-            Me(Me.tableProcedure.NotesColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1511,6 +1417,18 @@ Partial Public Class TransactionDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetPaymentUpdatedDateNull()
             Me(Me.tableProcedure.PaymentUpdatedDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsToothNull() As Boolean
+            Return Me.IsNull(Me.tableProcedure.ToothColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetToothNull()
+            Me(Me.tableProcedure.ToothColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

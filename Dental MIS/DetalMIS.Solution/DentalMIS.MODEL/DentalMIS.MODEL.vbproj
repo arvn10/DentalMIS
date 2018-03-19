@@ -84,6 +84,7 @@
     <Compile Include="Patient.vb" />
     <Compile Include="PatientMaritalStatus.vb" />
     <Compile Include="Procedure.vb" />
+    <Compile Include="ProcedureRemark.vb" />
     <Compile Include="ProcedureTooth.vb" />
     <Compile Include="ProcedureType.vb" />
     <Compile Include="Schedule.vb" />

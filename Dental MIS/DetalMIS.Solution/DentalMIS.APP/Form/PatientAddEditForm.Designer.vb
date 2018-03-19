@@ -170,7 +170,7 @@ Partial Class PatientAddEditForm
         '
         'textAge
         '
-        Me.textAge.BackColor = System.Drawing.Color.White
+        Me.textAge.BackColor = System.Drawing.Color.WhiteSmoke
         Me.textAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.textAge.Location = New System.Drawing.Point(153, 170)
         Me.textAge.Name = "textAge"
@@ -317,9 +317,10 @@ Partial Class PatientAddEditForm
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(437, 106)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(87, 16)
+        Me.Label10.Size = New System.Drawing.Size(66, 16)
         Me.Label10.TabIndex = 44
-        Me.Label10.Text = "Province/City"
+        Me.Label10.Tag = "*"
+        Me.Label10.Text = "*Province"
         '
         'textCity
         '

@@ -3,6 +3,7 @@ Imports DentalMIS.MODEL
 Public Class ReportControl
     Private procedureSvc As IProcedureService
     Private scheduleSvc As IScheduleService
+    Private patientSvc As IPatientService
     Private Sub ButtonSearch_Click(sender As Object, e As EventArgs) Handles ButtonSearch.Click
         If TreeViewConfig.SelectedNode.Text = String.Empty Then
             MessageBox.Show("Select Report Type", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -10,6 +11,7 @@ Public Class ReportControl
             Dim reportType As String
             Dim data As List(Of ProcedureReport)
             Dim schedules As List(Of MODEL.ScheduleReport)
+            Dim patientList As List(Of MODEL.PatientReport)
             procedureSvc = New ProcedureService()
             Select Case TreeViewConfig.SelectedNode.Text
                 Case "All"
@@ -39,7 +41,12 @@ Public Class ReportControl
                     scheduleReport1.SetDataSource(schedules)
                     CrystalReportViewer1.ReportSource = scheduleReport1
                     CrystalReportViewer1.Refresh()
-                    reportType = "Schedule Report"
+                Case "Patient"
+                    patientSvc = New PatientService
+                    patientList = patientSvc.PatientSearchReport(dtPickerFrom.Value, dtPickerTo.Value)
+                    patientReport1.SetDataSource(patientList)
+                    CrystalReportViewer1.ReportSource = patientReport1
+                    CrystalReportViewer1.Refresh()
             End Select
         End If
 

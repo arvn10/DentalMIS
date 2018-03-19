@@ -21,3 +21,12 @@
     Public Property UpdatedDate As DateTime?
 End Class
 
+Public Class PatientReport
+    Public Property PatientNumber As String
+    Public Property FullName As String
+    Public Property Address As String
+    Public Property Gender As String
+    Public Property Age As Integer
+    Public Property ContactNumber As String
+End Class
+

@@ -24,11 +24,11 @@ Partial Class ProcedureTypeAddEditForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureTypeAddEditForm))
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
@@ -49,17 +49,20 @@ Partial Class ProcedureTypeAddEditForm
         Me.buttonSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.TabPageNotAllowed = New System.Windows.Forms.TabPage()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButtonShowAll = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonEdit = New System.Windows.Forms.ToolStripButton()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.comboRequireTooth = New System.Windows.Forms.ComboBox()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.procedureName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.visibilityType = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButtonShowAll = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButtonEdit = New System.Windows.Forms.ToolStripButton()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -78,7 +81,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.PanelHeader.Location = New System.Drawing.Point(0, 0)
         Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelHeader.Name = "PanelHeader"
-        Me.PanelHeader.Size = New System.Drawing.Size(428, 46)
+        Me.PanelHeader.Size = New System.Drawing.Size(410, 46)
         Me.PanelHeader.TabIndex = 2
         '
         'HeaderLabel
@@ -101,7 +104,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.ButtonClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(377, 10)
+        Me.ButtonClose.Location = New System.Drawing.Point(359, 10)
         Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(42, 26)
@@ -198,7 +201,7 @@ Partial Class ProcedureTypeAddEditForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(4, 93)
+        Me.Label5.Location = New System.Drawing.Point(200, 93)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 16)
@@ -211,11 +214,11 @@ Partial Class ProcedureTypeAddEditForm
         Me.comboStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboStatus.FormattingEnabled = True
         Me.comboStatus.Items.AddRange(New Object() {"Active", "Not Active"})
-        Me.comboStatus.Location = New System.Drawing.Point(7, 111)
+        Me.comboStatus.Location = New System.Drawing.Point(203, 111)
         Me.comboStatus.Margin = New System.Windows.Forms.Padding(2)
         Me.comboStatus.Name = "comboStatus"
         Me.comboStatus.Size = New System.Drawing.Size(192, 24)
-        Me.comboStatus.TabIndex = 5
+        Me.comboStatus.TabIndex = 6
         Me.comboStatus.Visible = False
         '
         'BunifuDragControl1
@@ -238,12 +241,14 @@ Partial Class ProcedureTypeAddEditForm
         Me.TabControl1.Location = New System.Drawing.Point(0, 46)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(428, 220)
+        Me.TabControl1.Size = New System.Drawing.Size(410, 206)
         Me.TabControl1.TabIndex = 25
         '
         'TabPageDetails
         '
         Me.TabPageDetails.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPageDetails.Controls.Add(Me.Label6)
+        Me.TabPageDetails.Controls.Add(Me.comboRequireTooth)
         Me.TabPageDetails.Controls.Add(Me.buttonSave)
         Me.TabPageDetails.Controls.Add(Me.textBasePrice)
         Me.TabPageDetails.Controls.Add(Me.Label5)
@@ -258,7 +263,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.TabPageDetails.Location = New System.Drawing.Point(4, 22)
         Me.TabPageDetails.Name = "TabPageDetails"
         Me.TabPageDetails.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageDetails.Size = New System.Drawing.Size(420, 194)
+        Me.TabPageDetails.Size = New System.Drawing.Size(402, 180)
         Me.TabPageDetails.TabIndex = 0
         Me.TabPageDetails.Text = "Procedure Details"
         '
@@ -279,12 +284,12 @@ Partial Class ProcedureTypeAddEditForm
         Me.buttonSave.Iconimage_Selected = Nothing
         Me.buttonSave.IconMarginLeft = 0
         Me.buttonSave.IconMarginRight = 0
-        Me.buttonSave.IconRightVisible = True
+        Me.buttonSave.IconRightVisible = False
         Me.buttonSave.IconRightZoom = 0R
-        Me.buttonSave.IconVisible = True
+        Me.buttonSave.IconVisible = False
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(327, 142)
+        Me.buttonSave.Location = New System.Drawing.Point(310, 140)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -304,9 +309,9 @@ Partial Class ProcedureTypeAddEditForm
         Me.TabPageNotAllowed.Location = New System.Drawing.Point(4, 22)
         Me.TabPageNotAllowed.Name = "TabPageNotAllowed"
         Me.TabPageNotAllowed.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageNotAllowed.Size = New System.Drawing.Size(420, 194)
+        Me.TabPageNotAllowed.Size = New System.Drawing.Size(402, 180)
         Me.TabPageNotAllowed.TabIndex = 1
-        Me.TabPageNotAllowed.Text = "Procedure Not Allowed To Pair"
+        Me.TabPageNotAllowed.Text = "Procedure Type Pairing"
         Me.TabPageNotAllowed.UseVisualStyleBackColor = True
         '
         'DataGrid
@@ -318,24 +323,24 @@ Partial Class ProcedureTypeAddEditForm
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.visibilityType, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid.Location = New System.Drawing.Point(3, 28)
         Me.DataGrid.MultiSelect = False
@@ -343,58 +348,8 @@ Partial Class ProcedureTypeAddEditForm
         Me.DataGrid.ReadOnly = True
         Me.DataGrid.RowHeadersVisible = False
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(414, 163)
+        Me.DataGrid.Size = New System.Drawing.Size(396, 149)
         Me.DataGrid.TabIndex = 47
-        '
-        'ID
-        '
-        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 43
-        '
-        'procedureName
-        '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle7
-        Me.procedureName.HeaderText = "Procedure Name"
-        Me.procedureName.Name = "procedureName"
-        Me.procedureName.ReadOnly = True
-        '
-        'status
-        '
-        Me.status.HeaderText = "Status"
-        Me.status.Name = "status"
-        Me.status.ReadOnly = True
-        '
-        'createdBy
-        '
-        Me.createdBy.HeaderText = "Created By"
-        Me.createdBy.Name = "createdBy"
-        Me.createdBy.ReadOnly = True
-        '
-        'createdDate
-        '
-        Me.createdDate.HeaderText = "Created Date"
-        Me.createdDate.Name = "createdDate"
-        Me.createdDate.ReadOnly = True
-        '
-        'updatedBy
-        '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle8
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        Me.updatedBy.ReadOnly = True
-        '
-        'updatedDate
-        '
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle9
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
-        Me.updatedDate.ReadOnly = True
         '
         'ToolStrip1
         '
@@ -405,7 +360,7 @@ Partial Class ProcedureTypeAddEditForm
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 3)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(414, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(396, 25)
         Me.ToolStrip1.TabIndex = 48
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -433,12 +388,95 @@ Partial Class ProcedureTypeAddEditForm
         Me.ToolStripButtonEdit.Size = New System.Drawing.Size(48, 22)
         Me.ToolStripButtonEdit.Text = "Edit"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(4, 93)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(112, 16)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "*Require Tooth? :"
+        '
+        'comboRequireTooth
+        '
+        Me.comboRequireTooth.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboRequireTooth.FormattingEnabled = True
+        Me.comboRequireTooth.Items.AddRange(New Object() {"Yes", "Optional"})
+        Me.comboRequireTooth.Location = New System.Drawing.Point(7, 111)
+        Me.comboRequireTooth.Margin = New System.Windows.Forms.Padding(2)
+        Me.comboRequireTooth.Name = "comboRequireTooth"
+        Me.comboRequireTooth.Size = New System.Drawing.Size(192, 24)
+        Me.comboRequireTooth.TabIndex = 5
+        '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        Me.ID.Width = 24
+        '
+        'procedureName
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle2
+        Me.procedureName.HeaderText = "Procedure Name"
+        Me.procedureName.Name = "procedureName"
+        Me.procedureName.ReadOnly = True
+        '
+        'visibilityType
+        '
+        Me.visibilityType.HeaderText = "Visiblity Type"
+        Me.visibilityType.Name = "visibilityType"
+        Me.visibilityType.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        '
+        'createdBy
+        '
+        Me.createdBy.HeaderText = "Created By"
+        Me.createdBy.Name = "createdBy"
+        Me.createdBy.ReadOnly = True
+        Me.createdBy.Visible = False
+        '
+        'createdDate
+        '
+        Me.createdDate.HeaderText = "Created Date"
+        Me.createdDate.Name = "createdDate"
+        Me.createdDate.ReadOnly = True
+        Me.createdDate.Visible = False
+        '
+        'updatedBy
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle3
+        Me.updatedBy.HeaderText = "Updated By"
+        Me.updatedBy.Name = "updatedBy"
+        Me.updatedBy.ReadOnly = True
+        Me.updatedBy.Visible = False
+        '
+        'updatedDate
+        '
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle4
+        Me.updatedDate.HeaderText = "Updated Date"
+        Me.updatedDate.Name = "updatedDate"
+        Me.updatedDate.ReadOnly = True
+        Me.updatedDate.Visible = False
+        '
         'ProcedureTypeAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(428, 266)
+        Me.ClientSize = New System.Drawing.Size(410, 252)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.PanelHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -485,12 +523,15 @@ Partial Class ProcedureTypeAddEditForm
     Friend WithEvents ToolStripButtonShowAll As ToolStripButton
     Friend WithEvents ToolStripButtonNew As ToolStripButton
     Friend WithEvents ToolStripButtonEdit As ToolStripButton
+    Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Label6 As Label
+    Friend WithEvents comboRequireTooth As ComboBox
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents procedureName As DataGridViewTextBoxColumn
+    Friend WithEvents visibilityType As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
     Friend WithEvents createdBy As DataGridViewTextBoxColumn
     Friend WithEvents createdDate As DataGridViewTextBoxColumn
     Friend WithEvents updatedBy As DataGridViewTextBoxColumn
     Friend WithEvents updatedDate As DataGridViewTextBoxColumn
-    Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
 End Class

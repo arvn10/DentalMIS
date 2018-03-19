@@ -6,8 +6,9 @@ Public Interface IProcedureTypeService
     Function ProcedureTypeSearchLike(searchText As String) As List(Of ProcedureType)
     Function ProcedureTypeSearchTooth(patientID As Long, toothNumber As Integer) As List(Of ProcedureType)
 
-    Function ProcedureTypeNotAllowedCreate(param As ProcedureNotAllowed) As Long
-    Function ProcedureTypeNotAllowedEdit(param As ProcedureNotAllowed) As Long
-    Function ProcedureTypeNotAllowedSelect(procedureID As Long) As List(Of ProcedureNotAllowed)
-    Function ProcedureTypeNotAllowedSelectID(id As Long) As ProcedureNotAllowed
+    Function ProcedureTypePairCreate(param As ProcedureTypePair) As Long
+    Function ProcedureTypePairEdit(param As ProcedureTypePair) As Long
+    Function ProcedureTypePairSelect(procedureID As Long) As List(Of ProcedureTypePair)
+    Function ProcedureTypePairSelectID(id As Long) As ProcedureTypePair
+    Function ProcedureTypeSearch() As List(Of ProcedureType)
 End Interface

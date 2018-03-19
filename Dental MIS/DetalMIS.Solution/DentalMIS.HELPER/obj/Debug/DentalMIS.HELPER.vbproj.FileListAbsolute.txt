@@ -52,7 +52,6 @@ C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
 C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
-C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache
 C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll.config
 C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.dll
 C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\bin\Debug\DentalMIS.HELPER.pdb
@@ -67,3 +66,4 @@ C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMI
 C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.dll
 C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.xml
 C:\Users\acamacho\Desktop\DentalMIS-master\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.pdb
+C:\Users\BOK-PC\Documents\GitHub\DentalMIS\Dental MIS\DetalMIS.Solution\DentalMIS.HELPER\obj\Debug\DentalMIS.HELPER.vbprojResolveAssemblyReference.cache

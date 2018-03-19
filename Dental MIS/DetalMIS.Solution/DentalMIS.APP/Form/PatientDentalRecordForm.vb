@@ -18,7 +18,6 @@ Public Class PatientDentalRecordForm
         DataGrid.DataSource = bs
         DataGrid.Columns("ID").DataPropertyName = "ID"
         DataGrid.Columns("procedureName").DataPropertyName = "ProcedureName"
-        DataGrid.Columns("tooth").DataPropertyName = "Tooth"
         DataGrid.Columns("paymentStatus").DataPropertyName = "PaymentStatus"
         DataGrid.Columns("createdBy").DataPropertyName = "ProcedureCreatedBy"
         DataGrid.Columns("createdDate").DataPropertyName = "ProcedureCreatedDate"
@@ -111,4 +110,13 @@ Public Class PatientDentalRecordForm
 
     End Sub
 
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Try
+            Dim form As New PrintPatientHistory
+            form.patientID = patientID
+            form.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

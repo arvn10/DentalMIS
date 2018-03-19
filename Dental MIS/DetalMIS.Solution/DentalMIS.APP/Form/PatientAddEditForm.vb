@@ -46,6 +46,7 @@ Public Class PatientAddEditForm
                 data.Gender = comboGender.Text
                 data.Occupation = textOccupation.Text
                 data.CivilStatus = comboCivilStatus.Text
+                data.ContactNumber = textContactNumber.Text
                 If HeaderLabel.Text.Contains("Edit") Then
                     Dim confirm = MessageBox.Show("Save Changes?", "Olaes Dental Clinic", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If confirm = DialogResult.Yes Then

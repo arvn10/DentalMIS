@@ -23,51 +23,65 @@ Partial Class ProcedureAddEditForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureAddEditForm))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProcedureAddEditForm))
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.comboProcedureType = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.textPrice = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.textCharge = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.textPrescription = New System.Windows.Forms.TextBox()
         Me.buttonSave = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.comboTooth = New System.Windows.Forms.ComboBox()
-        Me.dtPickerTransDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TabControl = New System.Windows.Forms.TabControl()
-        Me.TabPageProcedure = New System.Windows.Forms.TabPage()
         Me.TabPagePayment = New System.Windows.Forms.TabPage()
-        Me.textAmountPaid = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.textPaymentBalance = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.textPaymentCharge = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.DataGrid = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.amountPaid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.paymentDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TabPageProcedure = New System.Windows.Forms.TabPage()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPageTooth = New System.Windows.Forms.TabPage()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DataGridTooth = New System.Windows.Forms.DataGridView()
+        Me.procedureToothID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.toothID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tooth = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuStrip3 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripButtonToothNew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonToothEdit = New System.Windows.Forms.ToolStripButton()
+        Me.TabPageRemarks = New System.Windows.Forms.TabPage()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.DataGridViewRemark = New System.Windows.Forms.DataGridView()
+        Me.procedureRemarkID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.remark = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dateAdded = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripButtonRemarkNew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButtonRemarkEdit = New System.Windows.Forms.ToolStripButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.comboProcedureType = New System.Windows.Forms.ComboBox()
+        Me.dtPickerTransDate = New System.Windows.Forms.DateTimePicker()
+        Me.textPrice = New System.Windows.Forms.TextBox()
+        Me.textCharge = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TabControl = New System.Windows.Forms.TabControl()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl.SuspendLayout()
-        Me.TabPageProcedure.SuspendLayout()
         Me.TabPagePayment.SuspendLayout()
-        CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPageProcedure.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPageTooth.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.DataGridTooth, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip3.SuspendLayout()
+        Me.TabPageRemarks.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DataGridViewRemark, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip2.SuspendLayout()
+        Me.TabControl.SuspendLayout()
         Me.SuspendLayout()
         '
         'BunifuElipse
@@ -116,85 +130,6 @@ Partial Class ProcedureAddEditForm
         Me.ButtonClose.TabStop = False
         Me.ButtonClose.Zoom = 10
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(217, 3)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 16)
-        Me.Label7.TabIndex = 35
-        Me.Label7.Text = "*Procedure"
-        '
-        'comboProcedureType
-        '
-        Me.comboProcedureType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.comboProcedureType.FormattingEnabled = True
-        Me.comboProcedureType.Location = New System.Drawing.Point(220, 22)
-        Me.comboProcedureType.Name = "comboProcedureType"
-        Me.comboProcedureType.Size = New System.Drawing.Size(208, 23)
-        Me.comboProcedureType.TabIndex = 0
-        Me.comboProcedureType.Tag = "*"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 16)
-        Me.Label1.TabIndex = 39
-        Me.Label1.Text = "Price"
-        '
-        'textPrice
-        '
-        Me.textPrice.BackColor = System.Drawing.SystemColors.Window
-        Me.textPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textPrice.Location = New System.Drawing.Point(6, 67)
-        Me.textPrice.Name = "textPrice"
-        Me.textPrice.ReadOnly = True
-        Me.textPrice.Size = New System.Drawing.Size(208, 23)
-        Me.textPrice.TabIndex = 38
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(217, 48)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 16)
-        Me.Label3.TabIndex = 41
-        Me.Label3.Text = "*Charge"
-        '
-        'textCharge
-        '
-        Me.textCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textCharge.Location = New System.Drawing.Point(220, 67)
-        Me.textCharge.Name = "textCharge"
-        Me.textCharge.Size = New System.Drawing.Size(208, 23)
-        Me.textCharge.TabIndex = 1
-        Me.textCharge.Tag = "*"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 138)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 16)
-        Me.Label5.TabIndex = 47
-        Me.Label5.Text = "Notes"
-        '
-        'textPrescription
-        '
-        Me.textPrescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textPrescription.Location = New System.Drawing.Point(6, 157)
-        Me.textPrescription.Multiline = True
-        Me.textPrescription.Name = "textPrescription"
-        Me.textPrescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.textPrescription.Size = New System.Drawing.Size(422, 172)
-        Me.textPrescription.TabIndex = 3
-        '
         'buttonSave
         '
         Me.buttonSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -229,45 +164,360 @@ Partial Class ProcedureAddEditForm
         Me.buttonSave.Textcolor = System.Drawing.Color.White
         Me.buttonSave.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Label4
+        'TabPagePayment
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 3)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 16)
-        Me.Label4.TabIndex = 50
-        Me.Label4.Text = "*Tooth"
+        Me.TabPagePayment.Controls.Add(Me.Panel1)
+        Me.TabPagePayment.Location = New System.Drawing.Point(4, 22)
+        Me.TabPagePayment.Name = "TabPagePayment"
+        Me.TabPagePayment.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPagePayment.Size = New System.Drawing.Size(435, 337)
+        Me.TabPagePayment.TabIndex = 2
+        Me.TabPagePayment.Text = "Payment"
+        Me.TabPagePayment.UseVisualStyleBackColor = True
         '
-        'comboTooth
+        'Panel1
         '
-        Me.comboTooth.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.comboTooth.FormattingEnabled = True
-        Me.comboTooth.Location = New System.Drawing.Point(6, 22)
-        Me.comboTooth.Name = "comboTooth"
-        Me.comboTooth.Size = New System.Drawing.Size(208, 23)
-        Me.comboTooth.TabIndex = 49
-        Me.comboTooth.Tag = "*"
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(429, 331)
+        Me.Panel1.TabIndex = 0
+        '
+        'TabPageProcedure
+        '
+        Me.TabPageProcedure.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPageProcedure.Controls.Add(Me.TabControl1)
+        Me.TabPageProcedure.Controls.Add(Me.Label7)
+        Me.TabPageProcedure.Controls.Add(Me.Label6)
+        Me.TabPageProcedure.Controls.Add(Me.comboProcedureType)
+        Me.TabPageProcedure.Controls.Add(Me.dtPickerTransDate)
+        Me.TabPageProcedure.Controls.Add(Me.textPrice)
+        Me.TabPageProcedure.Controls.Add(Me.textCharge)
+        Me.TabPageProcedure.Controls.Add(Me.Label1)
+        Me.TabPageProcedure.Controls.Add(Me.Label3)
+        Me.TabPageProcedure.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageProcedure.Name = "TabPageProcedure"
+        Me.TabPageProcedure.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageProcedure.Size = New System.Drawing.Size(435, 337)
+        Me.TabPageProcedure.TabIndex = 0
+        Me.TabPageProcedure.Text = "Procedure Details"
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPageTooth)
+        Me.TabControl1.Controls.Add(Me.TabPageRemarks)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 96)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(422, 235)
+        Me.TabControl1.TabIndex = 54
+        '
+        'TabPageTooth
+        '
+        Me.TabPageTooth.Controls.Add(Me.Panel2)
+        Me.TabPageTooth.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageTooth.Name = "TabPageTooth"
+        Me.TabPageTooth.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageTooth.Size = New System.Drawing.Size(414, 209)
+        Me.TabPageTooth.TabIndex = 0
+        Me.TabPageTooth.Text = "Tooth"
+        Me.TabPageTooth.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.DataGridTooth)
+        Me.Panel2.Controls.Add(Me.MenuStrip3)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(3, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(408, 203)
+        Me.Panel2.TabIndex = 0
+        '
+        'DataGridTooth
+        '
+        Me.DataGridTooth.AllowUserToAddRows = False
+        Me.DataGridTooth.AllowUserToDeleteRows = False
+        Me.DataGridTooth.AllowUserToResizeColumns = False
+        Me.DataGridTooth.AllowUserToResizeRows = False
+        Me.DataGridTooth.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridTooth.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridTooth.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridTooth.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridTooth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridTooth.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.procedureToothID, Me.toothID, Me.tooth})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridTooth.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridTooth.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridTooth.Location = New System.Drawing.Point(0, 27)
+        Me.DataGridTooth.MultiSelect = False
+        Me.DataGridTooth.Name = "DataGridTooth"
+        Me.DataGridTooth.ReadOnly = True
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridTooth.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridTooth.RowHeadersVisible = False
+        Me.DataGridTooth.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridTooth.Size = New System.Drawing.Size(408, 176)
+        Me.DataGridTooth.TabIndex = 51
+        '
+        'procedureToothID
+        '
+        Me.procedureToothID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.procedureToothID.HeaderText = "ID"
+        Me.procedureToothID.Name = "procedureToothID"
+        Me.procedureToothID.ReadOnly = True
+        Me.procedureToothID.Visible = False
+        '
+        'toothID
+        '
+        Me.toothID.HeaderText = "ToothID"
+        Me.toothID.Name = "toothID"
+        Me.toothID.ReadOnly = True
+        Me.toothID.Visible = False
+        '
+        'tooth
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tooth.DefaultCellStyle = DataGridViewCellStyle2
+        Me.tooth.HeaderText = "Tooth"
+        Me.tooth.Name = "tooth"
+        Me.tooth.ReadOnly = True
+        '
+        'MenuStrip3
+        '
+        Me.MenuStrip3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonToothNew, Me.ToolStripButtonToothEdit})
+        Me.MenuStrip3.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip3.Name = "MenuStrip3"
+        Me.MenuStrip3.Size = New System.Drawing.Size(408, 27)
+        Me.MenuStrip3.TabIndex = 55
+        Me.MenuStrip3.Text = "MenuStrip3"
+        '
+        'ToolStripButtonToothNew
+        '
+        Me.ToolStripButtonToothNew.Image = CType(resources.GetObject("ToolStripButtonToothNew.Image"), System.Drawing.Image)
+        Me.ToolStripButtonToothNew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonToothNew.Name = "ToolStripButtonToothNew"
+        Me.ToolStripButtonToothNew.Size = New System.Drawing.Size(51, 20)
+        Me.ToolStripButtonToothNew.Text = "New"
+        '
+        'ToolStripButtonToothEdit
+        '
+        Me.ToolStripButtonToothEdit.Image = CType(resources.GetObject("ToolStripButtonToothEdit.Image"), System.Drawing.Image)
+        Me.ToolStripButtonToothEdit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonToothEdit.Name = "ToolStripButtonToothEdit"
+        Me.ToolStripButtonToothEdit.Size = New System.Drawing.Size(47, 20)
+        Me.ToolStripButtonToothEdit.Text = "Edit"
+        '
+        'TabPageRemarks
+        '
+        Me.TabPageRemarks.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPageRemarks.Controls.Add(Me.Panel3)
+        Me.TabPageRemarks.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageRemarks.Name = "TabPageRemarks"
+        Me.TabPageRemarks.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageRemarks.Size = New System.Drawing.Size(414, 209)
+        Me.TabPageRemarks.TabIndex = 1
+        Me.TabPageRemarks.Text = "Remark"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.DataGridViewRemark)
+        Me.Panel3.Controls.Add(Me.MenuStrip2)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(3, 3)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(408, 203)
+        Me.Panel3.TabIndex = 0
+        '
+        'DataGridViewRemark
+        '
+        Me.DataGridViewRemark.AllowUserToAddRows = False
+        Me.DataGridViewRemark.AllowUserToDeleteRows = False
+        Me.DataGridViewRemark.AllowUserToResizeColumns = False
+        Me.DataGridViewRemark.AllowUserToResizeRows = False
+        Me.DataGridViewRemark.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridViewRemark.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridViewRemark.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewRemark.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridViewRemark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewRemark.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.procedureRemarkID, Me.remark, Me.dateAdded})
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewRemark.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridViewRemark.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridViewRemark.Location = New System.Drawing.Point(0, 27)
+        Me.DataGridViewRemark.MultiSelect = False
+        Me.DataGridViewRemark.Name = "DataGridViewRemark"
+        Me.DataGridViewRemark.ReadOnly = True
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewRemark.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridViewRemark.RowHeadersVisible = False
+        Me.DataGridViewRemark.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewRemark.Size = New System.Drawing.Size(408, 176)
+        Me.DataGridViewRemark.TabIndex = 53
+        '
+        'procedureRemarkID
+        '
+        Me.procedureRemarkID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.procedureRemarkID.HeaderText = "ID"
+        Me.procedureRemarkID.Name = "procedureRemarkID"
+        Me.procedureRemarkID.ReadOnly = True
+        Me.procedureRemarkID.Visible = False
+        '
+        'remark
+        '
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.remark.DefaultCellStyle = DataGridViewCellStyle6
+        Me.remark.HeaderText = "Remark"
+        Me.remark.Name = "remark"
+        Me.remark.ReadOnly = True
+        '
+        'dateAdded
+        '
+        Me.dateAdded.HeaderText = "Date Added"
+        Me.dateAdded.Name = "dateAdded"
+        Me.dateAdded.ReadOnly = True
+        '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonRemarkNew, Me.ToolStripButtonRemarkEdit})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(408, 27)
+        Me.MenuStrip2.TabIndex = 55
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'ToolStripButtonRemarkNew
+        '
+        Me.ToolStripButtonRemarkNew.Image = CType(resources.GetObject("ToolStripButtonRemarkNew.Image"), System.Drawing.Image)
+        Me.ToolStripButtonRemarkNew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonRemarkNew.Name = "ToolStripButtonRemarkNew"
+        Me.ToolStripButtonRemarkNew.Size = New System.Drawing.Size(51, 20)
+        Me.ToolStripButtonRemarkNew.Text = "New"
+        '
+        'ToolStripButtonRemarkEdit
+        '
+        Me.ToolStripButtonRemarkEdit.Image = CType(resources.GetObject("ToolStripButtonRemarkEdit.Image"), System.Drawing.Image)
+        Me.ToolStripButtonRemarkEdit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButtonRemarkEdit.Name = "ToolStripButtonRemarkEdit"
+        Me.ToolStripButtonRemarkEdit.Size = New System.Drawing.Size(47, 20)
+        Me.ToolStripButtonRemarkEdit.Text = "Edit"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(3, 3)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(76, 16)
+        Me.Label7.TabIndex = 35
+        Me.Label7.Text = "*Procedure"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(217, 48)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(116, 16)
+        Me.Label6.TabIndex = 52
+        Me.Label6.Text = "*Transaction Date"
+        '
+        'comboProcedureType
+        '
+        Me.comboProcedureType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboProcedureType.FormattingEnabled = True
+        Me.comboProcedureType.Location = New System.Drawing.Point(6, 22)
+        Me.comboProcedureType.Name = "comboProcedureType"
+        Me.comboProcedureType.Size = New System.Drawing.Size(208, 23)
+        Me.comboProcedureType.TabIndex = 0
+        Me.comboProcedureType.Tag = "*"
         '
         'dtPickerTransDate
         '
         Me.dtPickerTransDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtPickerTransDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtPickerTransDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtPickerTransDate.Location = New System.Drawing.Point(6, 112)
+        Me.dtPickerTransDate.Location = New System.Drawing.Point(220, 67)
         Me.dtPickerTransDate.Name = "dtPickerTransDate"
         Me.dtPickerTransDate.Size = New System.Drawing.Size(208, 22)
         Me.dtPickerTransDate.TabIndex = 51
         '
-        'Label6
+        'textPrice
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(3, 93)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(116, 16)
-        Me.Label6.TabIndex = 52
-        Me.Label6.Text = "*Transaction Date"
+        Me.textPrice.BackColor = System.Drawing.SystemColors.Window
+        Me.textPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textPrice.Location = New System.Drawing.Point(220, 22)
+        Me.textPrice.Name = "textPrice"
+        Me.textPrice.ReadOnly = True
+        Me.textPrice.Size = New System.Drawing.Size(208, 23)
+        Me.textPrice.TabIndex = 38
+        '
+        'textCharge
+        '
+        Me.textCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.textCharge.Location = New System.Drawing.Point(6, 67)
+        Me.textCharge.Name = "textCharge"
+        Me.textCharge.Size = New System.Drawing.Size(208, 23)
+        Me.textCharge.TabIndex = 1
+        Me.textCharge.Tag = "*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(217, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 16)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Price"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 48)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 16)
+        Me.Label3.TabIndex = 41
+        Me.Label3.Text = "*Charge"
         '
         'TabControl
         '
@@ -281,188 +531,12 @@ Partial Class ProcedureAddEditForm
         Me.TabControl.Size = New System.Drawing.Size(443, 363)
         Me.TabControl.TabIndex = 53
         '
-        'TabPageProcedure
-        '
-        Me.TabPageProcedure.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.TabPageProcedure.Controls.Add(Me.Label7)
-        Me.TabPageProcedure.Controls.Add(Me.Label6)
-        Me.TabPageProcedure.Controls.Add(Me.comboProcedureType)
-        Me.TabPageProcedure.Controls.Add(Me.dtPickerTransDate)
-        Me.TabPageProcedure.Controls.Add(Me.Label4)
-        Me.TabPageProcedure.Controls.Add(Me.comboTooth)
-        Me.TabPageProcedure.Controls.Add(Me.textPrice)
-        Me.TabPageProcedure.Controls.Add(Me.Label1)
-        Me.TabPageProcedure.Controls.Add(Me.Label5)
-        Me.TabPageProcedure.Controls.Add(Me.textCharge)
-        Me.TabPageProcedure.Controls.Add(Me.textPrescription)
-        Me.TabPageProcedure.Controls.Add(Me.Label3)
-        Me.TabPageProcedure.Location = New System.Drawing.Point(4, 22)
-        Me.TabPageProcedure.Name = "TabPageProcedure"
-        Me.TabPageProcedure.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageProcedure.Size = New System.Drawing.Size(435, 337)
-        Me.TabPageProcedure.TabIndex = 0
-        Me.TabPageProcedure.Text = "Procedure Details"
-        '
-        'TabPagePayment
-        '
-        Me.TabPagePayment.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.TabPagePayment.Controls.Add(Me.textAmountPaid)
-        Me.TabPagePayment.Controls.Add(Me.Label10)
-        Me.TabPagePayment.Controls.Add(Me.textPaymentBalance)
-        Me.TabPagePayment.Controls.Add(Me.Label9)
-        Me.TabPagePayment.Controls.Add(Me.textPaymentCharge)
-        Me.TabPagePayment.Controls.Add(Me.Label8)
-        Me.TabPagePayment.Controls.Add(Me.DataGrid)
-        Me.TabPagePayment.Location = New System.Drawing.Point(4, 22)
-        Me.TabPagePayment.Name = "TabPagePayment"
-        Me.TabPagePayment.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPagePayment.Size = New System.Drawing.Size(435, 337)
-        Me.TabPagePayment.TabIndex = 1
-        Me.TabPagePayment.Text = "Payment Details"
-        '
-        'textAmountPaid
-        '
-        Me.textAmountPaid.BackColor = System.Drawing.Color.White
-        Me.textAmountPaid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textAmountPaid.Location = New System.Drawing.Point(102, 279)
-        Me.textAmountPaid.Name = "textAmountPaid"
-        Me.textAmountPaid.ReadOnly = True
-        Me.textAmountPaid.Size = New System.Drawing.Size(325, 23)
-        Me.textAmountPaid.TabIndex = 52
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(6, 282)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(90, 16)
-        Me.Label10.TabIndex = 53
-        Me.Label10.Text = "Amount Paid :"
-        '
-        'textPaymentBalance
-        '
-        Me.textPaymentBalance.BackColor = System.Drawing.Color.White
-        Me.textPaymentBalance.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textPaymentBalance.Location = New System.Drawing.Point(102, 308)
-        Me.textPaymentBalance.Name = "textPaymentBalance"
-        Me.textPaymentBalance.ReadOnly = True
-        Me.textPaymentBalance.Size = New System.Drawing.Size(325, 23)
-        Me.textPaymentBalance.TabIndex = 49
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 311)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 16)
-        Me.Label9.TabIndex = 50
-        Me.Label9.Text = "Balance :"
-        '
-        'textPaymentCharge
-        '
-        Me.textPaymentCharge.BackColor = System.Drawing.Color.White
-        Me.textPaymentCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.textPaymentCharge.Location = New System.Drawing.Point(102, 250)
-        Me.textPaymentCharge.Name = "textPaymentCharge"
-        Me.textPaymentCharge.ReadOnly = True
-        Me.textPaymentCharge.Size = New System.Drawing.Size(325, 23)
-        Me.textPaymentCharge.TabIndex = 47
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(6, 253)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(58, 16)
-        Me.Label8.TabIndex = 48
-        Me.Label8.Text = "Charge :"
-        '
-        'DataGrid
-        '
-        Me.DataGrid.AllowUserToAddRows = False
-        Me.DataGrid.AllowUserToDeleteRows = False
-        Me.DataGrid.AllowUserToResizeColumns = False
-        Me.DataGrid.AllowUserToResizeRows = False
-        Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.amountPaid, Me.paymentDate, Me.updatedBy, Me.updatedDate})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGrid.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DataGrid.Location = New System.Drawing.Point(3, 3)
-        Me.DataGrid.MultiSelect = False
-        Me.DataGrid.Name = "DataGrid"
-        Me.DataGrid.ReadOnly = True
-        Me.DataGrid.RowHeadersVisible = False
-        Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGrid.Size = New System.Drawing.Size(429, 241)
-        Me.DataGrid.TabIndex = 46
-        '
-        'ID
-        '
-        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 43
-        '
-        'amountPaid
-        '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.amountPaid.DefaultCellStyle = DataGridViewCellStyle2
-        Me.amountPaid.HeaderText = "Amount Paid"
-        Me.amountPaid.Name = "amountPaid"
-        Me.amountPaid.ReadOnly = True
-        '
-        'paymentDate
-        '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.paymentDate.DefaultCellStyle = DataGridViewCellStyle3
-        Me.paymentDate.HeaderText = "Payment Date"
-        Me.paymentDate.Name = "paymentDate"
-        Me.paymentDate.ReadOnly = True
-        '
-        'updatedBy
-        '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle4
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        Me.updatedBy.ReadOnly = True
-        '
-        'updatedDate
-        '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle5
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
-        Me.updatedDate.ReadOnly = True
-        '
         'ProcedureAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(443, 455)
+        Me.ClientSize = New System.Drawing.Size(443, 457)
         Me.Controls.Add(Me.TabControl)
         Me.Controls.Add(Me.buttonSave)
         Me.Controls.Add(Me.PanelHeader)
@@ -474,12 +548,23 @@ Partial Class ProcedureAddEditForm
         Me.PanelHeader.ResumeLayout(False)
         Me.PanelHeader.PerformLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl.ResumeLayout(False)
+        Me.TabPagePayment.ResumeLayout(False)
         Me.TabPageProcedure.ResumeLayout(False)
         Me.TabPageProcedure.PerformLayout()
-        Me.TabPagePayment.ResumeLayout(False)
-        Me.TabPagePayment.PerformLayout()
-        CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPageTooth.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.DataGridTooth, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip3.ResumeLayout(False)
+        Me.MenuStrip3.PerformLayout()
+        Me.TabPageRemarks.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.DataGridViewRemark, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
+        Me.TabControl.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -488,32 +573,36 @@ Partial Class ProcedureAddEditForm
     Friend WithEvents PanelHeader As Panel
     Friend WithEvents HeaderLabel As Label
     Friend WithEvents ButtonClose As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents Label7 As Label
-    Friend WithEvents comboProcedureType As ComboBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents textCharge As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents textPrice As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents textPrescription As TextBox
     Friend WithEvents buttonSave As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents Label4 As Label
-    Friend WithEvents comboTooth As ComboBox
-    Friend WithEvents dtPickerTransDate As DateTimePicker
-    Friend WithEvents Label6 As Label
     Friend WithEvents TabControl As TabControl
     Friend WithEvents TabPageProcedure As TabPage
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents comboProcedureType As ComboBox
+    Friend WithEvents dtPickerTransDate As DateTimePicker
+    Friend WithEvents textPrice As TextBox
+    Friend WithEvents textCharge As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
     Friend WithEvents TabPagePayment As TabPage
-    Friend WithEvents DataGrid As DataGridView
-    Friend WithEvents textAmountPaid As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents textPaymentBalance As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents textPaymentCharge As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents amountPaid As DataGridViewTextBoxColumn
-    Friend WithEvents paymentDate As DataGridViewTextBoxColumn
-    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
-    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPageTooth As TabPage
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents DataGridTooth As DataGridView
+    Friend WithEvents TabPageRemarks As TabPage
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents DataGridViewRemark As DataGridView
+    Friend WithEvents MenuStrip3 As MenuStrip
+    Friend WithEvents ToolStripButtonToothNew As ToolStripButton
+    Friend WithEvents ToolStripButtonToothEdit As ToolStripButton
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents ToolStripButtonRemarkNew As ToolStripButton
+    Friend WithEvents ToolStripButtonRemarkEdit As ToolStripButton
+    Friend WithEvents procedureToothID As DataGridViewTextBoxColumn
+    Friend WithEvents toothID As DataGridViewTextBoxColumn
+    Friend WithEvents tooth As DataGridViewTextBoxColumn
+    Friend WithEvents procedureRemarkID As DataGridViewTextBoxColumn
+    Friend WithEvents remark As DataGridViewTextBoxColumn
+    Friend WithEvents dateAdded As DataGridViewTextBoxColumn
 End Class

@@ -4,4 +4,5 @@ Public Interface IPatientService
     Function PatientEdit(param As Patient) As Long
     Function PatientSearchID(id As Long) As Patient
     Function PatientSearchLike(searchText As String) As List(Of Patient)
+    Function PatientSearchReport([from] As Date, [to] As Date) As List(Of PatientReport)
 End Interface

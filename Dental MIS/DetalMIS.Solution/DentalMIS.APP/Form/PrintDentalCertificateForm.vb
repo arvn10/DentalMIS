@@ -12,8 +12,8 @@ Public Class PrintDentalCertificateForm
         dentalCertificate1.SetParameterValue("age", procedure.Age)
         dentalCertificate1.SetParameterValue("gender", procedure.Gender)
         dentalCertificate1.SetParameterValue("address", procedure.Address)
-        dentalCertificate1.SetParameterValue("procedure", procedure.Tooth + " " + procedure.ProcedureName)
-        dentalCertificate1.SetParameterValue("remarks", procedure.Notes)
+        dentalCertificate1.SetParameterValue("procedure", procedure.ProcedureName)
+        dentalCertificate1.SetParameterValue("tooths", procedure.Tooth)
         dentalCertificate1.SetParameterValue("doctor", procedure.ProcedureCreatedBy)
         CrystalReportViewer1.ReportSource = dentalCertificate1
         CrystalReportViewer1.Refresh()

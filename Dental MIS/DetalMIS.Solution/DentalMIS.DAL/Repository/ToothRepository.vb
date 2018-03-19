@@ -9,7 +9,7 @@ Public Class ToothRepository
         data = (From dr As DataRow In dt.Rows
                 Select New Tooth With {
                     .ToothNumber = Convert.ToInt64(dr("id")),
-                    .Tooth = dr("id").ToString() + " - " + dr("description").ToString()
+                    .Tooth = dr("description").ToString()
                 }).ToList()
 
         Return data

@@ -30,19 +30,23 @@ Public Class ProcedureTypeService
         Return procedureTypeService.ProcedureTypeSearchTooth(patientID, toothNumber)
     End Function
 
-    Public Function ProcedureTypeNotAllowedCreate(param As ProcedureNotAllowed) As Long Implements IProcedureTypeService.ProcedureTypeNotAllowedCreate
-        Return procedureTypeService.ProcedureTypeNotAllowedCreate(param)
+    Public Function ProcedureTypePairCreate(param As ProcedureTypePair) As Long Implements IProcedureTypeService.ProcedureTypePairCreate
+        Return procedureTypeService.ProcedureTypePairCreate(param)
     End Function
 
-    Public Function ProcedureTypeNotAllowedEdit(param As ProcedureNotAllowed) As Long Implements IProcedureTypeService.ProcedureTypeNotAllowedEdit
-        Return procedureTypeService.ProcedureTypeNotAllowedEdit(param)
+    Public Function ProcedureTypePairEdit(param As ProcedureTypePair) As Long Implements IProcedureTypeService.ProcedureTypePairEdit
+        Return procedureTypeService.ProcedureTypePairEdit(param)
     End Function
 
-    Public Function ProcedureTypeNotAllowedSelect(procedureID As Long) As List(Of ProcedureNotAllowed) Implements IProcedureTypeService.ProcedureTypeNotAllowedSelect
-        Return procedureTypeService.ProcedureTypeNotAllowedSelect(procedureID)
+    Public Function ProcedureTypePairSelect(procedureID As Long) As List(Of ProcedureTypePair) Implements IProcedureTypeService.ProcedureTypePairSelect
+        Return procedureTypeService.ProcedureTypePairSelect(procedureID)
     End Function
 
-    Public Function ProcedureTypeNotAllowedSelectID(id As Long) As ProcedureNotAllowed Implements IProcedureTypeService.ProcedureTypeNotAllowedSelectID
-        Return procedureTypeService.ProcedureTypeNotAllowedSelectID(id)
+    Public Function ProcedureTypePairSelectID(id As Long) As ProcedureTypePair Implements IProcedureTypeService.ProcedureTypePairSelectID
+        Return procedureTypeService.ProcedureTypePairSelectID(id)
+    End Function
+
+    Public Function ProcedureTypeSearch() As List(Of ProcedureType) Implements IProcedureTypeService.ProcedureTypeSearch
+        Return procedureTypeService.ProcedureTypeSearch()
     End Function
 End Class

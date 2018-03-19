@@ -35,15 +35,14 @@ Partial Class DashboardControl
         Me.calendarSchedule = New System.Windows.Forms.Calendar.Calendar()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.fullName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tooth = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.procedure = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.amountToPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.amountPaid = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.balance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.procedureDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +141,7 @@ Partial Class DashboardControl
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fullName, Me.tooth, Me.procedure, Me.amountToPay, Me.amountPaid, Me.balance, Me.procedureDate})
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fullName, Me.procedure, Me.amountToPay, Me.amountPaid, Me.balance, Me.procedureDate})
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid.Location = New System.Drawing.Point(3, 22)
         Me.DataGrid.MultiSelect = False
@@ -155,17 +154,15 @@ Partial Class DashboardControl
         Me.DataGrid.Size = New System.Drawing.Size(445, 528)
         Me.DataGrid.TabIndex = 47
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'fullName
         '
         Me.fullName.HeaderText = "Fullname"
         Me.fullName.Name = "fullName"
         Me.fullName.ReadOnly = True
-        '
-        'tooth
-        '
-        Me.tooth.HeaderText = "Tooth"
-        Me.tooth.Name = "tooth"
-        Me.tooth.ReadOnly = True
         '
         'procedure
         '
@@ -197,10 +194,6 @@ Partial Class DashboardControl
         Me.procedureDate.Name = "procedureDate"
         Me.procedureDate.ReadOnly = True
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1000
-        '
         'DashboardControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -227,13 +220,12 @@ Partial Class DashboardControl
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents calendarSchedule As Calendar.Calendar
     Friend WithEvents DataGrid As DataGridView
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Timer1 As Timer
     Friend WithEvents fullName As DataGridViewTextBoxColumn
-    Friend WithEvents tooth As DataGridViewTextBoxColumn
     Friend WithEvents procedure As DataGridViewTextBoxColumn
     Friend WithEvents amountToPay As DataGridViewTextBoxColumn
     Friend WithEvents amountPaid As DataGridViewTextBoxColumn
     Friend WithEvents balance As DataGridViewTextBoxColumn
     Friend WithEvents procedureDate As DataGridViewTextBoxColumn
-    Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents Timer1 As Timer
 End Class

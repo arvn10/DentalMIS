@@ -14,14 +14,15 @@ Public Class ProcedureTypeAddEditForm
     End Sub
 
     Public Sub LoadData()
-        Dim data As New List(Of ProcedureNotAllowed)
-        data = procedureTypeService.ProcedureTypeNotAllowedSelect(procedureTypeID)
+        Dim data As New List(Of ProcedureTypePair)
+        data = procedureTypeService.ProcedureTypePairSelect(procedureTypeID)
         Dim bs As New BindingSource
         bs.DataSource = data
         DataGrid.AutoGenerateColumns = False
         DataGrid.DataSource = bs
         DataGrid.Columns("ID").DataPropertyName = "ID"
         DataGrid.Columns("procedureName").DataPropertyName = "ProcedureName"
+        DataGrid.Columns("visibilityType").DataPropertyName = "VisibilityType"
         DataGrid.Columns("status").DataPropertyName = "Status"
         DataGrid.Columns("createdBy").DataPropertyName = "CreatedBy"
         DataGrid.Columns("createdDate").DataPropertyName = "CreatedDate"
@@ -110,10 +111,10 @@ Public Class ProcedureTypeAddEditForm
 
 
                 param.Name = textName.Text
-                param.BasePrice = Double.Parse(textBasePrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
+                param.BasePrice = Double.Parse(textBasePrice.Text.Replace("₱", ""))
                 param.PaymentType = comboPaymentType.Text
                 param.RequireMedCert = If(comboMedCert.Text = "Yes", 1, 0)
-
+                param.RequireTooth = comboRequireTooth.Text
                 If HeaderLabel.Text.Contains("New") Then
                     param.Status = 1
                     param.CreatedBy = activeUser
@@ -148,6 +149,7 @@ Public Class ProcedureTypeAddEditForm
     Private Sub ProcedureTypeAddEditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             If HeaderLabel.Text.Contains("Edit") Then
+                TabControl1.TabPages.Remove(TabPageNotAllowed)
                 comboStatus.Visible = True
                 Label5.Visible = True
                 Dim data As New ProcedureType
@@ -158,9 +160,10 @@ Public Class ProcedureTypeAddEditForm
                 textBasePrice.Text = data.BasePrice.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
                 comboPaymentType.Text = data.PaymentType
                 comboMedCert.Text = data.RequireMedCert
+                comboRequireTooth.Text = data.RequireTooth
                 comboStatus.Text = data.Status
             Else
-                TabPageNotAllowed.Enabled = False
+                TabControl1.TabPages.Remove(TabPageNotAllowed)
             End If
 
         Catch ex As Exception
@@ -174,7 +177,7 @@ Public Class ProcedureTypeAddEditForm
 
     Private Sub ToolStripButtonNew_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNew.Click
         On Error Resume Next
-        Dim form As New ProcedureTypeNotAllowedAddEditForm
+        Dim form As New ProcedureTypePairAddEditForm
         form.procedureTypeAddEditForm = Me
         form.activeUser = activeUser
         form.procedureTypeID = procedureTypeID
@@ -184,9 +187,9 @@ Public Class ProcedureTypeAddEditForm
 
     Private Sub ToolStripButtonEdit_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEdit.Click
         On Error Resume Next
-        Dim form As New ProcedureTypeNotAllowedAddEditForm
+        Dim form As New ProcedureTypePairAddEditForm
         form.procedureTypeAddEditForm = Me
-        form.procedureTypeNotAllowedID = DataGrid.CurrentRow.Cells(0).Value
+        form.procedureTypePairID = DataGrid.CurrentRow.Cells(0).Value
         form.activeUser = activeUser
         form.HeaderLabel.Text = "Procedure Type Not Allowed - Edit"
         form.ShowDialog()
@@ -194,14 +197,14 @@ Public Class ProcedureTypeAddEditForm
 
     Private Sub textBasePrice_Enter(sender As Object, e As EventArgs) Handles textBasePrice.Enter
         If textBasePrice.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            Dim amount As Double = Double.Parse(textBasePrice.Text.Replace("₱", ""))
             textBasePrice.Text = amount.ToString()
         End If
     End Sub
 
     Private Sub textBasePrice_Leave(sender As Object, e As EventArgs) Handles textBasePrice.Leave
         If textBasePrice.Text <> String.Empty Then
-            Dim amount As Double = Double.Parse(textBasePrice.Text, NumberStyles.Currency, Globalization.CultureInfo.GetCultureInfo("en-PH"))
+            Dim amount As Double = Double.Parse(textBasePrice.Text.Replace("₱", ""))
             textBasePrice.Text = amount.ToString("c", Globalization.CultureInfo.GetCultureInfo("en-PH"))
         End If
     End Sub

@@ -28,21 +28,22 @@ Partial Class ProcedureTypeControl
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGrid = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.procedureName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.basePrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.paymentType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.requireMedCert = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButtonShowAll = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonNew = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonEdit = New System.Windows.Forms.ToolStripButton()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.procedureName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.basePrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.paymentType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.requireMedCert = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.requireTooth = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.updatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.updatedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -103,11 +104,12 @@ Partial Class ProcedureTypeControl
         Me.DataGrid.AllowUserToDeleteRows = False
         Me.DataGrid.AllowUserToResizeColumns = False
         Me.DataGrid.AllowUserToResizeRows = False
+        Me.DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGrid.BackgroundColor = System.Drawing.Color.White
         Me.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.basePrice, Me.paymentType, Me.requireMedCert, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.basePrice, Me.paymentType, Me.requireMedCert, Me.requireTooth, Me.status, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
         Me.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid.Location = New System.Drawing.Point(3, 41)
         Me.DataGrid.MultiSelect = False
@@ -117,77 +119,6 @@ Partial Class ProcedureTypeControl
         Me.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGrid.Size = New System.Drawing.Size(787, 487)
         Me.DataGrid.TabIndex = 46
-        '
-        'ID
-        '
-        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.ID.HeaderText = "ID"
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 43
-        '
-        'procedureName
-        '
-        Me.procedureName.HeaderText = "Name"
-        Me.procedureName.Name = "procedureName"
-        Me.procedureName.ReadOnly = True
-        Me.procedureName.Width = 83
-        '
-        'basePrice
-        '
-        Me.basePrice.HeaderText = "Base Price"
-        Me.basePrice.Name = "basePrice"
-        Me.basePrice.ReadOnly = True
-        Me.basePrice.Width = 82
-        '
-        'paymentType
-        '
-        Me.paymentType.HeaderText = "Payment Type"
-        Me.paymentType.Name = "paymentType"
-        Me.paymentType.ReadOnly = True
-        Me.paymentType.Width = 83
-        '
-        'requireMedCert
-        '
-        Me.requireMedCert.HeaderText = "Require Med. Cert?"
-        Me.requireMedCert.Name = "requireMedCert"
-        Me.requireMedCert.ReadOnly = True
-        Me.requireMedCert.Width = 82
-        '
-        'status
-        '
-        Me.status.HeaderText = "Status"
-        Me.status.Name = "status"
-        Me.status.ReadOnly = True
-        Me.status.Width = 83
-        '
-        'createdBy
-        '
-        Me.createdBy.HeaderText = "Created By"
-        Me.createdBy.Name = "createdBy"
-        Me.createdBy.ReadOnly = True
-        Me.createdBy.Width = 82
-        '
-        'createdDate
-        '
-        Me.createdDate.HeaderText = "Created Date"
-        Me.createdDate.Name = "createdDate"
-        Me.createdDate.ReadOnly = True
-        Me.createdDate.Width = 83
-        '
-        'updatedBy
-        '
-        Me.updatedBy.HeaderText = "Updated By"
-        Me.updatedBy.Name = "updatedBy"
-        Me.updatedBy.ReadOnly = True
-        Me.updatedBy.Width = 82
-        '
-        'updatedDate
-        '
-        Me.updatedDate.HeaderText = "Updated Date"
-        Me.updatedDate.Name = "updatedDate"
-        Me.updatedDate.ReadOnly = True
-        Me.updatedDate.Width = 83
         '
         'GroupBox1
         '
@@ -239,6 +170,78 @@ Partial Class ProcedureTypeControl
         Me.ToolStripButtonEdit.Size = New System.Drawing.Size(48, 22)
         Me.ToolStripButtonEdit.Text = "Edit"
         '
+        'ID
+        '
+        Me.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 43
+        '
+        'procedureName
+        '
+        Me.procedureName.HeaderText = "Name"
+        Me.procedureName.Name = "procedureName"
+        Me.procedureName.ReadOnly = True
+        '
+        'basePrice
+        '
+        Me.basePrice.HeaderText = "Base Price"
+        Me.basePrice.Name = "basePrice"
+        Me.basePrice.ReadOnly = True
+        '
+        'paymentType
+        '
+        Me.paymentType.HeaderText = "Payment Type"
+        Me.paymentType.Name = "paymentType"
+        Me.paymentType.ReadOnly = True
+        '
+        'requireMedCert
+        '
+        Me.requireMedCert.HeaderText = "Require Med. Cert?"
+        Me.requireMedCert.Name = "requireMedCert"
+        Me.requireMedCert.ReadOnly = True
+        '
+        'requireTooth
+        '
+        Me.requireTooth.HeaderText = "Require Tooth"
+        Me.requireTooth.Name = "requireTooth"
+        Me.requireTooth.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        '
+        'createdBy
+        '
+        Me.createdBy.HeaderText = "Created By"
+        Me.createdBy.Name = "createdBy"
+        Me.createdBy.ReadOnly = True
+        Me.createdBy.Visible = False
+        '
+        'createdDate
+        '
+        Me.createdDate.HeaderText = "Created Date"
+        Me.createdDate.Name = "createdDate"
+        Me.createdDate.ReadOnly = True
+        Me.createdDate.Visible = False
+        '
+        'updatedBy
+        '
+        Me.updatedBy.HeaderText = "Updated By"
+        Me.updatedBy.Name = "updatedBy"
+        Me.updatedBy.ReadOnly = True
+        Me.updatedBy.Visible = False
+        '
+        'updatedDate
+        '
+        Me.updatedDate.HeaderText = "Updated Date"
+        Me.updatedDate.Name = "updatedDate"
+        Me.updatedDate.ReadOnly = True
+        Me.updatedDate.Visible = False
+        '
         'ProcedureTypeControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -266,19 +269,20 @@ Partial Class ProcedureTypeControl
     Friend WithEvents BunifuSeparator1 As Bunifu.Framework.UI.BunifuSeparator
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGrid As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents procedureName As DataGridViewTextBoxColumn
-    Friend WithEvents basePrice As DataGridViewTextBoxColumn
-    Friend WithEvents paymentType As DataGridViewTextBoxColumn
-    Friend WithEvents requireMedCert As DataGridViewTextBoxColumn
-    Friend WithEvents status As DataGridViewTextBoxColumn
-    Friend WithEvents createdBy As DataGridViewTextBoxColumn
-    Friend WithEvents createdDate As DataGridViewTextBoxColumn
-    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
-    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButtonShowAll As ToolStripButton
     Friend WithEvents ToolStripButtonNew As ToolStripButton
     Friend WithEvents ToolStripButtonEdit As ToolStripButton
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents procedureName As DataGridViewTextBoxColumn
+    Friend WithEvents basePrice As DataGridViewTextBoxColumn
+    Friend WithEvents paymentType As DataGridViewTextBoxColumn
+    Friend WithEvents requireMedCert As DataGridViewTextBoxColumn
+    Friend WithEvents requireTooth As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
+    Friend WithEvents createdBy As DataGridViewTextBoxColumn
+    Friend WithEvents createdDate As DataGridViewTextBoxColumn
+    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
+    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
 End Class

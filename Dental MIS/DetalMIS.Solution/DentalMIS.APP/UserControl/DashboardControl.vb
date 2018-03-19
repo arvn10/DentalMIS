@@ -18,7 +18,6 @@ Public Class DashboardControl
         DataGrid.AutoGenerateColumns = False
         DataGrid.DataSource = bs
         DataGrid.Columns("fullname").DataPropertyName = "Fullname"
-        DataGrid.Columns("tooth").DataPropertyName = "Tooth"
         DataGrid.Columns("procedure").DataPropertyName = "ProcedureName"
         DataGrid.Columns("amountToPay").DataPropertyName = "AmountToPay"
         DataGrid.Columns("amountPaid").DataPropertyName = "AmountPaid"

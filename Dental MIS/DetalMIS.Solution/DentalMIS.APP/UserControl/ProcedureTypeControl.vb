@@ -25,6 +25,7 @@ Public Class ProcedureTypeControl
         DataGrid.Columns("basePrice").DataPropertyName = "BasePrice"
         DataGrid.Columns("paymentType").DataPropertyName = "PaymentType"
         DataGrid.Columns("requireMedCert").DataPropertyName = "RequireMedCert"
+        DataGrid.Columns("requireTooth").DataPropertyName = "RequireTooth"
         DataGrid.Columns("status").DataPropertyName = "Status"
         DataGrid.Columns("createdBy").DataPropertyName = "CreatedBy"
         DataGrid.Columns("createdDate").DataPropertyName = "CreatedDate"
@@ -34,7 +35,7 @@ Public Class ProcedureTypeControl
         DataGrid.Columns("basePrice").DefaultCellStyle.Format = "C"
         DataGrid.Columns("basePrice").DefaultCellStyle.FormatProvider = Globalization.CultureInfo.GetCultureInfo("en-PH")
         DataGrid.AutoResizeColumns()
-        DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        DataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader
     End Sub
 
     Private Sub ProcedureTypeControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -54,8 +55,10 @@ Public Class ProcedureTypeControl
 
     Private Sub TextSearch_TextChanged(sender As Object, e As EventArgs) Handles TextSearch.TextChanged
         Try
-            If TextSearch.Text <> String.Empty Then
+            If Not String.IsNullOrEmpty(TextSearch.Text) Then
                 LoadData(TextSearch.Text)
+            Else
+                LoadData("")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)

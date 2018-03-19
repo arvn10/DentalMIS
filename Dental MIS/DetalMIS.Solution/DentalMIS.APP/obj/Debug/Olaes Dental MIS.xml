@@ -22,6 +22,26 @@ Olaes Dental MIS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:DentalMIS.APP.PatientDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.PatientDataSet.PatientDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.PatientDataSet.PatientRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DentalMIS.APP.PatientDataSet.PatientRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:DentalMIS.APP.ScheduleDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.

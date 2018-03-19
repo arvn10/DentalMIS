@@ -23,11 +23,12 @@ Partial Class ReportControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportControl))
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("All")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Paid")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Not Paid")
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Transaction", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3})
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schedule")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("All")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Paid")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Not Paid")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Transaction", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8, TreeNode9})
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schedule")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Patient")
         Me.BunifuSeparator1 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelMain = New System.Windows.Forms.Panel()
@@ -40,6 +41,7 @@ Partial Class ReportControl
         Me.TreeViewConfig = New System.Windows.Forms.TreeView()
         Me.transactionReport1 = New DentalMIS.APP.TransactionReport()
         Me.scheduleReport1 = New DentalMIS.APP.ScheduleReport()
+        Me.patientReport1 = New DentalMIS.APP.PatientReport()
         Me.PanelMain.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,6 +97,7 @@ Partial Class ReportControl
         Me.CrystalReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 39)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
@@ -186,17 +189,19 @@ Partial Class ReportControl
         Me.TreeViewConfig.Location = New System.Drawing.Point(12, 93)
         Me.TreeViewConfig.Margin = New System.Windows.Forms.Padding(2)
         Me.TreeViewConfig.Name = "TreeViewConfig"
-        TreeNode1.Name = "All"
-        TreeNode1.Text = "All"
-        TreeNode2.Name = "paid"
-        TreeNode2.Text = "Paid"
-        TreeNode3.Name = "notPaid"
-        TreeNode3.Text = "Not Paid"
-        TreeNode4.Name = "Transaction"
-        TreeNode4.Text = "Transaction"
-        TreeNode5.Name = "schedule"
-        TreeNode5.Text = "Schedule"
-        Me.TreeViewConfig.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        TreeNode7.Name = "All"
+        TreeNode7.Text = "All"
+        TreeNode8.Name = "paid"
+        TreeNode8.Text = "Paid"
+        TreeNode9.Name = "notPaid"
+        TreeNode9.Text = "Not Paid"
+        TreeNode10.Name = "Transaction"
+        TreeNode10.Text = "Transaction"
+        TreeNode11.Name = "schedule"
+        TreeNode11.Text = "Schedule"
+        TreeNode12.Name = "patient"
+        TreeNode12.Text = "Patient"
+        Me.TreeViewConfig.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode12})
         Me.TreeViewConfig.Size = New System.Drawing.Size(178, 565)
         Me.TreeViewConfig.TabIndex = 8
         '
@@ -230,4 +235,5 @@ Partial Class ReportControl
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents transactionReport1 As TransactionReport
     Friend WithEvents scheduleReport1 As ScheduleReport
+    Friend WithEvents patientReport1 As PatientReport
 End Class

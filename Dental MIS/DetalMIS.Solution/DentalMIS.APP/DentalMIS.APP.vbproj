@@ -113,6 +113,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Dataset\PatientDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\ScheduleDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -183,6 +188,12 @@
     <Compile Include="Form\PaymentAddEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\PaymentDetail.Designer.vb">
+      <DependentUpon>PaymentDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PaymentDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\PaymentForm.Designer.vb">
       <DependentUpon>PaymentForm.vb</DependentUpon>
     </Compile>
@@ -195,10 +206,28 @@
     <Compile Include="Form\PrintDentalCertificateForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\PrintPatientHistory.Designer.vb">
+      <DependentUpon>PrintPatientHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PrintPatientHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\ProcedureAddEditForm.Designer.vb">
       <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\ProcedureAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcedureRemarkAddEditForm.Designer.vb">
+      <DependentUpon>ProcedureRemarkAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcedureRemarkAddEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProcedureToothAddEditForm.Designer.vb">
+      <DependentUpon>ProcedureToothAddEditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProcedureToothAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\ProcedureTypeAddEditForm.Designer.vb">
@@ -207,10 +236,10 @@
     <Compile Include="Form\ProcedureTypeAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ProcedureTypeNotAllowedAddEditForm.Designer.vb">
-      <DependentUpon>ProcedureTypeNotAllowedAddEditForm.vb</DependentUpon>
+    <Compile Include="Form\ProcedureTypePairAddEditForm.Designer.vb">
+      <DependentUpon>ProcedureTypePairAddEditForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\ProcedureTypeNotAllowedAddEditForm.vb">
+    <Compile Include="Form\ProcedureTypePairAddEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\ScheduleAddEditForm.Designer.vb">
@@ -256,6 +285,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DentalCertificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PatientProcedureReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientProcedureReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PatientReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ScheduleReport.vb">
@@ -365,20 +406,32 @@
     <EmbeddedResource Include="Form\PaymentAddEdit.resx">
       <DependentUpon>PaymentAddEdit.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\PaymentDetail.resx">
+      <DependentUpon>PaymentDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\PaymentForm.resx">
       <DependentUpon>PaymentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PrintDentalCertificateForm.resx">
       <DependentUpon>PrintDentalCertificateForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\PrintPatientHistory.resx">
+      <DependentUpon>PrintPatientHistory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\ProcedureAddEditForm.resx">
       <DependentUpon>ProcedureAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcedureRemarkAddEditForm.resx">
+      <DependentUpon>ProcedureRemarkAddEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProcedureToothAddEditForm.resx">
+      <DependentUpon>ProcedureToothAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProcedureTypeAddEditForm.resx">
       <DependentUpon>ProcedureTypeAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ProcedureTypeNotAllowedAddEditForm.resx">
-      <DependentUpon>ProcedureTypeNotAllowedAddEditForm.vb</DependentUpon>
+    <EmbeddedResource Include="Form\ProcedureTypePairAddEditForm.resx">
+      <DependentUpon>ProcedureTypePairAddEditForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ScheduleAddEditForm.resx">
       <DependentUpon>ScheduleAddEditForm.vb</DependentUpon>
@@ -401,6 +454,14 @@
     <EmbeddedResource Include="Report\DentalCertificate.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DentalCertificate.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PatientProcedureReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PatientProcedureReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PatientReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PatientReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ScheduleReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -445,6 +506,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Dataset\PatientDataSet.xsc">
+      <DependentUpon>PatientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\PatientDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PatientDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\PatientDataSet.xss">
+      <DependentUpon>PatientDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\ScheduleDataSet.xsc">
       <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
     </None>

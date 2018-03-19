@@ -24,11 +24,11 @@ Partial Class PatientDentalRecordForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientDentalRecordForm))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelHeader = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.ButtonClose = New Bunifu.Framework.UI.BunifuImageButton()
@@ -74,7 +74,6 @@ Partial Class PatientDentalRecordForm
         Me.DataGrid = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.procedureName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tooth = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.paymentStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.createdBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.createdDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -87,6 +86,7 @@ Partial Class PatientDentalRecordForm
         Me.ToolStripMenuItemPrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxTooth.SuspendLayout()
@@ -856,7 +856,7 @@ Partial Class PatientDentalRecordForm
         Me.DataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.tooth, Me.paymentStatus, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
+        Me.DataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.procedureName, Me.paymentStatus, Me.createdBy, Me.createdDate, Me.updatedBy, Me.updatedDate})
         Me.DataGrid.Location = New System.Drawing.Point(5, 75)
         Me.DataGrid.MultiSelect = False
         Me.DataGrid.Name = "DataGrid"
@@ -876,17 +876,11 @@ Partial Class PatientDentalRecordForm
         '
         'procedureName
         '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.procedureName.DefaultCellStyle = DataGridViewCellStyle6
         Me.procedureName.HeaderText = "Procedure Name"
         Me.procedureName.Name = "procedureName"
         Me.procedureName.ReadOnly = True
-        '
-        'tooth
-        '
-        Me.tooth.HeaderText = "Tooth"
-        Me.tooth.Name = "tooth"
-        Me.tooth.ReadOnly = True
         '
         'paymentStatus
         '
@@ -896,32 +890,32 @@ Partial Class PatientDentalRecordForm
         '
         'createdBy
         '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createdBy.DefaultCellStyle = DataGridViewCellStyle7
         Me.createdBy.HeaderText = "Created By"
         Me.createdBy.Name = "createdBy"
         Me.createdBy.ReadOnly = True
         '
         'createdDate
         '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createdDate.DefaultCellStyle = DataGridViewCellStyle8
         Me.createdDate.HeaderText = "Created Date"
         Me.createdDate.Name = "createdDate"
         Me.createdDate.ReadOnly = True
         '
         'updatedBy
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedBy.DefaultCellStyle = DataGridViewCellStyle9
         Me.updatedBy.HeaderText = "Updated By"
         Me.updatedBy.Name = "updatedBy"
         Me.updatedBy.ReadOnly = True
         '
         'updatedDate
         '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatedDate.DefaultCellStyle = DataGridViewCellStyle10
         Me.updatedDate.HeaderText = "Updated Date"
         Me.updatedDate.Name = "updatedDate"
         Me.updatedDate.ReadOnly = True
@@ -930,7 +924,7 @@ Partial Class PatientDentalRecordForm
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemShowAll, Me.buttonNew, Me.buttonEdit, Me.ToolStripMenuItemPrint})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemShowAll, Me.buttonNew, Me.buttonEdit, Me.ToolStripMenuItemPrint, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 16)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(701, 24)
@@ -969,6 +963,13 @@ Partial Class PatientDentalRecordForm
         '
         Me.BunifuElipse.ElipseRadius = 5
         Me.BunifuElipse.TargetControl = Me
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(160, 20)
+        Me.ToolStripMenuItem1.Text = "Print Procedure History"
         '
         'PatientDentalRecordForm
         '
@@ -1074,14 +1075,6 @@ Partial Class PatientDentalRecordForm
     Friend WithEvents BunifuElipse As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents DataGrid As DataGridView
     Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents procedureName As DataGridViewTextBoxColumn
-    Friend WithEvents tooth As DataGridViewTextBoxColumn
-    Friend WithEvents paymentStatus As DataGridViewTextBoxColumn
-    Friend WithEvents createdBy As DataGridViewTextBoxColumn
-    Friend WithEvents createdDate As DataGridViewTextBoxColumn
-    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
-    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
     Friend WithEvents dtPickerTo As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents dtPickerFrom As DateTimePicker
@@ -1089,4 +1082,12 @@ Partial Class PatientDentalRecordForm
     Friend WithEvents ButtonSearch As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ToolStripMenuItemShowAll As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItemPrint As ToolStripMenuItem
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents procedureName As DataGridViewTextBoxColumn
+    Friend WithEvents paymentStatus As DataGridViewTextBoxColumn
+    Friend WithEvents createdBy As DataGridViewTextBoxColumn
+    Friend WithEvents createdDate As DataGridViewTextBoxColumn
+    Friend WithEvents updatedBy As DataGridViewTextBoxColumn
+    Friend WithEvents updatedDate As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

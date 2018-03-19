@@ -63,13 +63,22 @@ Public Class ScheduleControl
     Private Sub ScheduleControl_Load(sender As Object, e As EventArgs) Handles Me.Load
         calendarSchedule.ViewStart = DateTimePickerDate.Value
         calendarSchedule.ViewEnd = DateTimePickerDate.Value
+
+        If DateTimePickerDate.Value.Date < DateTime.Now.Date Then
+            ToolStripButtonNew.Enabled = False
+        ElseIf DateTime.Now.DayOfWeek = DayOfWeek.Sunday Then
+            ToolStripButtonNew.Enabled = False
+        Else
+            ToolStripButtonNew.Enabled = True
+            ToolStripButtonSave.Enabled = True
+        End If
         GetSchedules()
     End Sub
 
     Private Sub DateTimePickerDate_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePickerDate.ValueChanged
         If DateTimePickerDate.Value.Date < DateTime.Now.Date Then
             ToolStripButtonNew.Enabled = False
-        ElseIf DateTimePickerDate.Value.DayOfWeek = DayOfWeek.Sunday Then
+        ElseIf DateTime.Now.DayOfWeek = DayOfWeek.Sunday Then
             ToolStripButtonNew.Enabled = False
         Else
             ToolStripButtonNew.Enabled = True
