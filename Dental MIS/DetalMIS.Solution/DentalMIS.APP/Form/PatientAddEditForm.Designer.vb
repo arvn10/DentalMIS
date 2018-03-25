@@ -53,6 +53,8 @@ Partial Class PatientAddEditForm
         Me.comboCivilStatus = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.textContactNumber = New System.Windows.Forms.TextBox()
+        Me.comboSuffix = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -67,7 +69,7 @@ Partial Class PatientAddEditForm
         Me.PanelHeader.Location = New System.Drawing.Point(0, 0)
         Me.PanelHeader.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelHeader.Name = "PanelHeader"
-        Me.PanelHeader.Size = New System.Drawing.Size(660, 46)
+        Me.PanelHeader.Size = New System.Drawing.Size(661, 46)
         Me.PanelHeader.TabIndex = 19
         '
         'HeaderLabel
@@ -90,7 +92,7 @@ Partial Class PatientAddEditForm
         Me.ButtonClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonClose.Image = CType(resources.GetObject("ButtonClose.Image"), System.Drawing.Image)
         Me.ButtonClose.ImageActive = Nothing
-        Me.ButtonClose.Location = New System.Drawing.Point(609, 10)
+        Me.ButtonClose.Location = New System.Drawing.Point(610, 10)
         Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(42, 26)
@@ -145,7 +147,7 @@ Partial Class PatientAddEditForm
         Me.textMI.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.textMI.Location = New System.Drawing.Point(440, 80)
         Me.textMI.Name = "textMI"
-        Me.textMI.Size = New System.Drawing.Size(208, 23)
+        Me.textMI.Size = New System.Drawing.Size(132, 23)
         Me.textMI.TabIndex = 2
         '
         'Label3
@@ -240,7 +242,7 @@ Partial Class PatientAddEditForm
         Me.buttonSave.IconVisible = True
         Me.buttonSave.IconZoom = 50.0R
         Me.buttonSave.IsTab = False
-        Me.buttonSave.Location = New System.Drawing.Point(563, 303)
+        Me.buttonSave.Location = New System.Drawing.Point(564, 303)
         Me.buttonSave.Name = "buttonSave"
         Me.buttonSave.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(143, Byte), Integer))
         Me.buttonSave.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(190, Byte), Integer))
@@ -260,7 +262,7 @@ Partial Class PatientAddEditForm
         Me.dateBirthdate.Location = New System.Drawing.Point(12, 170)
         Me.dateBirthdate.Name = "dateBirthdate"
         Me.dateBirthdate.Size = New System.Drawing.Size(135, 23)
-        Me.dateBirthdate.TabIndex = 6
+        Me.dateBirthdate.TabIndex = 7
         '
         'Label7
         '
@@ -289,7 +291,7 @@ Partial Class PatientAddEditForm
         Me.textHouseNumber.Location = New System.Drawing.Point(12, 125)
         Me.textHouseNumber.Name = "textHouseNumber"
         Me.textHouseNumber.Size = New System.Drawing.Size(101, 23)
-        Me.textHouseNumber.TabIndex = 3
+        Me.textHouseNumber.TabIndex = 4
         Me.textHouseNumber.Tag = "*"
         '
         'Label4
@@ -308,7 +310,7 @@ Partial Class PatientAddEditForm
         Me.textStreet.Location = New System.Drawing.Point(119, 125)
         Me.textStreet.Name = "textStreet"
         Me.textStreet.Size = New System.Drawing.Size(315, 23)
-        Me.textStreet.TabIndex = 4
+        Me.textStreet.TabIndex = 5
         Me.textStreet.Tag = "*"
         '
         'Label10
@@ -328,7 +330,7 @@ Partial Class PatientAddEditForm
         Me.textCity.Location = New System.Drawing.Point(440, 125)
         Me.textCity.Name = "textCity"
         Me.textCity.Size = New System.Drawing.Size(208, 23)
-        Me.textCity.TabIndex = 5
+        Me.textCity.TabIndex = 6
         Me.textCity.Tag = "*"
         '
         'Label11
@@ -371,12 +373,35 @@ Partial Class PatientAddEditForm
         Me.textContactNumber.TabIndex = 9
         Me.textContactNumber.Tag = "*"
         '
+        'comboSuffix
+        '
+        Me.comboSuffix.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboSuffix.FormattingEnabled = True
+        Me.comboSuffix.Items.AddRange(New Object() {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "JR", "SR"})
+        Me.comboSuffix.Location = New System.Drawing.Point(578, 80)
+        Me.comboSuffix.Name = "comboSuffix"
+        Me.comboSuffix.Size = New System.Drawing.Size(70, 23)
+        Me.comboSuffix.TabIndex = 3
+        Me.comboSuffix.Tag = "*"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(575, 61)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(39, 16)
+        Me.Label13.TabIndex = 102
+        Me.Label13.Text = "Suffix"
+        '
         'PatientAddEditForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(660, 348)
+        Me.ClientSize = New System.Drawing.Size(661, 348)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.comboSuffix)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.textContactNumber)
         Me.Controls.Add(Me.Label11)
@@ -445,4 +470,6 @@ Partial Class PatientAddEditForm
     Friend WithEvents textCity As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents textStreet As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents comboSuffix As ComboBox
 End Class

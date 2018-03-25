@@ -4,6 +4,7 @@
     Public Property Firstname As String
     Public Property Lastname As String
     Public Property MiddleName As String
+    Public Property Suffix As String
     Public Property FullName As String
     Public Property AddressNumber As String
     Public Property AddressStreetBuilding As String

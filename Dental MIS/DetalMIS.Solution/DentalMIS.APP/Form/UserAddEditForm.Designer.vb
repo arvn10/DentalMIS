@@ -237,7 +237,7 @@ Partial Class UserAddEditForm
         Me.comboStatus.Name = "comboStatus"
         Me.comboStatus.Size = New System.Drawing.Size(192, 24)
         Me.comboStatus.TabIndex = 5
-        Me.comboStatus.Tag = "*"
+        Me.comboStatus.Tag = ""
         Me.comboStatus.Visible = False
         '
         'buttonSave

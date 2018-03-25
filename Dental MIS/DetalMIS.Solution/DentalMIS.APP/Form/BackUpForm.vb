@@ -31,12 +31,14 @@ Public Class BackUpForm
         backup.ExportInfo.ExportProcedures = True
         backup.ExportInfo.ExportViews = True
         backup.ExportInfo.ExportEvents = True
+        backup.ExportInfo.ExportTriggers = True
         backup.Command = command
         bwExport.RunWorkerAsync()
     End Sub
 
     Private Sub BackUpForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         backup = New MySqlBackup()
+        textSavePath.Text = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\DentalMIS Backup " + DateTime.Now.ToString("yyyyMMdd hhmmss") + ".sql"
     End Sub
 
     Sub exportProgessChanged(sender As Object, e As ExportProgressArgs)

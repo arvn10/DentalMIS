@@ -20,7 +20,7 @@ Public Class ScheduleService
         Return scheduleRepository.ScheduleSelect(scheduleDate)
     End Function
 
-    Public Function ScheduleReport(from As Date, [to] As Date) As List(Of ScheduleReport) Implements IScheduleService.ScheduleReport
+    Public Function ScheduleReport(from As String, [to] As String) As List(Of ScheduleReport) Implements IScheduleService.ScheduleReport
         Return scheduleRepository.ScheduleReport(from, [to])
     End Function
 End Class

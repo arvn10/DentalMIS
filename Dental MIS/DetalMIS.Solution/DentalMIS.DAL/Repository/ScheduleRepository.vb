@@ -48,8 +48,8 @@ Public Class ScheduleRepository
         Return data
     End Function
 
-    Public Function ScheduleReport([from] As Date, [to] As Date) As List(Of ScheduleReport)
-        Dim procedure As String = $"CALL `dental_mis`.`usp_schedule_select_report`('{[from].ToString("yyyy-MM-dd")}', '{[to].ToString("yyyy-MM-dd")}');"
+    Public Function ScheduleReport([from] As String, [to] As String) As List(Of ScheduleReport)
+        Dim procedure As String = $"CALL `dental_mis`.`usp_schedule_select_report`('{[from]}', '{[to]}');"
         Dim dt As DataTable = ExecuteDataset(procedure)
         Dim data As List(Of ScheduleReport)
         data = (From dr As DataRow In dt.Rows

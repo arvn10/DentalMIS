@@ -38,6 +38,7 @@ Public Class PatientAddEditForm
                 data.Firstname = textFirstname.Text
                 data.Lastname = textLastname.Text
                 data.MiddleName = textMI.Text
+                data.Suffix = comboSuffix.Text
                 data.AddressNumber = textHouseNumber.Text
                 data.AddressStreetBuilding = textStreet.Text
                 data.AddressMunicipality = textCity.Text
@@ -154,6 +155,7 @@ Public Class PatientAddEditForm
                 textFirstname.Text = data.Firstname
                 textMI.Text = data.MiddleName
                 textLastname.Text = data.Lastname
+                comboSuffix.Text = data.Suffix
                 textHouseNumber.Text = data.AddressNumber
                 textStreet.Text = data.AddressStreetBuilding
                 textCity.Text = data.AddressMunicipality
@@ -218,5 +220,111 @@ Public Class PatientAddEditForm
 
     Private Sub textCity_Leave(sender As Object, e As EventArgs) Handles textCity.Leave
         textCity.Text = StrConv(textCity.Text, VbStrConv.ProperCase)
+    End Sub
+
+    Private Sub comboSuffix_KeyPress(sender As Object, e As KeyPressEventArgs) Handles comboSuffix.KeyPress
+        e.Handled = True
+    End Sub
+
+    Private Sub textFirstname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textFirstname.KeyPress
+        Dim AllowedKeys As String = "abcdefghijklmnopqrstuvwxyz-"
+        Select Case e.KeyChar
+            Case Convert.ToChar(Keys.Enter)
+
+            Case Convert.ToChar(Keys.Back)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Left)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Right)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Up)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Down)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Capital Or Keys.RButton)
+                e.Handled = Not Clipboard.GetText().All(Function(c) AllowedKeys.Contains(c))
+
+            Case Else
+                e.Handled = Not AllowedKeys.Contains(e.KeyChar)
+        End Select
+    End Sub
+
+    Private Sub textLastname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textLastname.KeyPress
+        Dim AllowedKeys As String = "abcdefghijklmnopqrstuvwxyz-"
+        Select Case e.KeyChar
+            Case Convert.ToChar(Keys.Enter)
+
+            Case Convert.ToChar(Keys.Back)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Left)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Right)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Up)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Down)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Capital Or Keys.RButton)
+                e.Handled = Not Clipboard.GetText().All(Function(c) AllowedKeys.Contains(c))
+
+            Case Else
+                e.Handled = Not AllowedKeys.Contains(e.KeyChar)
+        End Select
+    End Sub
+
+    Private Sub textMI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles textMI.KeyPress
+        Dim AllowedKeys As String = "abcdefghijklmnopqrstuvwxyz-"
+        Select Case e.KeyChar
+            Case Convert.ToChar(Keys.Enter)
+
+            Case Convert.ToChar(Keys.Back)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Space)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Left)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Right)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Up)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Down)
+                e.Handled = False
+
+            Case Convert.ToChar(Keys.Capital Or Keys.RButton)
+                e.Handled = Not Clipboard.GetText().All(Function(c) AllowedKeys.Contains(c))
+
+            Case Else
+                e.Handled = Not AllowedKeys.Contains(e.KeyChar)
+        End Select
     End Sub
 End Class

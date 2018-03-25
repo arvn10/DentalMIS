@@ -113,6 +113,7 @@ Partial Class BackUpForm
         Me.buttonBrowse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.buttonBrowse.Textcolor = System.Drawing.Color.White
         Me.buttonBrowse.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttonBrowse.Visible = False
         '
         'buttonStart
         '

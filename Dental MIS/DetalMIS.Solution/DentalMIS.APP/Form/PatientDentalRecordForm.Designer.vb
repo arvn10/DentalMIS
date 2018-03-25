@@ -84,9 +84,9 @@ Partial Class PatientDentalRecordForm
         Me.buttonNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.buttonEdit = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemPrint = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BunifuElipse = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelHeader.SuspendLayout()
         CType(Me.ButtonClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxTooth.SuspendLayout()
@@ -224,8 +224,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton17.TabIndex = 34
         Me.BunifuImageButton17.TabStop = False
-        Me.BunifuImageButton17.Tag = "17"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton17, "(L) Third Molar")
+        Me.BunifuImageButton17.Tag = "(LL) Third Molar"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton17, "(LL) Third Molar")
         Me.BunifuImageButton17.Zoom = 10
         '
         'BunifuImageButton18
@@ -241,8 +241,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton18.TabIndex = 33
         Me.BunifuImageButton18.TabStop = False
-        Me.BunifuImageButton18.Tag = "18"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton18, "(L) Second Molar")
+        Me.BunifuImageButton18.Tag = "(LL) Second Molar"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton18, "(LL) Second Molar")
         Me.BunifuImageButton18.Zoom = 10
         '
         'BunifuImageButton19
@@ -258,8 +258,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton19.TabIndex = 32
         Me.BunifuImageButton19.TabStop = False
-        Me.BunifuImageButton19.Tag = "19"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton19, "(L) First Molar")
+        Me.BunifuImageButton19.Tag = "(LL) First Molar"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton19, "(LL) First Molar")
         Me.BunifuImageButton19.Zoom = 10
         '
         'BunifuImageButton20
@@ -275,8 +275,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton20.TabIndex = 31
         Me.BunifuImageButton20.TabStop = False
-        Me.BunifuImageButton20.Tag = "20"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton20, "(L) Second Bicuspid")
+        Me.BunifuImageButton20.Tag = "(LL) Second Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton20, "(LL) Second Bicuspid")
         Me.BunifuImageButton20.Zoom = 10
         '
         'BunifuImageButton21
@@ -292,8 +292,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton21.TabIndex = 30
         Me.BunifuImageButton21.TabStop = False
-        Me.BunifuImageButton21.Tag = "21"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton21, "(L) First Bicuspid")
+        Me.BunifuImageButton21.Tag = "(LL) First Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton21, "(LL) First Bicuspid")
         Me.BunifuImageButton21.Zoom = 10
         '
         'BunifuImageButton22
@@ -309,8 +309,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton22.TabIndex = 29
         Me.BunifuImageButton22.TabStop = False
-        Me.BunifuImageButton22.Tag = "22"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton22, "(L) Bicuspid")
+        Me.BunifuImageButton22.Tag = "(LL) Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton22, "(LL) Bicuspid")
         Me.BunifuImageButton22.Zoom = 10
         '
         'BunifuImageButton23
@@ -326,8 +326,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton23.TabIndex = 28
         Me.BunifuImageButton23.TabStop = False
-        Me.BunifuImageButton23.Tag = "23"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton23, "(L) Lateral Incisor")
+        Me.BunifuImageButton23.Tag = "(LL) Lateral Incisor"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton23, "(LL) Lateral Incisor")
         Me.BunifuImageButton23.Zoom = 10
         '
         'BunifuImageButton24
@@ -343,8 +343,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton24.TabIndex = 27
         Me.BunifuImageButton24.TabStop = False
-        Me.BunifuImageButton24.Tag = "24"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton24, "(L) Central Incisor")
+        Me.BunifuImageButton24.Tag = "(LL) Central Incisor"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton24, "(LL) Central Incisor")
         Me.BunifuImageButton24.Zoom = 10
         '
         'BunifuImageButton25
@@ -360,8 +360,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton25.TabIndex = 26
         Me.BunifuImageButton25.TabStop = False
-        Me.BunifuImageButton25.Tag = "25"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton25, "(R) Central Incisor")
+        Me.BunifuImageButton25.Tag = "(LR) Central Incisor"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton25, "(LR) Central Incisor")
         Me.BunifuImageButton25.Zoom = 10
         '
         'BunifuImageButton26
@@ -377,8 +377,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton26.TabIndex = 25
         Me.BunifuImageButton26.TabStop = False
-        Me.BunifuImageButton26.Tag = "26"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton26, "(R) Lateral Incisor")
+        Me.BunifuImageButton26.Tag = "(LR) Lateral Incisor"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton26, "(LR) Lateral Incisor")
         Me.BunifuImageButton26.Zoom = 10
         '
         'BunifuImageButton27
@@ -394,8 +394,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton27.TabIndex = 24
         Me.BunifuImageButton27.TabStop = False
-        Me.BunifuImageButton27.Tag = "27"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton27, "(R) Bicuspid")
+        Me.BunifuImageButton27.Tag = "(LR) Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton27, "(LR) Bicuspid")
         Me.BunifuImageButton27.Zoom = 10
         '
         'BunifuImageButton28
@@ -411,8 +411,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton28.TabIndex = 23
         Me.BunifuImageButton28.TabStop = False
-        Me.BunifuImageButton28.Tag = "28"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton28, "(R) First Bicuspid")
+        Me.BunifuImageButton28.Tag = "(LR) First Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton28, "(LR) First Bicuspid")
         Me.BunifuImageButton28.Zoom = 10
         '
         'BunifuImageButton29
@@ -428,8 +428,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton29.TabIndex = 22
         Me.BunifuImageButton29.TabStop = False
-        Me.BunifuImageButton29.Tag = "29"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton29, "(R) Second Bicuspid")
+        Me.BunifuImageButton29.Tag = "(LR) Second Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton29, "(LR) Second Bicuspid")
         Me.BunifuImageButton29.Zoom = 10
         '
         'BunifuImageButton30
@@ -445,8 +445,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton30.TabIndex = 21
         Me.BunifuImageButton30.TabStop = False
-        Me.BunifuImageButton30.Tag = "30"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton30, "(R) First Molar")
+        Me.BunifuImageButton30.Tag = "(LR) First Molar"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton30, "(LR) First Molar")
         Me.BunifuImageButton30.Zoom = 10
         '
         'BunifuImageButton31
@@ -462,8 +462,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton31.TabIndex = 20
         Me.BunifuImageButton31.TabStop = False
-        Me.BunifuImageButton31.Tag = "31"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton31, "(R) Second Molar")
+        Me.BunifuImageButton31.Tag = "(LR) Second Molar"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton31, "(LR) Second Molar")
         Me.BunifuImageButton31.Zoom = 10
         '
         'BunifuImageButton32
@@ -479,8 +479,8 @@ Partial Class PatientDentalRecordForm
         Me.BunifuImageButton32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.BunifuImageButton32.TabIndex = 19
         Me.BunifuImageButton32.TabStop = False
-        Me.BunifuImageButton32.Tag = "32"
-        Me.ToolTip1.SetToolTip(Me.BunifuImageButton32, "(R) Third Molar")
+        Me.BunifuImageButton32.Tag = "(LR) Third Molar"
+        Me.ToolTip1.SetToolTip(Me.BunifuImageButton32, "(LR) Third Molar")
         Me.BunifuImageButton32.Zoom = 10
         '
         'buttonTooth16
@@ -496,8 +496,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth16.TabIndex = 18
         Me.buttonTooth16.TabStop = False
-        Me.buttonTooth16.Tag = "16"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth16, "(L) Third Molar")
+        Me.buttonTooth16.Tag = "(UL) Third Molar"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth16, "(UL) Third Molar")
         Me.buttonTooth16.Zoom = 10
         '
         'buttonTooth15
@@ -513,8 +513,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth15.TabIndex = 17
         Me.buttonTooth15.TabStop = False
-        Me.buttonTooth15.Tag = "15"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth15, "(L) Second Molar")
+        Me.buttonTooth15.Tag = "(UL) Second Molar"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth15, "(UL) Second Molar")
         Me.buttonTooth15.Zoom = 10
         '
         'buttonTooth14
@@ -530,8 +530,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth14.TabIndex = 16
         Me.buttonTooth14.TabStop = False
-        Me.buttonTooth14.Tag = "14"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth14, "(L) First Molar")
+        Me.buttonTooth14.Tag = "(UL) First Molar"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth14, "(UL) First Molar")
         Me.buttonTooth14.Zoom = 10
         '
         'buttonTooth13
@@ -547,8 +547,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth13.TabIndex = 15
         Me.buttonTooth13.TabStop = False
-        Me.buttonTooth13.Tag = "13"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth13, "(L) Second Bicuspid")
+        Me.buttonTooth13.Tag = "(UL) Second Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth13, "(UL) Second Bicuspid")
         Me.buttonTooth13.Zoom = 10
         '
         'buttonTooth12
@@ -564,8 +564,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth12.TabIndex = 14
         Me.buttonTooth12.TabStop = False
-        Me.buttonTooth12.Tag = "12"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth12, "(L) First Bicuspid")
+        Me.buttonTooth12.Tag = "(UL) First Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth12, "(UL) First Bicuspid")
         Me.buttonTooth12.Zoom = 10
         '
         'buttonTooth11
@@ -581,8 +581,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth11.TabIndex = 13
         Me.buttonTooth11.TabStop = False
-        Me.buttonTooth11.Tag = "11"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth11, "(L) Bicuspid")
+        Me.buttonTooth11.Tag = "(UL) Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth11, "(UL) Bicuspid")
         Me.buttonTooth11.Zoom = 10
         '
         'buttonTooth10
@@ -598,8 +598,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth10.TabIndex = 12
         Me.buttonTooth10.TabStop = False
-        Me.buttonTooth10.Tag = "0"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth10, "(L) Lateral Incisor")
+        Me.buttonTooth10.Tag = "(UL) Lateral Incisor"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth10, "(UL) Lateral Incisor")
         Me.buttonTooth10.Zoom = 10
         '
         'buttonTooth9
@@ -615,8 +615,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth9.TabIndex = 11
         Me.buttonTooth9.TabStop = False
-        Me.buttonTooth9.Tag = "9"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth9, "(L) Central Incisor")
+        Me.buttonTooth9.Tag = "(UL) Central Incisor"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth9, "(UL) Central Incisor")
         Me.buttonTooth9.Zoom = 10
         '
         'buttonTooth8
@@ -632,8 +632,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth8.TabIndex = 10
         Me.buttonTooth8.TabStop = False
-        Me.buttonTooth8.Tag = "8"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth8, "(R) Central Incisor")
+        Me.buttonTooth8.Tag = "(UR) Central Incisor"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth8, "(UR) Central Incisor")
         Me.buttonTooth8.Zoom = 10
         '
         'buttonTooth7
@@ -649,8 +649,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth7.TabIndex = 9
         Me.buttonTooth7.TabStop = False
-        Me.buttonTooth7.Tag = "7"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth7, "(R) Lateral Incisor")
+        Me.buttonTooth7.Tag = "(UR) Lateral Incisor"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth7, "(UR) Lateral Incisor")
         Me.buttonTooth7.Zoom = 10
         '
         'buttonTooth6
@@ -666,8 +666,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth6.TabIndex = 8
         Me.buttonTooth6.TabStop = False
-        Me.buttonTooth6.Tag = "6"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth6, "(R) Bicuspid")
+        Me.buttonTooth6.Tag = "(UR) Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth6, "(UR) Bicuspid")
         Me.buttonTooth6.Zoom = 10
         '
         'buttonTooth5
@@ -683,8 +683,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth5.TabIndex = 7
         Me.buttonTooth5.TabStop = False
-        Me.buttonTooth5.Tag = "5"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth5, "(R) First Bicuspid")
+        Me.buttonTooth5.Tag = "(UR) First Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth5, "(UR) First Bicuspid")
         Me.buttonTooth5.Zoom = 10
         '
         'buttonTooth4
@@ -700,8 +700,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth4.TabIndex = 6
         Me.buttonTooth4.TabStop = False
-        Me.buttonTooth4.Tag = "4"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth4, "(R) Second Bicuspid")
+        Me.buttonTooth4.Tag = "(UR) Second Bicuspid"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth4, "(UR) Second Bicuspid")
         Me.buttonTooth4.Zoom = 10
         '
         'buttonTooth3
@@ -717,8 +717,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth3.TabIndex = 5
         Me.buttonTooth3.TabStop = False
-        Me.buttonTooth3.Tag = "3"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth3, "(R) First Molar")
+        Me.buttonTooth3.Tag = "(UR) First Molar"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth3, "(UR) First Molar")
         Me.buttonTooth3.Zoom = 10
         '
         'buttonTooth2
@@ -734,8 +734,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.buttonTooth2.TabIndex = 4
         Me.buttonTooth2.TabStop = False
-        Me.buttonTooth2.Tag = "2"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth2, "(R) Second Molar")
+        Me.buttonTooth2.Tag = "(UR) Second Molar"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth2, "(UR) Second Molar")
         Me.buttonTooth2.Zoom = 10
         '
         'buttonTooth1
@@ -751,8 +751,8 @@ Partial Class PatientDentalRecordForm
         Me.buttonTooth1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.buttonTooth1.TabIndex = 3
         Me.buttonTooth1.TabStop = False
-        Me.buttonTooth1.Tag = "1"
-        Me.ToolTip1.SetToolTip(Me.buttonTooth1, "(R) Third Molar")
+        Me.buttonTooth1.Tag = "(UR) Third Molar"
+        Me.ToolTip1.SetToolTip(Me.buttonTooth1, "(UR) Third Molar")
         Me.buttonTooth1.Zoom = 10
         '
         'GroupBox2
@@ -959,17 +959,17 @@ Partial Class PatientDentalRecordForm
         Me.ToolStripMenuItemPrint.Size = New System.Drawing.Size(156, 20)
         Me.ToolStripMenuItemPrint.Text = "Print Dental Certificate"
         '
-        'BunifuElipse
-        '
-        Me.BunifuElipse.ElipseRadius = 5
-        Me.BunifuElipse.TargetControl = Me
-        '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(160, 20)
         Me.ToolStripMenuItem1.Text = "Print Procedure History"
+        '
+        'BunifuElipse
+        '
+        Me.BunifuElipse.ElipseRadius = 5
+        Me.BunifuElipse.TargetControl = Me
         '
         'PatientDentalRecordForm
         '

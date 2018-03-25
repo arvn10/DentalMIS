@@ -128,7 +128,7 @@ Public Class PatientControl
             form.patientControl = Me
             form.activeUser = MainForm.user.ID
             form.patientID = Convert.ToInt32(DataGrid.CurrentRow.Cells(0).Value)
-            form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(1).Value) + " " + Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
+            form.HeaderLabel.Text = Convert.ToString(DataGrid.CurrentRow.Cells(2).Value) + "'s Dental Record"
             form.ShowDialog()
         Else
             MessageBox.Show("No Patient Dental Record to View", "Olaes Dental Clinic", MessageBoxButtons.OK, MessageBoxIcon.Error)

@@ -18,6 +18,7 @@ Public Class PatientReporsitory
                                     '{param.Firstname}', 
                                     '{param.Lastname}', 
                                     '{param.MiddleName}', 
+                                    '{param.Suffix}',
                                     '{param.AddressNumber}', 
                                     '{param.AddressStreetBuilding}', 
                                     '{param.AddressMunicipality}', 
@@ -37,6 +38,7 @@ Public Class PatientReporsitory
                                     '{param.Firstname}', 
                                     '{param.Lastname}', 
                                     '{param.MiddleName}', 
+                                    '{param.Suffix}',
                                     '{param.AddressNumber}', 
                                     '{param.AddressStreetBuilding}', 
                                     '{param.AddressMunicipality}', 
@@ -62,6 +64,7 @@ Public Class PatientReporsitory
                     .Firstname = dr("firstname").ToString(),
                     .Lastname = dr("lastname").ToString(),
                     .MiddleName = dr("middle_name").ToString(),
+                    .Suffix = dr("suffix").ToString(),
                     .FullName = dr("full_name").ToString(),
                     .AddressNumber = dr("address_house_number").ToString(),
                     .AddressStreetBuilding = dr("address_street_building").ToString(),
@@ -93,6 +96,7 @@ Public Class PatientReporsitory
                     .Firstname = dr("firstname").ToString(),
                     .Lastname = dr("lastname").ToString(),
                     .MiddleName = dr("middle_name").ToString(),
+                    .Suffix = dr("suffix").ToString(),
                     .FullName = dr("full_name").ToString(),
                     .AddressNumber = dr("address_house_number").ToString(),
                     .AddressStreetBuilding = dr("address_street_building").ToString(),
@@ -112,8 +116,8 @@ Public Class PatientReporsitory
         Return datas
     End Function
 
-    Public Function PatientSearchReport([from] As Date, [to] As Date) As List(Of PatientReport)
-        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_patient_search_report`('{0}', '{1}')", [from].Date.ToString("yyyy-MM-dd"), [to].Date.ToString("yyyy-MM-dd"))
+    Public Function PatientSearchReport([from] As String, [to] As String) As List(Of PatientReport)
+        Dim procedure As String = String.Format("CALL `dental_mis`.`usp_patient_search_report`('{0}', '{1}')", [from], [to])
         Dim dt As DataTable = ExecuteDataset(procedure)
         Dim datas As List(Of PatientReport)
 

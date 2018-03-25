@@ -25,7 +25,7 @@ Public Class PatientService
         Return patientService.PatientSearchLike(searchText)
     End Function
 
-    Public Function PatientSearchReport(from As Date, [to] As Date) As List(Of PatientReport) Implements IPatientService.PatientSearchReport
+    Public Function PatientSearchReport(from As String, [to] As String) As List(Of PatientReport) Implements IPatientService.PatientSearchReport
         Return patientService.PatientSearchReport(from, [to])
     End Function
 End Class
